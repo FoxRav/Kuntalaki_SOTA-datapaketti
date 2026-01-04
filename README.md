@@ -10,10 +10,11 @@ Finlexin Akoma Ntoso XML -muodosta muunnettuna momenttitason JSON/JSONL-dataksi,
 |------|--------|-----------|------|
 | **Kuntalaki** | 410/2015 | 421 | ✅ Indeksoitu |
 | **Kirjanpitolaki** | 1336/1997 | 385 | ✅ Indeksoitu |
+| **Kirjanpitoasetus** | 1339/1997 | 112 | ✅ Indeksoitu |
 | **Tilintarkastuslaki** | 1141/2015 | 357 | ✅ Indeksoitu |
 | **Hankintalaki** | 1397/2016 | 454 | ✅ Indeksoitu |
 | **Osakeyhtiölaki** | 624/2006 | 919 | ✅ Indeksoitu |
-| **Yhteensä** | - | **2536** | ✅ |
+| **Yhteensä** | - | **2648** | ✅ |
 
 ## Arkkitehtuuri
 
@@ -24,8 +25,9 @@ Finlexin Akoma Ntoso XML -muodosta muunnettuna momenttitason JSON/JSONL-dataksi,
 │   ├── query_boost.py        # Query-time boost/penalty
 │   └── tests/                # Golden-set testit
 │
-├── laws/                     # Multi-laki rakenne (v5)
+├── laws/                     # Multi-laki rakenne (v5.1)
 │   ├── kirjanpitolaki_1336_1997/
+│   ├── kirjanpitoasetus_1339_1997/
 │   ├── tilintarkastuslaki_1141_2015/
 │   ├── hankintalaki_1397_2016/
 │   └── osakeyhtiolaki_624_2006/
@@ -145,22 +147,23 @@ Latency: ~45ms
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-## Tilastot (v5)
+## Tilastot (v5.1)
 
 | Laki | Momentteja | Kuvaus |
 |------|-----------|--------|
 | Kuntalaki | 421 | Kuntahallinon perusta |
 | Kirjanpitolaki | 385 | Kirjanpitovelvollisuus |
+| Kirjanpitoasetus | 112 | KPL:n täydentävä (liitetiedot) |
 | Tilintarkastuslaki | 357 | Tilintarkastus |
 | Hankintalaki | 454 | Julkiset hankinnat |
 | Osakeyhtiölaki | 919 | Yhtiöoikeus |
-| **Yhteensä** | **2536** | 5 lakia |
+| **Yhteensä** | **2648** | 6 lakia |
 
 ## Roadmap
 
 1. ✅ **v4**: Kuntalaki SOTA (100% pass)
-2. ✅ **v5**: Multi-laki rakenne + kaikki 5 lakia
-3. 🔜 **v5.1**: Kirjanpitoasetus (1339/1997)
+2. ✅ **v5**: Multi-laki rakenne + 5 lakia
+3. ✅ **v5.1**: Kirjanpitoasetus (1339/1997)
 4. 📋 **v6**: Cross-law eval ja multi-law reranking
 
 ## Lisenssi & lähde

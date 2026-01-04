@@ -33,6 +33,10 @@ LAW_INDICES = {
         "chroma_path": PROJECT_ROOT / "laws" / "kirjanpitolaki_1336_1997" / "analysis_layer" / "embeddings" / "chroma_db",
         "collection_name": "kirjanpitolaki",
     },
+    "kirjanpitoasetus_1339_1997": {
+        "chroma_path": PROJECT_ROOT / "laws" / "kirjanpitoasetus_1339_1997" / "analysis_layer" / "embeddings" / "chroma_db",
+        "collection_name": "kirjanpitoasetus",
+    },
     "tilintarkastuslaki_1141_2015": {
         "chroma_path": PROJECT_ROOT / "laws" / "tilintarkastuslaki_1141_2015" / "analysis_layer" / "embeddings" / "chroma_db",
         "collection_name": "tilintarkastuslaki",
@@ -167,6 +171,7 @@ def main() -> None:
     test_queries = [
         "kunnan talousarvion alijäämä",
         "tilinpäätöksen liitetiedot ja tase",
+        "tuloslaskelmakaava ja tasekaava",  # KPA specific
         "tilintarkastajan huomautus ja vastuuvapaus",
         "julkisen hankinnan kynnysarvo",
         "osakeyhtiön hallituksen vastuu",

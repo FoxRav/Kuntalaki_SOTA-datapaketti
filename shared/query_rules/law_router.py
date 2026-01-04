@@ -33,6 +33,11 @@ _DEFAULT_KEYWORDS: dict[str, list[str]] = {
         "tase", "liitetiedot", "tuloslaskelma", "poistot", "arvostus",
         "kirjanpito", "tilivuosi", "tilikausi", "kirjanpitovelvollinen",
     ],
+    "kirjanpitoasetus_1339_1997": [
+        "kirjanpitoasetus", "tasekaava", "tuloslaskelmakaava", "liitetieto",
+        "esittämistapa", "erittely", "tase-erittelyt", "konsernitase",
+        "konsernituloslaskelma", "rahoituslaskelma", "rahavirta", "kassavirta",
+    ],
     "tilintarkastuslaki_1141_2015": [
         "tilintarkastaja", "tilintarkastuskertomus", "huomautus",
         "vastuuvapaus", "tarkastuskertomus", "tilintarkastus",
@@ -71,6 +76,8 @@ def _extract_explicit_law_reference(query: str) -> Optional[str]:
     query_lower = query.lower()
     
     # Check for law abbreviations
+    if "kpa" in query_lower or "kirjanpitoasetus" in query_lower:
+        return "kirjanpitoasetus_1339_1997"
     if "kpl" in query_lower or "kirjanpitolaki" in query_lower:
         return "kirjanpitolaki_1336_1997"
     if "oyl" in query_lower or "osakeyhtiölaki" in query_lower:
@@ -86,6 +93,7 @@ def _extract_explicit_law_reference(query: str) -> Optional[str]:
     finlex_patterns = {
         r"410/2015": "kuntalaki_410_2015",
         r"1336/1997": "kirjanpitolaki_1336_1997",
+        r"1339/1997": "kirjanpitoasetus_1339_1997",
         r"1141/2015": "tilintarkastuslaki_1141_2015",
         r"1397/2016": "hankintalaki_1397_2016",
         r"624/2006": "osakeyhtiolaki_624_2006",
