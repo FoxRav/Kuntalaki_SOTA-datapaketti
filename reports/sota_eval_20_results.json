@@ -1,0 +1,1611 @@
+{
+  "timestamp": "2026-01-05T01:07:05.147680",
+  "summary": {
+    "correct": 20,
+    "total": 20,
+    "pass_rate": 100.0,
+    "avg_latency_ms": 72.77255498338491
+  },
+  "categories": {
+    "A. Kunnan tilinpäätös": {
+      "total": 4,
+      "correct": 4
+    },
+    "B. Kirjanpitolaki vs. Kuntalaki": {
+      "total": 3,
+      "correct": 3
+    },
+    "C. Kuntakonserni": {
+      "total": 3,
+      "correct": 3
+    },
+    "D. Hankinnat": {
+      "total": 2,
+      "correct": 2
+    },
+    "E. Tilintarkastus": {
+      "total": 2,
+      "correct": 2
+    },
+    "F. Rahoitus": {
+      "total": 2,
+      "correct": 2
+    },
+    "G. Erityistilanteet": {
+      "total": 4,
+      "correct": 4
+    }
+  },
+  "questions": [
+    {
+      "id": "SOTA-A01",
+      "category": "A. Kunnan tilinpäätös",
+      "query": "Mitkä Kuntalain säännökset velvoittavat kunnan laatimaan tilinpäätöksen ja missä määräajassa se on tehtävä?",
+      "expected_laws": [
+        "kuntalaki_410_2015"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.7616556358337403,
+          "section_id": "113",
+          "section_num": 113,
+          "section_title": "Tilinpäätös",
+          "moment": "1",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 113 Tilinpäätös: Kunnan tilikausi on kalenterivuosi. Kunnanhallituksen on laadittava tilikaudelta tilinpäätös tilikautta seuraavan vuoden maaliskuun loppuun mennessä ja annettava se tilintarkastajien tarkastettavaksi. Tilintarkastajien on tarkastettava tilinpäätös toukokuun loppuun mennessä. Kunna...",
+          "node_id": "410/2015:fin@20230780:113:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.7158145380020142,
+          "section_id": "114",
+          "section_num": 114,
+          "section_title": "Konsernitilinpäätös",
+          "moment": "1",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 114 Konsernitilinpäätös: Kunnan, joka tytäryhteisöineen muodostaa kuntakonsernin, tulee laatia ja sisällyttää tilinpäätökseensä konsernitilinpäätös. Konsernitilinpäätös tulee laatia samalta päivältä kuin kunnan tilinpäätös.",
+          "node_id": "410/2015:fin@20230780:114:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.7153934311866761,
+          "section_id": "120a",
+          "section_num": 120,
+          "section_title": "Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen",
+          "moment": "2",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 120a Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen: Kunnan on salassapitosäännösten estämättä toimitettava 112 §:ssä tarkoitetut tilinpäätös-, osavuosikatsaus- ja kustannustiedot sekä muualla laissa tai lain nojalla säännöllisesti toimitettavaksi edellytetyt ...",
+          "node_id": "410/2015:fin@20230780:120a:2"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.7112599086761475,
+          "section_id": "113",
+          "section_num": 113,
+          "section_title": "Tilinpäätös",
+          "moment": "3",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 113 Tilinpäätös: Tilinpäätöksen tulee antaa oikea ja riittävä kuva kunnan tuloksesta, taloudellisesta asemasta, rahoituksesta sekä toiminnasta olennaisuusperiaatteen mukaisesti. Tätä varten tarpeelliset seikat on ilmoitettava liitetiedoissa.",
+          "node_id": "410/2015:fin@20230780:113:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.7090190124511719,
+          "section_id": "110a",
+          "section_num": 110,
+          "section_title": "Alijäämän kattamista koskevan määräajan jatkaminen covid-19-epidemiasta johtuvien taloudellisten vaikeuksien vuoksi",
+          "moment": "3",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 110a Alijäämän kattamista koskevan määräajan jatkaminen covid-19-epidemiasta johtuvien taloudellisten vaikeuksien vuoksi: Kunnan on laadittava talousarvionsa ja -suunnitelmansa siten, että valtuuston päätökset alijäämän kattamista koskevista toimenpiteistä 1 momentissa tarkoitettuna määräaikana to...",
+          "node_id": "410/2015:fin@20230780:110a:3"
+        }
+      ],
+      "latency_ms": 466.08919999562204
+    },
+    {
+      "id": "SOTA-A02",
+      "category": "A. Kunnan tilinpäätös",
+      "query": "Millä edellytyksillä kunta on velvollinen laatimaan konsernitilinpäätöksen ja mitkä yhteisöt siihen sisällytetään?",
+      "expected_laws": [
+        "kuntalaki_410_2015"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.7337839984893799,
+          "section_id": "114",
+          "section_num": 114,
+          "section_title": "Konsernitilinpäätös",
+          "moment": "1",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 114 Konsernitilinpäätös: Kunnan, joka tytäryhteisöineen muodostaa kuntakonsernin, tulee laatia ja sisällyttää tilinpäätökseensä konsernitilinpäätös. Konsernitilinpäätös tulee laatia samalta päivältä kuin kunnan tilinpäätös.",
+          "node_id": "410/2015:fin@20230780:114:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.705413498878479,
+          "section_id": "114",
+          "section_num": 114,
+          "section_title": "Konsernitilinpäätös",
+          "moment": "3",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 114 Konsernitilinpäätös: Kuntayhtymän tilinpäätös yhdistellään jäsenkunnan konsernitilinpäätökseen. Kunnan, jolla ei ole tytäryhteisöjä, mutta joka on jäsen kuntayhtymässä tai liikelaitoskuntayhtymässä, tulee sisällyttää tilinpäätökseensä konsernitilinpäätöstä vastaavat tiedot.",
+          "node_id": "410/2015:fin@20230780:114:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6834779167175293,
+          "section_id": "114",
+          "section_num": 114,
+          "section_title": "Konsernitilinpäätös",
+          "moment": "2",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 114 Konsernitilinpäätös: Konsernitilinpäätös laaditaan konserniyhteisöjen taseiden ja tuloslaskelmien sekä niiden liitetietojen yhdistelmänä. Konsernitilinpäätökseen sisällytetään lisäksi konsernin rahoituslaskelma, jossa annetaan selvitys kuntakonsernin varojen hankinnasta ja niiden käytöstä tili...",
+          "node_id": "410/2015:fin@20230780:114:2"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6626702332496643,
+          "section_id": "47",
+          "section_num": 47,
+          "section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
+          "moment": "4",
+          "chapter": "7 luku",
+          "chapter_title": "Kunnan johtaminen ja kunnanhallitus",
+          "text": "§ 47 Kunnan tytäryhteisöjen toiminta ja konserniohje: Konserniohjeessa annetaan tarpeelliset määräykset ainakin: 1) kuntakonsernin talouden ja investointien suunnittelusta ja ohjauksesta; 2) konsernivalvonnan ja raportoinnin sekä riskienhallinnan järjestämisestä; 3) tiedottamisesta ja kunnan luottam...",
+          "node_id": "410/2015:fin@20230780:47:4"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6423025512695313,
+          "section_id": "6",
+          "section_num": 6,
+          "section_title": "Kuntakonserni ja kunnan toiminta",
+          "moment": "1",
+          "chapter": "1 luku",
+          "chapter_title": "Yleiset säännökset",
+          "text": "§ 6 Kuntakonserni ja kunnan toiminta: Yhteisö, jossa kunnalla on kirjanpitolain (1336/1997) 1 luvun 5 §:ssä tai 6 §:n 2 momentissa tarkoitettu määräysvalta, on kunnan tytäryhteisö . Kunta tytäryhteisöineen muodostaa kuntakonsernin . Mitä tässä laissa säädetään kunnan tytäryhteisöstä, sovelletaan myö...",
+          "node_id": "410/2015:fin@20230780:6:1"
+        }
+      ],
+      "latency_ms": 33.66809990257025
+    },
+    {
+      "id": "SOTA-A03",
+      "category": "A. Kunnan tilinpäätös",
+      "query": "Miten alijäämän kattamisvelvollisuus vaikuttaa kunnan toimintakertomuksen sisältöön?",
+      "expected_laws": [
+        "kuntalaki_410_2015"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.758984375,
+          "section_id": "115",
+          "section_num": 115,
+          "section_title": "Toimintakertomus",
+          "moment": "2",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 115 Toimintakertomus: Jos kunnan taseessa on kattamatonta alijäämää, toimintakertomuksessa on esitettävä selvitys talouden tasapainotuksen toteutumisesta tilikaudella sekä voimassa olevan taloussuunnitelman riittävyydestä talouden tasapainottamiseksi.",
+          "node_id": "410/2015:fin@20230780:115:2"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.7227189421653748,
+          "section_id": "148",
+          "section_num": 148,
+          "section_title": "Alijäämän kattamista ja arviointimenettelyä koskevat siirtymäsäännökset",
+          "moment": "2",
+          "chapter": "17 luku",
+          "chapter_title": "Voimaantulo",
+          "text": "§ 148 Alijäämän kattamista ja arviointimenettelyä koskevat siirtymäsäännökset: Sen estämättä, mitä 110 §:n 3 momentissa säädetään velvollisuudesta kattaa kunnan taseeseen kertynyt alijäämä, alijäämän tulee olla katettu viimeistään tilikauden 2022 tilinpäätöksessä, jos kunnan taseeseen kertynyt alijä...",
+          "node_id": "410/2015:fin@20230780:148:2"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.7195554256439209,
+          "section_id": "148",
+          "section_num": 148,
+          "section_title": "Alijäämän kattamista ja arviointimenettelyä koskevat siirtymäsäännökset",
+          "moment": "1",
+          "chapter": "17 luku",
+          "chapter_title": "Voimaantulo",
+          "text": "§ 148 Alijäämän kattamista ja arviointimenettelyä koskevat siirtymäsäännökset: Edellä 110 §:n 3 momentissa säädettyä velvollisuutta kattaa kunnan taseeseen kertynyt alijäämä sovelletaan ensimmäisen kerran tilikauden 2015 tilinpäätöksessä taseeseen kertyneeseen alijäämään.",
+          "node_id": "410/2015:fin@20230780:148:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.7069231748580933,
+          "section_id": "110a",
+          "section_num": 110,
+          "section_title": "Alijäämän kattamista koskevan määräajan jatkaminen covid-19-epidemiasta johtuvien taloudellisten vaikeuksien vuoksi",
+          "moment": "3",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 110a Alijäämän kattamista koskevan määräajan jatkaminen covid-19-epidemiasta johtuvien taloudellisten vaikeuksien vuoksi: Kunnan on laadittava talousarvionsa ja -suunnitelmansa siten, että valtuuston päätökset alijäämän kattamista koskevista toimenpiteistä 1 momentissa tarkoitettuna määräaikana to...",
+          "node_id": "410/2015:fin@20230780:110a:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.7004598259925843,
+          "section_id": "110",
+          "section_num": 110,
+          "section_title": "Talousarvio ja -suunnitelma",
+          "moment": "6",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 110 Talousarvio ja -suunnitelma: Edellä 3 momentissa säädettyä alijäämän kattamisvelvollisuutta sovelletaan myös kuntayhtymiin.",
+          "node_id": "410/2015:fin@20230780:110:6"
+        }
+      ],
+      "latency_ms": 37.61759994085878
+    },
+    {
+      "id": "SOTA-A04",
+      "category": "A. Kunnan tilinpäätös",
+      "query": "Mitkä taloudelliset tiedot on pakollista esittää kunnan toimintakertomuksessa?",
+      "expected_laws": [
+        "kuntalaki_410_2015"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.727048146724701,
+          "section_id": "115",
+          "section_num": 115,
+          "section_title": "Toimintakertomus",
+          "moment": "1",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 115 Toimintakertomus: Toimintakertomuksessa on esitettävä selvitys valtuuston asettamien toiminnan ja talouden tavoitteiden toteutumisesta kunnassa ja kuntakonsernissa. Toimintakertomuksessa on myös annettava tietoja sellaisista kunnan ja kuntakonsernin talouteen liittyvistä olennaisista asioista,...",
+          "node_id": "410/2015:fin@20230780:115:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6902032375335694,
+          "section_id": "115",
+          "section_num": 115,
+          "section_title": "Toimintakertomus",
+          "moment": "2",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 115 Toimintakertomus: Jos kunnan taseessa on kattamatonta alijäämää, toimintakertomuksessa on esitettävä selvitys talouden tasapainotuksen toteutumisesta tilikaudella sekä voimassa olevan taloussuunnitelman riittävyydestä talouden tasapainottamiseksi.",
+          "node_id": "410/2015:fin@20230780:115:2"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6795731067657471,
+          "section_id": "120a",
+          "section_num": 120,
+          "section_title": "Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen",
+          "moment": "2",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 120a Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen: Kunnan on salassapitosäännösten estämättä toimitettava 112 §:ssä tarkoitetut tilinpäätös-, osavuosikatsaus- ja kustannustiedot sekä muualla laissa tai lain nojalla säännöllisesti toimitettavaksi edellytetyt ...",
+          "node_id": "410/2015:fin@20230780:120a:2"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6699663877487183,
+          "section_id": "109",
+          "section_num": 109,
+          "section_title": "Tietojen saatavuus yleisessä tietoverkossa",
+          "moment": "1",
+          "chapter": "12 luku",
+          "chapter_title": "Päätöksenteko- ja hallintomenettely",
+          "text": "§ 109 Tietojen saatavuus yleisessä tietoverkossa: Kunnan järjestämiä palveluja sekä kunnan toimintaa koskevat keskeiset tiedot on julkaistava yleisessä tietoverkossa. Yleisessä tietoverkossa on oltava saatavilla ainakin seuraavat tiedot: 1) kuntastrategia; 2) hallintosääntö; 3) talousarvio- ja suunn...",
+          "node_id": "410/2015:fin@20230780:109:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6621808886528016,
+          "section_id": "113",
+          "section_num": 113,
+          "section_title": "Tilinpäätös",
+          "moment": "3",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 113 Tilinpäätös: Tilinpäätöksen tulee antaa oikea ja riittävä kuva kunnan tuloksesta, taloudellisesta asemasta, rahoituksesta sekä toiminnasta olennaisuusperiaatteen mukaisesti. Tätä varten tarpeelliset seikat on ilmoitettava liitetiedoissa.",
+          "node_id": "410/2015:fin@20230780:113:3"
+        }
+      ],
+      "latency_ms": 34.54489994328469
+    },
+    {
+      "id": "SOTA-B05",
+      "category": "B. Kirjanpitolaki vs. Kuntalaki",
+      "query": "Missä tilanteissa Kirjanpitolakia sovelletaan kuntaan ja milloin Kuntalaki syrjäyttää sen?",
+      "expected_laws": [
+        "kuntalaki_410_2015",
+        "kirjanpitolaki_1336_1997"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6701190066337586,
+          "section_id": "112",
+          "section_num": 112,
+          "section_title": "Kirjanpito",
+          "moment": "1",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 112 Kirjanpito: Kunnan kirjanpitovelvollisuuteen, kirjanpitoon ja tilinpäätökseen sovelletaan sen lisäksi, mitä tässä laissa säädetään, kirjanpitolakia. Kirjanpitolautakunnan kuntajaosto antaa ohjeita ja lausuntoja kirjanpitolain ja tämän lain 113–116 §:n, 120 §:n 1 momentin 3 ja 4 kohdan sekä täm...",
+          "node_id": "410/2015:fin@20230780:112:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6100101661682129,
+          "section_id": "132",
+          "section_num": 132,
+          "section_title": "Kilpailulain soveltaminen",
+          "moment": "1",
+          "chapter": "15 luku",
+          "chapter_title": "Kunnan toiminta markkinoilla",
+          "text": "§ 132 Kilpailulain soveltaminen: Kirjanpidon eriyttämisestä sekä Kilpailu- ja kuluttajaviraston oikeudesta puuttua kunnan, kuntayhtymän tai niiden määräysvaltaan kuuluvan yhteisön harjoittamaan kilpailulain vastaiseen menettelyyn tai toiminnan rakenteeseen säädetään kilpailulaissa (948/2011) .",
+          "node_id": "410/2015:fin@20230780:132:1"
+        },
+        {
+          "law_key": "kirjanpitolaki_1336_1997",
+          "law_name": "Kirjanpitolaki",
+          "score": 0.5692076086997986,
+          "section_id": "1",
+          "section_num": 1,
+          "section_title": "Voimaantulo",
+          "moment": "2",
+          "chapter": "9 luku",
+          "chapter_title": "Voimaantulo- ja siirtymäsäännökset",
+          "text": "Voimaantulo. Tälla lailla kumotaan 10 päivänä elokuuta 1973 annettu kirjanpitolaki (655/1973) siihen myöhemmin tehtyine muutoksineen. Kirjanpitolautakunnasta 19 päivänä lokakuuta 1973 annettu asetus (784/1973) jää kuitenkin edelleen voimaan lukuun ottamatta 8 §:n 3 momenttia. Voimaan jää myös 30 päi...",
+          "node_id": "1336/1997:fin@20251006:9l:1:2"
+        },
+        {
+          "law_key": "kirjanpitolaki_1336_1997",
+          "law_name": "Kirjanpitolaki",
+          "score": 0.5514250993728638,
+          "section_id": "5",
+          "section_num": 5,
+          "section_title": "Kirjanpitoa koskevat säännökset muissa laeissa",
+          "moment": "1",
+          "chapter": "8 luku",
+          "chapter_title": "Erinäiset säännökset",
+          "text": "Kirjanpitoa koskevat säännökset muissa laeissa. Sen estämättä, mitä tässä laissa säädetään, kirjanpitovelvollisuuteen ja kirjanpitoon sekä tilinpäätökseen ja toimintakertomuksen julkistamiseen sovelletaan, mitä niistä muualla laissa tai sen nojalla säädetään tai määrätään.",
+          "node_id": "1336/1997:fin@20251006:8l:5:1"
+        },
+        {
+          "law_key": "kirjanpitolaki_1336_1997",
+          "law_name": "Kirjanpitolaki",
+          "score": 0.5436568856239319,
+          "section_id": "2",
+          "section_num": 2,
+          "section_title": "Siirtymäsäännökset",
+          "moment": "1",
+          "chapter": "9 luku",
+          "chapter_title": "Voimaantulo- ja siirtymäsäännökset",
+          "text": "Siirtymäsäännökset. Tätä lakia sovelletaan ensimmäisen kerran kirjanpitoon siltä tilikaudelta, joka alkaa 1 päivänä tammikuuta 1998 tai sen jälkeen. Kirjanpitovelvollinen saa soveltaa tätä lakia kirjanpitoon sinä tilikautena, joka on kulumassa, kun laki tulee voimaan. Edellä 3 luvun 9 §:n 1 momentin...",
+          "node_id": "1336/1997:fin@20251006:9l:2:1"
+        }
+      ],
+      "latency_ms": 33.72579999268055
+    },
+    {
+      "id": "SOTA-B06",
+      "category": "B. Kirjanpitolaki vs. Kuntalaki",
+      "query": "Miten kunnan tuloslaskelman ja taseen kaavat eroavat yleisen kirjanpitovelvollisen kaavoista?",
+      "expected_laws": [
+        "kirjanpitoasetus_1339_1997",
+        "kuntalaki_410_2015"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.616358904838562,
+          "section_id": "112",
+          "section_num": 112,
+          "section_title": "Kirjanpito",
+          "moment": "2",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 112 Kirjanpito: Valtioneuvoston asetuksella voidaan antaa tarkempia säännöksiä kunnan tilinpäätökseen kuuluvasta taseesta, tuloslaskelmasta, rahoituslaskelmasta ja niiden liitteenä olevista tiedoista sekä talousarvion toteutumisvertailusta ja toimintakertomuksesta, konsernitilinpäätöksestä ja sen ...",
+          "node_id": "410/2015:fin@20230780:112:2"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6142094421386719,
+          "section_id": "120",
+          "section_num": 120,
+          "section_title": "Kunnallisen liikelaitoksen talous",
+          "moment": "1",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 120 Kunnallisen liikelaitoksen talous: Kunnallisen liikelaitoksen talouteen sovelletaan kunnan taloutta koskevia säännöksiä kuitenkin siten, että: 1) kunnan ja kuntayhtymän liikelaitoksen talousarvio ja -suunnitelma laaditaan kunnan ja kuntayhtymän talousarviosta ja -suunnitelmasta erillisenä osan...",
+          "node_id": "410/2015:fin@20230780:120:1"
+        },
+        {
+          "law_key": "kirjanpitolaki_1336_1997",
+          "law_name": "Kirjanpitolaki",
+          "score": 0.5918918752670288,
+          "section_id": "6",
+          "section_num": 6,
+          "section_title": "Tarkemmat säännökset",
+          "moment": "1",
+          "chapter": "8 luku",
+          "chapter_title": "Erinäiset säännökset",
+          "text": "Tarkemmat säännökset. Tarkemmat säännökset tilinpäätöksen tase- ja tuloslaskelmakaavoista, toimintakertomuksesta, rahoituslaskelmasta, tilinpäätöksen liitetiedoista, konsernitilinpäätöksen laatimiseen liittyvistä vastaavista kaavoista, asiakirjoista ja liitetiedoista sekä tase-erittelyistä ja liitet...",
+          "node_id": "1336/1997:fin@20251006:8l:6:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5855229187011719,
+          "section_id": "110",
+          "section_num": 110,
+          "section_title": "Talousarvio ja -suunnitelma",
+          "moment": "2",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 110 Talousarvio ja -suunnitelma: Talousarvio ja -suunnitelma on laadittava siten, että ne toteuttavat kuntastrategiaa ja edellytykset kunnan tehtävien hoitamiseen turvataan. Talousarviossa ja -suunnitelmassa hyväksytään kunnan ja kuntakonsernin toiminnan ja talouden tavoitteet.",
+          "node_id": "410/2015:fin@20230780:110:2"
+        },
+        {
+          "law_key": "kirjanpitolaki_1336_1997",
+          "law_name": "Kirjanpitolaki",
+          "score": 0.5352556610107422,
+          "section_id": "1",
+          "section_num": 1,
+          "section_title": "Tilinpäätöksen sisältö",
+          "moment": "3",
+          "chapter": "3 luku",
+          "chapter_title": "Tilinpäätös ja toimintakertomus (30.12.2004/1304)",
+          "text": "Tilinpäätöksen sisältö. Tilinpäätökseen on liitettävä 1 a §:ssä tarkoitettu toimintakertomus, jos kirjanpitovelvollinen on: 1) julkinen osakeyhtiö; 2) sellainen osuuskunta tai yksityinen osakeyhtiö, joka ei ole mikro- tai pienyritys; tai 3) yleisen edun kannalta merkittävä yhteisö.",
+          "node_id": "1336/1997:fin@20251006:3l:1:3"
+        }
+      ],
+      "latency_ms": 34.38910003751516
+    },
+    {
+      "id": "SOTA-B07",
+      "category": "B. Kirjanpitolaki vs. Kuntalaki",
+      "query": "Voiko kunta poiketa kirjanpitolain arvostusperiaatteista ja millä perusteilla?",
+      "expected_laws": [
+        "kirjanpitolaki_1336_1997",
+        "kuntalaki_410_2015"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6019655656814575,
+          "section_id": "121",
+          "section_num": 121,
+          "section_title": "Tarkastuslautakunta",
+          "moment": "3",
+          "chapter": "14 luku",
+          "chapter_title": "Hallinnon ja talouden tarkastus",
+          "text": "§ 121 Tarkastuslautakunta: Kunnanhallitus voi poiketa tarkastuslautakunnan esityksestä lautakuntaa koskeviksi hallintosäännön määräyksiksi ja talousarvioksi kunnan hallintosäännön ja talousarvioesityksen yhteensovittamiseen liittyvästä perustellusta syystä.",
+          "node_id": "410/2015:fin@20230780:121:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5931285214424133,
+          "section_id": "118",
+          "section_num": 118,
+          "section_title": "Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely",
+          "moment": "3",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 118 Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely: Arviointimenettely voidaan lisäksi käynnistää, jos asukasta kohden laskettu kertynyt alijäämä on kunnan viimeisessä konsernitilinpäätöksessä vähintään 1 000 euroa ja sitä edeltäneenä vuonna vähintään 500 euroa, tai ...",
+          "node_id": "410/2015:fin@20230780:118:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5866674971580506,
+          "section_id": "118",
+          "section_num": 118,
+          "section_title": "Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely",
+          "moment": "4",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 118 Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely: Edellä 3 momentissa tarkoitettujen tunnuslukujen raja-arvot lasketaan vuosittain Valtiokonttorin ylläpitämiin konsernitilinpäätösten tietoihin ja kunnan vahvistamaan tuloveroprosenttiin perustuen. Mainitun momentin ...",
+          "node_id": "410/2015:fin@20230780:118:4"
+        },
+        {
+          "law_key": "kirjanpitolaki_1336_1997",
+          "law_name": "Kirjanpitolaki",
+          "score": 0.5710674524307251,
+          "section_id": "2",
+          "section_num": 2,
+          "section_title": "Kirjanpitolautakunta",
+          "moment": "2",
+          "chapter": "8 luku",
+          "chapter_title": "Erinäiset säännökset",
+          "text": "Kirjanpitolautakunta. Kirjanpitolautakunta voi erityisestä syystä yksittäistapauksissa myöntää määräajaksi poik-keuksia 3 luvun 6 §:ssä ja 6 luvun 5 §:n 1 momentissa säädetystä. Poikkeuksen myöntämisen edellytyksenä on, ettei se ole Euroopan unionin tilinpäätöksestä ja konsernitilinpäätöksestä annet...",
+          "node_id": "1336/1997:fin@20251006:8l:2:2"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5704251718521118,
+          "section_id": "132",
+          "section_num": 132,
+          "section_title": "Kilpailulain soveltaminen",
+          "moment": "1",
+          "chapter": "15 luku",
+          "chapter_title": "Kunnan toiminta markkinoilla",
+          "text": "§ 132 Kilpailulain soveltaminen: Kirjanpidon eriyttämisestä sekä Kilpailu- ja kuluttajaviraston oikeudesta puuttua kunnan, kuntayhtymän tai niiden määräysvaltaan kuuluvan yhteisön harjoittamaan kilpailulain vastaiseen menettelyyn tai toiminnan rakenteeseen säädetään kilpailulaissa (948/2011) .",
+          "node_id": "410/2015:fin@20230780:132:1"
+        }
+      ],
+      "latency_ms": 42.51909989397973
+    },
+    {
+      "id": "SOTA-C08",
+      "category": "C. Kuntakonserni",
+      "query": "Miten määräysvalta määritellään kuntakonsernissa ja miten se vaikuttaa konsernitilinpäätökseen?",
+      "expected_laws": [
+        "kuntalaki_410_2015"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6880973958969117,
+          "section_id": "6",
+          "section_num": 6,
+          "section_title": "Kuntakonserni ja kunnan toiminta",
+          "moment": "1",
+          "chapter": "1 luku",
+          "chapter_title": "Yleiset säännökset",
+          "text": "§ 6 Kuntakonserni ja kunnan toiminta: Yhteisö, jossa kunnalla on kirjanpitolain (1336/1997) 1 luvun 5 §:ssä tai 6 §:n 2 momentissa tarkoitettu määräysvalta, on kunnan tytäryhteisö . Kunta tytäryhteisöineen muodostaa kuntakonsernin . Mitä tässä laissa säädetään kunnan tytäryhteisöstä, sovelletaan myö...",
+          "node_id": "410/2015:fin@20230780:6:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.666934289932251,
+          "section_id": "47",
+          "section_num": 47,
+          "section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
+          "moment": "4",
+          "chapter": "7 luku",
+          "chapter_title": "Kunnan johtaminen ja kunnanhallitus",
+          "text": "§ 47 Kunnan tytäryhteisöjen toiminta ja konserniohje: Konserniohjeessa annetaan tarpeelliset määräykset ainakin: 1) kuntakonsernin talouden ja investointien suunnittelusta ja ohjauksesta; 2) konsernivalvonnan ja raportoinnin sekä riskienhallinnan järjestämisestä; 3) tiedottamisesta ja kunnan luottam...",
+          "node_id": "410/2015:fin@20230780:47:4"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6657553100585938,
+          "section_id": "48",
+          "section_num": 48,
+          "section_title": "Konsernijohto",
+          "moment": "1",
+          "chapter": "7 luku",
+          "chapter_title": "Kunnan johtaminen ja kunnanhallitus",
+          "text": "§ 48 Konsernijohto: Kunnan konsernijohtoon kuuluvat kunnanhallitus, kunnanjohtaja tai pormestari ja muut hallintosäännössä määrätyt viranomaiset. Hallintosäännössä määrätään konsernijohdon tehtävistä ja toimivallan jaosta.",
+          "node_id": "410/2015:fin@20230780:48:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6250310325622559,
+          "section_id": "48",
+          "section_num": 48,
+          "section_title": "Konsernijohto",
+          "moment": "2",
+          "chapter": "7 luku",
+          "chapter_title": "Kunnan johtaminen ja kunnanhallitus",
+          "text": "§ 48 Konsernijohto: Konsernijohto vastaa kuntakonsernissa omistajaohjauksen toteuttamisesta sekä konsernivalvonnan järjestämisestä, jollei hallintosäännössä toisin määrätä.",
+          "node_id": "410/2015:fin@20230780:48:2"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6188376331329346,
+          "section_id": "114",
+          "section_num": 114,
+          "section_title": "Konsernitilinpäätös",
+          "moment": "1",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 114 Konsernitilinpäätös: Kunnan, joka tytäryhteisöineen muodostaa kuntakonsernin, tulee laatia ja sisällyttää tilinpäätökseensä konsernitilinpäätös. Konsernitilinpäätös tulee laatia samalta päivältä kuin kunnan tilinpäätös.",
+          "node_id": "410/2015:fin@20230780:114:1"
+        }
+      ],
+      "latency_ms": 127.15950002893806
+    },
+    {
+      "id": "SOTA-C09",
+      "category": "C. Kuntakonserni",
+      "query": "Millaiset sisäiset liiketapahtumat on eliminoitava kuntakonsernin tilinpäätöksessä?",
+      "expected_laws": [
+        "kuntalaki_410_2015",
+        "kirjanpitolaki_1336_1997"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.581171669960022,
+          "section_id": "115",
+          "section_num": 115,
+          "section_title": "Toimintakertomus",
+          "moment": "1",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 115 Toimintakertomus: Toimintakertomuksessa on esitettävä selvitys valtuuston asettamien toiminnan ja talouden tavoitteiden toteutumisesta kunnassa ja kuntakonsernissa. Toimintakertomuksessa on myös annettava tietoja sellaisista kunnan ja kuntakonsernin talouteen liittyvistä olennaisista asioista,...",
+          "node_id": "410/2015:fin@20230780:115:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5766626977920533,
+          "section_id": "120",
+          "section_num": 120,
+          "section_title": "Kunnallisen liikelaitoksen talous",
+          "moment": "1",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 120 Kunnallisen liikelaitoksen talous: Kunnallisen liikelaitoksen talouteen sovelletaan kunnan taloutta koskevia säännöksiä kuitenkin siten, että: 1) kunnan ja kuntayhtymän liikelaitoksen talousarvio ja -suunnitelma laaditaan kunnan ja kuntayhtymän talousarviosta ja -suunnitelmasta erillisenä osan...",
+          "node_id": "410/2015:fin@20230780:120:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5713303470611573,
+          "section_id": "114",
+          "section_num": 114,
+          "section_title": "Konsernitilinpäätös",
+          "moment": "1",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 114 Konsernitilinpäätös: Kunnan, joka tytäryhteisöineen muodostaa kuntakonsernin, tulee laatia ja sisällyttää tilinpäätökseensä konsernitilinpäätös. Konsernitilinpäätös tulee laatia samalta päivältä kuin kunnan tilinpäätös.",
+          "node_id": "410/2015:fin@20230780:114:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5694053554534912,
+          "section_id": "114",
+          "section_num": 114,
+          "section_title": "Konsernitilinpäätös",
+          "moment": "3",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 114 Konsernitilinpäätös: Kuntayhtymän tilinpäätös yhdistellään jäsenkunnan konsernitilinpäätökseen. Kunnan, jolla ei ole tytäryhteisöjä, mutta joka on jäsen kuntayhtymässä tai liikelaitoskuntayhtymässä, tulee sisällyttää tilinpäätökseensä konsernitilinpäätöstä vastaavat tiedot.",
+          "node_id": "410/2015:fin@20230780:114:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5610341215133667,
+          "section_id": "114",
+          "section_num": 114,
+          "section_title": "Konsernitilinpäätös",
+          "moment": "2",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 114 Konsernitilinpäätös: Konsernitilinpäätös laaditaan konserniyhteisöjen taseiden ja tuloslaskelmien sekä niiden liitetietojen yhdistelmänä. Konsernitilinpäätökseen sisällytetään lisäksi konsernin rahoituslaskelma, jossa annetaan selvitys kuntakonsernin varojen hankinnasta ja niiden käytöstä tili...",
+          "node_id": "410/2015:fin@20230780:114:2"
+        }
+      ],
+      "latency_ms": 41.38850001618266
+    },
+    {
+      "id": "SOTA-C10",
+      "category": "C. Kuntakonserni",
+      "query": "Miten kunnan antamat takaukset ja vastuusitoumukset esitetään tilinpäätöksen liitetiedoissa?",
+      "expected_laws": [
+        "kuntalaki_410_2015",
+        "kirjanpitolaki_1336_1997"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6864096999168396,
+          "section_id": "113",
+          "section_num": 113,
+          "section_title": "Tilinpäätös",
+          "moment": "3",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 113 Tilinpäätös: Tilinpäätöksen tulee antaa oikea ja riittävä kuva kunnan tuloksesta, taloudellisesta asemasta, rahoituksesta sekä toiminnasta olennaisuusperiaatteen mukaisesti. Tätä varten tarpeelliset seikat on ilmoitettava liitetiedoissa.",
+          "node_id": "410/2015:fin@20230780:113:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6413994312286377,
+          "section_id": "112",
+          "section_num": 112,
+          "section_title": "Kirjanpito",
+          "moment": "2",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 112 Kirjanpito: Valtioneuvoston asetuksella voidaan antaa tarkempia säännöksiä kunnan tilinpäätökseen kuuluvasta taseesta, tuloslaskelmasta, rahoituslaskelmasta ja niiden liitteenä olevista tiedoista sekä talousarvion toteutumisvertailusta ja toimintakertomuksesta, konsernitilinpäätöksestä ja sen ...",
+          "node_id": "410/2015:fin@20230780:112:2"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6398792147636414,
+          "section_id": "120a",
+          "section_num": 120,
+          "section_title": "Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen",
+          "moment": "2",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 120a Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen: Kunnan on salassapitosäännösten estämättä toimitettava 112 §:ssä tarkoitetut tilinpäätös-, osavuosikatsaus- ja kustannustiedot sekä muualla laissa tai lain nojalla säännöllisesti toimitettavaksi edellytetyt ...",
+          "node_id": "410/2015:fin@20230780:120a:2"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6376166224479676,
+          "section_id": "147",
+          "section_num": 147,
+          "section_title": "Toimielimiä ja johtamista, asukkaiden osallistumisoikeuksia, luottamushenkilöitä, päätöksenteko- ja hallintomenettelyä sekä oikaisuvaatimusta ja kunnallisvalitusta koskevat siirtymäsäännökset",
+          "moment": "4",
+          "chapter": "17 luku",
+          "chapter_title": "Voimaantulo",
+          "text": "§ 147 Toimielimiä ja johtamista, asukkaiden osallistumisoikeuksia, luottamushenkilöitä, päätöksenteko- ja hallintomenettelyä sekä oikaisuvaatimusta ja kunnallisvalitusta koskevat siirtymäsäännökset: Edellä 19 §:n 2 momentissa tarkoitettua kunnan velvollisuutta ilmoittaa valtuustoryhmille maksetun tu...",
+          "node_id": "410/2015:fin@20230780:147:4"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6297587633132935,
+          "section_id": "114",
+          "section_num": 114,
+          "section_title": "Konsernitilinpäätös",
+          "moment": "2",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 114 Konsernitilinpäätös: Konsernitilinpäätös laaditaan konserniyhteisöjen taseiden ja tuloslaskelmien sekä niiden liitetietojen yhdistelmänä. Konsernitilinpäätökseen sisällytetään lisäksi konsernin rahoituslaskelma, jossa annetaan selvitys kuntakonsernin varojen hankinnasta ja niiden käytöstä tili...",
+          "node_id": "410/2015:fin@20230780:114:2"
+        }
+      ],
+      "latency_ms": 32.933700014837086
+    },
+    {
+      "id": "SOTA-D11",
+      "category": "D. Hankinnat",
+      "query": "Millä tavoin hankintalain kynnysarvot vaikuttavat kunnan sopimusvastuiden raportointiin?",
+      "expected_laws": [
+        "hankintalaki_1397_2016"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "law_name": "Laki julkisista hankinnoista ja käyttöoikeussopimuksista",
+          "score": 0.696387357711792,
+          "section_id": "26",
+          "section_num": 26,
+          "section_title": "EU-kynnysarvot",
+          "moment": "1",
+          "chapter": "4 luku",
+          "chapter_title": "Kynnysarvot ja hankinnan ennakoidun arvon laskeminen",
+          "text": "EU-kynnysarvot. EU-kynnysarvot, jotka perustuvat hankintadirektiiviin ja käyttöoikeussopimusdirektiiviin, ilman arvonlisäveroa laskettuna ovat: 1) 134 000 euroa valtion keskushallintoviranomaisten tavarahankinnoissa, palveluhankinnoissa ja suunnittelukilpailuissa; puolustuksen alalla toimivien hanki...",
+          "node_id": "1397/2016:fin@20240592:4l:26:1"
+        },
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "law_name": "Laki julkisista hankinnoista ja käyttöoikeussopimuksista",
+          "score": 0.6951481771469117,
+          "section_id": "124",
+          "section_num": 124,
+          "section_title": "Hankintamenettelyä koskeva kertomus",
+          "moment": "1",
+          "chapter": "14 luku",
+          "chapter_title": "Hankintaa koskevat päätökset ja hankintasopimus",
+          "text": "Hankintamenettelyä koskeva kertomus. EU-kynnysarvot ylittävästä hankintasopimuksesta sekä kansallisen kynnysarvon ylittävästä liitteen E palveluhankinnan hankintasopimuksesta, puitejärjestelystä, puitejärjestelyyn perustuvasta 43 §:n 3 momentissa tarkoitetusta hankinnasta tai dynaamisen hankintajärj...",
+          "node_id": "1397/2016:fin@20240592:14l:124:1"
+        },
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "law_name": "Laki julkisista hankinnoista ja käyttöoikeussopimuksista",
+          "score": 0.6800794076919556,
+          "section_id": "141",
+          "section_num": 141,
+          "section_title": "Kilpailu- ja kuluttajaviraston esitys markkinaoikeudelle",
+          "moment": "1",
+          "chapter": "15 luku",
+          "chapter_title": "Hankintojen valvonta",
+          "text": "Kilpailu- ja kuluttajaviraston esitys markkinaoikeudelle. Jos hankintayksikkö on tehnyt EU-kynnysarvot ylittävän hankinnan tai kansalliset kynnysarvot ylittävän liitteessä E tarkoitetun palveluhankinnan tai käyttöoikeussopimuksen suorahankintana ilman tässä laissa säädettyä perustetta ja jos asiassa...",
+          "node_id": "1397/2016:fin@20240592:15l:141:1"
+        },
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "law_name": "Laki julkisista hankinnoista ja käyttöoikeussopimuksista",
+          "score": 0.6785722446441651,
+          "section_id": "136",
+          "section_num": 136,
+          "section_title": "Hankintasopimuksen muuttaminen sopimuskauden aikana",
+          "moment": "1",
+          "chapter": "14 luku",
+          "chapter_title": "Hankintaa koskevat päätökset ja hankintasopimus",
+          "text": "Hankintasopimuksen muuttaminen sopimuskauden aikana. Hankintasopimusta tai puitejärjestelyä ei saa EU-kynnysarvot ylittävissä hankinnoissa tai kansalliset kynnysarvot ylittävissä liitteen E mukaisissa palveluhankinnoissa taikka käyttöoikeussopimuksissa olennaisesti muuttaa sopimuskauden aikana ilman...",
+          "node_id": "1397/2016:fin@20240592:14l:136:1"
+        },
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "law_name": "Laki julkisista hankinnoista ja käyttöoikeussopimuksista",
+          "score": 0.6751398515701295,
+          "section_id": "25",
+          "section_num": 25,
+          "section_title": "Kansalliset kynnysarvot",
+          "moment": "1",
+          "chapter": "4 luku",
+          "chapter_title": "Kynnysarvot ja hankinnan ennakoidun arvon laskeminen",
+          "text": "Kansalliset kynnysarvot. Kansalliset kynnysarvot ilman arvonlisäveroa laskettuna ovat: 1) 60 000 euroa tavarahankinnoissa, palveluhankinnoissa ja suunnittelukilpailuissa, jollei 3–4 kohdassa toisin säädetä; 2) 150 000 euroa rakennusurakoissa; 3) 400 000 euroa liitteen E 1–4 kohdassa tarkoitettuja so...",
+          "node_id": "1397/2016:fin@20240592:4l:25:1"
+        }
+      ],
+      "latency_ms": 120.81430002581328
+    },
+    {
+      "id": "SOTA-D12",
+      "category": "D. Hankinnat",
+      "query": "Miten puitejärjestely eroaa hankintasopimuksesta ja miten ero näkyy taloudellisissa sitoumuksissa?",
+      "expected_laws": [
+        "hankintalaki_1397_2016"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "law_name": "Laki julkisista hankinnoista ja käyttöoikeussopimuksista",
+          "score": 0.6835590791702271,
+          "section_id": "136",
+          "section_num": 136,
+          "section_title": "Hankintasopimuksen muuttaminen sopimuskauden aikana",
+          "moment": "2",
+          "chapter": "14 luku",
+          "chapter_title": "Hankintaa koskevat päätökset ja hankintasopimus",
+          "text": "Hankintasopimuksen muuttaminen sopimuskauden aikana. Sen estämättä, mitä 1 momentissa säädetään, hankintasopimukseen ja puitejärjestelyyn voidaan tehdä muutos ilman uutta hankintamenettelyä, jos: 1) se perustuu hankintamenettelyn aikana tiedossa olleisiin ja hankinta-asiakirjoissa mainittuihin sopim...",
+          "node_id": "1397/2016:fin@20240592:14l:136:2"
+        },
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "law_name": "Laki julkisista hankinnoista ja käyttöoikeussopimuksista",
+          "score": 0.6787559580802918,
+          "section_id": "42",
+          "section_num": 42,
+          "section_title": "Puitejärjestely",
+          "moment": "4",
+          "chapter": "5 luku",
+          "chapter_title": "Hankintamenettelyt",
+          "text": "Puitejärjestely. Puitejärjestelyyn perustuvat hankintasopimukset on tehtävä puitejärjestelyyn valittujen toimittajien ja sellaisten hankintayksiköiden kesken, jotka on selkeästi ilmaistu ja joiden yhteenlaskettu hankintojen enimmäismäärä taikka enimmäisarvo on ilmoitettu puitejärjestelyn kilpailutuk...",
+          "node_id": "1397/2016:fin@20240592:5l:42:4"
+        },
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "law_name": "Laki julkisista hankinnoista ja käyttöoikeussopimuksista",
+          "score": 0.670749683380127,
+          "section_id": "136",
+          "section_num": 136,
+          "section_title": "Hankintasopimuksen muuttaminen sopimuskauden aikana",
+          "moment": "1",
+          "chapter": "14 luku",
+          "chapter_title": "Hankintaa koskevat päätökset ja hankintasopimus",
+          "text": "Hankintasopimuksen muuttaminen sopimuskauden aikana. Hankintasopimusta tai puitejärjestelyä ei saa EU-kynnysarvot ylittävissä hankinnoissa tai kansalliset kynnysarvot ylittävissä liitteen E mukaisissa palveluhankinnoissa taikka käyttöoikeussopimuksissa olennaisesti muuttaa sopimuskauden aikana ilman...",
+          "node_id": "1397/2016:fin@20240592:14l:136:1"
+        },
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "law_name": "Laki julkisista hankinnoista ja käyttöoikeussopimuksista",
+          "score": 0.6628230404853821,
+          "section_id": "43",
+          "section_num": 43,
+          "section_title": "Puitejärjestelyyn perustuvat hankinnat",
+          "moment": "3",
+          "chapter": "5 luku",
+          "chapter_title": "Hankintamenettelyt",
+          "text": "Puitejärjestelyyn perustuvat hankinnat. Jos hankintayksikkö on tehnyt puitejärjestelyn usean toimittajan kanssa ja puitejärjestelyn kaikkia ehtoja ei ole vahvistettu, puitejärjestelyyn perustuvat hankinnat on tehtävä kilpailuttamalla puitejärjestelyyn valitut toimittajat noudattamalla puitejärjestel...",
+          "node_id": "1397/2016:fin@20240592:5l:43:3"
+        },
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "law_name": "Laki julkisista hankinnoista ja käyttöoikeussopimuksista",
+          "score": 0.6595276784896851,
+          "section_id": "43",
+          "section_num": 43,
+          "section_title": "Puitejärjestelyyn perustuvat hankinnat",
+          "moment": "1",
+          "chapter": "5 luku",
+          "chapter_title": "Hankintamenettelyt",
+          "text": "Puitejärjestelyyn perustuvat hankinnat. Jos hankintayksikkö on tehnyt puitejärjestelyn yhden toimittajan kanssa, puitejärjestelyyn perustuvat hankinnat on tehtävä puitejärjestelyssä vahvistettujen ehtojen mukaisesti. Hankintayksikkö voi pyytää toimittajaa tarvittaessa kirjallisesti täsmentämään tai ...",
+          "node_id": "1397/2016:fin@20240592:5l:43:1"
+        }
+      ],
+      "latency_ms": 34.03130010701716
+    },
+    {
+      "id": "SOTA-E13",
+      "category": "E. Tilintarkastus",
+      "query": "Missä tilanteissa tilintarkastaja voi antaa huomautuksen kunnan tilinpäätöksestä?",
+      "expected_laws": [
+        "tilintarkastuslaki_1141_2015",
+        "kuntalaki_410_2015"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.736978042125702,
+          "section_id": "125",
+          "section_num": 125,
+          "section_title": "Tilintarkastuskertomus ja sen käsittely",
+          "moment": "2",
+          "chapter": "14 luku",
+          "chapter_title": "Hallinnon ja talouden tarkastus",
+          "text": "§ 125 Tilintarkastuskertomus ja sen käsittely: Jos tilintarkastaja havaitsee, että kunnan hallintoa ja taloutta on hoidettu vastoin lakia tai valtuuston päätöksiä eikä virhe tai aiheutunut vahinko ole vähäinen, tilintarkastuskertomuksessa on tehtävä asiasta tilivelvolliseen kohdistuva muistutus. Mui...",
+          "node_id": "410/2015:fin@20230780:125:2"
+        },
+        {
+          "law_key": "tilintarkastuslaki_1141_2015",
+          "law_name": "Tilintarkastuslaki",
+          "score": 0.6984809231758118,
+          "section_id": "7",
+          "section_num": 7,
+          "section_title": "Tilintarkastuspöytäkirja",
+          "moment": "1",
+          "chapter": "3 luku",
+          "chapter_title": "Tilintarkastuksen ja kestävyysraportointivarmentamisen sisältö (21.12.2023/1250)",
+          "text": "Tilintarkastuspöytäkirja. Tilintarkastaja voi esittää hallitukselle, hallintoneuvostolle, toimitusjohtajalle tai muulle vastuuvelvolliselle huomautuksia myös seikoista, joita ei esitetä tilintarkastuskertomuksessa tai 6 §:n 2 momentissa tarkoitetussa tarkastusvaliokunnan lisäraportissa. Tällaiset hu...",
+          "node_id": "1141/2015:fin@20240985:3l:7:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6879127502441407,
+          "section_id": "123",
+          "section_num": 123,
+          "section_title": "Tilintarkastajan tehtävät",
+          "moment": "1",
+          "chapter": "14 luku",
+          "chapter_title": "Hallinnon ja talouden tarkastus",
+          "text": "§ 123 Tilintarkastajan tehtävät: Tilintarkastajan on toukokuun loppuun mennessä tarkastettava julkishallinnon hyvän tilintarkastustavan mukaisesti kunkin tilikauden hallinto, kirjanpito ja tilinpäätös. Tilintarkastajan on tarkastettava: 1) onko kunnan hallintoa hoidettu lain ja valtuuston päätösten ...",
+          "node_id": "410/2015:fin@20230780:123:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6869142532348633,
+          "section_id": "123",
+          "section_num": 123,
+          "section_title": "Tilintarkastajan tehtävät",
+          "moment": "3",
+          "chapter": "14 luku",
+          "chapter_title": "Hallinnon ja talouden tarkastus",
+          "text": "§ 123 Tilintarkastajan tehtävät: Havaitsemistaan olennaisista epäkohdista tilintarkastajan on ilmoitettava viipymättä kunnanhallitukselle annettavassa tilintarkastuspöytäkirjassa. Tilintarkastuspöytäkirja annetaan tiedoksi tarkastuslautakunnalle.",
+          "node_id": "410/2015:fin@20230780:123:3"
+        },
+        {
+          "law_key": "tilintarkastuslaki_1141_2015",
+          "law_name": "Tilintarkastuslaki",
+          "score": 0.6742410254478455,
+          "section_id": "1",
+          "section_num": 1,
+          "section_title": "Huomautus ja varoitus",
+          "moment": "1",
+          "chapter": "10 luku",
+          "chapter_title": "Seuraamukset",
+          "text": "Huomautus ja varoitus. Tilintarkastuslautakunnan tulee antaa tilintarkastajalle huomautus, jos tämä on huolimattomuudesta menetellyt tämän lain tai sen nojalla annettujen säännösten vastaisesti tai julkishallinnon ja -talouden tilintarkastuksesta annetun lain vastaisesti tai muussa lainsäädännössä o...",
+          "node_id": "1141/2015:fin@20240985:10l:1:1"
+        }
+      ],
+      "latency_ms": 98.63160003442317
+    },
+    {
+      "id": "SOTA-E14",
+      "category": "E. Tilintarkastus",
+      "query": "Miten tilintarkastuskertomuksen havainnot vaikuttavat vastuuvapauden myöntämiseen?",
+      "expected_laws": [
+        "kuntalaki_410_2015",
+        "tilintarkastuslaki_1141_2015"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6422013235092163,
+          "section_id": "125",
+          "section_num": 125,
+          "section_title": "Tilintarkastuskertomus ja sen käsittely",
+          "moment": "1",
+          "chapter": "14 luku",
+          "chapter_title": "Hallinnon ja talouden tarkastus",
+          "text": "§ 125 Tilintarkastuskertomus ja sen käsittely: Tilintarkastajan on annettava valtuustolle kultakin tilikaudelta kertomus, jossa esitetään tarkastuksen tulokset. Kertomuksessa on myös esitettävä, onko tilinpäätös hyväksyttävä ja voidaanko toimielimen jäsenelle ja asianomaisen toimielimen tehtäväaluee...",
+          "node_id": "410/2015:fin@20230780:125:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.62440993309021,
+          "section_id": "125",
+          "section_num": 125,
+          "section_title": "Tilintarkastuskertomus ja sen käsittely",
+          "moment": "3",
+          "chapter": "14 luku",
+          "chapter_title": "Hallinnon ja talouden tarkastus",
+          "text": "§ 125 Tilintarkastuskertomus ja sen käsittely: Tarkastuslautakunnan on hankittava tilintarkastuskertomuksessa tehdystä muistutuksesta asianomaisen selitys sekä kunnanhallituksen lausunto. Valtuusto päättää toimenpiteistä, joihin tarkastuslautakunnan valmistelu, tilintarkastuskertomus ja siinä tehty ...",
+          "node_id": "410/2015:fin@20230780:125:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5971164894104004,
+          "section_id": "122",
+          "section_num": 122,
+          "section_title": "Tilintarkastus",
+          "moment": "4",
+          "chapter": "14 luku",
+          "chapter_title": "Hallinnon ja talouden tarkastus",
+          "text": "§ 122 Tilintarkastus: Tilintarkastajalla on oltava edellytykset riippumattoman ja riittävän laajan tilintarkastuksen toimittamiseen. Jos edellytykset riippumattomaan tarkastukseen puuttuvat, tilintarkastajan on kieltäydyttävä vastaanottamasta tehtävää tai luovuttava siitä.",
+          "node_id": "410/2015:fin@20230780:122:4"
+        },
+        {
+          "law_key": "kirjanpitolaki_1336_1997",
+          "law_name": "Kirjanpitolaki",
+          "score": 0.545916736125946,
+          "section_id": "7a",
+          "section_num": 7,
+          "section_title": "Vastuu tilinpäätöksestä ja toimintakertomuksesta sekä kirjanpitoja ja aineistoja koskevasta luettelosta",
+          "moment": "1",
+          "chapter": "3 luku",
+          "chapter_title": "Tilinpäätös ja toimintakertomus (30.12.2004/1304)",
+          "text": "Vastuu tilinpäätöksestä ja toimintakertomuksesta sekä kirjanpitoja ja aineistoja koskevasta luettelosta. Hallituksen tai muun vastaavan toimielimen jäsenen sekä toimitusjohtajan tilinpäätöstä ja toimintakertomusta koskevasta vastuusta säädetään asianomaista oikeushenkilöä koskevassa laissa. Sama vas...",
+          "node_id": "1336/1997:fin@20251006:3l:7a:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5415755701065064,
+          "section_id": "125",
+          "section_num": 125,
+          "section_title": "Tilintarkastuskertomus ja sen käsittely",
+          "moment": "2",
+          "chapter": "14 luku",
+          "chapter_title": "Hallinnon ja talouden tarkastus",
+          "text": "§ 125 Tilintarkastuskertomus ja sen käsittely: Jos tilintarkastaja havaitsee, että kunnan hallintoa ja taloutta on hoidettu vastoin lakia tai valtuuston päätöksiä eikä virhe tai aiheutunut vahinko ole vähäinen, tilintarkastuskertomuksessa on tehtävä asiasta tilivelvolliseen kohdistuva muistutus. Mui...",
+          "node_id": "410/2015:fin@20230780:125:2"
+        }
+      ],
+      "latency_ms": 35.33210000023246
+    },
+    {
+      "id": "SOTA-F15",
+      "category": "F. Rahoitus",
+      "query": "Miten rahoituslaskelman tiedot tukevat arviota kunnan maksuvalmiudesta?",
+      "expected_laws": [
+        "kuntalaki_410_2015",
+        "kirjanpitoasetus_1339_1997"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6582906723022461,
+          "section_id": "12",
+          "section_num": 12,
+          "section_title": "Kuntatalousohjelma",
+          "moment": "3",
+          "chapter": "3 luku",
+          "chapter_title": "Valtion ja kunnan suhde",
+          "text": "§ 12 Kuntatalousohjelma: Kuntatalousohjelmassa arvioidaan rahoituksen riittävyyttä kuntien tehtävien hoitamiseen ( rahoitusperiaate ). Ohjelmassa arvioidaan kuntien toimintaympäristön, palveluiden kysynnän ja kuntien tehtävien muutokset sekä tehdään arvio kuntatalouden kehityksestä. Kuntataloutta ar...",
+          "node_id": "410/2015:fin@20230780:12:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6582720756530762,
+          "section_id": "118",
+          "section_num": 118,
+          "section_title": "Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely",
+          "moment": "3",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 118 Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely: Arviointimenettely voidaan lisäksi käynnistää, jos asukasta kohden laskettu kertynyt alijäämä on kunnan viimeisessä konsernitilinpäätöksessä vähintään 1 000 euroa ja sitä edeltäneenä vuonna vähintään 500 euroa, tai ...",
+          "node_id": "410/2015:fin@20230780:118:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6515967130661011,
+          "section_id": "118",
+          "section_num": 118,
+          "section_title": "Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely",
+          "moment": "4",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 118 Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely: Edellä 3 momentissa tarkoitettujen tunnuslukujen raja-arvot lasketaan vuosittain Valtiokonttorin ylläpitämiin konsernitilinpäätösten tietoihin ja kunnan vahvistamaan tuloveroprosenttiin perustuen. Mainitun momentin ...",
+          "node_id": "410/2015:fin@20230780:118:4"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6384438753128052,
+          "section_id": "110",
+          "section_num": 110,
+          "section_title": "Talousarvio ja -suunnitelma",
+          "moment": "3",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 110 Talousarvio ja -suunnitelma: Taloussuunnitelman on oltava tasapainossa tai ylijäämäinen. Taloussuunnitelman tasapainossa voidaan ottaa huomioon talousarvion laadintavuoden taseeseen kertyväksi arvioitu ylijäämä. Kunnan taseeseen kertynyt alijäämä tulee kattaa enintään neljän vuoden kuluessa ti...",
+          "node_id": "410/2015:fin@20230780:110:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6314181566238404,
+          "section_id": "115",
+          "section_num": 115,
+          "section_title": "Toimintakertomus",
+          "moment": "2",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 115 Toimintakertomus: Jos kunnan taseessa on kattamatonta alijäämää, toimintakertomuksessa on esitettävä selvitys talouden tasapainotuksen toteutumisesta tilikaudella sekä voimassa olevan taloussuunnitelman riittävyydestä talouden tasapainottamiseksi.",
+          "node_id": "410/2015:fin@20230780:115:2"
+        }
+      ],
+      "latency_ms": 83.47449998836964
+    },
+    {
+      "id": "SOTA-F16",
+      "category": "F. Rahoitus",
+      "query": "Millä edellytyksillä kunnan johdon vahingonkorvausvastuu voi syntyä taloudellisista päätöksistä?",
+      "expected_laws": [
+        "kuntalaki_410_2015"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6124243021011353,
+          "section_id": "42",
+          "section_num": 42,
+          "section_title": "Johtajasopimus",
+          "moment": "3",
+          "chapter": "7 luku",
+          "chapter_title": "Kunnan johtaminen ja kunnanhallitus",
+          "text": "§ 42 Johtajasopimus: Johtajasopimukseen voidaan ottaa määräyksiä menettelytavoista, joilla kunnanjohtajan viran hoitamiseen liittyvät erimielisyydet ratkaistaan 43 §:ssä tarkoitetun menettelyn sijasta. Johtajasopimuksessa voidaan tällöin sopia kunnanjohtajalle maksettavasta erokorvauksesta.",
+          "node_id": "410/2015:fin@20230780:42:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5970994710922242,
+          "section_id": "118",
+          "section_num": 118,
+          "section_title": "Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely",
+          "moment": "3",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 118 Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely: Arviointimenettely voidaan lisäksi käynnistää, jos asukasta kohden laskettu kertynyt alijäämä on kunnan viimeisessä konsernitilinpäätöksessä vähintään 1 000 euroa ja sitä edeltäneenä vuonna vähintään 500 euroa, tai ...",
+          "node_id": "410/2015:fin@20230780:118:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5805312275886536,
+          "section_id": "43",
+          "section_num": 43,
+          "section_title": "Kunnanjohtajan irtisanominen tai siirtäminen muihin tehtäviin",
+          "moment": "1",
+          "chapter": "7 luku",
+          "chapter_title": "Kunnan johtaminen ja kunnanhallitus",
+          "text": "§ 43 Kunnanjohtajan irtisanominen tai siirtäminen muihin tehtäviin: Valtuusto voi irtisanoa kunnanjohtajan tai siirtää hänet muihin tehtäviin, jos hän on menettänyt valtuuston luottamuksen.",
+          "node_id": "410/2015:fin@20230780:43:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5764742374420166,
+          "section_id": "43",
+          "section_num": 43,
+          "section_title": "Kunnanjohtajan irtisanominen tai siirtäminen muihin tehtäviin",
+          "moment": "3",
+          "chapter": "7 luku",
+          "chapter_title": "Kunnan johtaminen ja kunnanhallitus",
+          "text": "§ 43 Kunnanjohtajan irtisanominen tai siirtäminen muihin tehtäviin: Edellä 1 momentissa tarkoitetun päätöksen tekemiseen vaaditaan, että sitä kannattaa kaksi kolmasosaa kaikista valtuutetuista. Päätös voidaan panna heti täytäntöön. Samalla kunnanjohtaja voidaan vapauttaa tehtäviensä hoidosta.",
+          "node_id": "410/2015:fin@20230780:43:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.574521827697754,
+          "section_id": "110a",
+          "section_num": 110,
+          "section_title": "Alijäämän kattamista koskevan määräajan jatkaminen covid-19-epidemiasta johtuvien taloudellisten vaikeuksien vuoksi",
+          "moment": "1",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 110a Alijäämän kattamista koskevan määräajan jatkaminen covid-19-epidemiasta johtuvien taloudellisten vaikeuksien vuoksi: Jos kunta ei covid-19-epidemiasta johtuvien poikkeuksellisten ja tilapäisten kunnallistaloudellisten vaikeuksien vuoksi voi kattaa taseeseensa kertynyttä alijäämää 110 §:n 3 mo...",
+          "node_id": "410/2015:fin@20230780:110a:1"
+        }
+      ],
+      "latency_ms": 32.890899921767414
+    },
+    {
+      "id": "SOTA-G17",
+      "category": "G. Erityistilanteet",
+      "query": "Miten poikkeukselliset taloudelliset tapahtumat tulee käsitellä kunnan tilinpäätöksessä?",
+      "expected_laws": [
+        "kuntalaki_410_2015",
+        "kirjanpitolaki_1336_1997"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.654457974433899,
+          "section_id": "118",
+          "section_num": 118,
+          "section_title": "Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely",
+          "moment": "6",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 118 Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely: Valtuuston on käsiteltävä ryhmän toimenpide-ehdotukset ja saatettava niitä koskeva päätös valtiovarainministeriön tietoon mahdollisia jatkotoimenpiteitä varten. Talousarvio ja -suunnitelma on laadittava siten, että ...",
+          "node_id": "410/2015:fin@20230780:118:6"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6286840319633484,
+          "section_id": "109a",
+          "section_num": 109,
+          "section_title": "Poikkeuksellisissa hallinnollisissa vaikeuksissa olevaa kuntaa koskeva selvitysmenettely",
+          "moment": "1",
+          "chapter": "12 a luku",
+          "chapter_title": "Poikkeuksellisissa hallinnollisissa vaikeuksissa olevaa kuntaa koskeva selvitysmenettely",
+          "text": "§ 109a Poikkeuksellisissa hallinnollisissa vaikeuksissa olevaa kuntaa koskeva selvitysmenettely: Jos kunnan hallinto ja toiminta ovat poikkeuksellisen suurissa vaikeuksissa, joista kunta ei omin toimenpitein kykene selviytymään, valtiovarainministeriö voi kuntaa kuultuaan asettaa kunnan hallintoa se...",
+          "node_id": "410/2015:fin@20230780:109a:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6277884125709534,
+          "section_id": "113",
+          "section_num": 113,
+          "section_title": "Tilinpäätös",
+          "moment": "3",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 113 Tilinpäätös: Tilinpäätöksen tulee antaa oikea ja riittävä kuva kunnan tuloksesta, taloudellisesta asemasta, rahoituksesta sekä toiminnasta olennaisuusperiaatteen mukaisesti. Tätä varten tarpeelliset seikat on ilmoitettava liitetiedoissa.",
+          "node_id": "410/2015:fin@20230780:113:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6246394991874695,
+          "section_id": "109a",
+          "section_num": 109,
+          "section_title": "Poikkeuksellisissa hallinnollisissa vaikeuksissa olevaa kuntaa koskeva selvitysmenettely",
+          "moment": "3",
+          "chapter": "12 a luku",
+          "chapter_title": "Poikkeuksellisissa hallinnollisissa vaikeuksissa olevaa kuntaa koskeva selvitysmenettely",
+          "text": "§ 109a Poikkeuksellisissa hallinnollisissa vaikeuksissa olevaa kuntaa koskeva selvitysmenettely: Selvityshenkilö tai selvitysryhmä tekee ehdotuksen tarvittaviksi toimenpiteiksi kunnan hallinnon saattamiseksi tämän lain ja muiden lakien mukaiseksi. Saatuaan selvityshenkilön tai selvitysryhmän toimenp...",
+          "node_id": "410/2015:fin@20230780:109a:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.622465181350708,
+          "section_id": "118",
+          "section_num": 118,
+          "section_title": "Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely",
+          "moment": "7",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 118 Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely: Valtiovarainministeriö tekee ryhmän toimenpide-ehdotusten ja niitä koskevien valtuuston päätösten perusteella ratkaisun kuntarakennelaissa tarkoitetun erityisen selvityksen tarpeellisuudesta kuntajaon muuttamiseksi....",
+          "node_id": "410/2015:fin@20230780:118:7"
+        }
+      ],
+      "latency_ms": 41.58449999522418
+    },
+    {
+      "id": "SOTA-G18",
+      "category": "G. Erityistilanteet",
+      "query": "Voiko kunta poiketa tilinpäätöksen esittämistavasta ja millä oikeudellisilla perusteilla?",
+      "expected_laws": [
+        "kuntalaki_410_2015",
+        "kirjanpitolaki_1336_1997"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6888367915153504,
+          "section_id": "121",
+          "section_num": 121,
+          "section_title": "Tarkastuslautakunta",
+          "moment": "3",
+          "chapter": "14 luku",
+          "chapter_title": "Hallinnon ja talouden tarkastus",
+          "text": "§ 121 Tarkastuslautakunta: Kunnanhallitus voi poiketa tarkastuslautakunnan esityksestä lautakuntaa koskeviksi hallintosäännön määräyksiksi ja talousarvioksi kunnan hallintosäännön ja talousarvioesityksen yhteensovittamiseen liittyvästä perustellusta syystä.",
+          "node_id": "410/2015:fin@20230780:121:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6425225520133973,
+          "section_id": "113",
+          "section_num": 113,
+          "section_title": "Tilinpäätös",
+          "moment": "3",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 113 Tilinpäätös: Tilinpäätöksen tulee antaa oikea ja riittävä kuva kunnan tuloksesta, taloudellisesta asemasta, rahoituksesta sekä toiminnasta olennaisuusperiaatteen mukaisesti. Tätä varten tarpeelliset seikat on ilmoitettava liitetiedoissa.",
+          "node_id": "410/2015:fin@20230780:113:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.623882749080658,
+          "section_id": "125",
+          "section_num": 125,
+          "section_title": "Tilintarkastuskertomus ja sen käsittely",
+          "moment": "2",
+          "chapter": "14 luku",
+          "chapter_title": "Hallinnon ja talouden tarkastus",
+          "text": "§ 125 Tilintarkastuskertomus ja sen käsittely: Jos tilintarkastaja havaitsee, että kunnan hallintoa ja taloutta on hoidettu vastoin lakia tai valtuuston päätöksiä eikä virhe tai aiheutunut vahinko ole vähäinen, tilintarkastuskertomuksessa on tehtävä asiasta tilivelvolliseen kohdistuva muistutus. Mui...",
+          "node_id": "410/2015:fin@20230780:125:2"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6219768905639649,
+          "section_id": "120a",
+          "section_num": 120,
+          "section_title": "Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen",
+          "moment": "2",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 120a Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen: Kunnan on salassapitosäännösten estämättä toimitettava 112 §:ssä tarkoitetut tilinpäätös-, osavuosikatsaus- ja kustannustiedot sekä muualla laissa tai lain nojalla säännöllisesti toimitettavaksi edellytetyt ...",
+          "node_id": "410/2015:fin@20230780:120a:2"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.620782175064087,
+          "section_id": "135",
+          "section_num": 135,
+          "section_title": "Kunnallisvalitus",
+          "moment": "2",
+          "chapter": "16 luku",
+          "chapter_title": "Oikaisuvaatimus ja kunnallisvalitus",
+          "text": "§ 135 Kunnallisvalitus: Valituksen saa tehdä sillä perusteella, että: 1) päätös on syntynyt virheellisessä järjestyksessä; 2) päätöksen tehnyt viranomainen on ylittänyt toimivaltansa; tai 3) päätös on muuten lainvastainen.",
+          "node_id": "410/2015:fin@20230780:135:2"
+        }
+      ],
+      "latency_ms": 42.367099900729954
+    },
+    {
+      "id": "SOTA-G19",
+      "category": "G. Erityistilanteet",
+      "query": "Miten julkisuusperiaate vaikuttaa tilinpäätösasiakirjojen tietosisältöön ja salassapitoon?",
+      "expected_laws": [
+        "kuntalaki_410_2015"
+      ],
+      "found_expected": true,
+      "top1_correct": false,
+      "top_results": [
+        {
+          "law_key": "kirjanpitolaki_1336_1997",
+          "law_name": "Kirjanpitolaki",
+          "score": 0.5742287635803223,
+          "section_id": "8",
+          "section_num": 8,
+          "section_title": "Väliaikainen poikkeus tuloverokertomukseen sisältyvän tiedon julkistamisesta",
+          "moment": "1",
+          "chapter": "7 b luku",
+          "chapter_title": "Tuloverokertomus",
+          "text": "Väliaikainen poikkeus tuloverokertomukseen sisältyvän tiedon julkistamisesta. Tieto, jonka julkistamisesta säädetään tilinpäätösdirektiivin 48 c artiklan 2 tai 3 kohdassa, saadaan jättää väliaikaisesti julkistamatta, jos julkistaminen voisi aiheuttaa vakavaa taloudellista haittaa tuloverokertomuksen...",
+          "node_id": "1336/1997:fin@20251006:7b:8:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5548244905471802,
+          "section_id": "140",
+          "section_num": 140,
+          "section_title": "Päätöksen tiedoksianto kunnan jäsenelle",
+          "moment": "1",
+          "chapter": "16 luku",
+          "chapter_title": "Oikaisuvaatimus ja kunnallisvalitus",
+          "text": "§ 140 Päätöksen tiedoksianto kunnan jäsenelle: Valtuuston, kunnanhallituksen ja lautakunnan sekä kuntayhtymän 58 §:n 1 momentissa tarkoitetun toimielimen pöytäkirja siihen liitettyine oikaisuvaatimusohjeineen tai valitusosoituksineen pidetään tarkastamisen jälkeen nähtävänä yleisessä tietoverkossa, ...",
+          "node_id": "410/2015:fin@20230780:140:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.5543822836875916,
+          "section_id": "101",
+          "section_num": 101,
+          "section_title": "Kokouksen julkisuus",
+          "moment": "2",
+          "chapter": "12 luku",
+          "chapter_title": "Päätöksenteko- ja hallintomenettely",
+          "text": "§ 101 Kokouksen julkisuus: Valtuuston suljetussa kokouksessa esitetyt ja siinä käydystä keskustelusta laaditut asiakirjat ovat salassa pidettäviä, jos niin laissa säädetään.",
+          "node_id": "410/2015:fin@20230780:101:2"
+        },
+        {
+          "law_key": "kirjanpitolaki_1336_1997",
+          "law_name": "Kirjanpitolaki",
+          "score": 0.5535045862197876,
+          "section_id": "10",
+          "section_num": 10,
+          "section_title": "Tilinpäätöksen ja toimintakertomuksen julkistaminen",
+          "moment": "1",
+          "chapter": "3 luku",
+          "chapter_title": "Tilinpäätös ja toimintakertomus (30.12.2004/1304)",
+          "text": "Tilinpäätöksen ja toimintakertomuksen julkistaminen. Rekisteröitäväksi ilmoitetun tilinpäätöksen ja toimintakertomuksen julkistamismenettelystä säädetään erikseen. Jäljempänä 7 luvussa tarkoitetun yrityksen tilinpäätöksen ja toimintakertomuksen julkistamisesta säädetään mainitussa luvussa.",
+          "node_id": "1336/1997:fin@20251006:3l:10:1"
+        },
+        {
+          "law_key": "kirjanpitolaki_1336_1997",
+          "law_name": "Kirjanpitolaki",
+          "score": 0.546125590801239,
+          "section_id": "10",
+          "section_num": 10,
+          "section_title": "Tilinpäätöksen ja toimintakertomuksen julkistaminen",
+          "moment": "3",
+          "chapter": "3 luku",
+          "chapter_title": "Tilinpäätös ja toimintakertomus (30.12.2004/1304)",
+          "text": "Tilinpäätöksen ja toimintakertomuksen julkistaminen. Kirjanpitovelvollinen saa myös julkistaa tilinpäätöksestään tai toimintakertomuksestaan lyhennelmän edellyttäen, että: 1) lyhennelmässä mainitaan, ettei siinä ole kaikkia 1 §:n mukaisessa tilinpäätöksessä tai 1 a §:n mukaisessa toimintakertomukses...",
+          "node_id": "1336/1997:fin@20251006:3l:10:3"
+        }
+      ],
+      "latency_ms": 39.497399935498834
+    },
+    {
+      "id": "SOTA-G20",
+      "category": "G. Erityistilanteet",
+      "query": "Miten ristiriita Kuntalain ja muun erityislainsäädännön välillä ratkaistaan talousraportoinnissa?",
+      "expected_laws": [
+        "kuntalaki_410_2015"
+      ],
+      "found_expected": true,
+      "top1_correct": true,
+      "top_results": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.617413022518158,
+          "section_id": "120",
+          "section_num": 120,
+          "section_title": "Kunnallisen liikelaitoksen talous",
+          "moment": "1",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 120 Kunnallisen liikelaitoksen talous: Kunnallisen liikelaitoksen talouteen sovelletaan kunnan taloutta koskevia säännöksiä kuitenkin siten, että: 1) kunnan ja kuntayhtymän liikelaitoksen talousarvio ja -suunnitelma laaditaan kunnan ja kuntayhtymän talousarviosta ja -suunnitelmasta erillisenä osan...",
+          "node_id": "410/2015:fin@20230780:120:1"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6134187960624695,
+          "section_id": "120a",
+          "section_num": 120,
+          "section_title": "Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen",
+          "moment": "2",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 120a Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen: Kunnan on salassapitosäännösten estämättä toimitettava 112 §:ssä tarkoitetut tilinpäätös-, osavuosikatsaus- ja kustannustiedot sekä muualla laissa tai lain nojalla säännöllisesti toimitettavaksi edellytetyt ...",
+          "node_id": "410/2015:fin@20230780:120a:2"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6074875974655152,
+          "section_id": "120a",
+          "section_num": 120,
+          "section_title": "Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen",
+          "moment": "3",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 120a Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen: Valtiovarainministeriö vastaa 2 momentissa tarkoitettujen taloustietojen yhteentoimivuuden edellytyksenä olevan tarkemman tietosisällön ja teknisten kuvausten määrittelyä varten tarvittavan yhteistyön järjes...",
+          "node_id": "410/2015:fin@20230780:120a:3"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6052849674224854,
+          "section_id": "118",
+          "section_num": 118,
+          "section_title": "Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely",
+          "moment": "6",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 118 Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely: Valtuuston on käsiteltävä ryhmän toimenpide-ehdotukset ja saatettava niitä koskeva päätös valtiovarainministeriön tietoon mahdollisia jatkotoimenpiteitä varten. Talousarvio ja -suunnitelma on laadittava siten, että ...",
+          "node_id": "410/2015:fin@20230780:118:6"
+        },
+        {
+          "law_key": "kuntalaki_410_2015",
+          "law_name": "Kuntalaki",
+          "score": 0.6004389905929566,
+          "section_id": "119",
+          "section_num": 119,
+          "section_title": "Arviointimenettely kuntayhtymässä",
+          "moment": "1",
+          "chapter": "13 luku",
+          "chapter_title": "Kunnan talous",
+          "text": "§ 119 Arviointimenettely kuntayhtymässä: Jos kuntayhtymä ei ole kattanut kuntayhtymän taseeseen kertynyttä alijäämää 110 §:n 3 säädetyssä määräajassa, valtiovarainministeriö voi määrätä kuntayhtymää ja sen jäsenkuntia kuultuaan riippumattoman selvityshenkilön, jonka tehtävänä on laatia ehdotus kunta...",
+          "node_id": "410/2015:fin@20230780:119:1"
+        }
+      ],
+      "latency_ms": 42.79189999215305
+    }
+  ]
+}
