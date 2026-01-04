@@ -5,8 +5,9 @@
 # Finlex XML raakadata (94,000+ tiedostoa!)
 finlex_statute_consolidated/
 
-# ChromaDB vektori-indeksi (binääritiedostot)
+# ChromaDB vektori-indeksit (binääritiedostot)
 analysis_layer/embeddings/chroma_db/
+laws/*/analysis_layer/embeddings/chroma_db/
 
 # ===========================================
 # Python

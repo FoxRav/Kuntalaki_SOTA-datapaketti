@@ -1,0 +1,36 @@
+{
+  "description": "Cross-law reference keywords for retrieval boosting",
+  "references": {
+    "kuntalaki_kirjanpitolaki": {
+      "keywords": ["tilinpäätös", "toimintakertomus", "tase", "tuloslaskelma", "liitetiedot", "poistot", "arvostus"],
+      "from_law": "kuntalaki_410_2015",
+      "to_law": "kirjanpitolaki_1336_1997",
+      "boost_weight": 0.1
+    },
+    "kuntalaki_tilintarkastuslaki": {
+      "keywords": ["tilintarkastaja", "tilintarkastuskertomus", "huomautus", "vastuuvapaus", "tarkastus"],
+      "from_law": "kuntalaki_410_2015",
+      "to_law": "tilintarkastuslaki_1141_2015",
+      "boost_weight": 0.1
+    },
+    "kuntalaki_hankintalaki": {
+      "keywords": ["hankinta", "kilpailutus", "kynnysarvo", "tarjous", "sopimuskausi", "investointi"],
+      "from_law": "kuntalaki_410_2015",
+      "to_law": "hankintalaki_1397_2016",
+      "boost_weight": 0.1
+    },
+    "kuntalaki_osakeyhtiolaki": {
+      "keywords": ["konserniyhtiö", "osakeyhtiö", "yhtiökokous", "hallitus", "toimitusjohtaja", "tytäryhtiö"],
+      "from_law": "kuntalaki_410_2015",
+      "to_law": "osakeyhtiolaki_624_2006",
+      "boost_weight": 0.05
+    }
+  },
+  "router_keywords": {
+    "kirjanpitolaki_1336_1997": ["tase", "liitetiedot", "tuloslaskelma", "poistot", "arvostus", "kirjanpito", "tilivuosi", "tilikausi"],
+    "tilintarkastuslaki_1141_2015": ["tilintarkastaja", "tilintarkastuskertomus", "huomautus", "vastuuvapaus", "tarkastuskertomus"],
+    "hankintalaki_1397_2016": ["hankinta", "kilpailutus", "kynnysarvo", "tarjous", "sopimuskausi", "julkinen hankinta"],
+    "osakeyhtiolaki_624_2006": ["konserniyhtiö", "osakeyhtiö", "yhtiökokous", "hallitus", "toimitusjohtaja", "osakepääoma"]
+  }
+}
+

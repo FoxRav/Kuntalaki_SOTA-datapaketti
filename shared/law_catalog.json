@@ -1,0 +1,77 @@
+{
+  "laws": [
+    {
+      "law_key": "kuntalaki_410_2015",
+      "finlex_number_year": "410/2015",
+      "finlex_title_fi": "Kuntalaki",
+      "finlex_path": "/fi/laki/ajantasa/2015/20150410",
+      "aliases": ["KunL", "KuntaL"],
+      "priority": 1,
+      "scope": "Core (kunnat, konserni, tilinpäätös, tarkastus)",
+      "xml_base_path": "finlex_statute_consolidated/akn/fi/act/statute-consolidated/2015/410",
+      "status": "indexed"
+    },
+    {
+      "law_key": "kirjanpitolaki_1336_1997",
+      "finlex_number_year": "1336/1997",
+      "finlex_title_fi": "Kirjanpitolaki",
+      "finlex_path": "/fi/laki/ajantasa/1997/19971336",
+      "aliases": ["KPL", "KirjanpitoL"],
+      "priority": 2,
+      "scope": "Tilinpäätös- ja liitetietoperusta",
+      "xml_base_path": "finlex_statute_consolidated/akn/fi/act/statute-consolidated/1997/1336",
+      "status": "pending"
+    },
+    {
+      "law_key": "kirjanpitoasetus_1339_1997",
+      "finlex_number_year": "1339/1997",
+      "finlex_title_fi": "Kirjanpitoasetus",
+      "finlex_path": "/fi/laki/ajantasa/1997/19971339",
+      "aliases": ["KPA"],
+      "priority": 3,
+      "scope": "KPL:n täydentävä (liitetiedot ym.)",
+      "xml_base_path": "finlex_statute_consolidated/akn/fi/act/statute-consolidated/1997/1339",
+      "status": "pending"
+    },
+    {
+      "law_key": "tilintarkastuslaki_1141_2015",
+      "finlex_number_year": "1141/2015",
+      "finlex_title_fi": "Tilintarkastuslaki",
+      "finlex_path": "/fi/laki/ajantasa/2015/20151141",
+      "aliases": ["TilintarkL", "TTL"],
+      "priority": 4,
+      "scope": "Tilintarkastuskertomus, huomautukset, velvoitteet",
+      "xml_base_path": "finlex_statute_consolidated/akn/fi/act/statute-consolidated/2015/1141",
+      "status": "pending"
+    },
+    {
+      "law_key": "hankintalaki_1397_2016",
+      "finlex_number_year": "1397/2016",
+      "finlex_title_fi": "Laki julkisista hankinnoista ja käyttöoikeussopimuksista",
+      "finlex_path": "/fi/laki/ajantasa/2016/20161397",
+      "aliases": ["HankintaL", "JulkHankL"],
+      "priority": 5,
+      "scope": "Investointien ja hankintojen menettelyt (talousriskit)",
+      "xml_base_path": "finlex_statute_consolidated/akn/fi/act/statute-consolidated/2016/1397",
+      "status": "pending"
+    },
+    {
+      "law_key": "osakeyhtiolaki_624_2006",
+      "finlex_number_year": "624/2006",
+      "finlex_title_fi": "Osakeyhtiölaki",
+      "finlex_path": "/fi/laki/ajantasa/2006/20060624",
+      "aliases": ["OYL", "OsakeyhtiöL"],
+      "priority": 6,
+      "scope": "Rajattu: kuntakonsernin Oy:t (hallinto, vastuut)",
+      "xml_base_path": "finlex_statute_consolidated/akn/fi/act/statute-consolidated/2006/624",
+      "status": "pending"
+    }
+  ],
+  "cross_refs": {
+    "kuntalaki_kirjanpitolaki": ["tilinpäätös", "toimintakertomus", "tase", "liitetiedot"],
+    "kuntalaki_tilintarkastuslaki": ["tilintarkastuskertomus", "huomautus", "vastuuvapaus"],
+    "kuntalaki_hankintalaki": ["investoinnit", "kilpailutus", "sopimuskausi"],
+    "kuntalaki_osakeyhtiolaki": ["tytäryhtiö", "konserniyhtiö", "hallitus", "toimitusjohtaja"]
+  }
+}
+
