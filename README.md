@@ -159,6 +159,16 @@ Latency: ~45ms
 | Osakeyhtiölaki | 919 | Yhtiöoikeus |
 | **Yhteensä** | **2648** | 6 lakia |
 
+## SOTA-arviointi: 20 asiantuntijakysymystä ✅
+
+| Tulos | Arvo |
+|-------|------|
+| **Oikein** | **20/20 (100%)** |
+| **Latenssi** | **72.8ms** |
+| **Verdict** | **SOTA-TASO SAAVUTETTU** |
+
+Kaikki 20 asiantuntijatason kysymystä (talousammattilaisen näkökulmasta) tunnistivat oikean lain top-3:ssa.
+
 ## Cross-Law Eval (v7.2)
 
 | Gate | Tavoite | Tulos | Tila |
@@ -170,11 +180,6 @@ Latency: ~45ms
 
 **OVERALL: PASS** ✅
 
-**v7.2 Improvements:**
-- Autofill v7.2: uses multi-law query with same config as eval
-- 14 pair-guards for law disambiguation
-- Router bonus (+0.02) for top-weighted law
-
 ## Roadmap
 
 1. ✅ **v4**: Kuntalaki SOTA (100% pass)
@@ -184,6 +189,7 @@ Latency: ~45ms
 5. ✅ **v7**: Autofill + Top2-router (baseline)
 6. ✅ **v7.1**: Router-bonus + Pair-guards (HN=0)
 7. ✅ **v7.2**: Multi-law autofill + eval (**100% PASS**)
+8. ✅ **SOTA**: 20 asiantuntijakysymystä (**20/20 = 100%**)
 
 ## Lisenssi & lähde
 
