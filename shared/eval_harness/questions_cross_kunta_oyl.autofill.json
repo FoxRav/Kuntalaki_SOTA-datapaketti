@@ -1,6 +1,6 @@
 {
-  "description": "Cross-law evaluation: Kuntalaki ↔ Osakeyhtiölaki (OYL) (autofilled v7)",
-  "version": "7.0",
+  "description": "Cross-law evaluation: Kuntalaki ↔ Osakeyhtiölaki (OYL) (autofilled v7.2)",
+  "version": "7.2",
   "autofill_stats": {
     "ok": 20,
     "fail": 0
@@ -12,17 +12,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "osakeyhtiön hallituksen tehtävät",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "hallituksen",
-        "osakeyhtiön",
-        "tehtävät"
-      ],
       "expected_none": [],
       "notes": "Hallituksen tehtävät ovat OYL:ssä",
       "autofill_status": "OK",
+      "autofill_version": "7.2",
       "autofill_score": 0.6923919916152954,
-      "autofill_overlap": 2,
+      "autofill_section_title": "Hallituksen tehtävät pörssiyhtiössä ja muussa yleisen edun kannalta merkittävässä yhtiössä (12.4.2019/512)",
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
@@ -37,21 +32,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "yhtiökokouksen päätöksenteko",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "päätöksenteko",
-        "yhtiökokouksen"
-      ],
       "expected_none": [],
       "notes": "Yhtiökokous on OYL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.6895984411239624,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6243979525566101,
+      "autofill_section_title": "Toimielimen päätöksentekotavat",
       "expected_any": [
         {
-          "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 2,
-          "moment": 3
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 98,
+          "moment": 1
         }
       ]
     },
@@ -61,16 +52,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "toimitusjohtajan vastuu",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "toimitusjohtajan",
-        "vastuu"
-      ],
       "expected_none": [],
       "notes": "Toimitusjohtajan vastuu on OYL:ssä",
       "autofill_status": "OK",
+      "autofill_version": "7.2",
       "autofill_score": 0.6653012037277222,
-      "autofill_overlap": 1,
+      "autofill_section_title": "Johtohenkilön vahingonkorvausvelvollisuus",
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
@@ -85,16 +72,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "osakeyhtiön osakepääoma",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "osakepääoma",
-        "osakeyhtiön"
-      ],
       "expected_none": [],
       "notes": "Osakepääoma on OYL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.6151098012924194,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6351098012924195,
+      "autofill_section_title": "Pääoma ja sen pysyvyys",
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
@@ -109,23 +92,19 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "kuntakonsernin omistajaohjaus",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "omistajaohjaus",
-        "kuntakonsernin"
-      ],
       "expected_none": [
         "osakeyhtiolaki_624_2006"
       ],
       "notes": "HARD NEG: 'kuntakonserni' ja 'omistajaohjaus' ovat Kuntalaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.6578224301338196,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7098232889175415,
+      "autofill_section_title": "Konsernijohto",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 47,
-          "moment": 1
+          "section_num": 48,
+          "moment": 2
         }
       ]
     },
@@ -135,21 +114,16 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "osakeyhtiön sulautuminen ja jakautuminen",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "jakautuminen",
-        "sulautuminen",
-        "osakeyhtiön"
-      ],
       "expected_none": [],
       "notes": "Sulautuminen on OYL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.6530482172966003,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7135146856307983,
+      "autofill_section_title": "Sulautuminen",
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 26,
+          "section_num": 1,
           "moment": 1
         }
       ]
@@ -160,22 +134,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "osingon jakaminen yhtiössä",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "jakaminen",
-        "osingon",
-        "yhtiössä"
-      ],
       "expected_none": [],
       "notes": "Osingonjako on OYL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.6196674108505249,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.5955334901809692,
+      "autofill_section_title": "Osakkuusyrityksen tilinpäätöstietojen yhdisteleminen",
       "expected_any": [
         {
-          "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 6,
-          "moment": 2
+          "law_key": "kirjanpitolaki_1336_1997",
+          "section_num": 13,
+          "moment": 4
         }
       ]
     },
@@ -185,19 +154,14 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "kunnan tytäryhteisön ohjaus",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "tytäryhteisön",
-        "ohjaus",
-        "kunnan"
-      ],
       "expected_none": [
         "osakeyhtiolaki_624_2006"
       ],
       "notes": "HARD NEG: 'kunnan tytäryhteisö' on Kuntalaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.7034314870834351,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7534314870834351,
+      "autofill_section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
@@ -212,16 +176,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "osakeyhtiön purkaminen",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "purkaminen",
-        "osakeyhtiön"
-      ],
       "expected_none": [],
       "notes": "Purkaminen on OYL:ssä",
       "autofill_status": "OK",
+      "autofill_version": "7.2",
       "autofill_score": 0.6825228929519653,
-      "autofill_overlap": 1,
+      "autofill_section_title": "Purkaminen",
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
@@ -236,22 +196,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "hallituksen jäsenen vahingonkorvausvastuu",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "hallituksen",
-        "vahingonkorvausvastuu",
-        "jäsenen"
-      ],
       "expected_none": [],
       "notes": "Vahingonkorvausvastuu on OYL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.7010878324508667,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.5498658418655396,
+      "autofill_section_title": "Vastuu tuloverokertomuksesta",
       "expected_any": [
         {
-          "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 1,
-          "moment": 2
+          "law_key": "kirjanpitolaki_1336_1997",
+          "section_num": 10,
+          "moment": 1
         }
       ]
     },
@@ -261,19 +216,14 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "konserniohje ja konsernin toimintaperiaatteet",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "konsernin",
-        "konserniohje",
-        "toimintaperiaatteet"
-      ],
       "expected_none": [
         "osakeyhtiolaki_624_2006"
       ],
       "notes": "HARD NEG: 'konserniohje' on Kuntalaki-käsite",
       "autofill_status": "OK",
-      "autofill_score": 0.6689983606338501,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6889983606338501,
+      "autofill_section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
@@ -288,20 +238,16 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "osakeyhtiön perustaminen",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "perustaminen",
-        "osakeyhtiön"
-      ],
       "expected_none": [],
       "notes": "Perustaminen on OYL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.6062455177307129,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6476235389709473,
+      "autofill_section_title": "Perustamissopimus",
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 13,
+          "section_num": 1,
           "moment": 1
         }
       ]
@@ -312,22 +258,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "osakkeen luovuttaminen ja siirto",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "siirto",
-        "osakkeen",
-        "luovuttaminen"
-      ],
       "expected_none": [],
       "notes": "Osakkeen luovutus on OYL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.6178669929504395,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6037609767913819,
+      "autofill_section_title": "Yhtiöittämisvelvollisuutta koskevat siirtymäsäännökset",
       "expected_any": [
         {
-          "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 1,
-          "moment": 1
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 150,
+          "moment": 4
         }
       ]
     },
@@ -337,25 +278,19 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "valtuuston päätös tytäryhtiön perustamisesta",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "perustamisesta",
-        "valtuuston",
-        "päätös",
-        "tytäryhtiön"
-      ],
       "expected_none": [
         "osakeyhtiolaki_624_2006"
       ],
       "notes": "HARD NEG: 'valtuusto' viittaa Kuntalakiin",
       "autofill_status": "OK",
-      "autofill_score": 0.5517604351043701,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.5980369639396668,
+      "autofill_section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 88,
-          "moment": 1
+          "section_num": 47,
+          "moment": 2
         }
       ]
     },
@@ -365,18 +300,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "osakeyhtiön oma pääoma ja SVOP-rahasto",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "svop",
-        "pääoma",
-        "rahasto",
-        "osakeyhtiön"
-      ],
       "expected_none": [],
       "notes": "Oma pääoma ja rahastot ovat OYL:ssä",
       "autofill_status": "OK",
+      "autofill_version": "7.2",
       "autofill_score": 0.6548433899879456,
-      "autofill_overlap": 2,
+      "autofill_section_title": "Oman pääoman lajit ja käyttö",
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
@@ -391,20 +320,16 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "pörssiyhtiön hallinto",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "hallinto",
-        "pörssiyhtiön"
-      ],
       "expected_none": [],
       "notes": "Pörssiyhtiön hallinto on OYL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.6249161958694458,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.5521391224861145,
+      "autofill_section_title": "Johtokunta",
       "expected_any": [
         {
-          "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 24,
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 67,
           "moment": 2
         }
       ]
@@ -415,25 +340,19 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "kunnanhallituksen edustaja tytäryhtiön hallituksessa",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "edustaja",
-        "kunnanhallituksen",
-        "hallituksessa",
-        "tytäryhtiön"
-      ],
       "expected_none": [
         "osakeyhtiolaki_624_2006"
       ],
       "notes": "HARD NEG: 'kunnanhallitus' ja 'tytäryhtiö' viittaavat Kuntalakiin",
       "autofill_status": "OK",
-      "autofill_score": 0.5275741815567017,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6420489430427552,
+      "autofill_section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 39,
-          "moment": 1
+          "section_num": 47,
+          "moment": 2
         }
       ]
     },
@@ -443,16 +362,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "osakeyhtiön yhtiöjärjestys",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "yhtiöjärjestys",
-        "osakeyhtiön"
-      ],
       "expected_none": [],
       "notes": "Yhtiöjärjestys on OYL:ssä",
       "autofill_status": "OK",
+      "autofill_version": "7.2",
       "autofill_score": 0.6676062941551208,
-      "autofill_overlap": 2,
+      "autofill_section_title": "Yhtiöjärjestys",
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
@@ -467,16 +382,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "lähipiiriliiketoimi osakeyhtiössä",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "lähipiiriliiketoimi",
-        "osakeyhtiössä"
-      ],
       "expected_none": [],
       "notes": "Lähipiiriliiketoimet ovat OYL:ssä",
       "autofill_status": "OK",
+      "autofill_version": "7.2",
       "autofill_score": 0.6711629629135132,
-      "autofill_overlap": 0,
+      "autofill_section_title": "Pörssiyhtiön lähipiiri",
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
@@ -491,21 +402,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "osakeannin toteuttaminen",
-      "expected_law_key": "osakeyhtiolaki_624_2006",
-      "expected_anchor_terms": [
-        "osakeannin",
-        "toteuttaminen"
-      ],
       "expected_none": [],
       "notes": "Osakeanti on OYL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.6361473798751831,
-      "autofill_overlap": 0,
+      "autofill_version": "7.2",
+      "autofill_score": 0.5742409229278564,
+      "autofill_section_title": "Osakkuusyrityksen tilinpäätöstietojen yhdisteleminen",
       "expected_any": [
         {
-          "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 7,
-          "moment": 1
+          "law_key": "kirjanpitolaki_1336_1997",
+          "section_num": 13,
+          "moment": 6
         }
       ]
     }

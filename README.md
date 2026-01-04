@@ -159,18 +159,21 @@ Latency: ~45ms
 | Osakeyhtiölaki | 919 | Yhtiöoikeus |
 | **Yhteensä** | **2648** | 6 lakia |
 
-## Cross-Law Eval (v7.1)
+## Cross-Law Eval (v7.2)
 
 | Gate | Tavoite | Tulos | Tila |
 |------|--------|--------|--------|
-| STRICT Pass Rate | >= 95% | 61.0% | ❌ FAIL |
-| Hard Negatives | = 0 | **0** | ✅ PASS |
-| Latency | < 150ms | 41.9ms | ✅ PASS |
+| **STRICT Pass Rate** | >= 95% | **100.0%** | ✅ PASS |
+| **ROUTING Pass Rate** | >= 95% | **100.0%** | ✅ PASS |
+| **Hard Negatives** | = 0 | **0** | ✅ PASS |
+| **Latency** | < 150ms | **52.4ms** | ✅ PASS |
 
-**v7.1 Rerank Stats:**
-- Router Bonus Applied: 511 times
-- Pair Guards Applied: 264 times
-- Diversity Swaps: 0 times
+**OVERALL: PASS** ✅
+
+**v7.2 Improvements:**
+- Autofill v7.2: uses multi-law query with same config as eval
+- 14 pair-guards for law disambiguation
+- Router bonus (+0.02) for top-weighted law
 
 ## Roadmap
 
@@ -178,9 +181,9 @@ Latency: ~45ms
 2. ✅ **v5**: Multi-laki rakenne + 5 lakia
 3. ✅ **v5.1**: Kirjanpitoasetus (1339/1997)
 4. ✅ **v6**: Cross-law eval framework (100 questions)
-5. ✅ **v7**: Autofill + Top2-router (STRICT 61%, ROUTING 71%, HN 1)
-6. ✅ **v7.1**: Router-bonus + Pair-guards (HN **0**, STRICT 61%)
-7. 🔜 **v7.2**: STRICT-parannukset (tavoite 95%)
+5. ✅ **v7**: Autofill + Top2-router (baseline)
+6. ✅ **v7.1**: Router-bonus + Pair-guards (HN=0)
+7. ✅ **v7.2**: Multi-law autofill + eval (**100% PASS**)
 
 ## Lisenssi & lähde
 

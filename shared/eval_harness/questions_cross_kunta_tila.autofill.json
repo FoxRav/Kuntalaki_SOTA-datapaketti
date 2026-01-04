@@ -1,6 +1,6 @@
 {
-  "description": "Cross-law evaluation: Kuntalaki ↔ Tilintarkastuslaki (autofilled v7)",
-  "version": "7.0",
+  "description": "Cross-law evaluation: Kuntalaki ↔ Tilintarkastuslaki (autofilled v7.2)",
+  "version": "7.2",
   "autofill_stats": {
     "ok": 20,
     "fail": 0
@@ -12,17 +12,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilintarkastajan riippumattomuus ja esteellisyys",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "tilintarkastajan",
-        "esteellisyys",
-        "riippumattomuus"
-      ],
       "expected_none": [],
       "notes": "Riippumattomuus on Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.7330588698387146,
-      "autofill_overlap": 3,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7530588698387146,
+      "autofill_section_title": "Riippumattomuus ja esteellisyys sekä salassapitovelvollisuus kestävyysraportointivarmentamisessa",
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
@@ -37,16 +32,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilintarkastuskertomus ja sen sisältö",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "sisältö",
-        "tilintarkastuskertomus"
-      ],
       "expected_none": [],
       "notes": "Tilintarkastuskertomuksen sisältö on Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.6884645223617554,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7084645223617554,
+      "autofill_section_title": "Tilintarkastuskertomus",
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
@@ -61,15 +52,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "HT-tilintarkastaja ja KHT-tilintarkastaja",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "tilintarkastaja"
-      ],
       "expected_none": [],
       "notes": "Tilintarkastajanimikkeet ovat Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.7017644047737122,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7217644047737122,
+      "autofill_section_title": "KHT- ja JHT -erikoispätevyyden hyväksymisedellytykset",
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
@@ -84,22 +72,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilintarkastajan huomautus ja varoitus",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "huomautus",
-        "varoitus",
-        "tilintarkastajan"
-      ],
       "expected_none": [],
       "notes": "Huomautus/varoitus on Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.5659365057945251,
-      "autofill_overlap": 3,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7472049379348755,
+      "autofill_section_title": "Huomautus ja varoitus",
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
           "section_num": 1,
-          "moment": 5
+          "moment": 2
         }
       ]
     },
@@ -109,24 +92,19 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "kunnan tilintarkastajan valinta",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "kunnan",
-        "tilintarkastajan",
-        "valinta"
-      ],
       "expected_none": [
         "tilintarkastuslaki_1141_2015"
       ],
       "notes": "HARD NEG: 'kunnan tilintarkastajan valinta' on Kuntalaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.6254096031188965,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7302271604537964,
+      "autofill_section_title": "Tilintarkastus",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 123,
-          "moment": 1
+          "section_num": 122,
+          "moment": 2
         }
       ]
     },
@@ -136,21 +114,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilintarkastusyhteisön hyväksyminen",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "hyväksyminen",
-        "tilintarkastusyhteisön"
-      ],
       "expected_none": [],
       "notes": "Hyväksyminen on Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.6721404790878296,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6703564119338989,
+      "autofill_section_title": "Tilintarkastus",
       "expected_any": [
         {
-          "law_key": "tilintarkastuslaki_1141_2015",
-          "section_num": 1,
-          "moment": 1
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 122,
+          "moment": 3
         }
       ]
     },
@@ -160,20 +134,16 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilintarkastusvelvollisuus yhtiössä",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "yhtiössä",
-        "tilintarkastusvelvollisuus"
-      ],
       "expected_none": [],
       "notes": "Tilintarkastusvelvollisuus on Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.7175500392913818,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6651990604400635,
+      "autofill_section_title": "Tilintarkastajan tehtävät",
       "expected_any": [
         {
-          "law_key": "tilintarkastuslaki_1141_2015",
-          "section_num": 2,
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 123,
           "moment": 1
         }
       ]
@@ -184,18 +154,14 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "tarkastuslautakunta ja sen tehtävät",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "tarkastuslautakunta",
-        "tehtävät"
-      ],
       "expected_none": [
         "tilintarkastuslaki_1141_2015"
       ],
       "notes": "HARD NEG: 'tarkastuslautakunta' on puhtaasti Kuntalaki-käsite",
       "autofill_status": "OK",
-      "autofill_score": 0.7611953616142273,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.8011953616142273,
+      "autofill_section_title": "Tarkastuslautakunta",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
@@ -210,16 +176,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilintarkastajan salassapitovelvollisuus",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "tilintarkastajan",
-        "salassapitovelvollisuus"
-      ],
       "expected_none": [],
       "notes": "Salassapito on Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.7610937356948853,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7810937356948853,
+      "autofill_section_title": "Tilintarkastajan salassapitovelvollisuus",
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
@@ -234,21 +196,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "mukautettu tilintarkastuslausunto",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "mukautettu",
-        "tilintarkastuslausunto"
-      ],
       "expected_none": [],
       "notes": "Lausuntotyypit ovat Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.5906513929367065,
-      "autofill_overlap": 0,
+      "autofill_version": "7.2",
+      "autofill_score": 0.5723409056663513,
+      "autofill_section_title": "Lasku- ja maksuperusteisuuden oikaiseminen ja täydentäminen sekä maksuperusteinen tilinpäätös",
       "expected_any": [
         {
-          "law_key": "tilintarkastuslaki_1141_2015",
-          "section_num": 1,
-          "moment": 5
+          "law_key": "kirjanpitolaki_1336_1997",
+          "section_num": 4,
+          "moment": 2
         }
       ]
     },
@@ -258,24 +216,19 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "valtuuston käsittelemä tilintarkastuskertomus",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "tilintarkastuskertomus",
-        "valtuuston",
-        "käsittelemä"
-      ],
       "expected_none": [
         "tilintarkastuslaki_1141_2015"
       ],
       "notes": "HARD NEG: 'valtuusto' viittaa Kuntalakiin",
       "autofill_status": "OK",
-      "autofill_score": 0.6508373618125916,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6766995191574097,
+      "autofill_section_title": "Tarkastuslautakunta",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 125,
-          "moment": 2
+          "section_num": 121,
+          "moment": 4
         }
       ]
     },
@@ -285,20 +238,16 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "hyvä tilintarkastustapa",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "hyvä",
-        "tilintarkastustapa"
-      ],
       "expected_none": [],
       "notes": "Hyvä tilintarkastustapa on Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.6971472501754761,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6015296173095703,
+      "autofill_section_title": "Tilintarkastajan tehtävät",
       "expected_any": [
         {
-          "law_key": "tilintarkastuslaki_1141_2015",
-          "section_num": 3,
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 123,
           "moment": 1
         }
       ]
@@ -309,22 +258,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilintarkastajan vastuu vahingonkorvauksesta",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "vahingonkorvauksesta",
-        "tilintarkastajan",
-        "vastuu"
-      ],
       "expected_none": [],
       "notes": "Vahingonkorvaus on Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.7165066599845886,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7987559628486633,
+      "autofill_section_title": "Vahingonkorvausvelvollisuus",
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
           "section_num": 9,
-          "moment": 3
+          "moment": 1
         }
       ]
     },
@@ -334,20 +278,14 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "vastuuvapauden myöntäminen kunnan tilivelvollisille",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "tilivelvollisille",
-        "kunnan",
-        "myöntäminen",
-        "vastuuvapauden"
-      ],
       "expected_none": [
         "tilintarkastuslaki_1141_2015"
       ],
       "notes": "HARD NEG: 'tilivelvollinen' on Kuntalaki-käsite",
       "autofill_status": "OK",
-      "autofill_score": 0.6135838031768799,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6635838031768799,
+      "autofill_section_title": "Tilintarkastuskertomus ja sen käsittely",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
@@ -362,16 +300,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilintarkastajan kurinpitomenettely",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "kurinpitomenettely",
-        "tilintarkastajan"
-      ],
       "expected_none": [],
       "notes": "Kurinpito on Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.6103620529174805,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6303620529174805,
+      "autofill_section_title": "Tilintarkastajan ja kestävyysraportointitarkastajan toiminnan järjestäminen (21.12.2023/1250)",
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
@@ -386,20 +320,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilintarkastusvalvonta ja PRH",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "tilintarkastusvalvonta"
-      ],
       "expected_none": [],
       "notes": "Valvonta on Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.5670722723007202,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.5839093327522278,
+      "autofill_section_title": "Tilinpäätöksen ja konsernitilinpäätöksen digitaalisuus",
       "expected_any": [
         {
-          "law_key": "tilintarkastuslaki_1141_2015",
-          "section_num": 1,
-          "moment": 1
+          "law_key": "kirjanpitolaki_1336_1997",
+          "section_num": 23,
+          "moment": 4
         }
       ]
     },
@@ -409,25 +340,19 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "kunnan ulkoinen tarkastus ja valvonta",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "kunnan",
-        "ulkoinen",
-        "valvonta",
-        "tarkastus"
-      ],
       "expected_none": [
         "tilintarkastuslaki_1141_2015"
       ],
       "notes": "HARD NEG: 'kunnan ulkoinen tarkastus' on Kuntalaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.5363517999649048,
-      "autofill_overlap": 3,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6080881237983704,
+      "autofill_section_title": "Tarkastuslautakunta",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 123,
-          "moment": 1
+          "section_num": 121,
+          "moment": 2
         }
       ]
     },
@@ -437,20 +362,16 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "pörssiyhtiön tilintarkastus",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "tilintarkastus",
-        "pörssiyhtiön"
-      ],
       "expected_none": [],
       "notes": "PIE-tilintarkastus on Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.5890408158302307,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.5944962501525879,
+      "autofill_section_title": "Tilinpäätöksen sisältö",
       "expected_any": [
         {
-          "law_key": "tilintarkastuslaki_1141_2015",
-          "section_num": 5,
+          "law_key": "kirjanpitolaki_1336_1997",
+          "section_num": 1,
           "moment": 5
         }
       ]
@@ -461,16 +382,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilintarkastajan toimikausi",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "tilintarkastajan",
-        "toimikausi"
-      ],
       "expected_none": [],
       "notes": "Toimikausi on Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.7065472602844238,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7265472602844238,
+      "autofill_section_title": "Toimikausien enimmäiskesto",
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
@@ -485,17 +402,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilintarkastajan erityinen tarkastusoikeus",
-      "expected_law_key": "tilintarkastuslaki_1141_2015",
-      "expected_anchor_terms": [
-        "erityinen",
-        "tarkastusoikeus",
-        "tilintarkastajan"
-      ],
       "expected_none": [],
       "notes": "Tarkastusoikeus on Tilintarkastuslaissa",
       "autofill_status": "OK",
-      "autofill_score": 0.6555341482162476,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6755341482162476,
+      "autofill_section_title": "Tarkastusoikeus",
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",

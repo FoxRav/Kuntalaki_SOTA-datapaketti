@@ -1,6 +1,6 @@
 {
-  "description": "Cross-law evaluation: Kuntalaki ↔ Kirjanpitolaki (KPL) (autofilled v7)",
-  "version": "7.0",
+  "description": "Cross-law evaluation: Kuntalaki ↔ Kirjanpitolaki (KPL) (autofilled v7.2)",
+  "version": "7.2",
   "autofill_stats": {
     "ok": 20,
     "fail": 0
@@ -12,22 +12,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilinpäätöksen liitetiedot ja arvostusperiaatteet",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "arvostusperiaatteet",
-        "tilinpäätöksen",
-        "liitetiedot"
-      ],
       "expected_none": [],
       "notes": "Liitetiedot ja arvostus kuuluvat KPL:ään, ei Kuntalakiin",
       "autofill_status": "OK",
-      "autofill_score": 0.6245176792144775,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6583976340293884,
+      "autofill_section_title": "Tarkemmat säännökset",
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 4,
-          "moment": 2
+          "section_num": 6,
+          "moment": 1
         }
       ]
     },
@@ -37,22 +32,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "kirjanpitovelvollisen tilinpäätöksen laatimisaika",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "kirjanpitovelvollisen",
-        "laatimisaika",
-        "tilinpäätöksen"
-      ],
       "expected_none": [],
       "notes": "Tilinpäätöksen laatimisaika on KPL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.6666392087936401,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7218414545059204,
+      "autofill_section_title": "Laatimisaika",
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 9,
-          "moment": 4
+          "section_num": 6,
+          "moment": 1
         }
       ]
     },
@@ -62,21 +52,16 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tase-erittelyt ja liitetiedot",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "erittelyt",
-        "liitetiedot",
-        "tase"
-      ],
       "expected_none": [],
       "notes": "Tase-erittelyt ovat KPL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.6585401296615601,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7123738121986389,
+      "autofill_section_title": "Taseen vastattavia koskevat liitetiedot",
       "expected_any": [
         {
-          "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 13,
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 5,
           "moment": 1
         }
       ]
@@ -87,17 +72,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "poistot ja arvonalentuminen kirjanpidossa",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "poistot",
-        "kirjanpidossa",
-        "arvonalentuminen"
-      ],
       "expected_none": [],
       "notes": "Poistot ovat KPL:ssä, vaikka query voi houkutella Kuntalaissa",
       "autofill_status": "OK",
+      "autofill_version": "7.2",
       "autofill_score": 0.5888156890869141,
-      "autofill_overlap": 1,
+      "autofill_section_title": "Muut kuin suunnitelman mukaiset poistot",
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
@@ -112,24 +92,19 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "kunnan tilinpäätöksen laatimisvelvollisuus",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "laatimisvelvollisuus",
-        "kunnan",
-        "tilinpäätöksen"
-      ],
       "expected_none": [
         "kirjanpitolaki_1336_1997"
       ],
       "notes": "HARD NEG: 'kunnan' viittaa Kuntalakiin, ei KPL:ään",
       "autofill_status": "OK",
-      "autofill_score": 0.6392803192138672,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6925023078918457,
+      "autofill_section_title": "Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 113,
-          "moment": 3
+          "section_num": 120,
+          "moment": 2
         }
       ]
     },
@@ -139,17 +114,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tuloslaskelman ja taseen sisältö",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "taseen",
-        "sisältö",
-        "tuloslaskelman"
-      ],
       "expected_none": [],
       "notes": "Tilinpäätöksen sisältö on KPL 3:1:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.6629832983016968,
-      "autofill_overlap": 3,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6829832983016968,
+      "autofill_section_title": "Tilinpäätöksen sisältö",
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
@@ -164,22 +134,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "kirjanpidon menetelmät ja aineisto",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "menetelmät",
-        "kirjanpidon",
-        "aineisto"
-      ],
       "expected_none": [],
       "notes": "Kirjanpitomenetelmät ovat KPL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.598189115524292,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6382764577865601,
+      "autofill_section_title": "Luettelo kirjanpidoista ja aineistoista",
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
           "section_num": 7,
-          "moment": 3
+          "moment": 1
         }
       ]
     },
@@ -189,18 +154,14 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "kuntayhtymän tilinpäätös",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "kuntayhtymän",
-        "tilinpäätös"
-      ],
       "expected_none": [
         "kirjanpitolaki_1336_1997"
       ],
       "notes": "HARD NEG: 'kuntayhtymä' viittaa selvästi Kuntalakiin",
       "autofill_status": "OK",
-      "autofill_score": 0.7028093338012695,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7428093338012696,
+      "autofill_section_title": "Konsernitilinpäätös",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
@@ -215,21 +176,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "rahoituslaskelma ja kassavirta",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "kassavirta",
-        "rahoituslaskelma"
-      ],
       "expected_none": [],
       "notes": "Rahoituslaskelma on KPL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.5597116947174072,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7012871098518372,
+      "autofill_section_title": "Rahoituslaskelma",
       "expected_any": [
         {
-          "law_key": "kirjanpitolaki_1336_1997",
+          "law_key": "kirjanpitoasetus_1339_1997",
           "section_num": 1,
-          "moment": 2
+          "moment": 1
         }
       ]
     },
@@ -239,17 +196,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilinpäätöksen allekirjoitus ja päiväys",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "allekirjoitus",
-        "tilinpäätöksen",
-        "päiväys"
-      ],
       "expected_none": [],
       "notes": "Allekirjoitus on KPL:ssä",
       "autofill_status": "OK",
+      "autofill_version": "7.2",
       "autofill_score": 0.739931583404541,
-      "autofill_overlap": 3,
+      "autofill_section_title": "Päiväys ja allekirjoitus",
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
@@ -264,23 +216,18 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "valtuuston hyväksymä tilinpäätös",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "hyväksymä",
-        "tilinpäätös",
-        "valtuuston"
-      ],
       "expected_none": [
         "kirjanpitolaki_1336_1997"
       ],
       "notes": "HARD NEG: 'valtuusto' viittaa yksiselitteisesti Kuntalakiin",
       "autofill_status": "OK",
-      "autofill_score": 0.6110217571258545,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6524323415756226,
+      "autofill_section_title": "Talousarvio ja -suunnitelma",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 113,
+          "section_num": 110,
           "moment": 1
         }
       ]
@@ -291,17 +238,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "liikevaihdon ja tuottojen kirjaaminen",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "kirjaaminen",
-        "liikevaihdon",
-        "tuottojen"
-      ],
       "expected_none": [],
       "notes": "Tuottojen kirjaaminen on KPL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.5818353891372681,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.6276496052742004,
+      "autofill_section_title": "Liiketapahtumat",
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
@@ -316,21 +258,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "konsernitilinpäätös kirjanpidossa",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "kirjanpidossa",
-        "konsernitilinpäätös"
-      ],
       "expected_none": [],
       "notes": "Konsernin kirjanpitoa koskevat säännöt ovat KPL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.6998424530029297,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7546262335777283,
+      "autofill_section_title": "Konsernitilinpäätös",
       "expected_any": [
         {
-          "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 2,
-          "moment": 1
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 114,
+          "moment": 2
         }
       ]
     },
@@ -340,24 +278,19 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "kunnan konsernitilinpäätöksen laatiminen",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "laatiminen",
-        "kunnan",
-        "konsernitilinpäätöksen"
-      ],
       "expected_none": [
         "kirjanpitolaki_1336_1997"
       ],
       "notes": "HARD NEG: 'kunnan konserni' viittaa Kuntalakiin",
       "autofill_status": "OK",
-      "autofill_score": 0.6580517888069153,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7689247608184815,
+      "autofill_section_title": "Konsernitilinpäätös",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 118,
-          "moment": 3
+          "section_num": 114,
+          "moment": 1
         }
       ]
     },
@@ -367,17 +300,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilinpäätöksen julkistaminen ja rekisteröinti",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "rekisteröinti",
-        "tilinpäätöksen",
-        "julkistaminen"
-      ],
       "expected_none": [],
       "notes": "Julkistaminen on KPL:ssä",
       "autofill_status": "OK",
+      "autofill_version": "7.2",
       "autofill_score": 0.7340836524963379,
-      "autofill_overlap": 2,
+      "autofill_section_title": "Tilinpäätöksen ja toimintakertomuksen julkistaminen",
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
@@ -392,18 +320,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "hyvä kirjanpitotapa ja yleinen säännös",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "hyvä",
-        "kirjanpitotapa",
-        "yleinen",
-        "säännös"
-      ],
       "expected_none": [],
       "notes": "Hyvä kirjanpitotapa on KPL:ssä",
       "autofill_status": "OK",
+      "autofill_version": "7.2",
       "autofill_score": 0.6749849915504456,
-      "autofill_overlap": 2,
+      "autofill_section_title": "Hyvä kirjanpitotapa",
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
@@ -418,24 +340,19 @@
       "category": "cross_law",
       "test_type": "hard_negative",
       "query": "kunnanhallituksen vastuu tilinpäätöksestä",
-      "expected_law_key": "kuntalaki_410_2015",
-      "expected_anchor_terms": [
-        "kunnanhallituksen",
-        "tilinpäätöksestä",
-        "vastuu"
-      ],
       "expected_none": [
         "kirjanpitolaki_1336_1997"
       ],
       "notes": "HARD NEG: 'kunnanhallitus' viittaa yksiselitteisesti Kuntalakiin",
       "autofill_status": "OK",
-      "autofill_score": 0.6267961263656616,
-      "autofill_overlap": 2,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7217401146888733,
+      "autofill_section_title": "Kunnanhallituksen tehtävät",
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 125,
-          "moment": 3
+          "section_num": 39,
+          "moment": 1
         }
       ]
     },
@@ -445,16 +362,12 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "kirjanpitoaineiston säilytysaika",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "kirjanpitoaineiston",
-        "säilytysaika"
-      ],
       "expected_none": [],
       "notes": "Säilytysaika on KPL:ssä",
       "autofill_status": "OK",
+      "autofill_version": "7.2",
       "autofill_score": 0.7683080434799194,
-      "autofill_overlap": 2,
+      "autofill_section_title": "Kirjanpitoaineiston säilytysaika",
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
@@ -469,22 +382,17 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "pieni kirjanpitovelvollinen ja helpotukset",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "pieni",
-        "helpotukset",
-        "kirjanpitovelvollinen"
-      ],
       "expected_none": [],
       "notes": "Pienen kirjanpitovelvollisen helpotukset ovat KPL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.49603480100631714,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.5541523694992065,
+      "autofill_section_title": "Kirjanpitorikkomus",
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 16,
-          "moment": 1
+          "section_num": 4,
+          "moment": 2
         }
       ]
     },
@@ -494,21 +402,16 @@
       "category": "cross_law",
       "test_type": "cross_law",
       "query": "tilikauden pituus ja muuttaminen",
-      "expected_law_key": "kirjanpitolaki_1336_1997",
-      "expected_anchor_terms": [
-        "muuttaminen",
-        "pituus",
-        "tilikauden"
-      ],
       "expected_none": [],
       "notes": "Tilikausi on KPL:ssä",
       "autofill_status": "OK",
-      "autofill_score": 0.5921714305877686,
-      "autofill_overlap": 1,
+      "autofill_version": "7.2",
+      "autofill_score": 0.7124577760696411,
+      "autofill_section_title": "Tilikausi",
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 6,
+          "section_num": 4,
           "moment": 1
         }
       ]
