@@ -1,0 +1,232 @@
+{
+  "description": "Cross-law evaluation: Kuntalaki ↔ Tilintarkastuslaki",
+  "version": "1.0",
+  "questions": [
+    {
+      "id": "CROSS-KUNTA-TILA-001",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilintarkastajan riippumattomuus ja esteellisyys",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 4, "moment": 1}
+      ],
+      "notes": "Riippumattomuus on Tilintarkastuslaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-002",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilintarkastuskertomus ja sen sisältö",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 5, "moment": 1}
+      ],
+      "notes": "Tilintarkastuskertomuksen sisältö on Tilintarkastuslaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-003",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "HT-tilintarkastaja ja KHT-tilintarkastaja",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Tilintarkastajanimikkeet ovat Tilintarkastuslaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-004",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilintarkastajan huomautus ja varoitus",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Huomautus/varoitus on Tilintarkastuslaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-005",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnan tilintarkastajan valinta",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 122, "moment": 1}
+      ],
+      "expected_none": ["tilintarkastuslaki_1141_2015"],
+      "notes": "HARD NEG: 'kunnan tilintarkastajan valinta' on Kuntalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-006",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilintarkastusyhteisön hyväksyminen",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Hyväksyminen on Tilintarkastuslaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-007",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilintarkastusvelvollisuus yhtiössä",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 2, "moment": 1}
+      ],
+      "notes": "Tilintarkastusvelvollisuus on Tilintarkastuslaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-008",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "tarkastuslautakunta ja sen tehtävät",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 121, "moment": 1}
+      ],
+      "expected_none": ["tilintarkastuslaki_1141_2015"],
+      "notes": "HARD NEG: 'tarkastuslautakunta' on puhtaasti Kuntalaki-käsite"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-009",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilintarkastajan salassapitovelvollisuus",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 4, "moment": 1}
+      ],
+      "notes": "Salassapito on Tilintarkastuslaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-010",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "mukautettu tilintarkastuslausunto",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 5, "moment": 1}
+      ],
+      "notes": "Lausuntotyypit ovat Tilintarkastuslaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-011",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "valtuuston käsittelemä tilintarkastuskertomus",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 125, "moment": 1}
+      ],
+      "expected_none": ["tilintarkastuslaki_1141_2015"],
+      "notes": "HARD NEG: 'valtuusto' viittaa Kuntalakiin"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-012",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "hyvä tilintarkastustapa",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 3, "moment": 1}
+      ],
+      "notes": "Hyvä tilintarkastustapa on Tilintarkastuslaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-013",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilintarkastajan vastuu vahingonkorvauksesta",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 10, "moment": 1}
+      ],
+      "notes": "Vahingonkorvaus on Tilintarkastuslaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-014",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "vastuuvapauden myöntäminen kunnan tilivelvollisille",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 125, "moment": 3}
+      ],
+      "expected_none": ["tilintarkastuslaki_1141_2015"],
+      "notes": "HARD NEG: 'tilivelvollinen' on Kuntalaki-käsite"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-015",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilintarkastajan kurinpitomenettely",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Kurinpito on Tilintarkastuslaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-016",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilintarkastusvalvonta ja PRH",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 7, "moment": 1}
+      ],
+      "notes": "Valvonta on Tilintarkastuslaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-017",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnan ulkoinen tarkastus ja valvonta",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 122, "moment": 1}
+      ],
+      "expected_none": ["tilintarkastuslaki_1141_2015"],
+      "notes": "HARD NEG: 'kunnan ulkoinen tarkastus' on Kuntalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-018",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "pörssiyhtiön tilintarkastus",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 5, "moment": 1}
+      ],
+      "notes": "PIE-tilintarkastus on Tilintarkastuslaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-019",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilintarkastajan toimikausi",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 2, "moment": 1}
+      ],
+      "notes": "Toimikausi on Tilintarkastuslaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-TILA-020",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilintarkastajan erityinen tarkastusoikeus",
+      "expected_any": [
+        {"law_key": "tilintarkastuslaki_1141_2015", "section_num": 3, "moment": 1}
+      ],
+      "notes": "Tarkastusoikeus on Tilintarkastuslaissa"
+    }
+  ]
+}
+

@@ -1,0 +1,232 @@
+{
+  "description": "Cross-law evaluation: Kuntalaki ↔ Kirjanpitolaki (KPL)",
+  "version": "1.0",
+  "questions": [
+    {
+      "id": "CROSS-KUNTA-KPL-001",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilinpäätöksen liitetiedot ja arvostusperiaatteet",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 3, "moment": 1}
+      ],
+      "notes": "Liitetiedot ja arvostus kuuluvat KPL:ään, ei Kuntalakiin"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-002",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "kirjanpitovelvollisen tilinpäätöksen laatimisaika",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 6, "moment": 1}
+      ],
+      "notes": "Tilinpäätöksen laatimisaika on KPL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-003",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tase-erittelyt ja liitetiedot",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 13, "moment": 1}
+      ],
+      "notes": "Tase-erittelyt ovat KPL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-004",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "poistot ja arvonalentuminen kirjanpidossa",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 5, "moment": 1}
+      ],
+      "notes": "Poistot ovat KPL:ssä, vaikka query voi houkutella Kuntalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-005",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnan tilinpäätöksen laatimisvelvollisuus",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 113, "moment": 1}
+      ],
+      "expected_none": ["kirjanpitolaki_1336_1997"],
+      "notes": "HARD NEG: 'kunnan' viittaa Kuntalakiin, ei KPL:ään"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-006",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tuloslaskelman ja taseen sisältö",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Tilinpäätöksen sisältö on KPL 3:1:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-007",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "kirjanpidon menetelmät ja aineisto",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Kirjanpitomenetelmät ovat KPL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-008",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kuntayhtymän tilinpäätös",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 113, "moment": 1}
+      ],
+      "expected_none": ["kirjanpitolaki_1336_1997"],
+      "notes": "HARD NEG: 'kuntayhtymä' viittaa selvästi Kuntalakiin"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-009",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "rahoituslaskelma ja kassavirta",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Rahoituslaskelma on KPL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-010",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilinpäätöksen allekirjoitus ja päiväys",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 7, "moment": 1}
+      ],
+      "notes": "Allekirjoitus on KPL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-011",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "valtuuston hyväksymä tilinpäätös",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 113, "moment": 3}
+      ],
+      "expected_none": ["kirjanpitolaki_1336_1997"],
+      "notes": "HARD NEG: 'valtuusto' viittaa yksiselitteisesti Kuntalakiin"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-012",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "liikevaihdon ja tuottojen kirjaaminen",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Tuottojen kirjaaminen on KPL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-013",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "konsernitilinpäätös kirjanpidossa",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Konsernin kirjanpitoa koskevat säännöt ovat KPL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-014",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnan konsernitilinpäätöksen laatiminen",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 114, "moment": 1}
+      ],
+      "expected_none": ["kirjanpitolaki_1336_1997"],
+      "notes": "HARD NEG: 'kunnan konserni' viittaa Kuntalakiin"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-015",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilinpäätöksen julkistaminen ja rekisteröinti",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 9, "moment": 1}
+      ],
+      "notes": "Julkistaminen on KPL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-016",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "hyvä kirjanpitotapa ja yleinen säännös",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 3, "moment": 1}
+      ],
+      "notes": "Hyvä kirjanpitotapa on KPL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-017",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnanhallituksen vastuu tilinpäätöksestä",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 113, "moment": 2}
+      ],
+      "expected_none": ["kirjanpitolaki_1336_1997"],
+      "notes": "HARD NEG: 'kunnanhallitus' viittaa yksiselitteisesti Kuntalakiin"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-018",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "kirjanpitoaineiston säilytysaika",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 10, "moment": 1}
+      ],
+      "notes": "Säilytysaika on KPL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-019",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "pieni kirjanpitovelvollinen ja helpotukset",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 4, "moment": 1}
+      ],
+      "notes": "Pienen kirjanpitovelvollisen helpotukset ovat KPL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-020",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilikauden pituus ja muuttaminen",
+      "expected_any": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 4, "moment": 1}
+      ],
+      "notes": "Tilikausi on KPL:ssä"
+    }
+  ]
+}
+

@@ -1,0 +1,232 @@
+{
+  "description": "Cross-law evaluation: Kuntalaki ↔ Hankintalaki",
+  "version": "1.0",
+  "questions": [
+    {
+      "id": "CROSS-KUNTA-HANK-001",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "julkisen hankinnan kynnysarvot",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 25, "moment": 1}
+      ],
+      "notes": "Kynnysarvot ovat Hankintalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-002",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "hankintailmoituksen julkaiseminen",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 60, "moment": 1}
+      ],
+      "notes": "Hankintailmoitus on Hankintalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-003",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tarjouksen valintaperusteet",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 93, "moment": 1}
+      ],
+      "notes": "Valintaperusteet ovat Hankintalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-004",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "kilpailutus ja tarjouskilpailu",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Kilpailutus on Hankintalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-005",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnan investointien rahoitus",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 110, "moment": 1}
+      ],
+      "expected_none": ["hankintalaki_1397_2016"],
+      "notes": "HARD NEG: 'investointien rahoitus' on talousarviossa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-006",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "hankintayksikön määritelmä",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 5, "moment": 1}
+      ],
+      "notes": "Hankintayksikkö on Hankintalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-007",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "puitejärjestely ja hankintasopimus",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 42, "moment": 1}
+      ],
+      "notes": "Puitejärjestely on Hankintalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-008",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnan toiminnan ja talouden ohjaus",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 110, "moment": 1}
+      ],
+      "expected_none": ["hankintalaki_1397_2016"],
+      "notes": "HARD NEG: 'talouden ohjaus' on Kuntalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-009",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "EU-kynnysarvon ylittävä hankinta",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 26, "moment": 1}
+      ],
+      "notes": "EU-kynnysarvot ovat Hankintalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-010",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "hankintapäätöksen tekeminen",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 123, "moment": 1}
+      ],
+      "notes": "Hankintapäätös on Hankintalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-011",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnanhallituksen päätösvalta sopimuksissa",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 39, "moment": 1}
+      ],
+      "expected_none": ["hankintalaki_1397_2016"],
+      "notes": "HARD NEG: 'kunnanhallitus' viittaa Kuntalakiin"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-012",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tarjoajan poissulkemisperusteet",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 80, "moment": 1}
+      ],
+      "notes": "Poissulkemisperusteet ovat Hankintalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-013",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "markkinaoikeus ja hankintavalitus",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 145, "moment": 1}
+      ],
+      "notes": "Markkinaoikeusvalitus on Hankintalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-014",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "valtuuston päätös suuresta investoinnista",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 14, "moment": 1}
+      ],
+      "expected_none": ["hankintalaki_1397_2016"],
+      "notes": "HARD NEG: 'valtuusto' viittaa Kuntalakiin"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-015",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "neuvottelumenettely julkisissa hankinnoissa",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 34, "moment": 1}
+      ],
+      "notes": "Neuvottelumenettely on Hankintalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-016",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "sidosyksikköhankinta",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 15, "moment": 1}
+      ],
+      "notes": "Sidosyksikkö on Hankintalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-017",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnan omaisuuden myynti",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 130, "moment": 1}
+      ],
+      "expected_none": ["hankintalaki_1397_2016"],
+      "notes": "HARD NEG: 'omaisuuden myynti' ei ole hankinta"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-018",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "sosiaalinen näkökulma hankinnoissa",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 98, "moment": 1}
+      ],
+      "notes": "Sosiaaliset näkökohdat ovat Hankintalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-019",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "käyttöoikeussopimus ja konsessio",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 4, "moment": 1}
+      ],
+      "notes": "Käyttöoikeussopimus on Hankintalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-020",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "avoin menettely ja rajoitettu menettely",
+      "expected_any": [
+        {"law_key": "hankintalaki_1397_2016", "section_num": 32, "moment": 1}
+      ],
+      "notes": "Hankintamenettelyt ovat Hankintalaissa"
+    }
+  ]
+}
+

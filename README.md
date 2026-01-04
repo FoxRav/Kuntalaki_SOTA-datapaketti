@@ -164,7 +164,8 @@ Latency: ~45ms
 1. ✅ **v4**: Kuntalaki SOTA (100% pass)
 2. ✅ **v5**: Multi-laki rakenne + 5 lakia
 3. ✅ **v5.1**: Kirjanpitoasetus (1339/1997)
-4. 📋 **v6**: Cross-law eval ja multi-law reranking
+4. 🔄 **v6**: Cross-law eval (baseline 55%, tavoite 95%)
+5. 📋 **v6.1**: Multi-law reranking ja router-bonus
 
 ## Lisenssi & lähde
 

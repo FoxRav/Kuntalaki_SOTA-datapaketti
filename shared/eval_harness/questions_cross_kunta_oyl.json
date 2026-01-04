@@ -1,0 +1,232 @@
+{
+  "description": "Cross-law evaluation: Kuntalaki ↔ Osakeyhtiölaki (OYL)",
+  "version": "1.0",
+  "questions": [
+    {
+      "id": "CROSS-KUNTA-OYL-001",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "osakeyhtiön hallituksen tehtävät",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Hallituksen tehtävät ovat OYL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-002",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "yhtiökokouksen päätöksenteko",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Yhtiökokous on OYL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-003",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "toimitusjohtajan vastuu",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Toimitusjohtajan vastuu on OYL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-004",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "osakeyhtiön osakepääoma",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Osakepääoma on OYL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-005",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kuntakonsernin omistajaohjaus",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 46, "moment": 1}
+      ],
+      "expected_none": ["osakeyhtiolaki_624_2006"],
+      "notes": "HARD NEG: 'kuntakonserni' ja 'omistajaohjaus' ovat Kuntalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-006",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "osakeyhtiön sulautuminen ja jakautuminen",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Sulautuminen on OYL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-007",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "osingon jakaminen yhtiössä",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Osingonjako on OYL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-008",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnan tytäryhteisön ohjaus",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 46, "moment": 1}
+      ],
+      "expected_none": ["osakeyhtiolaki_624_2006"],
+      "notes": "HARD NEG: 'kunnan tytäryhteisö' on Kuntalaissa"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-009",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "osakeyhtiön purkaminen",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Purkaminen on OYL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-010",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "hallituksen jäsenen vahingonkorvausvastuu",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Vahingonkorvausvastuu on OYL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-011",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "konserniohje ja konsernin toimintaperiaatteet",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 47, "moment": 1}
+      ],
+      "expected_none": ["osakeyhtiolaki_624_2006"],
+      "notes": "HARD NEG: 'konserniohje' on Kuntalaki-käsite"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-012",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "osakeyhtiön perustaminen",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Perustaminen on OYL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-013",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "osakkeen luovuttaminen ja siirto",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Osakkeen luovutus on OYL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-014",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "valtuuston päätös tytäryhtiön perustamisesta",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 14, "moment": 1}
+      ],
+      "expected_none": ["osakeyhtiolaki_624_2006"],
+      "notes": "HARD NEG: 'valtuusto' viittaa Kuntalakiin"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-015",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "osakeyhtiön oma pääoma ja SVOP-rahasto",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Oma pääoma ja rahastot ovat OYL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-016",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "pörssiyhtiön hallinto",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 16, "moment": 1}
+      ],
+      "notes": "Pörssiyhtiön hallinto on OYL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-017",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnanhallituksen edustaja tytäryhtiön hallituksessa",
+      "expected_any": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 47, "moment": 1}
+      ],
+      "expected_none": ["osakeyhtiolaki_624_2006"],
+      "notes": "HARD NEG: 'kunnanhallitus' ja 'tytäryhtiö' viittaavat Kuntalakiin"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-018",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "osakeyhtiön yhtiöjärjestys",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Yhtiöjärjestys on OYL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-019",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "lähipiiriliiketoimi osakeyhtiössä",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Lähipiiriliiketoimet ovat OYL:ssä"
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-020",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "osakeannin toteuttaminen",
+      "expected_any": [
+        {"law_key": "osakeyhtiolaki_624_2006", "section_num": 1, "moment": 1}
+      ],
+      "notes": "Osakeanti on OYL:ssä"
+    }
+  ]
+}
+
