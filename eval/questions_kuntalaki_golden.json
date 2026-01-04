@@ -1,0 +1,989 @@
+[
+  {
+    "id": "KL-MUST-001",
+    "category": "talousarvio",
+    "must": true,
+    "query": "Mitä kuntalaki sanoo alijäämän kattamisesta ja missä ajassa se pitää kattaa?",
+    "expected_any": [
+      {"section": "110", "moment": "3"},
+      {"section": "148", "moment": "1"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Alijäämän kattamisvelvollisuus ja siirtymäsäännös"
+  },
+  {
+    "id": "KL-MUST-002",
+    "category": "talousarvio",
+    "must": true,
+    "query": "Mitä osia talousarviossa ja taloussuunnitelmassa pitää olla?",
+    "expected_any": [
+      {"section": "110", "moment": "4"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Käyttötalous-, tuloslaskelma-, investointi- ja rahoitusosa"
+  },
+  {
+    "id": "KL-MUST-003",
+    "category": "covid-poikkeus",
+    "must": true,
+    "query": "Voiko alijäämän kattamisen määräaikaa pidentää covid-19:n takia ja kuka päättää siitä?",
+    "expected_any": [
+      {"section": "110a", "moment": "1"},
+      {"section": "110a", "moment": "2"},
+      {"section": "110a", "moment": "3"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "VM voi päättää jatkosta kunnan hakemuksesta"
+  },
+  {
+    "id": "KL-MUST-004",
+    "category": "tilinpäätös",
+    "must": true,
+    "query": "Mitä asiakirjoja kunnan tilinpäätökseen kuuluu?",
+    "expected_any": [
+      {"section": "113", "moment": "2"},
+      {"section": "113", "moment": "1"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Tase, tuloslaskelma, rahoituslaskelma, liitetiedot, toteutumisvertailu, toimintakertomus"
+  },
+  {
+    "id": "KL-MUST-005",
+    "category": "konserni",
+    "must": true,
+    "query": "Milloin kunnan pitää tehdä konsernitilinpäätös ja mitä siihen sisällytetään?",
+    "expected_any": [
+      {"section": "114", "moment": "1"},
+      {"section": "114", "moment": "2"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Kuntakonserni; sisältö ja rahoituslaskelma"
+  },
+  {
+    "id": "KL-MUST-006",
+    "category": "toimintakertomus",
+    "must": true,
+    "query": "Mitä toimintakertomuksessa on kerrottava talouden olennaisista asioista ja riskeistä?",
+    "expected_any": [
+      {"section": "115", "moment": "1"},
+      {"section": "115", "moment": "2"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Tavoitteiden toteuma, olennaiset asiat, sisäinen valvonta ja riskienhallinta, alijäämäselvitys"
+  },
+  {
+    "id": "KL-MUST-007",
+    "category": "arviointimenettely",
+    "must": true,
+    "query": "Milloin kunta voi joutua arviointimenettelyyn erityisen vaikean taloudellisen aseman vuoksi?",
+    "expected_any": [
+      {"section": "118", "moment": "2"},
+      {"section": "118", "moment": "3"},
+      {"section": "118", "moment": "1"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Alijäämän kattamatta jättäminen määräajassa tai tunnuslukurajat"
+  },
+  {
+    "id": "KL-MUST-008",
+    "category": "siirtymäsäännökset",
+    "must": true,
+    "query": "Mikä on alijäämän kattamista koskeva siirtymäsäännös ja mitä vuosia se koskee?",
+    "expected_any": [
+      {"section": "148", "moment": "2"},
+      {"section": "148", "moment": "1"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "2022 määräaika tietyissä tapauksissa"
+  },
+  {
+    "id": "KL-SHOULD-009",
+    "category": "talousarvio",
+    "must": false,
+    "query": "Miten kertynyt alijäämä täytyy kattaa kunnan taloudessa?",
+    "expected_any": [
+      {"section": "110", "moment": "3"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Synonyymi: kertynyt alijäämä"
+  },
+  {
+    "id": "KL-SHOULD-010",
+    "category": "talousarvio",
+    "must": false,
+    "query": "Taseen alijäämä ja sen kattaminen kuntalaissa",
+    "expected_any": [
+      {"section": "110", "moment": "3"},
+      {"section": "148", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Synonyymi: tasealijäämä"
+  },
+  {
+    "id": "KL-SHOULD-011",
+    "category": "talousarvio",
+    "must": false,
+    "query": "Kunnan taloussuunnitelman tasapaino ja ylijäämä",
+    "expected_any": [
+      {"section": "110", "moment": "3"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Tasapaino"
+  },
+  {
+    "id": "KL-SHOULD-012",
+    "category": "talousarvio",
+    "must": false,
+    "query": "Milloin valtuuston on hyväksyttävä talousarvio?",
+    "expected_any": [
+      {"section": "110", "moment": "1"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Vuoden loppuun mennessä"
+  },
+  {
+    "id": "KL-SHOULD-013",
+    "category": "talousarvio",
+    "must": false,
+    "query": "Talousarvion sitovuus ja määrärahat",
+    "expected_any": [
+      {"section": "110", "moment": "5"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Sitovat erät"
+  },
+  {
+    "id": "KL-SHOULD-014",
+    "category": "arviointimenettely",
+    "must": false,
+    "query": "Kriisikunnan tunnusmerkit ja kriteerit",
+    "expected_any": [
+      {"section": "118", "moment": "2"},
+      {"section": "118", "moment": "3"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Puhekieli: kriisikunta"
+  },
+  {
+    "id": "KL-SHOULD-015",
+    "category": "arviointimenettely",
+    "must": false,
+    "query": "Mikä on arviointiryhmä ja mitä se tekee?",
+    "expected_any": [
+      {"section": "118", "moment": "5"},
+      {"section": "118", "moment": "6"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Arviointiryhmän toiminta"
+  },
+  {
+    "id": "KL-SHOULD-016",
+    "category": "arviointimenettely",
+    "must": false,
+    "query": "Valtiovarainministeriön rooli kunnan arviointimenettelyssä",
+    "expected_any": [
+      {"section": "118", "moment": "1"},
+      {"section": "118", "moment": "7"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "VM:n toimivalta"
+  },
+  {
+    "id": "KL-SHOULD-017",
+    "category": "arviointimenettely",
+    "must": false,
+    "query": "Kuntayhtymän arviointimenettely",
+    "expected_any": [
+      {"section": "119", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Kuntayhtymä"
+  },
+  {
+    "id": "KL-SHOULD-018",
+    "category": "tilinpäätös",
+    "must": false,
+    "query": "Kunnan tilinpäätöksen hyväksymisen aikataulu",
+    "expected_any": [
+      {"section": "113", "moment": "3"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Maaliskuun loppuun mennessä"
+  },
+  {
+    "id": "KL-SHOULD-019",
+    "category": "tilinpäätös",
+    "must": false,
+    "query": "Kuka allekirjoittaa kunnan tilinpäätöksen?",
+    "expected_any": [
+      {"section": "113", "moment": "4"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Kunnanhallituksen jäsenet ja kunnanjohtaja"
+  },
+  {
+    "id": "KL-SHOULD-020",
+    "category": "tilinpäätös",
+    "must": false,
+    "query": "Tilinpäätöksen tase ja tuloslaskelma",
+    "expected_any": [
+      {"section": "113", "moment": "2"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Sisältö"
+  },
+  {
+    "id": "KL-SHOULD-021",
+    "category": "konserni",
+    "must": false,
+    "query": "Mikä on kuntakonserni ja tytäryhteisö?",
+    "expected_any": [
+      {"section": "6", "moment": "1"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Määritelmä"
+  },
+  {
+    "id": "KL-SHOULD-022",
+    "category": "konserni",
+    "must": false,
+    "query": "Konsernitilinpäätöksen rahoituslaskelma",
+    "expected_any": [
+      {"section": "114", "moment": "2"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Rahoituslaskelma"
+  },
+  {
+    "id": "KL-SHOULD-023",
+    "category": "konserni",
+    "must": false,
+    "query": "Konserniohjeet ja omistajaohjaus",
+    "expected_any": [
+      {"section": "47", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Omistajaohjaus"
+  },
+  {
+    "id": "KL-SHOULD-024",
+    "category": "toimintakertomus",
+    "must": false,
+    "query": "Sisäinen valvonta ja riskienhallinta toimintakertomuksessa",
+    "expected_any": [
+      {"section": "115", "moment": "2"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Riskienhallinta"
+  },
+  {
+    "id": "KL-SHOULD-025",
+    "category": "toimintakertomus",
+    "must": false,
+    "query": "Alijäämäselvitys toimintakertomuksessa",
+    "expected_any": [
+      {"section": "115", "moment": "3"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Jos alijäämää ei ole katettu"
+  },
+  {
+    "id": "KL-SHOULD-026",
+    "category": "kirjanpito",
+    "must": false,
+    "query": "Kunnan kirjanpito ja kirjanpitolautakunta",
+    "expected_any": [
+      {"section": "112", "moment": "1"},
+      {"section": "112", "moment": "2"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Kirjanpito"
+  },
+  {
+    "id": "KL-SHOULD-027",
+    "category": "laina",
+    "must": false,
+    "query": "Kunnan lainan antaminen ja takaukset",
+    "expected_any": [
+      {"section": "129", "moment": "1"},
+      {"section": "129", "moment": "2"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Laina ja takaus"
+  },
+  {
+    "id": "KL-SHOULD-028",
+    "category": "laina",
+    "must": false,
+    "query": "Vakuuden antaminen kunnasta",
+    "expected_any": [
+      {"section": "129", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Vakuus"
+  },
+  {
+    "id": "KL-SHOULD-029",
+    "category": "hallinto",
+    "must": false,
+    "query": "Kunnanjohtajan tehtävät ja asema",
+    "expected_any": [
+      {"section": "38", "moment": ""},
+      {"section": "41", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Kunnanjohtaja"
+  },
+  {
+    "id": "KL-SHOULD-030",
+    "category": "hallinto",
+    "must": false,
+    "query": "Kunnanhallituksen tehtävät",
+    "expected_any": [
+      {"section": "38", "moment": ""},
+      {"section": "39", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Kunnanhallitus"
+  },
+  {
+    "id": "KL-SHOULD-031",
+    "category": "hallinto",
+    "must": false,
+    "query": "Hallintosäännön sisältö",
+    "expected_any": [
+      {"section": "90", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Hallintosääntö"
+  },
+  {
+    "id": "KL-SHOULD-032",
+    "category": "valtuusto",
+    "must": false,
+    "query": "Valtuuston kokoontuminen ja päätösvaltaisuus",
+    "expected_any": [
+      {"section": "94", "moment": ""},
+      {"section": "95", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Valtuusto"
+  },
+  {
+    "id": "KL-SHOULD-033",
+    "category": "valtuusto",
+    "must": false,
+    "query": "Valtuuston tehtävät ja toimivalta",
+    "expected_any": [
+      {"section": "14", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Valtuusto tehtävät"
+  },
+  {
+    "id": "KL-SHOULD-034",
+    "category": "päätöksenteko",
+    "must": false,
+    "query": "Esteellisyys kunnan päätöksenteossa",
+    "expected_any": [
+      {"section": "97", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Esteellisyys"
+  },
+  {
+    "id": "KL-SHOULD-035",
+    "category": "päätöksenteko",
+    "must": false,
+    "query": "Oikaisuvaatimus kunnan päätöksestä",
+    "expected_any": [
+      {"section": "134", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Oikaisuvaatimus"
+  },
+  {
+    "id": "KL-SHOULD-036",
+    "category": "päätöksenteko",
+    "must": false,
+    "query": "Kunnallisvalitus hallinto-oikeuteen",
+    "expected_any": [
+      {"section": "135", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Kunnallisvalitus"
+  },
+  {
+    "id": "KL-SHOULD-037",
+    "category": "tilintarkastus",
+    "must": false,
+    "query": "Kunnan tilintarkastajan valinta ja kelpoisuus",
+    "expected_any": [
+      {"section": "122", "moment": ""},
+      {"section": "123", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Tilintarkastus"
+  },
+  {
+    "id": "KL-SHOULD-038",
+    "category": "tilintarkastus",
+    "must": false,
+    "query": "Tarkastuslautakunnan tehtävät",
+    "expected_any": [
+      {"section": "121", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Tarkastuslautakunta"
+  },
+  {
+    "id": "KL-SHOULD-039",
+    "category": "kuntayhtymä",
+    "must": false,
+    "query": "Kuntayhtymän perustaminen ja perussopimus",
+    "expected_any": [
+      {"section": "55", "moment": ""},
+      {"section": "56", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Kuntayhtymä"
+  },
+  {
+    "id": "KL-SHOULD-040",
+    "category": "kuntayhtymä",
+    "must": false,
+    "query": "Kuntayhtymästä eroaminen",
+    "expected_any": [
+      {"section": "62", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Eroaminen"
+  },
+  {
+    "id": "KL-SHOULD-041",
+    "category": "osallistuminen",
+    "must": false,
+    "query": "Kunnan asukkaiden osallistumis- ja vaikuttamismahdollisuudet",
+    "expected_any": [
+      {"section": "22", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Osallistuminen"
+  },
+  {
+    "id": "KL-SHOULD-042",
+    "category": "osallistuminen",
+    "must": false,
+    "query": "Aloiteoikeus kunnassa",
+    "expected_any": [
+      {"section": "23", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Aloiteoikeus"
+  },
+  {
+    "id": "KL-SHOULD-043",
+    "category": "talousarvio",
+    "must": false,
+    "query": "Kuntayhtymän alijäämän kattaminen",
+    "expected_any": [
+      {"section": "110", "moment": "6"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Kuntayhtymä"
+  },
+  {
+    "id": "KL-SHOULD-044",
+    "category": "covid-poikkeus",
+    "must": false,
+    "query": "COVID-19 poikkeus alijäämän kattamiseen",
+    "expected_any": [
+      {"section": "110a", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "COVID"
+  },
+  {
+    "id": "KL-SHOULD-045",
+    "category": "covid-poikkeus",
+    "must": false,
+    "query": "Koronaepidemia ja kunnan talous",
+    "expected_any": [
+      {"section": "110a", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Korona synonyymi"
+  },
+  {
+    "id": "KL-SHOULD-046",
+    "category": "arviointimenettely",
+    "must": false,
+    "query": "Erittäin vaikea taloudellinen asema kunnassa",
+    "expected_any": [
+      {"section": "118", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Puhekieli"
+  },
+  {
+    "id": "KL-SHOULD-047",
+    "category": "arviointimenettely",
+    "must": false,
+    "query": "Kunta on pahassa jamassa taloudellisesti",
+    "expected_any": [
+      {"section": "118", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.50,
+    "notes": "Puhekieli adversarial"
+  },
+  {
+    "id": "KL-SHOULD-048",
+    "category": "talousarvio",
+    "must": false,
+    "query": "Budjetti ja taloussuunnitelma kunnassa",
+    "expected_any": [
+      {"section": "110", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Synonyymi: budjetti"
+  },
+  {
+    "id": "KL-SHOULD-049",
+    "category": "tilinpäätös",
+    "must": false,
+    "query": "Rahoituslaskelma tilinpäätöksessä",
+    "expected_any": [
+      {"section": "113", "moment": "2"},
+      {"section": "114", "moment": "2"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Rahoituslaskelma"
+  },
+  {
+    "id": "KL-SHOULD-050",
+    "category": "tilinpäätös",
+    "must": false,
+    "query": "Toteutumisvertailu tilinpäätöksessä",
+    "expected_any": [
+      {"section": "113", "moment": "2"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Toteutumisvertailu"
+  },
+  {
+    "id": "KL-SHOULD-051",
+    "category": "toimintakertomus",
+    "must": false,
+    "query": "Olennaiset tapahtumat tilikauden päättymisen jälkeen",
+    "expected_any": [
+      {"section": "115", "moment": "1"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Olennaiset tapahtumat"
+  },
+  {
+    "id": "KL-SHOULD-052",
+    "category": "arviointimenettely",
+    "must": false,
+    "query": "Tunnusluvut kriisikunnan määrittelyssä",
+    "expected_any": [
+      {"section": "118", "moment": "3"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Tunnusluvut"
+  },
+  {
+    "id": "KL-SHOULD-053",
+    "category": "laina",
+    "must": false,
+    "query": "Kunnan antama takaus kilpailutilanteessa markkinoilla",
+    "expected_any": [
+      {"section": "129", "moment": "2"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Markkinatilanne"
+  },
+  {
+    "id": "KL-SHOULD-054",
+    "category": "hallinto",
+    "must": false,
+    "query": "Pormestarin valinta ja tehtävät",
+    "expected_any": [
+      {"section": "44", "moment": ""},
+      {"section": "45", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Pormestari"
+  },
+  {
+    "id": "KL-SHOULD-055",
+    "category": "hallinto",
+    "must": false,
+    "query": "Lautakunnan asettaminen ja tehtävät",
+    "expected_any": [
+      {"section": "30", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Lautakunta"
+  },
+  {
+    "id": "KL-SHOULD-056",
+    "category": "päätöksenteko",
+    "must": false,
+    "query": "Valitusperusteet kunnallisvalituksessa",
+    "expected_any": [
+      {"section": "135", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Valitusperusteet"
+  },
+  {
+    "id": "KL-SHOULD-057",
+    "category": "talousarvio",
+    "must": false,
+    "query": "Mihin mennessä kunta saa talousarvion olla alijäämäinen?",
+    "expected_any": [
+      {"section": "110", "moment": "3"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Alijäämä aikataulu"
+  },
+  {
+    "id": "KL-SHOULD-058",
+    "category": "siirtymäsäännökset",
+    "must": false,
+    "query": "Vanhan kuntalain siirtymäsäännökset alijäämästä",
+    "expected_any": [
+      {"section": "148", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Siirtymäsäännökset"
+  },
+  {
+    "id": "KL-SHOULD-059",
+    "category": "konserni",
+    "must": false,
+    "query": "Tytäryhteisön tiedonantovelvollisuus",
+    "expected_any": [
+      {"section": "116", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Tiedonantovelvollisuus"
+  },
+  {
+    "id": "KL-SHOULD-060",
+    "category": "kuntayhtymä",
+    "must": false,
+    "query": "Kuntayhtymän rahoitus ja jäsenkuntien maksuosuudet",
+    "expected_any": [
+      {"section": "117", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Rahoitus"
+  },
+  {
+    "id": "KL-SHOULD-061",
+    "category": "talousarvio",
+    "must": false,
+    "query": "Investointien rahoitus talousarviossa",
+    "expected_any": [
+      {"section": "110", "moment": "4"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Investoinnit"
+  },
+  {
+    "id": "KL-SHOULD-062",
+    "category": "arviointimenettely",
+    "must": false,
+    "query": "Miten kunta pääsee pois arviointimenettelystä?",
+    "expected_any": [
+      {"section": "118", "moment": "6"},
+      {"section": "118", "moment": "7"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Menettelyn päättyminen"
+  },
+  {
+    "id": "KL-SHOULD-063",
+    "category": "tilintarkastus",
+    "must": false,
+    "query": "Tilintarkastuskertomuksen sisältö",
+    "expected_any": [
+      {"section": "125", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Tilintarkastuskertomus"
+  },
+  {
+    "id": "KL-SHOULD-064",
+    "category": "hallinto",
+    "must": false,
+    "query": "Johtajasopimus kunnanjohtajan kanssa",
+    "expected_any": [
+      {"section": "42", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Johtajasopimus"
+  },
+  {
+    "id": "KL-SHOULD-065",
+    "category": "osallistuminen",
+    "must": false,
+    "query": "Kansanäänestys kunnassa",
+    "expected_any": [
+      {"section": "24", "moment": ""},
+      {"section": "25", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Kansanäänestys"
+  },
+  {
+    "id": "KL-SHOULD-066",
+    "category": "valtuusto",
+    "must": false,
+    "query": "Kunnanvaltuutetun asema ja palkkiot",
+    "expected_any": [
+      {"section": "80", "moment": ""},
+      {"section": "81", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Valtuutettu"
+  },
+  {
+    "id": "KL-SHOULD-067",
+    "category": "laina",
+    "must": false,
+    "query": "EU:n valtiontukisäännöt ja kunnan lainat",
+    "expected_any": [
+      {"section": "129", "moment": "4"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "EU-sääntely"
+  },
+  {
+    "id": "KL-SHOULD-068",
+    "category": "toimintakertomus",
+    "must": false,
+    "query": "Tavoitteiden toteutumisen arviointi toimintakertomuksessa",
+    "expected_any": [
+      {"section": "115", "moment": "1"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Tavoitteet"
+  },
+  {
+    "id": "KL-SHOULD-069",
+    "category": "päätöksenteko",
+    "must": false,
+    "query": "Päätöksen täytäntöönpano kunnassa",
+    "expected_any": [
+      {"section": "143", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Täytäntöönpano"
+  },
+  {
+    "id": "KL-SHOULD-070",
+    "category": "arviointimenettely",
+    "must": false,
+    "query": "Kriisikunnan raja-arvot ja tunnusluvut",
+    "expected_any": [
+      {"section": "118", "moment": "3"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Raja-arvot"
+  },
+  {
+    "id": "KL-SHOULD-071",
+    "category": "talousarvio",
+    "must": false,
+    "query": "Veroprosentista päättäminen kunnassa",
+    "expected_any": [
+      {"section": "111", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Verot"
+  },
+  {
+    "id": "KL-SHOULD-072",
+    "category": "konserni",
+    "must": false,
+    "query": "Kunnan määräysvalta tytäryhteisössä",
+    "expected_any": [
+      {"section": "6", "moment": "1"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Määräysvalta"
+  },
+  {
+    "id": "KL-SHOULD-073",
+    "category": "hallinto",
+    "must": false,
+    "query": "Kunnan tehtävät ja järjestämisvastuu",
+    "expected_any": [
+      {"section": "7", "moment": ""},
+      {"section": "8", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Tehtävät"
+  },
+  {
+    "id": "KL-SHOULD-074",
+    "category": "kuntayhtymä",
+    "must": false,
+    "query": "Kuntayhtymien yhdistyminen",
+    "expected_any": [
+      {"section": "62a", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Yhdistyminen"
+  },
+  {
+    "id": "KL-SHOULD-075",
+    "category": "kuntayhtymä",
+    "must": false,
+    "query": "Kuntayhtymän jakautuminen",
+    "expected_any": [
+      {"section": "62b", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Jakautuminen"
+  },
+  {
+    "id": "KL-SHOULD-076",
+    "category": "laina",
+    "must": false,
+    "query": "Kiinteistön luovutuksen markkinaehtoisuus",
+    "expected_any": [
+      {"section": "130", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Kiinteistö"
+  },
+  {
+    "id": "KL-SHOULD-077",
+    "category": "laina",
+    "must": false,
+    "query": "Kunnan hinnoittelu kilpailutilanteessa markkinoilla",
+    "expected_any": [
+      {"section": "128", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Hinnoittelu"
+  },
+  {
+    "id": "KL-SHOULD-078",
+    "category": "talousarvio",
+    "must": false,
+    "query": "Talousarvion poikkeamat ja lisätalousarvio",
+    "expected_any": [
+      {"section": "110", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.50,
+    "notes": "Poikkeamat"
+  },
+  {
+    "id": "KL-SHOULD-079",
+    "category": "tilinpäätös",
+    "must": false,
+    "query": "Liitetiedot kunnan tilinpäätöksessä",
+    "expected_any": [
+      {"section": "113", "moment": "2"}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Liitetiedot"
+  },
+  {
+    "id": "KL-SHOULD-080",
+    "category": "arviointimenettely",
+    "must": false,
+    "query": "Mikä on erityisen vaikea taloudellinen tilanne?",
+    "expected_any": [
+      {"section": "118", "moment": ""}
+    ],
+    "k": 5,
+    "min_score": 0.55,
+    "notes": "Synonyymi"
+  }
+]
+

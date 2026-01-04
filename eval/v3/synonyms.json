@@ -1,0 +1,86 @@
+{
+  "description": "Synonyymisanakirja Kuntalaki-kyselyjen parafraasien generointiin",
+  
+  "term_synonyms": {
+    "covid-19": ["korona", "koronaepidemia", "pandemia", "covid", "covid-19"],
+    "korona": ["covid-19", "koronaepidemia", "pandemia", "covid"],
+    "kriisikunta": ["erityisen vaikea taloudellinen asema", "arviointimenettelykunta", "taloudellisesti vaikeassa asemassa oleva kunta"],
+    "arviointimenettely": ["kriisikuntatarkastelu", "taloudellisen aseman arviointi", "kriisikunta-arviointi"],
+    "alijäämä": ["kertynyt alijäämä", "tasealijäämä", "taseen alijäämä", "talousarvion alijäämä"],
+    "ylijäämä": ["taloudellinen ylijäämä", "taseen ylijäämä"],
+    "talousarvio": ["budjetti", "kunnan taloussuunnitelma", "vuosibudjetti"],
+    "tilinpäätös": ["vuositilinpäätös", "tilikauden päätös", "kirjanpidon päätös"],
+    "toimintakertomus": ["vuosikertomus", "hallituksen kertomus", "toiminnan raportti"],
+    "konsernitilinpäätös": ["kuntakonsernin tilinpäätös", "konsernin yhteenvetotilinpäätös"],
+    "sisäinen valvonta": ["riskienhallinta", "valvonta ja riskit", "sisäinen tarkastus", "kontrollitoiminnot"],
+    "riskienhallinta": ["sisäinen valvonta", "riskien tunnistaminen", "riskiarviointi"],
+    "olennaiset tapahtumat": ["merkittävät tapahtumat", "tärkeät tapahtumat", "keskeiset tapahtumat"],
+    "taloussuunnitelma": ["talousarviosuunnitelma", "monivuotinen taloussuunnitelma"],
+    "kuntayhtymä": ["kuntien yhteistyöelin", "kuntaliitto"],
+    "kunnanvaltuusto": ["valtuusto", "kunnan ylintä päätösvaltaa käyttävä elin"],
+    "kunnanhallitus": ["hallitus", "kunnan toimeenpaneva elin"],
+    "tilintarkastaja": ["ulkoinen tarkastaja", "JHTT-tilintarkastaja"],
+    "laina": ["luotto", "velka", "rahoitus"],
+    "takaus": ["vakuus", "takuusitoumus"]
+  },
+  
+  "question_templates": {
+    "mitä_laki_sanoo": [
+      "Mitä kuntalaki sanoo {aihe}?",
+      "Miten kuntalaissa säädetään {aihe}?",
+      "Mitä laki määrää {aihe}?",
+      "Kuntalain säännökset koskien {aihe}"
+    ],
+    "milloin": [
+      "Milloin {aihe}?",
+      "Missä tilanteessa {aihe}?",
+      "Mitkä ovat edellytykset {aihe}?"
+    ],
+    "miten": [
+      "Miten {aihe}?",
+      "Kuinka {aihe}?",
+      "Millä tavalla {aihe}?"
+    ],
+    "mikä_on": [
+      "Mikä on {aihe}?",
+      "Mitä tarkoitetaan {aihe}?",
+      "Selitä {aihe}"
+    ]
+  },
+  
+  "section_specific_synonyms": {
+    "110": {
+      "terms": ["talousarvio", "alijäämän kattaminen", "taloussuunnitelma"],
+      "synonyms": ["budjetti", "kertyneen alijäämän kattaminen", "tasapainovaatimus"]
+    },
+    "110a": {
+      "terms": ["covid-19", "määräajan pidennys", "poikkeus"],
+      "synonyms": ["korona", "koronaepidemia", "pandemia", "poikkeusolojen takia", "määräajan jatko"]
+    },
+    "113": {
+      "terms": ["tilinpäätös", "asiakirjat", "aikataulu"],
+      "synonyms": ["vuositilinpäätös", "tilinpäätösasiakirjat", "hyväksymisaika"]
+    },
+    "114": {
+      "terms": ["konsernitilinpäätös", "kuntakonserni"],
+      "synonyms": ["konsernin tilinpäätös", "konsernilaskelmat"]
+    },
+    "115": {
+      "terms": ["toimintakertomus", "sisäinen valvonta", "riskienhallinta", "olennaiset tapahtumat"],
+      "synonyms": ["vuosikertomus", "valvonta ja riskit", "riskien hallinta", "merkittävät tapahtumat", "tärkeimmät tapahtumat"]
+    },
+    "118": {
+      "terms": ["arviointimenettely", "kriisikunta", "tunnusluvut"],
+      "synonyms": ["erityisen vaikea taloudellinen asema", "kriisikuntatarkastelu", "raja-arvot", "kriteerit"]
+    },
+    "129": {
+      "terms": ["laina", "takaus", "vakuus"],
+      "synonyms": ["luotto", "takuusitoumus", "kunnan antama takaus"]
+    },
+    "148": {
+      "terms": ["siirtymäsäännös", "alijäämän kattaminen"],
+      "synonyms": ["siirtymäkausi", "vanhan lain mukaiset määräajat"]
+    }
+  }
+}
+

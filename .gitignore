@@ -1,0 +1,90 @@
+# ===========================================
+# KRIITTINEN: ÄLÄ PUSHAA NÄITÄ GITHUBIIN
+# ===========================================
+
+# Finlex XML raakadata (94,000+ tiedostoa!)
+finlex_statute_consolidated/
+
+# ChromaDB vektori-indeksi (binääritiedostot)
+analysis_layer/embeddings/chroma_db/
+
+# ===========================================
+# Python
+# ===========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# ===========================================
+# IDE & Editor
+# ===========================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ===========================================
+# Jupyter
+# ===========================================
+.ipynb_checkpoints/
+
+# ===========================================
+# OS
+# ===========================================
+.DS_Store
+Thumbs.db
+
+# ===========================================
+# Kehitysohjeet (eivät kuulu repoon)
+# ===========================================
+*cursor*.md
+*_llm_prompt*.md
+kuntalaki_indeksin_kovatasoinen_testi*.md
+kuntalaki_rag_jatkokehitys*.md
+kuntalaki_rag_jatkotoimet*.md
+
+# ===========================================
+# Väliaikaiset ja debug-tiedostot
+# ===========================================
+*.log
+*.tmp
+*.temp
+*.cache
+.cache/
+
+# Eval debug scripts (pidä vain päätiedostot)
+eval/v3/debug_*.py
+eval/v3/fix_*.py
+eval/v3/check_*.py
+eval/v3/find_*.py
+eval/v3/show_*.py
+eval/v3/expand_*.py
+eval/v3/analyze_*.py
+
+# Huggingface model cache
+.cache/huggingface/

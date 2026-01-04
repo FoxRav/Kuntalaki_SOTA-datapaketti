@@ -1,0 +1,58 @@
+{
+  "law": "Kuntalaki",
+  "law_id": "410/2015",
+  "law_type": "laki",
+  "ministry": "Valtiovarainministeriö",
+  "original_date": "2015-04-10",
+  "published_date": "2015-04-16",
+  "effective_from": "2015-05-01",
+  "in_force": true,
+  "latest_version": "fin@20230780",
+  "finlex_url": "https://finlex.fi/fi/laki/ajantasa/2015/20150410",
+  "eli_url": "http://data.finlex.fi/eli/sd/2015/410/ajantasa",
+  "statistics": {
+    "total_moments": 421,
+    "total_sections": 150,
+    "total_chapters": 21,
+    "total_parts": 8
+  },
+  "key_chapters": {
+    "talous": {
+      "chapter": "13 luku",
+      "title": "Kunnan talous",
+      "sections": ["110", "111", "112", "113", "114", "115", "116", "117", "118", "119", "120"]
+    },
+    "hallinto": {
+      "chapter": "7 luku",
+      "title": "Kunnan hallinto",
+      "sections": ["30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42"]
+    },
+    "valtuusto": {
+      "chapter": "4 luku",
+      "title": "Valtuusto",
+      "sections": ["14", "15", "16", "17", "18", "19"]
+    }
+  },
+  "repeals": ["365/1995"],
+  "keywords": [
+    "kunta",
+    "kuntatalous",
+    "valtuusto",
+    "kunnanhallitus",
+    "kunnanjohtaja",
+    "talousarvio",
+    "tilinpäätös",
+    "kuntayhtymä",
+    "kuntakonserni"
+  ],
+  "source": {
+    "format": "Akoma Ntoso 3.0",
+    "provider": "Finlex",
+    "license": "CC BY 4.0"
+  },
+  "generated": {
+    "date": "2026-01-04",
+    "tool": "build_kuntalaki_json.py"
+  }
+}
+
