@@ -109,14 +109,16 @@ def route_query(
     query: str,
     available_laws: Optional[list[str]] = None,
     default_law: str = "kuntalaki_410_2015",
+    min_laws: int = 2,
 ) -> dict[str, float]:
     """
-    Route a query to appropriate law indices.
+    Route a query to appropriate law indices (v7: Top2 + fallback).
     
     Args:
         query: User query string
         available_laws: List of law_keys that are indexed. If None, uses all.
         default_law: Default law to use if no keywords match
+        min_laws: Minimum number of laws to return (v7: always at least 2)
         
     Returns:
         Dictionary of law_key -> weight (weights sum to 1.0)
@@ -126,8 +128,6 @@ def route_query(
     
     # Check for explicit law reference first
     explicit_law = _extract_explicit_law_reference(query)
-    if explicit_law and explicit_law in available_laws:
-        return {explicit_law: 1.0}
     
     # Count keyword matches for each law
     query_lower = query.lower()
@@ -138,18 +138,72 @@ def route_query(
         if law_key not in available_laws:
             continue
         score = sum(1 for kw in kw_list if kw in query_lower)
-        if score > 0:
-            scores[law_key] = score
+        scores[law_key] = score
     
-    # If no keywords matched, use default
-    if not scores:
-        if default_law in available_laws:
-            return {default_law: 1.0}
-        return {available_laws[0]: 1.0}
+    # v7: If explicit law reference, give it high weight but still include 2nd law
+    if explicit_law and explicit_law in available_laws:
+        weights = {explicit_law: 0.8}
+        # Add second law with lower weight
+        other_laws = [k for k, v in sorted(scores.items(), key=lambda x: x[1], reverse=True) 
+                      if k != explicit_law]
+        if other_laws:
+            weights[other_laws[0]] = 0.2
+        return weights
     
+    # Get laws with any keyword matches
+    matched_laws = {k: v for k, v in scores.items() if v > 0}
+    
+    # v7: Fallback prior distribution if no/few keyword matches
+    FALLBACK_PRIOR = {
+        "kuntalaki_410_2015": 0.40,
+        "kirjanpitolaki_1336_1997": 0.15,
+        "kirjanpitoasetus_1339_1997": 0.10,
+        "tilintarkastuslaki_1141_2015": 0.15,
+        "hankintalaki_1397_2016": 0.15,
+        "osakeyhtiolaki_624_2006": 0.05,
+    }
+    
+    if len(matched_laws) < min_laws:
+        # Use fallback prior, filtered by available_laws
+        weights = {}
+        for law_key in available_laws:
+            if law_key in matched_laws:
+                # Boost matched laws
+                weights[law_key] = FALLBACK_PRIOR.get(law_key, 0.1) + 0.2 * matched_laws[law_key]
+            else:
+                weights[law_key] = FALLBACK_PRIOR.get(law_key, 0.1)
+        
+        # Normalize
+        total = sum(weights.values())
+        weights = {k: v / total for k, v in weights.items()}
+        
+        # Keep only top min_laws
+        sorted_laws = sorted(weights.items(), key=lambda x: x[1], reverse=True)
+        weights = dict(sorted_laws[:max(min_laws, len(matched_laws) + 1)])
+        
+        # Re-normalize
+        total = sum(weights.values())
+        weights = {k: v / total for k, v in weights.items()}
+        
+        return weights
+    
+    # Normal case: multiple keyword matches
     # Normalize to weights summing to 1.0
-    total = sum(scores.values())
-    weights = {law_key: count / total for law_key, count in scores.items()}
+    total = sum(matched_laws.values())
+    weights = {law_key: count / total for law_key, count in matched_laws.items()}
+    
+    # v7: Ensure at least min_laws are included
+    if len(weights) < min_laws:
+        # Add more laws from fallback prior
+        for law_key in available_laws:
+            if law_key not in weights:
+                weights[law_key] = 0.1
+                if len(weights) >= min_laws:
+                    break
+        
+        # Re-normalize
+        total = sum(weights.values())
+        weights = {k: v / total for k, v in weights.items()}
     
     return weights
 

@@ -1,0 +1,515 @@
+{
+  "description": "Cross-law evaluation: Kuntalaki ↔ Kirjanpitoasetus (KPA) (autofilled v7)",
+  "version": "7.0",
+  "autofill_stats": {
+    "ok": 20,
+    "fail": 0
+  },
+  "questions": [
+    {
+      "id": "CROSS-KUNTA-KPA-001",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tuloslaskelmakaava ja tasekaava",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "tuloslaskelmakaava",
+        "tasekaava"
+      ],
+      "expected_none": [],
+      "notes": "Kaavat ovat KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6480122208595276,
+      "autofill_overlap": 0,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 1,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-002",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "taseen vastaavaa ja vastattavaa",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "vastattavaa",
+        "taseen",
+        "vastaavaa"
+      ],
+      "expected_none": [],
+      "notes": "Tasekaava on KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.5793529748916626,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 5,
+          "moment": 3
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-003",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "liitetietojen sisältö ja esittämistapa",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "esittämistapa",
+        "sisältö",
+        "liitetietojen"
+      ],
+      "expected_none": [],
+      "notes": "Liitetietojen esittäminen on KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.642926037311554,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 2,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-004",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "rahoituslaskelman kaava",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "rahoituslaskelman",
+        "kaava"
+      ],
+      "expected_none": [],
+      "notes": "Rahoituslaskelman kaava on KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.5691549777984619,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 1,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-005",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnan talousarvion esittäminen",
+      "expected_law_key": "kuntalaki_410_2015",
+      "expected_anchor_terms": [
+        "talousarvion",
+        "kunnan",
+        "esittäminen"
+      ],
+      "expected_none": [
+        "kirjanpitoasetus_1339_1997"
+      ],
+      "notes": "HARD NEG: 'talousarvio' on Kuntalaki-käsite",
+      "autofill_status": "OK",
+      "autofill_score": 0.6103681325912476,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 110,
+          "moment": 3
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-006",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "konsernituloslaskelma ja konsernitase",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "konsernitase",
+        "konsernituloslaskelma"
+      ],
+      "expected_none": [],
+      "notes": "Konsernitilinpäätöksen kaavat ovat KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.7305424809455872,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 1,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-007",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "pysyvät vastaavat taseessa",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "vastaavat",
+        "taseessa",
+        "pysyvät"
+      ],
+      "expected_none": [],
+      "notes": "Taseen erät ovat KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6062787771224976,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 6,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-008",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kuntayhtymän tase",
+      "expected_law_key": "kuntalaki_410_2015",
+      "expected_anchor_terms": [
+        "kuntayhtymän",
+        "tase"
+      ],
+      "expected_none": [
+        "kirjanpitoasetus_1339_1997"
+      ],
+      "notes": "HARD NEG: 'kuntayhtymä' viittaa Kuntalakiin",
+      "autofill_status": "OK",
+      "autofill_score": 0.5598558783531189,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 119,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-009",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "oma pääoma ja vieras pääoma taseessa",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "vieras",
+        "pääoma",
+        "taseessa"
+      ],
+      "expected_none": [],
+      "notes": "Pääomaerät ovat KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6194536685943604,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 6,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-010",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tuloslaskelman henkilöstökulut",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "henkilöstökulut",
+        "tuloslaskelman"
+      ],
+      "expected_none": [],
+      "notes": "Tuloslaskelman erät ovat KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.5299047231674194,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 3,
+          "moment": 3
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-011",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "valtuuston päätös taseen osoittamasta tuloksesta",
+      "expected_law_key": "kuntalaki_410_2015",
+      "expected_anchor_terms": [
+        "osoittamasta",
+        "tuloksesta",
+        "päätös",
+        "taseen",
+        "valtuuston"
+      ],
+      "expected_none": [
+        "kirjanpitoasetus_1339_1997"
+      ],
+      "notes": "HARD NEG: 'valtuusto' viittaa Kuntalakiin",
+      "autofill_status": "OK",
+      "autofill_score": 0.5590192079544067,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 118,
+          "moment": 6
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-012",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "liiketoiminnan muut tuotot tuloslaskelmassa",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "muut",
+        "tuotot",
+        "tuloslaskelmassa",
+        "liiketoiminnan"
+      ],
+      "expected_none": [],
+      "notes": "Tuloslaskelman erät ovat KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6608263850212097,
+      "autofill_overlap": 3,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 2,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-013",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "poistot ja arvonalentumiset tuloslaskelmassa",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "poistot",
+        "tuloslaskelmassa",
+        "arvonalentumiset"
+      ],
+      "expected_none": [],
+      "notes": "Tuloslaskelman poistot ovat KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6038767695426941,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 2,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-014",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kuntakonsernin tilinpäätös",
+      "expected_law_key": "kuntalaki_410_2015",
+      "expected_anchor_terms": [
+        "kuntakonsernin",
+        "tilinpäätös"
+      ],
+      "expected_none": [
+        "kirjanpitoasetus_1339_1997"
+      ],
+      "notes": "HARD NEG: 'kuntakonserni' viittaa Kuntalakiin",
+      "autofill_status": "OK",
+      "autofill_score": 0.685562014579773,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 114,
+          "moment": 2
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-015",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tilinpäätöksen erittelyt",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "erittelyt",
+        "tilinpäätöksen"
+      ],
+      "expected_none": [],
+      "notes": "Erittelyt ovat KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6768834590911865,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 1,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-016",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "vakuudet ja vastuusitoumukset liitetiedoissa",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "liitetiedoissa",
+        "vastuusitoumukset",
+        "vakuudet"
+      ],
+      "expected_none": [],
+      "notes": "Vakuudet ja vastuusitoumukset ovat KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6375699043273926,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 7,
+          "moment": 2
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-017",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnanjohtajan allekirjoittama tilinpäätös",
+      "expected_law_key": "kuntalaki_410_2015",
+      "expected_anchor_terms": [
+        "allekirjoittama",
+        "tilinpäätös",
+        "kunnanjohtajan"
+      ],
+      "expected_none": [
+        "kirjanpitoasetus_1339_1997"
+      ],
+      "notes": "HARD NEG: 'kunnanjohtaja' viittaa Kuntalakiin",
+      "autofill_status": "OK",
+      "autofill_score": 0.7212642431259155,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 113,
+          "moment": 4
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-018",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "rahoitustuotot ja -kulut",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "kulut",
+        "rahoitustuotot"
+      ],
+      "expected_none": [],
+      "notes": "Rahoituserät ovat KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.5566644668579102,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 2,
+          "moment": 2
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-019",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "pienyrityksen tilinpäätöskaava",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "pienyrityksen",
+        "tilinpäätöskaava"
+      ],
+      "expected_none": [],
+      "notes": "Pienyrityksen kaava on KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.5403132438659668,
+      "autofill_overlap": 0,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 1,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-KPA-020",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "vaihtuvat vastaavat ja vaihto-omaisuus",
+      "expected_law_key": "kirjanpitoasetus_1339_1997",
+      "expected_anchor_terms": [
+        "vastaavat",
+        "vaihtuvat",
+        "omaisuus",
+        "vaihto"
+      ],
+      "expected_none": [],
+      "notes": "Taseen erät ovat KPA:ssa",
+      "autofill_status": "OK",
+      "autofill_score": 0.5318902730941772,
+      "autofill_overlap": 4,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitoasetus_1339_1997",
+          "section_num": 6,
+          "moment": 1
+        }
+      ]
+    }
+  ]
+}

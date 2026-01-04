@@ -1,47 +1,62 @@
 {
-  "timestamp": "2026-01-05T00:16:38.934057",
+  "timestamp": "2026-01-05T00:29:20.307263",
+  "version": "7.0",
   "config": {
     "k_total": 10,
     "min_score": 0.5
   },
   "summary": {
     "total": 100,
-    "passed": 55,
-    "pass_rate": 0.55,
-    "top1_hits": 42,
-    "top1_hit_rate": 0.42,
-    "hard_negative_violations": 0,
-    "avg_latency_ms": 35.79654200584628
+    "pass_strict": 61,
+    "pass_rate_strict": 0.61,
+    "top1_strict": 38,
+    "top1_rate_strict": 0.38,
+    "pass_routing": 71,
+    "pass_rate_routing": 0.71,
+    "top1_routing": 68,
+    "top1_rate_routing": 0.68,
+    "hard_negative_violations": 1,
+    "avg_latency_ms": 44.54448000062257
   },
   "pair_metrics": {
     "hank": {
       "total": 20,
-      "passed": 11,
-      "top1": 10,
+      "pass_strict": 11,
+      "pass_routing": 14,
+      "top1_strict": 6,
+      "top1_routing": 14,
       "hn_viol": 0
     },
     "kpa": {
       "total": 20,
-      "passed": 7,
-      "top1": 5,
+      "pass_strict": 9,
+      "pass_routing": 10,
+      "top1_strict": 6,
+      "top1_routing": 10,
       "hn_viol": 0
     },
     "kpl": {
       "total": 20,
-      "passed": 11,
-      "top1": 8,
-      "hn_viol": 0
+      "pass_strict": 17,
+      "pass_routing": 19,
+      "top1_strict": 8,
+      "top1_routing": 16,
+      "hn_viol": 1
     },
     "oyl": {
       "total": 20,
-      "passed": 13,
-      "top1": 9,
+      "pass_strict": 12,
+      "pass_routing": 14,
+      "top1_strict": 9,
+      "top1_routing": 14,
       "hn_viol": 0
     },
     "tila": {
       "total": 20,
-      "passed": 13,
-      "top1": 10,
+      "pass_strict": 12,
+      "pass_routing": 14,
+      "top1_strict": 9,
+      "top1_routing": 14,
       "hn_viol": 0
     }
   },
@@ -51,28 +66,21 @@
       "query": "julkisen hankinnan kynnysarvot",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": false,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "hankintalaki_1397_2016",
-          "section_num": 25,
-          "moment": 1
+          "section_num": 2,
+          "moment": 3
         }
       ],
       "expected_none": [],
-      "matched_result": {
-        "law_key": "hankintalaki_1397_2016",
-        "score": 0.6991478204727173,
-        "section_num": 25,
-        "section_id": "25",
-        "moment": "1",
-        "section_title": "Kansalliset kynnysarvot",
-        "node_id": "1397/2016:fin@20240592:4l:25:1"
-      },
+      "matched_result": null,
       "top1_result": {
         "law_key": "hankintalaki_1397_2016",
         "score": 0.6991478204727173,
@@ -82,34 +90,35 @@
         "section_title": "Kansalliset kynnysarvot",
         "node_id": "1397/2016:fin@20240592:4l:25:1"
       },
-      "latency_ms": 278.37880002334714
+      "latency_ms": 305.0461000530049
     },
     {
       "id": "CROSS-KUNTA-HANK-002",
       "query": "hankintailmoituksen julkaiseminen",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "hankintalaki_1397_2016",
           "section_num": 60,
-          "moment": 1
+          "moment": 5
         }
       ],
       "expected_none": [],
       "matched_result": {
         "law_key": "hankintalaki_1397_2016",
-        "score": 0.723171591758728,
-        "section_num": 101,
-        "section_id": "101",
-        "moment": "2",
-        "section_title": "Hankinnasta ilmoittaminen",
-        "node_id": "1397/2016:fin@20240592:11l:101:2"
+        "score": 0.7050917744636536,
+        "section_num": 60,
+        "section_id": "60",
+        "moment": "5",
+        "section_title": "Hankintailmoitusten julkaiseminen",
+        "node_id": "1397/2016:fin@20240592:7l:60:5"
       },
       "top1_result": {
         "law_key": "hankintalaki_1397_2016",
@@ -120,22 +129,23 @@
         "section_title": "Hankinnasta ilmoittaminen",
         "node_id": "1397/2016:fin@20240592:11l:101:2"
       },
-      "latency_ms": 34.45799998007715
+      "latency_ms": 38.671799935400486
     },
     {
       "id": "CROSS-KUNTA-HANK-003",
       "query": "tarjouksen valintaperusteet",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "hankintalaki_1397_2016",
-          "section_num": 93,
+          "section_num": 79,
           "moment": 1
         }
       ],
@@ -150,23 +160,24 @@
         "section_title": "Palveluvelvoite",
         "node_id": "410/2015:fin@20230780:131:3"
       },
-      "latency_ms": 40.39129999000579
+      "latency_ms": 48.662599991075695
     },
     {
       "id": "CROSS-KUNTA-HANK-004",
       "query": "kilpailutus ja tarjouskilpailu",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "hankintalaki_1397_2016",
-          "section_num": 1,
-          "moment": 1
+          "section_num": 104,
+          "moment": 2
         }
       ],
       "expected_none": [],
@@ -188,29 +199,38 @@
         "section_title": "Tarjouspyyntö ja tarjous",
         "node_id": "1397/2016:fin@20240592:11l:104:2"
       },
-      "latency_ms": 31.22340003028512
+      "latency_ms": 35.703200032003224
     },
     {
       "id": "CROSS-KUNTA-HANK-005",
       "query": "kunnan investointien rahoitus",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 110,
-          "moment": 1
+          "section_num": 6,
+          "moment": 2
         }
       ],
       "expected_none": [
         "hankintalaki_1397_2016"
       ],
-      "matched_result": null,
+      "matched_result": {
+        "law_key": "kuntalaki_410_2015",
+        "score": 0.544150173664093,
+        "section_num": 6,
+        "section_id": "6",
+        "moment": "2",
+        "section_title": "Kuntakonserni ja kunnan toiminta",
+        "node_id": "410/2015:fin@20230780:6:2"
+      },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
         "score": 0.544150173664093,
@@ -220,34 +240,35 @@
         "section_title": "Kuntakonserni ja kunnan toiminta",
         "node_id": "410/2015:fin@20230780:6:2"
       },
-      "latency_ms": 30.884900013916194
+      "latency_ms": 48.09180006850511
     },
     {
       "id": "CROSS-KUNTA-HANK-006",
       "query": "hankintayksikön määritelmä",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "hankintalaki_1397_2016",
           "section_num": 5,
-          "moment": 1
+          "moment": 2
         }
       ],
       "expected_none": [],
       "matched_result": {
         "law_key": "hankintalaki_1397_2016",
-        "score": 0.6997750997543335,
+        "score": 0.6792358160018921,
         "section_num": 5,
         "section_id": "5",
-        "moment": "1",
+        "moment": "2",
         "section_title": "Hankintayksiköt",
-        "node_id": "1397/2016:fin@20240592:1l:5:1"
+        "node_id": "1397/2016:fin@20240592:1l:5:2"
       },
       "top1_result": {
         "law_key": "hankintalaki_1397_2016",
@@ -258,35 +279,28 @@
         "section_title": "Hankintayksiköt",
         "node_id": "1397/2016:fin@20240592:1l:5:1"
       },
-      "latency_ms": 38.08609989937395
+      "latency_ms": 45.530300005339086
     },
     {
       "id": "CROSS-KUNTA-HANK-007",
       "query": "puitejärjestely ja hankintasopimus",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": false,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "hankintalaki_1397_2016",
-          "section_num": 42,
+          "section_num": 136,
           "moment": 1
         }
       ],
       "expected_none": [],
-      "matched_result": {
-        "law_key": "hankintalaki_1397_2016",
-        "score": 0.7371673583984375,
-        "section_num": 42,
-        "section_id": "42",
-        "moment": "4",
-        "section_title": "Puitejärjestely",
-        "node_id": "1397/2016:fin@20240592:5l:42:4"
-      },
+      "matched_result": null,
       "top1_result": {
         "law_key": "hankintalaki_1397_2016",
         "score": 0.7371673583984375,
@@ -296,29 +310,38 @@
         "section_title": "Puitejärjestely",
         "node_id": "1397/2016:fin@20240592:5l:42:4"
       },
-      "latency_ms": 31.53930010739714
+      "latency_ms": 41.07419995125383
     },
     {
       "id": "CROSS-KUNTA-HANK-008",
       "query": "kunnan toiminnan ja talouden ohjaus",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 110,
+          "section_num": 120,
           "moment": 1
         }
       ],
       "expected_none": [
         "hankintalaki_1397_2016"
       ],
-      "matched_result": null,
+      "matched_result": {
+        "law_key": "kuntalaki_410_2015",
+        "score": 0.5894989371299744,
+        "section_num": 120,
+        "section_id": "120",
+        "moment": "1",
+        "section_title": "Kunnallisen liikelaitoksen talous",
+        "node_id": "410/2015:fin@20230780:120:1"
+      },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
         "score": 0.6379335522651672,
@@ -328,34 +351,35 @@
         "section_title": "Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen",
         "node_id": "410/2015:fin@20230780:120a:1"
       },
-      "latency_ms": 32.40709996316582
+      "latency_ms": 47.36809991300106
     },
     {
       "id": "CROSS-KUNTA-HANK-009",
       "query": "EU-kynnysarvon ylittävä hankinta",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "hankintalaki_1397_2016",
-          "section_num": 26,
+          "section_num": 124,
           "moment": 1
         }
       ],
       "expected_none": [],
       "matched_result": {
         "law_key": "hankintalaki_1397_2016",
-        "score": 0.7247246503829956,
-        "section_num": 26,
-        "section_id": "26",
-        "moment": "2",
-        "section_title": "EU-kynnysarvot",
-        "node_id": "1397/2016:fin@20240592:4l:26:2"
+        "score": 0.6515711545944214,
+        "section_num": 124,
+        "section_id": "124",
+        "moment": "1",
+        "section_title": "Hankintamenettelyä koskeva kertomus",
+        "node_id": "1397/2016:fin@20240592:14l:124:1"
       },
       "top1_result": {
         "law_key": "hankintalaki_1397_2016",
@@ -366,22 +390,23 @@
         "section_title": "EU-kynnysarvot",
         "node_id": "1397/2016:fin@20240592:4l:26:2"
       },
-      "latency_ms": 30.259400024078786
+      "latency_ms": 38.22860005311668
     },
     {
       "id": "CROSS-KUNTA-HANK-010",
       "query": "hankintapäätöksen tekeminen",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "hankintalaki_1397_2016",
-          "section_num": 123,
+          "section_num": 128,
           "moment": 1
         }
       ],
@@ -404,22 +429,23 @@
         "section_title": "Hankintasopimuksen tekeminen",
         "node_id": "1397/2016:fin@20240592:14l:128:1"
       },
-      "latency_ms": 30.239999992772937
+      "latency_ms": 49.425800098106265
     },
     {
       "id": "CROSS-KUNTA-HANK-011",
       "query": "kunnanhallituksen päätösvalta sopimuksissa",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": true,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 39,
+          "section_num": 58,
           "moment": 1
         }
       ],
@@ -428,12 +454,12 @@
       ],
       "matched_result": {
         "law_key": "kuntalaki_410_2015",
-        "score": 0.5766988396644592,
-        "section_num": 39,
-        "section_id": "39",
+        "score": 0.604154646396637,
+        "section_num": 58,
+        "section_id": "58",
         "moment": "1",
-        "section_title": "Kunnanhallituksen tehtävät",
-        "node_id": "410/2015:fin@20230780:39:1"
+        "section_title": "Kuntayhtymän toimielimet",
+        "node_id": "410/2015:fin@20230780:58:1"
       },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
@@ -444,22 +470,23 @@
         "section_title": "Johtajasopimus",
         "node_id": "410/2015:fin@20230780:42:1"
       },
-      "latency_ms": 31.653700047172606
+      "latency_ms": 45.66709999926388
     },
     {
       "id": "CROSS-KUNTA-HANK-012",
       "query": "tarjoajan poissulkemisperusteet",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "hankintalaki_1397_2016",
-          "section_num": 80,
+          "section_num": 81,
           "moment": 1
         }
       ],
@@ -474,34 +501,35 @@
         "section_title": "Palveluvelvoite",
         "node_id": "410/2015:fin@20230780:131:3"
       },
-      "latency_ms": 31.323199975304306
+      "latency_ms": 42.782200034707785
     },
     {
       "id": "CROSS-KUNTA-HANK-013",
       "query": "markkinaoikeus ja hankintavalitus",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "hankintalaki_1397_2016",
-          "section_num": 145,
+          "section_num": 151,
           "moment": 1
         }
       ],
       "expected_none": [],
       "matched_result": {
         "law_key": "hankintalaki_1397_2016",
-        "score": 0.6667728424072266,
-        "section_num": 145,
-        "section_id": "145",
+        "score": 0.6347126960754395,
+        "section_num": 151,
+        "section_id": "151",
         "moment": "1",
-        "section_title": "Muutoksenhakuun oikeutetut",
-        "node_id": "1397/2016:fin@20240592:16l:145:1"
+        "section_title": "Markkinaoikeuden väliaikaiset päätökset",
+        "node_id": "1397/2016:fin@20240592:16l:151:1"
       },
       "top1_result": {
         "law_key": "hankintalaki_1397_2016",
@@ -512,23 +540,24 @@
         "section_title": "Muutoksenhakuun oikeutetut",
         "node_id": "1397/2016:fin@20240592:16l:145:1"
       },
-      "latency_ms": 31.5728000132367
+      "latency_ms": 39.87480001524091
     },
     {
       "id": "CROSS-KUNTA-HANK-014",
       "query": "valtuuston päätös suuresta investoinnista",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": false,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 14,
-          "moment": 1
+          "section_num": 118,
+          "moment": 6
         }
       ],
       "expected_none": [
@@ -544,22 +573,23 @@
         "section_title": "Veroja koskevat päätökset",
         "node_id": "410/2015:fin@20230780:111:1"
       },
-      "latency_ms": 30.96260002348572
+      "latency_ms": 41.29880003165454
     },
     {
       "id": "CROSS-KUNTA-HANK-015",
       "query": "neuvottelumenettely julkisissa hankinnoissa",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "hankintalaki_1397_2016",
-          "section_num": 34,
+          "section_num": 36,
           "moment": 1
         }
       ],
@@ -574,17 +604,18 @@
         "section_title": "Kuntatalousohjelma",
         "node_id": "410/2015:fin@20230780:12:1"
       },
-      "latency_ms": 31.200199970044196
+      "latency_ms": 45.81569996662438
     },
     {
       "id": "CROSS-KUNTA-HANK-016",
       "query": "sidosyksikköhankinta",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -612,17 +643,18 @@
         "section_title": "Hankinnat hankintayksikön sidosyksiköltä",
         "node_id": "1397/2016:fin@20240592:2l:15:1"
       },
-      "latency_ms": 34.116300055757165
+      "latency_ms": 40.45800003223121
     },
     {
       "id": "CROSS-KUNTA-HANK-017",
       "query": "kunnan omaisuuden myynti",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -652,66 +684,69 @@
         "section_title": "Kunnan omistaman kiinteistön luovutuksen tai vuokrasopimuksen markkinaehtoisuuden määrittely",
         "node_id": "410/2015:fin@20230780:130:1"
       },
-      "latency_ms": 34.53629999421537
+      "latency_ms": 49.10179995931685
     },
     {
       "id": "CROSS-KUNTA-HANK-018",
       "query": "sosiaalinen näkökulma hankinnoissa",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "hankintalaki_1397_2016",
-          "section_num": 98,
-          "moment": 1
+          "section_num": 108,
+          "moment": 2
         }
       ],
       "expected_none": [],
       "matched_result": null,
       "top1_result": null,
-      "latency_ms": 30.784099944867194
+      "latency_ms": 44.85599999316037
     },
     {
       "id": "CROSS-KUNTA-HANK-019",
       "query": "käyttöoikeussopimus ja konsessio",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "hankintalaki_1397_2016",
-          "section_num": 4,
-          "moment": 1
+          "section_num": 117,
+          "moment": 2
         }
       ],
       "expected_none": [],
       "matched_result": null,
       "top1_result": null,
-      "latency_ms": 29.324500006623566
+      "latency_ms": 39.0427999664098
     },
     {
       "id": "CROSS-KUNTA-HANK-020",
       "query": "avoin menettely ja rajoitettu menettely",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_hank.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_hank.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "hankintalaki_1397_2016",
-          "section_num": 32,
+          "section_num": 33,
           "moment": 1
         }
       ],
@@ -726,17 +761,18 @@
         "section_title": "Palveluvelvoite",
         "node_id": "410/2015:fin@20230780:131:3"
       },
-      "latency_ms": 29.70169996842742
+      "latency_ms": 35.067299962975085
     },
     {
       "id": "CROSS-KUNTA-KPA-001",
       "query": "tuloslaskelmakaava ja tasekaava",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -764,23 +800,24 @@
         "section_title": "Konsernituloslaskelman ja konsernitaseen kaavat",
         "node_id": "1339/1997:fin@20151752:3l:1:1"
       },
-      "latency_ms": 53.25920006725937
+      "latency_ms": 46.757300035096705
     },
     {
       "id": "CROSS-KUNTA-KPA-002",
       "query": "taseen vastaavaa ja vastattavaa",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitoasetus_1339_1997",
-          "section_num": 6,
-          "moment": 1
+          "section_num": 5,
+          "moment": 3
         }
       ],
       "expected_none": [],
@@ -794,17 +831,18 @@
         "section_title": "Tilinpäätöksen sisältö",
         "node_id": "1336/1997:fin@20251006:3l:1:2"
       },
-      "latency_ms": 30.67959996405989
+      "latency_ms": 36.434800014831126
     },
     {
       "id": "CROSS-KUNTA-KPA-003",
       "query": "liitetietojen sisältö ja esittämistapa",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -816,12 +854,12 @@
       "expected_none": [],
       "matched_result": {
         "law_key": "kirjanpitoasetus_1339_1997",
-        "score": 0.6432114243507385,
-        "section_num": 7,
-        "section_id": "7b",
+        "score": 0.6412299871444702,
+        "section_num": 2,
+        "section_id": "2",
         "moment": "1",
-        "section_title": "Lähipiiriliiketoimet",
-        "node_id": "1339/1997:fin@20151752:2l:7b:1"
+        "section_title": "Laatimista koskevat liitetiedot",
+        "node_id": "1339/1997:fin@20151752:4l:2:1"
       },
       "top1_result": {
         "law_key": "kirjanpitoasetus_1339_1997",
@@ -832,34 +870,35 @@
         "section_title": "Lähipiiriliiketoimet",
         "node_id": "1339/1997:fin@20151752:2l:7b:1"
       },
-      "latency_ms": 31.746799941174686
+      "latency_ms": 49.712899955920875
     },
     {
       "id": "CROSS-KUNTA-KPA-004",
       "query": "rahoituslaskelman kaava",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitoasetus_1339_1997",
-          "section_num": 2,
+          "section_num": 1,
           "moment": 1
         }
       ],
       "expected_none": [],
       "matched_result": {
         "law_key": "kirjanpitoasetus_1339_1997",
-        "score": 0.6232074499130249,
+        "score": 0.5506630539894104,
         "section_num": 1,
         "section_id": "1",
         "moment": "1",
-        "section_title": "Rahoituslaskelma",
-        "node_id": "1339/1997:fin@20151752:2l:1:1"
+        "section_title": "Kululajikohtainen tuloslaskelma",
+        "node_id": "1339/1997:fin@20151752:1l:1:1"
       },
       "top1_result": {
         "law_key": "kirjanpitoasetus_1339_1997",
@@ -870,23 +909,24 @@
         "section_title": "Rahoituslaskelma",
         "node_id": "1339/1997:fin@20151752:2l:1:1"
       },
-      "latency_ms": 30.422599986195564
+      "latency_ms": 42.43450006470084
     },
     {
       "id": "CROSS-KUNTA-KPA-005",
       "query": "kunnan talousarvion esittäminen",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": true,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
           "section_num": 110,
-          "moment": 1
+          "moment": 3
         }
       ],
       "expected_none": [
@@ -894,12 +934,12 @@
       ],
       "matched_result": {
         "law_key": "kuntalaki_410_2015",
-        "score": 0.6278314590454102,
+        "score": 0.6103681325912476,
         "section_num": 110,
         "section_id": "110",
-        "moment": "1",
+        "moment": "3",
         "section_title": "Talousarvio ja -suunnitelma",
-        "node_id": "410/2015:fin@20230780:110:1"
+        "node_id": "410/2015:fin@20230780:110:3"
       },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
@@ -910,17 +950,18 @@
         "section_title": "Kuntatalousohjelma",
         "node_id": "410/2015:fin@20230780:12:4"
       },
-      "latency_ms": 31.633300008252263
+      "latency_ms": 40.0746000232175
     },
     {
       "id": "CROSS-KUNTA-KPA-006",
       "query": "konsernituloslaskelma ja konsernitase",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -948,17 +989,18 @@
         "section_title": "Konsernituloslaskelman ja konsernitaseen kaavat",
         "node_id": "1339/1997:fin@20151752:3l:1:1"
       },
-      "latency_ms": 32.99699991475791
+      "latency_ms": 40.7553999684751
     },
     {
       "id": "CROSS-KUNTA-KPA-007",
       "query": "pysyvät vastaavat taseessa",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -978,29 +1020,38 @@
         "section_title": "Pysyvät ja vaihtuvat vastaavat",
         "node_id": "1336/1997:fin@20251006:4l:3:1"
       },
-      "latency_ms": 34.99419998843223
+      "latency_ms": 38.861799985170364
     },
     {
       "id": "CROSS-KUNTA-KPA-008",
       "query": "kuntayhtymän tase",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 113,
+          "section_num": 119,
           "moment": 1
         }
       ],
       "expected_none": [
         "kirjanpitoasetus_1339_1997"
       ],
-      "matched_result": null,
+      "matched_result": {
+        "law_key": "kuntalaki_410_2015",
+        "score": 0.5598558783531189,
+        "section_num": 119,
+        "section_id": "119",
+        "moment": "1",
+        "section_title": "Arviointimenettely kuntayhtymässä",
+        "node_id": "410/2015:fin@20230780:119:1"
+      },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
         "score": 0.562466561794281,
@@ -1010,17 +1061,18 @@
         "section_title": "Kuntayhtymän rahoitus",
         "node_id": "410/2015:fin@20230780:117:1"
       },
-      "latency_ms": 35.446599940769374
+      "latency_ms": 39.86000001896173
     },
     {
       "id": "CROSS-KUNTA-KPA-009",
       "query": "oma pääoma ja vieras pääoma taseessa",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -1040,23 +1092,24 @@
         "section_title": "Pääomalainan merkitseminen taseeseen",
         "node_id": "1336/1997:fin@20251006:5l:5c:1"
       },
-      "latency_ms": 36.41609998885542
+      "latency_ms": 42.95340005774051
     },
     {
       "id": "CROSS-KUNTA-KPA-010",
       "query": "tuloslaskelman henkilöstökulut",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitoasetus_1339_1997",
-          "section_num": 1,
-          "moment": 1
+          "section_num": 3,
+          "moment": 3
         }
       ],
       "expected_none": [],
@@ -1070,23 +1123,24 @@
         "section_title": "Konsernin sisäiset erät ja vähemmistöosuudet",
         "node_id": "1336/1997:fin@20251006:6l:7:2"
       },
-      "latency_ms": 35.98209994379431
+      "latency_ms": 36.2751999637112
     },
     {
       "id": "CROSS-KUNTA-KPA-011",
       "query": "valtuuston päätös taseen osoittamasta tuloksesta",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": false,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 113,
-          "moment": 3
+          "section_num": 118,
+          "moment": 6
         }
       ],
       "expected_none": [
@@ -1102,22 +1156,23 @@
         "section_title": "Tarkastuslautakunta",
         "node_id": "410/2015:fin@20230780:121:5"
       },
-      "latency_ms": 32.050800044089556
+      "latency_ms": 39.81919994112104
     },
     {
       "id": "CROSS-KUNTA-KPA-012",
       "query": "liiketoiminnan muut tuotot tuloslaskelmassa",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitoasetus_1339_1997",
-          "section_num": 1,
+          "section_num": 2,
           "moment": 1
         }
       ],
@@ -1132,22 +1187,23 @@
         "section_title": "Liikevaihto",
         "node_id": "1336/1997:fin@20251006:4l:1:1"
       },
-      "latency_ms": 31.85750008560717
+      "latency_ms": 45.0808999594301
     },
     {
       "id": "CROSS-KUNTA-KPA-013",
       "query": "poistot ja arvonalentumiset tuloslaskelmassa",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitoasetus_1339_1997",
-          "section_num": 1,
+          "section_num": 2,
           "moment": 1
         }
       ],
@@ -1162,23 +1218,24 @@
         "section_title": "Laskennalliset verovelat ja -saamiset",
         "node_id": "1336/1997:fin@20251006:5l:18:1"
       },
-      "latency_ms": 34.54030002467334
+      "latency_ms": 40.53049988579005
     },
     {
       "id": "CROSS-KUNTA-KPA-014",
       "query": "kuntakonsernin tilinpäätös",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": true,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
           "section_num": 114,
-          "moment": 1
+          "moment": 2
         }
       ],
       "expected_none": [
@@ -1186,12 +1243,12 @@
       ],
       "matched_result": {
         "law_key": "kuntalaki_410_2015",
-        "score": 0.668127179145813,
+        "score": 0.685562014579773,
         "section_num": 114,
         "section_id": "114",
-        "moment": "1",
+        "moment": "2",
         "section_title": "Konsernitilinpäätös",
-        "node_id": "410/2015:fin@20230780:114:1"
+        "node_id": "410/2015:fin@20230780:114:2"
       },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
@@ -1202,22 +1259,23 @@
         "section_title": "Konsernitilinpäätös",
         "node_id": "410/2015:fin@20230780:114:2"
       },
-      "latency_ms": 32.75539993774146
+      "latency_ms": 39.60210003424436
     },
     {
       "id": "CROSS-KUNTA-KPA-015",
       "query": "tilinpäätöksen erittelyt",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitoasetus_1339_1997",
-          "section_num": 5,
+          "section_num": 1,
           "moment": 1
         }
       ],
@@ -1240,59 +1298,69 @@
         "section_title": "Tase-erittelyt",
         "node_id": "1339/1997:fin@20151752:5l:1:1"
       },
-      "latency_ms": 32.705600024200976
+      "latency_ms": 33.9238999877125
     },
     {
       "id": "CROSS-KUNTA-KPA-016",
       "query": "vakuudet ja vastuusitoumukset liitetiedoissa",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitoasetus_1339_1997",
-          "section_num": 2,
-          "moment": 1
+          "section_num": 7,
+          "moment": 2
         }
       ],
       "expected_none": [],
       "matched_result": null,
       "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.5463189482688904,
-        "section_num": 84,
-        "section_id": "84",
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.5624048709869385,
+        "section_num": 5,
+        "section_id": "5b",
         "moment": "1",
-        "section_title": "Sidonnaisuuksien ilmoittaminen",
-        "node_id": "410/2015:fin@20230780:84:1"
+        "section_title": "Liitetietotosite",
+        "node_id": "1336/1997:fin@20251006:2l:5b:1"
       },
-      "latency_ms": 35.38520005531609
+      "latency_ms": 43.70719997677952
     },
     {
       "id": "CROSS-KUNTA-KPA-017",
       "query": "kunnanjohtajan allekirjoittama tilinpäätös",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
           "section_num": 113,
-          "moment": 2
+          "moment": 4
         }
       ],
       "expected_none": [
         "kirjanpitoasetus_1339_1997"
       ],
-      "matched_result": null,
+      "matched_result": {
+        "law_key": "kuntalaki_410_2015",
+        "score": 0.7212642431259155,
+        "section_num": 113,
+        "section_id": "113",
+        "moment": "4",
+        "section_title": "Tilinpäätös",
+        "node_id": "410/2015:fin@20230780:113:4"
+      },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
         "score": 0.7212642431259155,
@@ -1302,47 +1370,49 @@
         "section_title": "Tilinpäätös",
         "node_id": "410/2015:fin@20230780:113:4"
       },
-      "latency_ms": 32.50120009761304
+      "latency_ms": 40.964100044220686
     },
     {
       "id": "CROSS-KUNTA-KPA-018",
       "query": "rahoitustuotot ja -kulut",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitoasetus_1339_1997",
-          "section_num": 1,
-          "moment": 1
+          "section_num": 2,
+          "moment": 2
         }
       ],
       "expected_none": [],
       "matched_result": null,
       "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.5283517837524414,
-        "section_num": 113,
-        "section_id": "113",
-        "moment": "2",
-        "section_title": "Tilinpäätös",
-        "node_id": "410/2015:fin@20230780:113:2"
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.5862101912498474,
+        "section_num": 2,
+        "section_id": "2",
+        "moment": "3",
+        "section_title": "Saamiset, rahoitusvarat ja velat",
+        "node_id": "1336/1997:fin@20251006:5l:2:3"
       },
-      "latency_ms": 29.841800103895366
+      "latency_ms": 44.45980000309646
     },
     {
       "id": "CROSS-KUNTA-KPA-019",
       "query": "pienyrityksen tilinpäätöskaava",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -1354,25 +1424,26 @@
       "expected_none": [],
       "matched_result": null,
       "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.5312583446502686,
-        "section_num": 118,
-        "section_id": "118",
-        "moment": "3",
-        "section_title": "Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely",
-        "node_id": "410/2015:fin@20230780:118:3"
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.6257774233818054,
+        "section_num": 4,
+        "section_id": "4a",
+        "moment": "1",
+        "section_title": "Pienyritys",
+        "node_id": "1336/1997:fin@20251006:1l:4a:1"
       },
-      "latency_ms": 32.020899932831526
+      "latency_ms": 40.71919992566109
     },
     {
       "id": "CROSS-KUNTA-KPA-020",
       "query": "vaihtuvat vastaavat ja vaihto-omaisuus",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpa.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpa.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -1383,35 +1454,44 @@
       ],
       "expected_none": [],
       "matched_result": null,
-      "top1_result": null,
-      "latency_ms": 30.204399954527617
+      "top1_result": {
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.6921604871749878,
+        "section_num": 4,
+        "section_id": "4",
+        "moment": "2",
+        "section_title": "Vaihto-omaisuus ja rahoitusomaisuus (30.12.2004/1304)",
+        "node_id": "1336/1997:fin@20251006:4l:4:2"
+      },
+      "latency_ms": 41.79010004736483
     },
     {
       "id": "CROSS-KUNTA-KPL-001",
       "query": "tilinpäätöksen liitetiedot ja arvostusperiaatteet",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 3,
-          "moment": 1
+          "section_num": 4,
+          "moment": 2
         }
       ],
       "expected_none": [],
       "matched_result": {
         "law_key": "kirjanpitolaki_1336_1997",
-        "score": 0.6383976340293884,
-        "section_num": 6,
-        "section_id": "6",
-        "moment": "1",
-        "section_title": "Tarkemmat säännökset",
-        "node_id": "1336/1997:fin@20251006:8l:6:1"
+        "score": 0.6245176792144775,
+        "section_num": 4,
+        "section_id": "4",
+        "moment": "2",
+        "section_title": "Lasku- ja maksuperusteisuuden oikaiseminen ja täydentäminen sekä maksuperusteinen tilinpäätös",
+        "node_id": "1336/1997:fin@20251006:3l:4:2"
       },
       "top1_result": {
         "law_key": "kirjanpitolaki_1336_1997",
@@ -1422,34 +1502,35 @@
         "section_title": "Tarkemmat säännökset",
         "node_id": "1336/1997:fin@20251006:8l:6:1"
       },
-      "latency_ms": 30.059300013817847
+      "latency_ms": 39.24940002616495
     },
     {
       "id": "CROSS-KUNTA-KPL-002",
       "query": "kirjanpitovelvollisen tilinpäätöksen laatimisaika",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 6,
-          "moment": 1
+          "section_num": 9,
+          "moment": 4
         }
       ],
       "expected_none": [],
       "matched_result": {
         "law_key": "kirjanpitolaki_1336_1997",
-        "score": 0.7218414545059204,
-        "section_num": 6,
-        "section_id": "6",
-        "moment": "1",
-        "section_title": "Laatimisaika",
-        "node_id": "1336/1997:fin@20251006:3l:6:1"
+        "score": 0.6666392087936401,
+        "section_num": 9,
+        "section_id": "9",
+        "moment": "4",
+        "section_title": "Tilinpäätöksen ja toimintakertomuksen rekisteröinti",
+        "node_id": "1336/1997:fin@20251006:3l:9:4"
       },
       "top1_result": {
         "law_key": "kirjanpitolaki_1336_1997",
@@ -1460,17 +1541,18 @@
         "section_title": "Laatimisaika",
         "node_id": "1336/1997:fin@20251006:3l:6:1"
       },
-      "latency_ms": 31.635900028049946
+      "latency_ms": 39.863500045612454
     },
     {
       "id": "CROSS-KUNTA-KPL-003",
       "query": "tase-erittelyt ja liitetiedot",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": true,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -1482,12 +1564,12 @@
       "expected_none": [],
       "matched_result": {
         "law_key": "kirjanpitolaki_1336_1997",
-        "score": 0.6708506941795349,
-        "section_num": 6,
-        "section_id": "6",
+        "score": 0.6585401296615601,
+        "section_num": 13,
+        "section_id": "13",
         "moment": "1",
-        "section_title": "Tarkemmat säännökset",
-        "node_id": "1336/1997:fin@20251006:8l:6:1"
+        "section_title": "Tase-erittelyt",
+        "node_id": "1336/1997:fin@20251006:3l:13:1"
       },
       "top1_result": {
         "law_key": "kirjanpitoasetus_1339_1997",
@@ -1498,23 +1580,24 @@
         "section_title": "Taseen vastattavia koskevat liitetiedot",
         "node_id": "1339/1997:fin@20151752:2l:5:1"
       },
-      "latency_ms": 32.03210001811385
+      "latency_ms": 40.140700060874224
     },
     {
       "id": "CROSS-KUNTA-KPL-004",
       "query": "poistot ja arvonalentuminen kirjanpidossa",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 5,
-          "moment": 1
+          "section_num": 12,
+          "moment": 2
         }
       ],
       "expected_none": [],
@@ -1536,23 +1619,24 @@
         "section_title": "Muut kuin suunnitelman mukaiset poistot",
         "node_id": "1336/1997:fin@20251006:5l:12:2"
       },
-      "latency_ms": 30.991000006906688
+      "latency_ms": 46.94140003994107
     },
     {
       "id": "CROSS-KUNTA-KPL-005",
       "query": "kunnan tilinpäätöksen laatimisvelvollisuus",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": true,
-      "top1_hit": false,
-      "law_match": true,
-      "hard_negative_violation": false,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
+      "hard_negative_violation": true,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
           "section_num": 113,
-          "moment": 1
+          "moment": 3
         }
       ],
       "expected_none": [
@@ -1560,33 +1644,34 @@
       ],
       "matched_result": {
         "law_key": "kuntalaki_410_2015",
-        "score": 0.603703498840332,
+        "score": 0.6392803192138672,
         "section_num": 113,
         "section_id": "113",
-        "moment": "1",
+        "moment": "3",
         "section_title": "Tilinpäätös",
-        "node_id": "410/2015:fin@20230780:113:1"
+        "node_id": "410/2015:fin@20230780:113:3"
       },
       "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.6425023078918457,
-        "section_num": 120,
-        "section_id": "120a",
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.6831332445144653,
+        "section_num": 1,
+        "section_id": "1",
         "moment": "2",
-        "section_title": "Kunnan toiminnan, talouden ja palvelutuotannon tietojen tuottaminen ja toimittaminen",
-        "node_id": "410/2015:fin@20230780:120a:2"
+        "section_title": "Laatimisvelvollisuus",
+        "node_id": "1336/1997:fin@20251006:6l:1:2"
       },
-      "latency_ms": 35.53009999450296
+      "latency_ms": 35.64580006059259
     },
     {
       "id": "CROSS-KUNTA-KPL-006",
       "query": "tuloslaskelman ja taseen sisältö",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -1614,53 +1699,55 @@
         "section_title": "Tilinpäätöksen sisältö",
         "node_id": "1336/1997:fin@20251006:3l:1:1"
       },
-      "latency_ms": 34.188800025731325
+      "latency_ms": 39.663199917413294
     },
     {
       "id": "CROSS-KUNTA-KPL-007",
       "query": "kirjanpidon menetelmät ja aineisto",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": false,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 1,
-          "moment": 1
+          "section_num": 7,
+          "moment": 3
         }
       ],
       "expected_none": [],
       "matched_result": null,
       "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.5375587344169617,
-        "section_num": 112,
-        "section_id": "112",
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.6382764577865601,
+        "section_num": 7,
+        "section_id": "7a",
         "moment": "1",
-        "section_title": "Kirjanpito",
-        "node_id": "410/2015:fin@20230780:112:1"
+        "section_title": "Luettelo kirjanpidoista ja aineistoista",
+        "node_id": "1336/1997:fin@20251006:2l:7a:1"
       },
-      "latency_ms": 30.779600027017295
+      "latency_ms": 39.93400000035763
     },
     {
       "id": "CROSS-KUNTA-KPL-008",
       "query": "kuntayhtymän tilinpäätös",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": true,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 113,
-          "moment": 1
+          "section_num": 114,
+          "moment": 3
         }
       ],
       "expected_none": [
@@ -1668,12 +1755,12 @@
       ],
       "matched_result": {
         "law_key": "kuntalaki_410_2015",
-        "score": 0.6313807368278503,
-        "section_num": 113,
-        "section_id": "113",
-        "moment": "1",
-        "section_title": "Tilinpäätös",
-        "node_id": "410/2015:fin@20230780:113:1"
+        "score": 0.7028093338012695,
+        "section_num": 114,
+        "section_id": "114",
+        "moment": "3",
+        "section_title": "Konsernitilinpäätös",
+        "node_id": "410/2015:fin@20230780:114:3"
       },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
@@ -1684,23 +1771,24 @@
         "section_title": "Konsernitilinpäätös",
         "node_id": "410/2015:fin@20230780:114:3"
       },
-      "latency_ms": 30.212300014682114
+      "latency_ms": 44.057900086045265
     },
     {
       "id": "CROSS-KUNTA-KPL-009",
       "query": "rahoituslaskelma ja kassavirta",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
           "section_num": 1,
-          "moment": 1
+          "moment": 2
         }
       ],
       "expected_none": [],
@@ -1714,17 +1802,18 @@
         "section_title": "Rahoituslaskelma",
         "node_id": "1339/1997:fin@20151752:2l:1:1"
       },
-      "latency_ms": 41.95619991514832
+      "latency_ms": 37.2133000055328
     },
     {
       "id": "CROSS-KUNTA-KPL-010",
       "query": "tilinpäätöksen allekirjoitus ja päiväys",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -1734,39 +1823,56 @@
         }
       ],
       "expected_none": [],
-      "matched_result": null,
-      "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.6420106291770935,
-        "section_num": 113,
-        "section_id": "113",
-        "moment": "4",
-        "section_title": "Tilinpäätös",
-        "node_id": "410/2015:fin@20230780:113:4"
+      "matched_result": {
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.739931583404541,
+        "section_num": 7,
+        "section_id": "7",
+        "moment": "1",
+        "section_title": "Päiväys ja allekirjoitus",
+        "node_id": "1336/1997:fin@20251006:3l:7:1"
       },
-      "latency_ms": 30.90800007339567
+      "top1_result": {
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.739931583404541,
+        "section_num": 7,
+        "section_id": "7",
+        "moment": "1",
+        "section_title": "Päiväys ja allekirjoitus",
+        "node_id": "1336/1997:fin@20251006:3l:7:1"
+      },
+      "latency_ms": 36.15549998357892
     },
     {
       "id": "CROSS-KUNTA-KPL-011",
       "query": "valtuuston hyväksymä tilinpäätös",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
           "section_num": 113,
-          "moment": 3
+          "moment": 1
         }
       ],
       "expected_none": [
         "kirjanpitolaki_1336_1997"
       ],
-      "matched_result": null,
+      "matched_result": {
+        "law_key": "kuntalaki_410_2015",
+        "score": 0.6110217571258545,
+        "section_num": 113,
+        "section_id": "113",
+        "moment": "1",
+        "section_title": "Tilinpäätös",
+        "node_id": "410/2015:fin@20230780:113:1"
+      },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
         "score": 0.6324323415756226,
@@ -1776,17 +1882,18 @@
         "section_title": "Talousarvio ja -suunnitelma",
         "node_id": "410/2015:fin@20230780:110:1"
       },
-      "latency_ms": 31.38179995585233
+      "latency_ms": 35.563700017519295
     },
     {
       "id": "CROSS-KUNTA-KPL-012",
       "query": "liikevaihdon ja tuottojen kirjaaminen",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -1796,37 +1903,54 @@
         }
       ],
       "expected_none": [],
-      "matched_result": null,
-      "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.5507990121841431,
-        "section_num": 120,
-        "section_id": "120",
+      "matched_result": {
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.6013211607933044,
+        "section_num": 1,
+        "section_id": "1",
         "moment": "1",
-        "section_title": "Kunnallisen liikelaitoksen talous",
-        "node_id": "410/2015:fin@20230780:120:1"
+        "section_title": "Liikevaihto",
+        "node_id": "1336/1997:fin@20251006:4l:1:1"
       },
-      "latency_ms": 29.696699930354953
+      "top1_result": {
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.6276496052742004,
+        "section_num": 1,
+        "section_id": "1",
+        "moment": "1",
+        "section_title": "Liiketapahtumat",
+        "node_id": "1336/1997:fin@20251006:2l:1:1"
+      },
+      "latency_ms": 39.042599964886904
     },
     {
       "id": "CROSS-KUNTA-KPL-013",
       "query": "konsernitilinpäätös kirjanpidossa",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 1,
+          "section_num": 2,
           "moment": 1
         }
       ],
       "expected_none": [],
-      "matched_result": null,
+      "matched_result": {
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.6998424530029297,
+        "section_num": 2,
+        "section_id": "2",
+        "moment": "1",
+        "section_title": "Konsernitilinpäätöksen sisältö ja emoyhtiön toimintakertomuksessa esitettävät tiedot konsernista",
+        "node_id": "1336/1997:fin@20251006:6l:2:1"
+      },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
         "score": 0.7346262335777283,
@@ -1836,23 +1960,24 @@
         "section_title": "Konsernitilinpäätös",
         "node_id": "410/2015:fin@20230780:114:2"
       },
-      "latency_ms": 29.015299980528653
+      "latency_ms": 41.204200009815395
     },
     {
       "id": "CROSS-KUNTA-KPL-014",
       "query": "kunnan konsernitilinpäätöksen laatiminen",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 114,
-          "moment": 1
+          "section_num": 118,
+          "moment": 3
         }
       ],
       "expected_none": [
@@ -1860,12 +1985,12 @@
       ],
       "matched_result": {
         "law_key": "kuntalaki_410_2015",
-        "score": 0.7189247608184814,
-        "section_num": 114,
-        "section_id": "114",
-        "moment": "1",
-        "section_title": "Konsernitilinpäätös",
-        "node_id": "410/2015:fin@20230780:114:1"
+        "score": 0.6580517888069153,
+        "section_num": 118,
+        "section_id": "118",
+        "moment": "3",
+        "section_title": "Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely",
+        "node_id": "410/2015:fin@20230780:118:3"
       },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
@@ -1876,117 +2001,18 @@
         "section_title": "Konsernitilinpäätös",
         "node_id": "410/2015:fin@20230780:114:1"
       },
-      "latency_ms": 32.06460003275424
+      "latency_ms": 38.606499903835356
     },
     {
       "id": "CROSS-KUNTA-KPL-015",
       "query": "tilinpäätöksen julkistaminen ja rekisteröinti",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
-      "hard_negative_violation": false,
-      "expected_any": [
-        {
-          "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 9,
-          "moment": 1
-        }
-      ],
-      "expected_none": [],
-      "matched_result": null,
-      "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.5782305598258972,
-        "section_num": 113,
-        "section_id": "113",
-        "moment": "2",
-        "section_title": "Tilinpäätös",
-        "node_id": "410/2015:fin@20230780:113:2"
-      },
-      "latency_ms": 32.18089998699725
-    },
-    {
-      "id": "CROSS-KUNTA-KPL-016",
-      "query": "hyvä kirjanpitotapa ja yleinen säännös",
-      "type": "SHOULD",
-      "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
-      "hard_negative_violation": false,
-      "expected_any": [
-        {
-          "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 3,
-          "moment": 1
-        }
-      ],
-      "expected_none": [],
-      "matched_result": {
-        "law_key": "kirjanpitolaki_1336_1997",
-        "score": 0.6749849915504456,
-        "section_num": 3,
-        "section_id": "3",
-        "moment": "1",
-        "section_title": "Hyvä kirjanpitotapa",
-        "node_id": "1336/1997:fin@20251006:1l:3:1"
-      },
-      "top1_result": {
-        "law_key": "kirjanpitolaki_1336_1997",
-        "score": 0.6749849915504456,
-        "section_num": 3,
-        "section_id": "3",
-        "moment": "1",
-        "section_title": "Hyvä kirjanpitotapa",
-        "node_id": "1336/1997:fin@20251006:1l:3:1"
-      },
-      "latency_ms": 31.932300073094666
-    },
-    {
-      "id": "CROSS-KUNTA-KPL-017",
-      "query": "kunnanhallituksen vastuu tilinpäätöksestä",
-      "type": "SHOULD",
-      "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": true,
-      "hard_negative_violation": false,
-      "expected_any": [
-        {
-          "law_key": "kuntalaki_410_2015",
-          "section_num": 113,
-          "moment": 2
-        }
-      ],
-      "expected_none": [
-        "kirjanpitolaki_1336_1997"
-      ],
-      "matched_result": null,
-      "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.6717401146888733,
-        "section_num": 39,
-        "section_id": "39",
-        "moment": "1",
-        "section_title": "Kunnanhallituksen tehtävät",
-        "node_id": "410/2015:fin@20230780:39:1"
-      },
-      "latency_ms": 32.692600041627884
-    },
-    {
-      "id": "CROSS-KUNTA-KPL-018",
-      "query": "kirjanpitoaineiston säilytysaika",
-      "type": "SHOULD",
-      "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -1998,6 +2024,125 @@
       "expected_none": [],
       "matched_result": {
         "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.7340836524963379,
+        "section_num": 10,
+        "section_id": "10",
+        "moment": "1",
+        "section_title": "Tilinpäätöksen ja toimintakertomuksen julkistaminen",
+        "node_id": "1336/1997:fin@20251006:3l:10:1"
+      },
+      "top1_result": {
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.7340836524963379,
+        "section_num": 10,
+        "section_id": "10",
+        "moment": "1",
+        "section_title": "Tilinpäätöksen ja toimintakertomuksen julkistaminen",
+        "node_id": "1336/1997:fin@20251006:3l:10:1"
+      },
+      "latency_ms": 42.159699951298535
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-016",
+      "query": "hyvä kirjanpitotapa ja yleinen säännös",
+      "type": "SHOULD",
+      "test_type": "cross_law",
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
+      "hard_negative_violation": false,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitolaki_1336_1997",
+          "section_num": 3,
+          "moment": 1
+        }
+      ],
+      "expected_none": [],
+      "matched_result": {
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.5519745945930481,
+        "section_num": 3,
+        "section_id": "3",
+        "moment": "1",
+        "section_title": "Muut yleiset tilinpäätösperiaatteet",
+        "node_id": "1336/1997:fin@20251006:3l:3:1"
+      },
+      "top1_result": {
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.6749849915504456,
+        "section_num": 3,
+        "section_id": "3",
+        "moment": "1",
+        "section_title": "Hyvä kirjanpitotapa",
+        "node_id": "1336/1997:fin@20251006:1l:3:1"
+      },
+      "latency_ms": 46.14019999280572
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-017",
+      "query": "kunnanhallituksen vastuu tilinpäätöksestä",
+      "type": "SHOULD",
+      "test_type": "hard_negative",
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
+      "hard_negative_violation": false,
+      "expected_any": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 125,
+          "moment": 3
+        }
+      ],
+      "expected_none": [
+        "kirjanpitolaki_1336_1997"
+      ],
+      "matched_result": {
+        "law_key": "kuntalaki_410_2015",
+        "score": 0.6267961263656616,
+        "section_num": 125,
+        "section_id": "125",
+        "moment": "3",
+        "section_title": "Tilintarkastuskertomus ja sen käsittely",
+        "node_id": "410/2015:fin@20230780:125:3"
+      },
+      "top1_result": {
+        "law_key": "kuntalaki_410_2015",
+        "score": 0.6717401146888733,
+        "section_num": 39,
+        "section_id": "39",
+        "moment": "1",
+        "section_title": "Kunnanhallituksen tehtävät",
+        "node_id": "410/2015:fin@20230780:39:1"
+      },
+      "latency_ms": 41.46739991847426
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-018",
+      "query": "kirjanpitoaineiston säilytysaika",
+      "type": "SHOULD",
+      "test_type": "cross_law",
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
+      "hard_negative_violation": false,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitolaki_1336_1997",
+          "section_num": 10,
+          "moment": 2
+        }
+      ],
+      "expected_none": [],
+      "matched_result": {
+        "law_key": "kirjanpitolaki_1336_1997",
         "score": 0.7683080434799194,
         "section_num": 10,
         "section_id": "10",
@@ -2014,91 +2159,94 @@
         "section_title": "Kirjanpitoaineiston säilytysaika",
         "node_id": "1336/1997:fin@20251006:2l:10:2"
       },
-      "latency_ms": 30.118499998934567
+      "latency_ms": 41.01069993339479
     },
     {
       "id": "CROSS-KUNTA-KPL-019",
       "query": "pieni kirjanpitovelvollinen ja helpotukset",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": false,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 4,
-          "moment": 1
-        }
-      ],
-      "expected_none": [],
-      "matched_result": {
-        "law_key": "kirjanpitolaki_1336_1997",
-        "score": 0.5541523694992065,
-        "section_num": 4,
-        "section_id": "4",
-        "moment": "2",
-        "section_title": "Kirjanpitorikkomus",
-        "node_id": "1336/1997:fin@20251006:8l:4:2"
-      },
-      "top1_result": {
-        "law_key": "kirjanpitolaki_1336_1997",
-        "score": 0.5541523694992065,
-        "section_num": 4,
-        "section_id": "4",
-        "moment": "2",
-        "section_title": "Kirjanpitorikkomus",
-        "node_id": "1336/1997:fin@20251006:8l:4:2"
-      },
-      "latency_ms": 30.676100053824484
-    },
-    {
-      "id": "CROSS-KUNTA-KPL-020",
-      "query": "tilikauden pituus ja muuttaminen",
-      "type": "SHOULD",
-      "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_kpl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
-      "hard_negative_violation": false,
-      "expected_any": [
-        {
-          "law_key": "kirjanpitolaki_1336_1997",
-          "section_num": 4,
+          "section_num": 16,
           "moment": 1
         }
       ],
       "expected_none": [],
       "matched_result": null,
       "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.5675775408744812,
-        "section_num": 113,
-        "section_id": "113",
-        "moment": "1",
-        "section_title": "Tilinpäätös",
-        "node_id": "410/2015:fin@20230780:113:1"
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.5541523694992065,
+        "section_num": 4,
+        "section_id": "4",
+        "moment": "2",
+        "section_title": "Kirjanpitorikkomus",
+        "node_id": "1336/1997:fin@20251006:8l:4:2"
       },
-      "latency_ms": 33.36889995262027
+      "latency_ms": 37.675200030207634
+    },
+    {
+      "id": "CROSS-KUNTA-KPL-020",
+      "query": "tilikauden pituus ja muuttaminen",
+      "type": "SHOULD",
+      "test_type": "cross_law",
+      "source_file": "questions_cross_kunta_kpl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
+      "hard_negative_violation": false,
+      "expected_any": [
+        {
+          "law_key": "kirjanpitolaki_1336_1997",
+          "section_num": 6,
+          "moment": 1
+        }
+      ],
+      "expected_none": [],
+      "matched_result": {
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.5921714305877686,
+        "section_num": 6,
+        "section_id": "6",
+        "moment": "1",
+        "section_title": "Laatimisaika",
+        "node_id": "1336/1997:fin@20251006:3l:6:1"
+      },
+      "top1_result": {
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.7124577760696411,
+        "section_num": 4,
+        "section_id": "4",
+        "moment": "1",
+        "section_title": "Tilikausi",
+        "node_id": "1336/1997:fin@20251006:1l:4:1"
+      },
+      "latency_ms": 38.03030005656183
     },
     {
       "id": "CROSS-KUNTA-OYL-001",
       "query": "osakeyhtiön hallituksen tehtävät",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 1,
-          "moment": 1
+          "section_num": 16,
+          "moment": 4
         }
       ],
       "expected_none": [],
@@ -2120,23 +2268,24 @@
         "section_title": "Hallituksen tehtävät pörssiyhtiössä ja muussa yleisen edun kannalta merkittävässä yhtiössä (12.4.2019/512)",
         "node_id": "624/2006:fin@20250561:6l:16a:4"
       },
-      "latency_ms": 40.02369998488575
+      "latency_ms": 53.12150006648153
     },
     {
       "id": "CROSS-KUNTA-OYL-002",
       "query": "yhtiökokouksen päätöksenteko",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 1,
-          "moment": 1
+          "section_num": 2,
+          "moment": 3
         }
       ],
       "expected_none": [],
@@ -2150,17 +2299,18 @@
         "section_title": "Toimielimen päätöksentekotavat",
         "node_id": "410/2015:fin@20230780:98:1"
       },
-      "latency_ms": 30.28710000216961
+      "latency_ms": 41.30449995864183
     },
     {
       "id": "CROSS-KUNTA-OYL-003",
       "query": "toimitusjohtajan vastuu",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -2188,34 +2338,35 @@
         "section_title": "Johtohenkilön vahingonkorvausvelvollisuus",
         "node_id": "624/2006:fin@20250561:22l:1:1"
       },
-      "latency_ms": 29.502300079911947
+      "latency_ms": 42.02260007150471
     },
     {
       "id": "CROSS-KUNTA-OYL-004",
       "query": "osakeyhtiön osakepääoma",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 1,
+          "section_num": 3,
           "moment": 1
         }
       ],
       "expected_none": [],
       "matched_result": {
         "law_key": "osakeyhtiolaki_624_2006",
-        "score": 0.6151098012924194,
+        "score": 0.582469642162323,
         "section_num": 3,
         "section_id": "3",
         "moment": "1",
-        "section_title": "Pääoma ja sen pysyvyys",
-        "node_id": "624/2006:fin@20250561:1l:3:1"
+        "section_title": "Osakepääomasijoitus",
+        "node_id": "624/2006:fin@20250561:11l:3:1"
       },
       "top1_result": {
         "law_key": "osakeyhtiolaki_624_2006",
@@ -2226,233 +2377,18 @@
         "section_title": "Pääoma ja sen pysyvyys",
         "node_id": "624/2006:fin@20250561:1l:3:1"
       },
-      "latency_ms": 31.120400060899556
+      "latency_ms": 45.256300014443696
     },
     {
       "id": "CROSS-KUNTA-OYL-005",
       "query": "kuntakonsernin omistajaohjaus",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": true,
-      "top1_hit": false,
-      "law_match": true,
-      "hard_negative_violation": false,
-      "expected_any": [
-        {
-          "law_key": "kuntalaki_410_2015",
-          "section_num": 46,
-          "moment": 1
-        }
-      ],
-      "expected_none": [
-        "osakeyhtiolaki_624_2006"
-      ],
-      "matched_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.6463489532470703,
-        "section_num": 46,
-        "section_id": "46",
-        "moment": "1",
-        "section_title": "Omistajaohjaus",
-        "node_id": "410/2015:fin@20230780:46:1"
-      },
-      "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.6698232889175415,
-        "section_num": 48,
-        "section_id": "48",
-        "moment": "2",
-        "section_title": "Konsernijohto",
-        "node_id": "410/2015:fin@20230780:48:2"
-      },
-      "latency_ms": 30.805400107055902
-    },
-    {
-      "id": "CROSS-KUNTA-OYL-006",
-      "query": "osakeyhtiön sulautuminen ja jakautuminen",
-      "type": "SHOULD",
-      "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
-      "hard_negative_violation": false,
-      "expected_any": [
-        {
-          "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 1,
-          "moment": 1
-        }
-      ],
-      "expected_none": [],
-      "matched_result": {
-        "law_key": "osakeyhtiolaki_624_2006",
-        "score": 0.7135146856307983,
-        "section_num": 1,
-        "section_id": "1",
-        "moment": "1",
-        "section_title": "Sulautuminen",
-        "node_id": "624/2006:fin@20250561:16l:1:1"
-      },
-      "top1_result": {
-        "law_key": "osakeyhtiolaki_624_2006",
-        "score": 0.7135146856307983,
-        "section_num": 1,
-        "section_id": "1",
-        "moment": "1",
-        "section_title": "Sulautuminen",
-        "node_id": "624/2006:fin@20250561:16l:1:1"
-      },
-      "latency_ms": 34.892700030468404
-    },
-    {
-      "id": "CROSS-KUNTA-OYL-007",
-      "query": "osingon jakaminen yhtiössä",
-      "type": "SHOULD",
-      "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
-      "hard_negative_violation": false,
-      "expected_any": [
-        {
-          "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 1,
-          "moment": 1
-        }
-      ],
-      "expected_none": [],
-      "matched_result": null,
-      "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.5078732967376709,
-        "section_num": 150,
-        "section_id": "150",
-        "moment": "4",
-        "section_title": "Yhtiöittämisvelvollisuutta koskevat siirtymäsäännökset",
-        "node_id": "410/2015:fin@20230780:150:4"
-      },
-      "latency_ms": 34.213799983263016
-    },
-    {
-      "id": "CROSS-KUNTA-OYL-008",
-      "query": "kunnan tytäryhteisön ohjaus",
-      "type": "SHOULD",
-      "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": true,
-      "top1_hit": false,
-      "law_match": true,
-      "hard_negative_violation": false,
-      "expected_any": [
-        {
-          "law_key": "kuntalaki_410_2015",
-          "section_num": 46,
-          "moment": 1
-        }
-      ],
-      "expected_none": [
-        "osakeyhtiolaki_624_2006"
-      ],
-      "matched_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.5676094889640808,
-        "section_num": 46,
-        "section_id": "46",
-        "moment": "1",
-        "section_title": "Omistajaohjaus",
-        "node_id": "410/2015:fin@20230780:46:1"
-      },
-      "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.7034314870834351,
-        "section_num": 47,
-        "section_id": "47",
-        "moment": "1",
-        "section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
-        "node_id": "410/2015:fin@20230780:47:1"
-      },
-      "latency_ms": 32.32090000528842
-    },
-    {
-      "id": "CROSS-KUNTA-OYL-009",
-      "query": "osakeyhtiön purkaminen",
-      "type": "SHOULD",
-      "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
-      "hard_negative_violation": false,
-      "expected_any": [
-        {
-          "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 1,
-          "moment": 1
-        }
-      ],
-      "expected_none": [],
-      "matched_result": {
-        "law_key": "osakeyhtiolaki_624_2006",
-        "score": 0.6825228929519653,
-        "section_num": 1,
-        "section_id": "1",
-        "moment": "1",
-        "section_title": "Purkaminen",
-        "node_id": "624/2006:fin@20250561:20l:1:1"
-      },
-      "top1_result": {
-        "law_key": "osakeyhtiolaki_624_2006",
-        "score": 0.6825228929519653,
-        "section_num": 1,
-        "section_id": "1",
-        "moment": "1",
-        "section_title": "Purkaminen",
-        "node_id": "624/2006:fin@20250561:20l:1:1"
-      },
-      "latency_ms": 30.757399974390864
-    },
-    {
-      "id": "CROSS-KUNTA-OYL-010",
-      "query": "hallituksen jäsenen vahingonkorvausvastuu",
-      "type": "SHOULD",
-      "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
-      "hard_negative_violation": false,
-      "expected_any": [
-        {
-          "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 1,
-          "moment": 1
-        }
-      ],
-      "expected_none": [],
-      "matched_result": null,
-      "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.5201122760772705,
-        "section_num": 109,
-        "section_id": "109b",
-        "moment": "2",
-        "section_title": "Selvityshenkilö ja selvitysryhmän jäsenet",
-        "node_id": "410/2015:fin@20230780:109b:2"
-      },
-      "latency_ms": 30.79069999512285
-    },
-    {
-      "id": "CROSS-KUNTA-OYL-011",
-      "query": "konserniohje ja konsernin toimintaperiaatteet",
-      "type": "SHOULD",
-      "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": true,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -2466,7 +2402,7 @@
       ],
       "matched_result": {
         "law_key": "kuntalaki_410_2015",
-        "score": 0.5531922578811646,
+        "score": 0.6578224301338196,
         "section_num": 47,
         "section_id": "47",
         "moment": "1",
@@ -2475,24 +2411,128 @@
       },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
-        "score": 0.6689983606338501,
-        "section_num": 47,
-        "section_id": "47",
-        "moment": "4",
-        "section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
-        "node_id": "410/2015:fin@20230780:47:4"
+        "score": 0.6698232889175415,
+        "section_num": 48,
+        "section_id": "48",
+        "moment": "2",
+        "section_title": "Konsernijohto",
+        "node_id": "410/2015:fin@20230780:48:2"
       },
-      "latency_ms": 30.794800026342273
+      "latency_ms": 45.81539996434003
     },
     {
-      "id": "CROSS-KUNTA-OYL-012",
-      "query": "osakeyhtiön perustaminen",
+      "id": "CROSS-KUNTA-OYL-006",
+      "query": "osakeyhtiön sulautuminen ja jakautuminen",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": false,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
+      "hard_negative_violation": false,
+      "expected_any": [
+        {
+          "law_key": "osakeyhtiolaki_624_2006",
+          "section_num": 26,
+          "moment": 1
+        }
+      ],
+      "expected_none": [],
+      "matched_result": null,
+      "top1_result": {
+        "law_key": "osakeyhtiolaki_624_2006",
+        "score": 0.7135146856307983,
+        "section_num": 1,
+        "section_id": "1",
+        "moment": "1",
+        "section_title": "Sulautuminen",
+        "node_id": "624/2006:fin@20250561:16l:1:1"
+      },
+      "latency_ms": 41.01409995928407
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-007",
+      "query": "osingon jakaminen yhtiössä",
+      "type": "SHOULD",
+      "test_type": "cross_law",
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
+      "hard_negative_violation": false,
+      "expected_any": [
+        {
+          "law_key": "osakeyhtiolaki_624_2006",
+          "section_num": 6,
+          "moment": 2
+        }
+      ],
+      "expected_none": [],
+      "matched_result": null,
+      "top1_result": {
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.5955334901809692,
+        "section_num": 13,
+        "section_id": "13",
+        "moment": "4",
+        "section_title": "Osakkuusyrityksen tilinpäätöstietojen yhdisteleminen",
+        "node_id": "1336/1997:fin@20251006:6l:13:4"
+      },
+      "latency_ms": 35.28170008212328
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-008",
+      "query": "kunnan tytäryhteisön ohjaus",
+      "type": "SHOULD",
+      "test_type": "hard_negative",
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
+      "hard_negative_violation": false,
+      "expected_any": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 47,
+          "moment": 1
+        }
+      ],
+      "expected_none": [
+        "osakeyhtiolaki_624_2006"
+      ],
+      "matched_result": {
+        "law_key": "kuntalaki_410_2015",
+        "score": 0.7034314870834351,
+        "section_num": 47,
+        "section_id": "47",
+        "moment": "1",
+        "section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
+        "node_id": "410/2015:fin@20230780:47:1"
+      },
+      "top1_result": {
+        "law_key": "kuntalaki_410_2015",
+        "score": 0.7034314870834351,
+        "section_num": 47,
+        "section_id": "47",
+        "moment": "1",
+        "section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
+        "node_id": "410/2015:fin@20230780:47:1"
+      },
+      "latency_ms": 41.045499965548515
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-009",
+      "query": "osakeyhtiön purkaminen",
+      "type": "SHOULD",
+      "test_type": "cross_law",
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -2504,13 +2544,116 @@
       "expected_none": [],
       "matched_result": {
         "law_key": "osakeyhtiolaki_624_2006",
-        "score": 0.6476235389709473,
+        "score": 0.6825228929519653,
         "section_num": 1,
         "section_id": "1",
         "moment": "1",
-        "section_title": "Perustamissopimus",
-        "node_id": "624/2006:fin@20250561:2l:1:1"
+        "section_title": "Purkaminen",
+        "node_id": "624/2006:fin@20250561:20l:1:1"
       },
+      "top1_result": {
+        "law_key": "osakeyhtiolaki_624_2006",
+        "score": 0.6825228929519653,
+        "section_num": 1,
+        "section_id": "1",
+        "moment": "1",
+        "section_title": "Purkaminen",
+        "node_id": "624/2006:fin@20250561:20l:1:1"
+      },
+      "latency_ms": 43.75930002424866
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-010",
+      "query": "hallituksen jäsenen vahingonkorvausvastuu",
+      "type": "SHOULD",
+      "test_type": "cross_law",
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
+      "hard_negative_violation": false,
+      "expected_any": [
+        {
+          "law_key": "osakeyhtiolaki_624_2006",
+          "section_num": 1,
+          "moment": 2
+        }
+      ],
+      "expected_none": [],
+      "matched_result": null,
+      "top1_result": {
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.5498658418655396,
+        "section_num": 10,
+        "section_id": "10",
+        "moment": "1",
+        "section_title": "Vastuu tuloverokertomuksesta",
+        "node_id": "1336/1997:fin@20251006:7b:10:1"
+      },
+      "latency_ms": 42.014800012111664
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-011",
+      "query": "konserniohje ja konsernin toimintaperiaatteet",
+      "type": "SHOULD",
+      "test_type": "hard_negative",
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
+      "hard_negative_violation": false,
+      "expected_any": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 47,
+          "moment": 4
+        }
+      ],
+      "expected_none": [
+        "osakeyhtiolaki_624_2006"
+      ],
+      "matched_result": {
+        "law_key": "kuntalaki_410_2015",
+        "score": 0.6689983606338501,
+        "section_num": 47,
+        "section_id": "47",
+        "moment": "4",
+        "section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
+        "node_id": "410/2015:fin@20230780:47:4"
+      },
+      "top1_result": {
+        "law_key": "kuntalaki_410_2015",
+        "score": 0.6689983606338501,
+        "section_num": 47,
+        "section_id": "47",
+        "moment": "4",
+        "section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
+        "node_id": "410/2015:fin@20230780:47:4"
+      },
+      "latency_ms": 40.92139995191246
+    },
+    {
+      "id": "CROSS-KUNTA-OYL-012",
+      "query": "osakeyhtiön perustaminen",
+      "type": "SHOULD",
+      "test_type": "cross_law",
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": false,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
+      "hard_negative_violation": false,
+      "expected_any": [
+        {
+          "law_key": "osakeyhtiolaki_624_2006",
+          "section_num": 13,
+          "moment": 1
+        }
+      ],
+      "expected_none": [],
+      "matched_result": null,
       "top1_result": {
         "law_key": "osakeyhtiolaki_624_2006",
         "score": 0.6476235389709473,
@@ -2520,17 +2663,18 @@
         "section_title": "Perustamissopimus",
         "node_id": "624/2006:fin@20250561:2l:1:1"
       },
-      "latency_ms": 30.393299995921552
+      "latency_ms": 39.86989997792989
     },
     {
       "id": "CROSS-KUNTA-OYL-013",
       "query": "osakkeen luovuttaminen ja siirto",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -2550,29 +2694,38 @@
         "section_title": "Yhtiöittämisvelvollisuutta koskevat siirtymäsäännökset",
         "node_id": "410/2015:fin@20230780:150:4"
       },
-      "latency_ms": 31.344200018793344
+      "latency_ms": 43.220599996857345
     },
     {
       "id": "CROSS-KUNTA-OYL-014",
       "query": "valtuuston päätös tytäryhtiön perustamisesta",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 14,
+          "section_num": 88,
           "moment": 1
         }
       ],
       "expected_none": [
         "osakeyhtiolaki_624_2006"
       ],
-      "matched_result": null,
+      "matched_result": {
+        "law_key": "kuntalaki_410_2015",
+        "score": 0.5517604351043701,
+        "section_num": 88,
+        "section_id": "88",
+        "moment": "1",
+        "section_title": "Viran perustaminen ja lakkauttaminen",
+        "node_id": "410/2015:fin@20230780:88:1"
+      },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
         "score": 0.5780369639396667,
@@ -2582,17 +2735,18 @@
         "section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
         "node_id": "410/2015:fin@20230780:47:2"
       },
-      "latency_ms": 30.328699969686568
+      "latency_ms": 38.11459999997169
     },
     {
       "id": "CROSS-KUNTA-OYL-015",
       "query": "osakeyhtiön oma pääoma ja SVOP-rahasto",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -2604,12 +2758,12 @@
       "expected_none": [],
       "matched_result": {
         "law_key": "osakeyhtiolaki_624_2006",
-        "score": 0.6548433899879456,
+        "score": 0.5602538585662842,
         "section_num": 1,
         "section_id": "1",
         "moment": "1",
-        "section_title": "Oman pääoman lajit ja käyttö",
-        "node_id": "624/2006:fin@20250561:8l:1:1"
+        "section_title": "Varojenjakotavat",
+        "node_id": "624/2006:fin@20250561:13l:1:1"
       },
       "top1_result": {
         "law_key": "osakeyhtiolaki_624_2006",
@@ -2620,52 +2774,54 @@
         "section_title": "Oman pääoman lajit ja käyttö",
         "node_id": "624/2006:fin@20250561:8l:1:1"
       },
-      "latency_ms": 29.698199941776693
+      "latency_ms": 40.730200009420514
     },
     {
       "id": "CROSS-KUNTA-OYL-016",
       "query": "pörssiyhtiön hallinto",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 16,
-          "moment": 1
+          "section_num": 24,
+          "moment": 2
         }
       ],
       "expected_none": [],
       "matched_result": null,
       "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.5321391224861145,
-        "section_num": 67,
-        "section_id": "67",
-        "moment": "2",
-        "section_title": "Johtokunta",
-        "node_id": "410/2015:fin@20230780:67:2"
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.5479533672332764,
+        "section_num": 24,
+        "section_id": "24a",
+        "moment": "6",
+        "section_title": "Tietoja koskevat ESAP-asetuksen vaatimukset",
+        "node_id": "1336/1997:fin@20251006:7l:24a:6"
       },
-      "latency_ms": 33.658700063824654
+      "latency_ms": 36.350700072944164
     },
     {
       "id": "CROSS-KUNTA-OYL-017",
       "query": "kunnanhallituksen edustaja tytäryhtiön hallituksessa",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": true,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 47,
+          "section_num": 39,
           "moment": 1
         }
       ],
@@ -2674,12 +2830,12 @@
       ],
       "matched_result": {
         "law_key": "kuntalaki_410_2015",
-        "score": 0.5470591187477112,
-        "section_num": 47,
-        "section_id": "47",
+        "score": 0.5275741815567017,
+        "section_num": 39,
+        "section_id": "39",
         "moment": "1",
-        "section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
-        "node_id": "410/2015:fin@20230780:47:1"
+        "section_title": "Kunnanhallituksen tehtävät",
+        "node_id": "410/2015:fin@20230780:39:1"
       },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
@@ -2690,23 +2846,24 @@
         "section_title": "Kunnan tytäryhteisöjen toiminta ja konserniohje",
         "node_id": "410/2015:fin@20230780:47:2"
       },
-      "latency_ms": 30.311100068502128
+      "latency_ms": 35.645300056785345
     },
     {
       "id": "CROSS-KUNTA-OYL-018",
       "query": "osakeyhtiön yhtiöjärjestys",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 1,
-          "moment": 1
+          "section_num": 3,
+          "moment": 4
         }
       ],
       "expected_none": [],
@@ -2728,23 +2885,24 @@
         "section_title": "Yhtiöjärjestys",
         "node_id": "624/2006:fin@20250561:2l:3:4"
       },
-      "latency_ms": 38.47699996549636
+      "latency_ms": 37.5793999992311
     },
     {
       "id": "CROSS-KUNTA-OYL-019",
       "query": "lähipiiriliiketoimi osakeyhtiössä",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 1,
-          "moment": 1
+          "section_num": 12,
+          "moment": 2
         }
       ],
       "expected_none": [],
@@ -2766,52 +2924,54 @@
         "section_title": "Pörssiyhtiön lähipiiri",
         "node_id": "624/2006:fin@20250561:1l:12:2"
       },
-      "latency_ms": 34.09349999856204
+      "latency_ms": 36.34220000822097
     },
     {
       "id": "CROSS-KUNTA-OYL-020",
       "query": "osakeannin toteuttaminen",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_oyl.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_oyl.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "osakeyhtiolaki_624_2006",
-          "section_num": 1,
+          "section_num": 7,
           "moment": 1
         }
       ],
       "expected_none": [],
       "matched_result": null,
       "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.5128663778305054,
-        "section_num": 150,
-        "section_id": "150",
-        "moment": "4",
-        "section_title": "Yhtiöittämisvelvollisuutta koskevat siirtymäsäännökset",
-        "node_id": "410/2015:fin@20230780:150:4"
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.5742409229278564,
+        "section_num": 13,
+        "section_id": "13",
+        "moment": "6",
+        "section_title": "Osakkuusyrityksen tilinpäätöstietojen yhdisteleminen",
+        "node_id": "1336/1997:fin@20251006:6l:13:6"
       },
-      "latency_ms": 30.973599990829825
+      "latency_ms": 40.69860000163317
     },
     {
       "id": "CROSS-KUNTA-TILA-001",
       "query": "tilintarkastajan riippumattomuus ja esteellisyys",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
-          "section_num": 4,
+          "section_num": 8,
           "moment": 1
         }
       ],
@@ -2834,23 +2994,24 @@
         "section_title": "Riippumattomuus ja esteellisyys sekä salassapitovelvollisuus kestävyysraportointivarmentamisessa",
         "node_id": "1141/2015:fin@20240985:4l:8a:1"
       },
-      "latency_ms": 50.25490000844002
+      "latency_ms": 53.46599989570677
     },
     {
       "id": "CROSS-KUNTA-TILA-002",
       "query": "tilintarkastuskertomus ja sen sisältö",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
           "section_num": 5,
-          "moment": 1
+          "moment": 6
         }
       ],
       "expected_none": [],
@@ -2872,22 +3033,23 @@
         "section_title": "Tilintarkastuskertomus",
         "node_id": "1141/2015:fin@20240985:3l:5:6"
       },
-      "latency_ms": 30.9658000478521
+      "latency_ms": 37.81219990924001
     },
     {
       "id": "CROSS-KUNTA-TILA-003",
       "query": "HT-tilintarkastaja ja KHT-tilintarkastaja",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
-          "section_num": 1,
+          "section_num": 3,
           "moment": 1
         }
       ],
@@ -2910,35 +3072,28 @@
         "section_title": "KHT- ja JHT -erikoispätevyyden hyväksymisedellytykset",
         "node_id": "1141/2015:fin@20240985:6l:3:1"
       },
-      "latency_ms": 94.12060002796352
+      "latency_ms": 104.79960008524358
     },
     {
       "id": "CROSS-KUNTA-TILA-004",
       "query": "tilintarkastajan huomautus ja varoitus",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": false,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
           "section_num": 1,
-          "moment": 1
+          "moment": 5
         }
       ],
       "expected_none": [],
-      "matched_result": {
-        "law_key": "tilintarkastuslaki_1141_2015",
-        "score": 0.7072049379348755,
-        "section_num": 1,
-        "section_id": "1",
-        "moment": "2",
-        "section_title": "Huomautus ja varoitus",
-        "node_id": "1141/2015:fin@20240985:10l:1:2"
-      },
+      "matched_result": null,
       "top1_result": {
         "law_key": "tilintarkastuslaki_1141_2015",
         "score": 0.7072049379348755,
@@ -2948,22 +3103,23 @@
         "section_title": "Huomautus ja varoitus",
         "node_id": "1141/2015:fin@20240985:10l:1:2"
       },
-      "latency_ms": 31.571100000292063
+      "latency_ms": 37.14380005840212
     },
     {
       "id": "CROSS-KUNTA-TILA-005",
       "query": "kunnan tilintarkastajan valinta",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": true,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 122,
+          "section_num": 123,
           "moment": 1
         }
       ],
@@ -2972,12 +3128,12 @@
       ],
       "matched_result": {
         "law_key": "kuntalaki_410_2015",
-        "score": 0.6444408893585205,
-        "section_num": 122,
-        "section_id": "122",
+        "score": 0.6254096031188965,
+        "section_num": 123,
+        "section_id": "123",
         "moment": "1",
-        "section_title": "Tilintarkastus",
-        "node_id": "410/2015:fin@20230780:122:1"
+        "section_title": "Tilintarkastajan tehtävät",
+        "node_id": "410/2015:fin@20230780:123:1"
       },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
@@ -2988,17 +3144,18 @@
         "section_title": "Tilintarkastus",
         "node_id": "410/2015:fin@20230780:122:2"
       },
-      "latency_ms": 33.28900004271418
+      "latency_ms": 42.2580000013113
     },
     {
       "id": "CROSS-KUNTA-TILA-006",
       "query": "tilintarkastusyhteisön hyväksyminen",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -3018,17 +3175,18 @@
         "section_title": "Tilintarkastus",
         "node_id": "410/2015:fin@20230780:122:3"
       },
-      "latency_ms": 32.477800035849214
+      "latency_ms": 34.09470000769943
     },
     {
       "id": "CROSS-KUNTA-TILA-007",
       "query": "tilintarkastusvelvollisuus yhtiössä",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -3040,31 +3198,32 @@
       "expected_none": [],
       "matched_result": null,
       "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.6451990604400635,
-        "section_num": 123,
-        "section_id": "123",
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.648279070854187,
+        "section_num": 12,
+        "section_id": "12",
         "moment": "1",
-        "section_title": "Tilintarkastajan tehtävät",
-        "node_id": "410/2015:fin@20230780:123:1"
+        "section_title": "Tilintarkastusta koskevat tiedot",
+        "node_id": "1336/1997:fin@20251006:3l:12:1"
       },
-      "latency_ms": 29.804899939335883
+      "latency_ms": 34.599000005982816
     },
     {
       "id": "CROSS-KUNTA-TILA-008",
       "query": "tarkastuslautakunta ja sen tehtävät",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": true,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
           "section_num": 121,
-          "moment": 1
+          "moment": 2
         }
       ],
       "expected_none": [
@@ -3072,12 +3231,12 @@
       ],
       "matched_result": {
         "law_key": "kuntalaki_410_2015",
-        "score": 0.7310241460800171,
+        "score": 0.7611953616142273,
         "section_num": 121,
         "section_id": "121",
-        "moment": "1",
+        "moment": "2",
         "section_title": "Tarkastuslautakunta",
-        "node_id": "410/2015:fin@20230780:121:1"
+        "node_id": "410/2015:fin@20230780:121:2"
       },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
@@ -3088,23 +3247,24 @@
         "section_title": "Tarkastuslautakunta",
         "node_id": "410/2015:fin@20230780:121:2"
       },
-      "latency_ms": 30.455500003881752
+      "latency_ms": 39.51779997441918
     },
     {
       "id": "CROSS-KUNTA-TILA-009",
       "query": "tilintarkastajan salassapitovelvollisuus",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
-          "section_num": 4,
-          "moment": 1
+          "section_num": 8,
+          "moment": 3
         }
       ],
       "expected_none": [],
@@ -3126,53 +3286,55 @@
         "section_title": "Tilintarkastajan salassapitovelvollisuus",
         "node_id": "1141/2015:fin@20240985:4l:8:3"
       },
-      "latency_ms": 30.77020007185638
+      "latency_ms": 44.4423999870196
     },
     {
       "id": "CROSS-KUNTA-TILA-010",
       "query": "mukautettu tilintarkastuslausunto",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
-          "section_num": 5,
-          "moment": 1
+          "section_num": 1,
+          "moment": 5
         }
       ],
       "expected_none": [],
       "matched_result": null,
       "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.546432614326477,
-        "section_num": 125,
-        "section_id": "125",
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.5723409056663513,
+        "section_num": 4,
+        "section_id": "4",
         "moment": "2",
-        "section_title": "Tilintarkastuskertomus ja sen käsittely",
-        "node_id": "410/2015:fin@20230780:125:2"
+        "section_title": "Lasku- ja maksuperusteisuuden oikaiseminen ja täydentäminen sekä maksuperusteinen tilinpäätös",
+        "node_id": "1336/1997:fin@20251006:3l:4:2"
       },
-      "latency_ms": 33.67720008827746
+      "latency_ms": 44.06550002750009
     },
     {
       "id": "CROSS-KUNTA-TILA-011",
       "query": "valtuuston käsittelemä tilintarkastuskertomus",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": true,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
           "section_num": 125,
-          "moment": 1
+          "moment": 2
         }
       ],
       "expected_none": [
@@ -3180,12 +3342,12 @@
       ],
       "matched_result": {
         "law_key": "kuntalaki_410_2015",
-        "score": 0.6534885764122009,
+        "score": 0.6508373618125916,
         "section_num": 125,
         "section_id": "125",
-        "moment": "1",
+        "moment": "2",
         "section_title": "Tilintarkastuskertomus ja sen käsittely",
-        "node_id": "410/2015:fin@20230780:125:1"
+        "node_id": "410/2015:fin@20230780:125:2"
       },
       "top1_result": {
         "law_key": "kuntalaki_410_2015",
@@ -3196,17 +3358,18 @@
         "section_title": "Tarkastuslautakunta",
         "node_id": "410/2015:fin@20230780:121:4"
       },
-      "latency_ms": 31.976500060409307
+      "latency_ms": 39.42829999141395
     },
     {
       "id": "CROSS-KUNTA-TILA-012",
       "query": "hyvä tilintarkastustapa",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -3218,42 +3381,43 @@
       "expected_none": [],
       "matched_result": null,
       "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.5815296173095703,
-        "section_num": 123,
-        "section_id": "123",
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.5947797298431396,
+        "section_num": 3,
+        "section_id": "3",
         "moment": "1",
-        "section_title": "Tilintarkastajan tehtävät",
-        "node_id": "410/2015:fin@20230780:123:1"
+        "section_title": "Hyvä kirjanpitotapa",
+        "node_id": "1336/1997:fin@20251006:1l:3:1"
       },
-      "latency_ms": 33.19970006123185
+      "latency_ms": 42.324400041252375
     },
     {
       "id": "CROSS-KUNTA-TILA-013",
       "query": "tilintarkastajan vastuu vahingonkorvauksesta",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
-          "section_num": 10,
-          "moment": 1
+          "section_num": 9,
+          "moment": 3
         }
       ],
       "expected_none": [],
       "matched_result": {
         "law_key": "tilintarkastuslaki_1141_2015",
-        "score": 0.7787559628486633,
+        "score": 0.7165066599845886,
         "section_num": 9,
         "section_id": "9",
-        "moment": "1",
+        "moment": "3",
         "section_title": "Vahingonkorvausvelvollisuus",
-        "node_id": "1141/2015:fin@20240985:10l:9:1"
+        "node_id": "1141/2015:fin@20240985:10l:9:3"
       },
       "top1_result": {
         "law_key": "tilintarkastuslaki_1141_2015",
@@ -3264,17 +3428,18 @@
         "section_title": "Vahingonkorvausvelvollisuus",
         "node_id": "1141/2015:fin@20240985:10l:9:1"
       },
-      "latency_ms": 31.960299937054515
+      "latency_ms": 48.38799999561161
     },
     {
       "id": "CROSS-KUNTA-TILA-014",
       "query": "vastuuvapauden myöntäminen kunnan tilivelvollisille",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -3304,22 +3469,23 @@
         "section_title": "Tilintarkastuskertomus ja sen käsittely",
         "node_id": "410/2015:fin@20230780:125:3"
       },
-      "latency_ms": 30.84290004335344
+      "latency_ms": 37.009499967098236
     },
     {
       "id": "CROSS-KUNTA-TILA-015",
       "query": "tilintarkastajan kurinpitomenettely",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
-          "section_num": 1,
+          "section_num": 12,
           "moment": 1
         }
       ],
@@ -3342,52 +3508,54 @@
         "section_title": "Tilintarkastajan ja kestävyysraportointitarkastajan toiminnan järjestäminen (21.12.2023/1250)",
         "node_id": "1141/2015:fin@20240985:4l:12:1"
       },
-      "latency_ms": 32.43529994506389
+      "latency_ms": 35.13189998921007
     },
     {
       "id": "CROSS-KUNTA-TILA-016",
       "query": "tilintarkastusvalvonta ja PRH",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
-          "section_num": 7,
+          "section_num": 1,
           "moment": 1
         }
       ],
       "expected_none": [],
       "matched_result": null,
       "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.5251302123069763,
-        "section_num": 122,
-        "section_id": "122",
-        "moment": "1",
-        "section_title": "Tilintarkastus",
-        "node_id": "410/2015:fin@20230780:122:1"
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.5839093327522278,
+        "section_num": 23,
+        "section_id": "23",
+        "moment": "4",
+        "section_title": "Tilinpäätöksen ja konsernitilinpäätöksen digitaalisuus",
+        "node_id": "1336/1997:fin@20251006:7l:23:4"
       },
-      "latency_ms": 33.85180002078414
+      "latency_ms": 44.30940002202988
     },
     {
       "id": "CROSS-KUNTA-TILA-017",
       "query": "kunnan ulkoinen tarkastus ja valvonta",
       "type": "SHOULD",
       "test_type": "hard_negative",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": false,
+      "pass_routing": true,
+      "top1_hit_strict": false,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "kuntalaki_410_2015",
-          "section_num": 122,
+          "section_num": 123,
           "moment": 1
         }
       ],
@@ -3404,52 +3572,54 @@
         "section_title": "Tarkastuslautakunta",
         "node_id": "410/2015:fin@20230780:121:2"
       },
-      "latency_ms": 36.165299941785634
+      "latency_ms": 42.235399945639074
     },
     {
       "id": "CROSS-KUNTA-TILA-018",
       "query": "pörssiyhtiön tilintarkastus",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": false,
-      "top1_hit": false,
-      "law_match": false,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": false,
+      "pass_routing": false,
+      "top1_hit_strict": false,
+      "top1_hit_routing": false,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
           "section_num": 5,
-          "moment": 1
+          "moment": 5
         }
       ],
       "expected_none": [],
       "matched_result": null,
       "top1_result": {
-        "law_key": "kuntalaki_410_2015",
-        "score": 0.559761106967926,
-        "section_num": 123,
-        "section_id": "123",
-        "moment": "1",
-        "section_title": "Tilintarkastajan tehtävät",
-        "node_id": "410/2015:fin@20230780:123:1"
+        "law_key": "kirjanpitolaki_1336_1997",
+        "score": 0.5944962501525879,
+        "section_num": 1,
+        "section_id": "1",
+        "moment": "5",
+        "section_title": "Tilinpäätöksen sisältö",
+        "node_id": "1336/1997:fin@20251006:3l:1:5"
       },
-      "latency_ms": 32.940100063569844
+      "latency_ms": 38.466099998913705
     },
     {
       "id": "CROSS-KUNTA-TILA-019",
       "query": "tilintarkastajan toimikausi",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
           "law_key": "tilintarkastuslaki_1141_2015",
-          "section_num": 2,
+          "section_num": 1,
           "moment": 1
         }
       ],
@@ -3472,17 +3642,18 @@
         "section_title": "Toimikausien enimmäiskesto",
         "node_id": "1141/2015:fin@20240985:5l:1:1"
       },
-      "latency_ms": 31.098199891857803
+      "latency_ms": 46.3226999854669
     },
     {
       "id": "CROSS-KUNTA-TILA-020",
       "query": "tilintarkastajan erityinen tarkastusoikeus",
       "type": "SHOULD",
       "test_type": "cross_law",
-      "source_file": "questions_cross_kunta_tila.json",
-      "passed": true,
-      "top1_hit": true,
-      "law_match": true,
+      "source_file": "questions_cross_kunta_tila.autofill.json",
+      "pass_strict": true,
+      "pass_routing": true,
+      "top1_hit_strict": true,
+      "top1_hit_routing": true,
       "hard_negative_violation": false,
       "expected_any": [
         {
@@ -3494,12 +3665,12 @@
       "expected_none": [],
       "matched_result": {
         "law_key": "tilintarkastuslaki_1141_2015",
-        "score": 0.6555341482162476,
+        "score": 0.6293016076087952,
         "section_num": 3,
         "section_id": "3",
         "moment": "1",
-        "section_title": "Tarkastusoikeus",
-        "node_id": "1141/2015:fin@20240985:8l:3:1"
+        "section_title": "Muiden kuin tilintarkastuspalveluiden rajoittaminen",
+        "node_id": "1141/2015:fin@20240985:5l:3:1"
       },
       "top1_result": {
         "law_key": "tilintarkastuslaki_1141_2015",
@@ -3510,7 +3681,7 @@
         "section_title": "Tarkastusoikeus",
         "node_id": "1141/2015:fin@20240985:8l:3:1"
       },
-      "latency_ms": 31.104299938306212
+      "latency_ms": 42.275600018911064
     }
   ]
 }

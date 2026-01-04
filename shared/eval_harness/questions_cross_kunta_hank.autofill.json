@@ -1,0 +1,511 @@
+{
+  "description": "Cross-law evaluation: Kuntalaki ↔ Hankintalaki (autofilled v7)",
+  "version": "7.0",
+  "autofill_stats": {
+    "ok": 20,
+    "fail": 0
+  },
+  "questions": [
+    {
+      "id": "CROSS-KUNTA-HANK-001",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "julkisen hankinnan kynnysarvot",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "julkisen",
+        "kynnysarvot",
+        "hankinnan"
+      ],
+      "expected_none": [],
+      "notes": "Kynnysarvot ovat Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6041924357414246,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 2,
+          "moment": 3
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-002",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "hankintailmoituksen julkaiseminen",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "julkaiseminen",
+        "hankintailmoituksen"
+      ],
+      "expected_none": [],
+      "notes": "Hankintailmoitus on Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.7050917744636536,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 60,
+          "moment": 5
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-003",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tarjouksen valintaperusteet",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "tarjouksen",
+        "valintaperusteet"
+      ],
+      "expected_none": [],
+      "notes": "Valintaperusteet ovat Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.7062014937400818,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 79,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-004",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "kilpailutus ja tarjouskilpailu",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "kilpailutus",
+        "tarjouskilpailu"
+      ],
+      "expected_none": [],
+      "notes": "Kilpailutus on Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6387710571289062,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 104,
+          "moment": 2
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-005",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnan investointien rahoitus",
+      "expected_law_key": "kuntalaki_410_2015",
+      "expected_anchor_terms": [
+        "investointien",
+        "kunnan",
+        "rahoitus"
+      ],
+      "expected_none": [
+        "hankintalaki_1397_2016"
+      ],
+      "notes": "HARD NEG: 'investointien rahoitus' on talousarviossa",
+      "autofill_status": "OK",
+      "autofill_score": 0.544150173664093,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 6,
+          "moment": 2
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-006",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "hankintayksikön määritelmä",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "määritelmä",
+        "hankintayksikön"
+      ],
+      "expected_none": [],
+      "notes": "Hankintayksikkö on Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6792358160018921,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 5,
+          "moment": 2
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-007",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "puitejärjestely ja hankintasopimus",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "hankintasopimus",
+        "puitejärjestely"
+      ],
+      "expected_none": [],
+      "notes": "Puitejärjestely on Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6659058928489685,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 136,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-008",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnan toiminnan ja talouden ohjaus",
+      "expected_law_key": "kuntalaki_410_2015",
+      "expected_anchor_terms": [
+        "ohjaus",
+        "toiminnan",
+        "kunnan",
+        "talouden"
+      ],
+      "expected_none": [
+        "hankintalaki_1397_2016"
+      ],
+      "notes": "HARD NEG: 'talouden ohjaus' on Kuntalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6379335522651672,
+      "autofill_overlap": 4,
+      "expected_any": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 120,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-009",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "EU-kynnysarvon ylittävä hankinta",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "kynnysarvon",
+        "hankinta",
+        "ylittävä"
+      ],
+      "expected_none": [],
+      "notes": "EU-kynnysarvot ovat Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6515711545944214,
+      "autofill_overlap": 3,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 124,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-010",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "hankintapäätöksen tekeminen",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "tekeminen",
+        "hankintapäätöksen"
+      ],
+      "expected_none": [],
+      "notes": "Hankintapäätös on Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.704452395439148,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 128,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-011",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnanhallituksen päätösvalta sopimuksissa",
+      "expected_law_key": "kuntalaki_410_2015",
+      "expected_anchor_terms": [
+        "kunnanhallituksen",
+        "päätösvalta",
+        "sopimuksissa"
+      ],
+      "expected_none": [
+        "hankintalaki_1397_2016"
+      ],
+      "notes": "HARD NEG: 'kunnanhallitus' viittaa Kuntalakiin",
+      "autofill_status": "OK",
+      "autofill_score": 0.604154646396637,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 58,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-012",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "tarjoajan poissulkemisperusteet",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "tarjoajan",
+        "poissulkemisperusteet"
+      ],
+      "expected_none": [],
+      "notes": "Poissulkemisperusteet ovat Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6865018606185913,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 81,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-013",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "markkinaoikeus ja hankintavalitus",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "hankintavalitus",
+        "markkinaoikeus"
+      ],
+      "expected_none": [],
+      "notes": "Markkinaoikeusvalitus on Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6347126960754395,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 151,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-014",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "valtuuston päätös suuresta investoinnista",
+      "expected_law_key": "kuntalaki_410_2015",
+      "expected_anchor_terms": [
+        "suuresta",
+        "valtuuston",
+        "päätös",
+        "investoinnista"
+      ],
+      "expected_none": [
+        "hankintalaki_1397_2016"
+      ],
+      "notes": "HARD NEG: 'valtuusto' viittaa Kuntalakiin",
+      "autofill_status": "OK",
+      "autofill_score": 0.47259026765823364,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 118,
+          "moment": 6
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-015",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "neuvottelumenettely julkisissa hankinnoissa",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "julkisissa",
+        "neuvottelumenettely",
+        "hankinnoissa"
+      ],
+      "expected_none": [],
+      "notes": "Neuvottelumenettely on Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6933972239494324,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 36,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-016",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "sidosyksikköhankinta",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "sidosyksikköhankinta"
+      ],
+      "expected_none": [],
+      "notes": "Sidosyksikkö on Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6688767075538635,
+      "autofill_overlap": 0,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 15,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-017",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "hard_negative",
+      "query": "kunnan omaisuuden myynti",
+      "expected_law_key": "kuntalaki_410_2015",
+      "expected_anchor_terms": [
+        "omaisuuden",
+        "kunnan",
+        "myynti"
+      ],
+      "expected_none": [
+        "hankintalaki_1397_2016"
+      ],
+      "notes": "HARD NEG: 'omaisuuden myynti' ei ole hankinta",
+      "autofill_status": "OK",
+      "autofill_score": 0.6111132502555847,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "kuntalaki_410_2015",
+          "section_num": 130,
+          "moment": 1
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-018",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "sosiaalinen näkökulma hankinnoissa",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "näkökulma",
+        "hankinnoissa",
+        "sosiaalinen"
+      ],
+      "expected_none": [],
+      "notes": "Sosiaaliset näkökohdat ovat Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6365125179290771,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 108,
+          "moment": 2
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-019",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "käyttöoikeussopimus ja konsessio",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "käyttöoikeussopimus",
+        "konsessio"
+      ],
+      "expected_none": [],
+      "notes": "Käyttöoikeussopimus on Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.573604941368103,
+      "autofill_overlap": 1,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 117,
+          "moment": 2
+        }
+      ]
+    },
+    {
+      "id": "CROSS-KUNTA-HANK-020",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "test_type": "cross_law",
+      "query": "avoin menettely ja rajoitettu menettely",
+      "expected_law_key": "hankintalaki_1397_2016",
+      "expected_anchor_terms": [
+        "rajoitettu",
+        "menettely",
+        "avoin"
+      ],
+      "expected_none": [],
+      "notes": "Hankintamenettelyt ovat Hankintalaissa",
+      "autofill_status": "OK",
+      "autofill_score": 0.6516117453575134,
+      "autofill_overlap": 2,
+      "expected_any": [
+        {
+          "law_key": "hankintalaki_1397_2016",
+          "section_num": 33,
+          "moment": 1
+        }
+      ]
+    }
+  ]
+}
