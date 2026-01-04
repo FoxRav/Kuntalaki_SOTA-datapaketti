@@ -10,9 +10,10 @@ Finlexin Akoma Ntoso XML -muodosta muunnettuna momenttitason JSON/JSONL-dataksi,
 |------|--------|-----------|------|
 | **Kuntalaki** | 410/2015 | 421 | ✅ Indeksoitu |
 | **Kirjanpitolaki** | 1336/1997 | 385 | ✅ Indeksoitu |
-| Tilintarkastuslaki | 1141/2015 | - | 📋 Roadmap |
-| Hankintalaki | 1397/2016 | - | 📋 Roadmap |
-| Osakeyhtiölaki | 624/2006 | - | 📋 Roadmap |
+| **Tilintarkastuslaki** | 1141/2015 | 357 | ✅ Indeksoitu |
+| **Hankintalaki** | 1397/2016 | 454 | ✅ Indeksoitu |
+| **Osakeyhtiölaki** | 624/2006 | 919 | ✅ Indeksoitu |
+| **Yhteensä** | - | **2536** | ✅ |
 
 ## Arkkitehtuuri
 
@@ -25,12 +26,9 @@ Finlexin Akoma Ntoso XML -muodosta muunnettuna momenttitason JSON/JSONL-dataksi,
 │
 ├── laws/                     # Multi-laki rakenne (v5)
 │   ├── kirjanpitolaki_1336_1997/
-│   │   ├── analysis_layer/
-│   │   │   ├── json/
-│   │   │   └── embeddings/
-│   │   ├── build_kirjanpitolaki.py
-│   │   └── build_embeddings.py
-│   └── [muut lait tulevat tänne]
+│   ├── tilintarkastuslaki_1141_2015/
+│   ├── hankintalaki_1397_2016/
+│   └── osakeyhtiolaki_624_2006/
 │
 ├── shared/                   # Jaettu infrastruktuuri
 │   ├── law_catalog.json      # Lakikatalogi
@@ -41,6 +39,7 @@ Finlexin Akoma Ntoso XML -muodosta muunnettuna momenttitason JSON/JSONL-dataksi,
 │   └── utils/                # Geneerinen law builder
 │
 ├── scripts/                  # Ajoskriptit
+│   ├── build_all_embeddings.py
 │   └── multi_law_query.py    # Multi-laki haku
 │
 └── eval/                     # Evaluaatio
@@ -71,9 +70,8 @@ pip install lxml chromadb sentence-transformers pytest
 python analysis_layer/build_kuntalaki_json.py
 python analysis_layer/build_embeddings.py
 
-# Kirjanpitolaki
-python laws/kirjanpitolaki_1336_1997/build_kirjanpitolaki.py
-python laws/kirjanpitolaki_1336_1997/build_embeddings.py
+# Kaikki muut lait kerralla
+python scripts/build_all_embeddings.py
 ```
 
 ### 4. Testaa multi-laki haku
@@ -92,9 +90,23 @@ query = "tilinpäätöksen liitetiedot ja tase"
 routes = route_query(query)
 # {'kirjanpitolaki_1336_1997': 1.0}
 
-query = "kunnan talousarvion alijäämä"
+query = "julkisen hankinnan kynnysarvo"
 routes = route_query(query)
-# {'kuntalaki_410_2015': 1.0}
+# {'hankintalaki_1397_2016': 1.0}
+
+query = "osakeyhtiön hallituksen vastuu"
+routes = route_query(query)
+# {'osakeyhtiolaki_624_2006': 1.0}
+```
+
+## Testikyselyjen tulokset
+
+```
+Query: kunnan talousarvion alijäämä → Kuntalaki §110, §148, §110a ✅
+Query: tilinpäätöksen liitetiedot → Kirjanpitolaki §1, §6, §13 ✅
+Query: tilintarkastajan huomautus → Tilintarkastuslaki §1, §5 ✅
+Query: julkisen hankinnan kynnysarvo → Hankintalaki §25, §26 ✅
+Query: osakeyhtiön hallituksen vastuu → Osakeyhtiölaki §9, §16a ✅
 ```
 
 ## JSON-skeema (v5)
@@ -133,20 +145,23 @@ Latency: ~45ms
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-## Tilastot
+## Tilastot (v5)
 
-| Laki | Momentteja | Pykäliä | Lukuja |
-|------|-----------|--------|--------|
-| Kuntalaki | 421 | 150 | 21 |
-| Kirjanpitolaki | 385 | 43 | 12 |
-| **Yhteensä** | **806** | **193** | **33** |
+| Laki | Momentteja | Kuvaus |
+|------|-----------|--------|
+| Kuntalaki | 421 | Kuntahallinon perusta |
+| Kirjanpitolaki | 385 | Kirjanpitovelvollisuus |
+| Tilintarkastuslaki | 357 | Tilintarkastus |
+| Hankintalaki | 454 | Julkiset hankinnat |
+| Osakeyhtiölaki | 919 | Yhtiöoikeus |
+| **Yhteensä** | **2536** | 5 lakia |
 
 ## Roadmap
 
 1. ✅ **v4**: Kuntalaki SOTA (100% pass)
-2. ✅ **v5**: Multi-laki rakenne + Kirjanpitolaki
-3. 🔜 **v5.1**: Tilintarkastuslaki
-4. 📋 **v6**: Hankintalaki + cross-law eval
+2. ✅ **v5**: Multi-laki rakenne + kaikki 5 lakia
+3. 🔜 **v5.1**: Kirjanpitoasetus (1339/1997)
+4. 📋 **v6**: Cross-law eval ja multi-law reranking
 
 ## Lisenssi & lähde
 

@@ -33,6 +33,18 @@ LAW_INDICES = {
         "chroma_path": PROJECT_ROOT / "laws" / "kirjanpitolaki_1336_1997" / "analysis_layer" / "embeddings" / "chroma_db",
         "collection_name": "kirjanpitolaki",
     },
+    "tilintarkastuslaki_1141_2015": {
+        "chroma_path": PROJECT_ROOT / "laws" / "tilintarkastuslaki_1141_2015" / "analysis_layer" / "embeddings" / "chroma_db",
+        "collection_name": "tilintarkastuslaki",
+    },
+    "hankintalaki_1397_2016": {
+        "chroma_path": PROJECT_ROOT / "laws" / "hankintalaki_1397_2016" / "analysis_layer" / "embeddings" / "chroma_db",
+        "collection_name": "hankintalaki",
+    },
+    "osakeyhtiolaki_624_2006": {
+        "chroma_path": PROJECT_ROOT / "laws" / "osakeyhtiolaki_624_2006" / "analysis_layer" / "embeddings" / "chroma_db",
+        "collection_name": "osakeyhtiolaki",
+    },
 }
 
 
@@ -155,8 +167,10 @@ def main() -> None:
     test_queries = [
         "kunnan talousarvion alijäämä",
         "tilinpäätöksen liitetiedot ja tase",
-        "kirjanpitovelvollisen tilinpäätös",
-        "tilintarkastajan huomautus",
+        "tilintarkastajan huomautus ja vastuuvapaus",
+        "julkisen hankinnan kynnysarvo",
+        "osakeyhtiön hallituksen vastuu",
+        "konsernitilinpäätös ja tytäryhtiö",
     ]
     
     print("\nRunning test queries:\n")
