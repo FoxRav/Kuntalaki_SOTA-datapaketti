@@ -31,6 +31,26 @@ K_TOTAL = 10
 MIN_SCORE = 0.50
 EVAL_HARNESS_DIR = PROJECT_ROOT / "shared" / "eval_harness"
 
+# v7.1 Rerank configuration
+ROUTER_BONUS = 0.02  # Bonus for hits from router's top-weighted law
+DIVERSITY_GAP = 0.02  # If score gap between top 2 laws < this, ensure diversity
+
+# v7.1 Pair-guards: (query_term, target_law, bonus/penalty)
+# Positive = boost, Negative = penalty
+PAIR_GUARDS: list[tuple[str, str, float]] = [
+    # "kunnan" in query → boost kuntalaki, penalize kirjanpitolaki
+    ("kunnan", "kuntalaki_410_2015", +0.03),
+    ("kunnan", "kirjanpitolaki_1336_1997", -0.03),
+    ("kunta", "kuntalaki_410_2015", +0.02),
+    ("kunta", "kirjanpitolaki_1336_1997", -0.02),
+    # "konserni" → boost osakeyhtiölaki
+    ("konserni", "osakeyhtiolaki_624_2006", +0.02),
+    # "tilintarkastaja" → boost tilintarkastuslaki
+    ("tilintarkastaja", "tilintarkastuslaki_1141_2015", +0.02),
+    # "hankinta" → boost hankintalaki
+    ("hankinta", "hankintalaki_1397_2016", +0.02),
+]
+
 # Law index configurations
 LAW_INDICES = {
     "kuntalaki_410_2015": {
@@ -122,16 +142,28 @@ def multi_law_query(
     model: SentenceTransformer,
     total_k: int = K_TOTAL,
     min_score: float = MIN_SCORE,
-) -> tuple[list[dict], float]:
+    apply_rerank: bool = True,
+) -> tuple[list[dict], float, dict]:
     """
-    Query multiple law indices and merge results.
-    Returns tuple of (results, latency_ms).
+    Query multiple law indices and merge results (v7.1: with router bonus + diversity).
+    
+    Returns:
+        Tuple of (results, latency_ms, debug_info)
     """
     start_time = time.perf_counter()
+    debug_info: dict = {"router_bonus_applied": 0, "diversity_swap": False, "pair_guards_applied": 0}
     
     # Route query to determine weights
     available_laws = list(indices.keys())
     weights = route_query(query, available_laws)
+    
+    # Determine top 2 laws from router
+    sorted_weights = sorted(weights.items(), key=lambda x: x[1], reverse=True)
+    top1_law = sorted_weights[0][0] if sorted_weights else None
+    top2_law = sorted_weights[1][0] if len(sorted_weights) > 1 else None
+    debug_info["router_top1"] = top1_law
+    debug_info["router_top2"] = top2_law
+    debug_info["router_weights"] = weights
     
     # Calculate k per law
     k_per_law = calculate_k_per_law(weights, total_k, min_k=2)
@@ -164,6 +196,7 @@ def multi_law_query(
                 all_results.append({
                     "law_key": law_key,
                     "score": score,
+                    "score_original": score,  # Keep original for debugging
                     "section_num": meta.get("section_num", 0),
                     "section_id": meta.get("section_id", ""),
                     "moment": meta.get("moment", ""),
@@ -171,12 +204,55 @@ def multi_law_query(
                     "node_id": meta.get("node_id", ""),
                 })
     
-    # Sort by score
+    # v7.1: Apply router bonus (+0.02) to hits from router's top law
+    if apply_rerank and top1_law:
+        for r in all_results:
+            if r["law_key"] == top1_law:
+                r["score"] += ROUTER_BONUS
+                debug_info["router_bonus_applied"] += 1
+    
+    # v7.1: Apply pair-guards based on query terms
+    if apply_rerank:
+        query_lower = query.lower()
+        for term, law_key, adjustment in PAIR_GUARDS:
+            if term in query_lower:
+                for r in all_results:
+                    if r["law_key"] == law_key:
+                        r["score"] += adjustment
+                        debug_info["pair_guards_applied"] += 1
+    
+    # Sort by score (after bonus)
     all_results.sort(key=lambda x: x["score"], reverse=True)
+    
+    # v7.1: Diversity rule - ensure at least 1 hit from top2_law if gap is small
+    if apply_rerank and top2_law and len(all_results) >= 2:
+        # Find best scores per law
+        best_scores: dict[str, float] = {}
+        for r in all_results:
+            law = r["law_key"]
+            if law not in best_scores or r["score"] > best_scores[law]:
+                best_scores[law] = r["score"]
+        
+        best1 = best_scores.get(top1_law, 0)
+        best2 = best_scores.get(top2_law, 0)
+        
+        # Check if top2_law is present in top_k
+        top_k_results = all_results[:total_k]
+        top2_in_topk = any(r["law_key"] == top2_law for r in top_k_results)
+        
+        # If gap is small and top2_law not in top_k, swap in the best hit from top2_law
+        if abs(best1 - best2) < DIVERSITY_GAP and not top2_in_topk:
+            # Find best hit from top2_law
+            top2_hits = [r for r in all_results if r["law_key"] == top2_law]
+            if top2_hits:
+                # Replace last item in top_k with best top2_law hit
+                top_k_results[-1] = top2_hits[0]
+                all_results = top_k_results + [r for r in all_results[total_k:]]
+                debug_info["diversity_swap"] = True
     
     latency_ms = (time.perf_counter() - start_time) * 1000
     
-    return all_results[:total_k], latency_ms
+    return all_results[:total_k], latency_ms, debug_info
 
 
 def evaluate_question(
@@ -252,16 +328,23 @@ def run_evaluation(
     indices: dict[str, chromadb.Collection],
     model: SentenceTransformer,
 ) -> dict:
-    """Run full evaluation and return results."""
+    """Run full evaluation and return results (v7.1: with rerank stats)."""
     results: list[dict] = []
     total_latency = 0.0
+    total_router_bonus = 0
+    total_diversity_swaps = 0
+    total_pair_guards = 0
     
     for i, q in enumerate(questions):
         query = q.get("query", "")
         
-        # Run query
-        hits, latency_ms = multi_law_query(query, indices, model)
+        # Run query (v7.1: now returns debug_info)
+        hits, latency_ms, debug_info = multi_law_query(query, indices, model)
         total_latency += latency_ms
+        total_router_bonus += debug_info.get("router_bonus_applied", 0)
+        total_pair_guards += debug_info.get("pair_guards_applied", 0)
+        if debug_info.get("diversity_swap"):
+            total_diversity_swaps += 1
         
         # Evaluate
         eval_result = evaluate_question(q, hits)
@@ -326,10 +409,12 @@ def run_evaluation(
     
     return {
         "timestamp": datetime.now().isoformat(),
-        "version": "7.0",
+        "version": "7.1",
         "config": {
             "k_total": K_TOTAL,
             "min_score": MIN_SCORE,
+            "router_bonus": ROUTER_BONUS,
+            "diversity_gap": DIVERSITY_GAP,
         },
         "summary": {
             "total": total,
@@ -346,6 +431,10 @@ def run_evaluation(
             # Other
             "hard_negative_violations": hard_neg_violations,
             "avg_latency_ms": avg_latency,
+            # v7.1 rerank stats
+            "total_router_bonus_applied": total_router_bonus,
+            "total_diversity_swaps": total_diversity_swaps,
+            "total_pair_guards_applied": total_pair_guards,
         },
         "pair_metrics": pair_metrics,
         "questions": results,
@@ -363,16 +452,17 @@ def check_gates(summary: dict) -> dict[str, bool]:
 
 
 def generate_report(eval_results: dict) -> str:
-    """Generate markdown report (v7: STRICT + ROUTING)."""
+    """Generate markdown report (v7.1: STRICT + ROUTING + rerank stats)."""
     summary = eval_results["summary"]
     pair_metrics = eval_results["pair_metrics"]
     gates = check_gates(summary)
+    config = eval_results["config"]
     
     lines = [
-        "# Cross-Law Evaluation Report (v7)",
+        "# Cross-Law Evaluation Report (v7.1)",
         "",
         f"**Generated:** {eval_results['timestamp']}",
-        f"**Config:** k={eval_results['config']['k_total']}, min_score={eval_results['config']['min_score']}",
+        f"**Config:** k={config['k_total']}, min_score={config['min_score']}, router_bonus={config.get('router_bonus', 0)}, diversity_gap={config.get('diversity_gap', 0)}",
         "",
         "## Quality Gates (STRICT)",
         "",
@@ -397,6 +487,11 @@ def generate_report(eval_results: dict) -> str:
         "### Other",
         f"- **Hard Negative Violations:** {summary['hard_negative_violations']}",
         f"- **Avg Latency:** {summary['avg_latency_ms']:.1f}ms",
+        "",
+        "### v7.1 Rerank Stats",
+        f"- **Router Bonus Applied:** {summary.get('total_router_bonus_applied', 0)} times",
+        f"- **Pair Guards Applied:** {summary.get('total_pair_guards_applied', 0)} times",
+        f"- **Diversity Swaps:** {summary.get('total_diversity_swaps', 0)} times",
         "",
         "## Per-Pair Metrics",
         "",
@@ -453,9 +548,11 @@ def generate_report(eval_results: dict) -> str:
 
 
 def main() -> None:
-    """Run cross-law evaluation."""
+    """Run cross-law evaluation (v7.1: with router bonus + diversity)."""
     print("=" * 60)
-    print("Cross-Law Evaluation (v6)")
+    print("Cross-Law Evaluation (v7.1)")
+    print(f"  Router Bonus: +{ROUTER_BONUS}")
+    print(f"  Diversity Gap: {DIVERSITY_GAP}")
     print("=" * 60)
     
     # Load indices
@@ -495,10 +592,10 @@ def main() -> None:
         f.write(report)
     print(f"Report saved to: {report_path}")
     
-    # Print summary (v7)
+    # Print summary (v7.1)
     summary = eval_results["summary"]
     print("\n" + "=" * 60)
-    print("SUMMARY (v7)")
+    print("SUMMARY (v7.1)")
     print("=" * 60)
     print("\nSTRICT (gate):")
     print(f"  Pass Rate: {summary['pass_rate_strict']*100:.1f}%")
@@ -508,6 +605,10 @@ def main() -> None:
     print(f"  Top-1 Hit Rate: {summary['top1_rate_routing']*100:.1f}%")
     print(f"\nHard Negative Violations: {summary['hard_negative_violations']}")
     print(f"Avg Latency: {summary['avg_latency_ms']:.1f}ms")
+    print(f"\nv7.1 Rerank Stats:")
+    print(f"  Router Bonus Applied: {summary.get('total_router_bonus_applied', 0)} times")
+    print(f"  Pair Guards Applied: {summary.get('total_pair_guards_applied', 0)} times")
+    print(f"  Diversity Swaps: {summary.get('total_diversity_swaps', 0)} times")
     print()
     print("GATES:")
     for gate_name, gate_pass in gates.items():

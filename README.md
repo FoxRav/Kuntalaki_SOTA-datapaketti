@@ -159,14 +159,28 @@ Latency: ~45ms
 | Osakeyhtiölaki | 919 | Yhtiöoikeus |
 | **Yhteensä** | **2648** | 6 lakia |
 
+## Cross-Law Eval (v7.1)
+
+| Gate | Tavoite | Tulos | Tila |
+|------|--------|--------|--------|
+| STRICT Pass Rate | >= 95% | 61.0% | ❌ FAIL |
+| Hard Negatives | = 0 | **0** | ✅ PASS |
+| Latency | < 150ms | 41.9ms | ✅ PASS |
+
+**v7.1 Rerank Stats:**
+- Router Bonus Applied: 511 times
+- Pair Guards Applied: 264 times
+- Diversity Swaps: 0 times
+
 ## Roadmap
 
 1. ✅ **v4**: Kuntalaki SOTA (100% pass)
 2. ✅ **v5**: Multi-laki rakenne + 5 lakia
 3. ✅ **v5.1**: Kirjanpitoasetus (1339/1997)
 4. ✅ **v6**: Cross-law eval framework (100 questions)
-5. 🔄 **v7**: Autofill + Top2-router (STRICT 61%, ROUTING 71%)
-6. 📋 **v7.1**: Rerank + diversiteettisääntö
+5. ✅ **v7**: Autofill + Top2-router (STRICT 61%, ROUTING 71%, HN 1)
+6. ✅ **v7.1**: Router-bonus + Pair-guards (HN **0**, STRICT 61%)
+7. 🔜 **v7.2**: STRICT-parannukset (tavoite 95%)
 
 ## Lisenssi & lähde
 
