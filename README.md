@@ -2,39 +2,70 @@
 
 Finlexin Kuntalaki (410/2015) Akoma Ntoso XML -muodosta **SOTA-tasoiseksi AI-analyysidataksi** muunnettuna.
 
-## Rakenne
-
-```
-├── finlex_statute_consolidated/     # 🔒 Kultainen lähde (DO NOT TOUCH)
-│   └── akn/fi/act/statute-consolidated/2015/410/
-│       ├── fin@20230780/main.xml    # Ajantasaisin versio
-│       └── fin@.../                 # Aiemmat versiot
-│
-├── analysis_layer/                  # ✅ AI-optimoitu analyysikerros
-│   ├── json/                        # Normalisoitu JSON (pykälä/momentti-taso)
-│   ├── markdown/                    # LLM-ystävällinen Markdown
-│   ├── embeddings/                  # RAG-vektori-indeksit
-│   ├── lineage/                     # Versiohistoria ja aikajana
-│   └── metadata/                    # Lain metatiedot
-│
-├── akn_to_md.py                     # Perusmuunnostyökalu
-├── akn_to_md_v2.py                  # Parannettu versio
-└── md_clean.py                      # Markdown-siivous
-```
-
 ## Tila
 
-| Kerros | Tila | Tiedosto |
-|--------|------|----------|
-| Finlex XML | ✅ valmis | `finlex_statute_consolidated/` |
-| Normalisoitu JSON | ✅ valmis | `analysis_layer/json/kuntalaki_410-2015.json` |
-| JSONL (streaming) | ✅ valmis | `analysis_layer/json/kuntalaki_410-2015.jsonl` |
-| Markdown | ✅ valmis | `analysis_layer/markdown/kuntalaki_410-2015.md` |
-| Versiohistoria | ✅ valmis | `analysis_layer/lineage/kuntalaki_410-2015_versions.json` |
-| Metadata | ✅ valmis | `analysis_layer/metadata/kuntalaki_410-2015_meta.json` |
-| Embedding (RAG) | ✅ valmis | `analysis_layer/embeddings/chroma_db/` |
+| Komponentti | Tila | Huomio |
+|-------------|------|--------|
+| JSON/JSONL (momenttitaso) | ✅ valmis | 421 momenttia, uniikki `node_id` |
+| Markdown | ✅ valmis | LLM-ystävällinen |
+| ChromaDB embedding | ✅ valmis | BAAI/bge-m3 |
+| Anchors (v4) | ✅ valmis | Momenttispesifit avainsanat |
+| Query boost/penalty | ✅ valmis | Pair-guards (110/110a, 113/114) |
+| Eval v3 testit | ✅ **100% PASS** | MUST 100%, SHOULD 100%, k=10 |
 
-## JSON-skeema
+## Repon rakenne
+
+```
+├── analysis_layer/              # AI-optimoitu analyysikerros
+│   ├── json/                    # Normalisoitu JSON (momenttitaso)
+│   ├── markdown/                # LLM-ystävällinen Markdown
+│   ├── embeddings/              # ChromaDB-indeksi (EI repossa)
+│   ├── lineage/                 # Versiohistoria
+│   ├── metadata/                # Domain filters, metatiedot
+│   ├── vector_store/            # ChromaDB wrapper
+│   ├── query_boost.py           # Query-time boost/penalty
+│   └── tests/                   # Golden-set testit
+│
+├── eval/                        # Retrieval-evaluaatio
+│   ├── v3/                      # V3 testikehys (150 kysymystä)
+│   └── questions_kuntalaki_golden.json
+│
+└── *.py                         # Muunnostyökalut
+```
+
+**HUOM**: Seuraavat EIVÄT ole repossa (vain paikallisesti):
+- `finlex_statute_consolidated/` - Finlex XML raakadata
+- `analysis_layer/embeddings/chroma_db/` - Vektori-indeksi (generoitava)
+
+## Pikastartti
+
+### 1. Kloonaa ja asenna
+
+```bash
+git clone https://github.com/FoxRav/Kuntalaki_SOTA-datapaketti.git
+cd Kuntalaki_SOTA-datapaketti
+pip install lxml chromadb sentence-transformers pytest
+```
+
+### 2. Hanki Finlex-data (tarvitaan vain jos haluat generoida itse)
+
+```bash
+# Lataa Finlex avoin data: https://data.finlex.fi/
+# Pura: finlex_statute_consolidated/akn/fi/act/statute-consolidated/2015/410/
+```
+
+### 3. Generoi indeksi (tai käytä valmiita JSON-tiedostoja)
+
+```bash
+# Jos sinulla on Finlex-data:
+python analysis_layer/build_kuntalaki_json.py
+python analysis_layer/build_embeddings.py
+
+# Testaa
+pytest analysis_layer/tests/ -v
+```
+
+## JSON-skeema (v4)
 
 Jokainen momentti on oma tietue:
 
@@ -42,99 +73,88 @@ Jokainen momentti on oma tietue:
 {
   "law": "Kuntalaki",
   "law_id": "410/2015",
+  "law_key": "fi:act:410/2015",
+  "node_id": "410/2015:fin@20230780:110a:3",
   "finlex_version": "fin@20230780",
   "part": "VI OSA",
-  "part_title": "TALOUS",
   "chapter": "13 luku",
-  "chapter_title": "Kunnan talous",
-  "section": "110",
-  "section_title": "Talousarvio ja -suunnitelma",
-  "moment": "1",
-  "text": "Valtuuston on vuoden loppuun mennessä hyväksyttävä...",
-  "effective_from": "2015-05-01",
+  "section_id": "110a",
+  "section_num": 110,
+  "section_suffix": "a",
+  "section_title": "COVID-19-epidemiaan liittyvät poikkeukset",
+  "moment": 3,
+  "text": "...",
+  "tags": ["talousarvio", "covid-19", "korona", "poikkeuslaki"],
+  "anchors": ["covid", "korona", "epidemia", "poikkeuslaki"],
   "in_force": true,
-  "tags": ["talousarvio", "budjetti", "investoinnit"],
-  "source": {
-    "xml_path": "finlex_statute_consolidated/akn/.../main.xml",
-    "finlex_url": "https://finlex.fi/fi/laki/ajantasa/2015/20150410",
-    "xpath": "//subsection[@eId='...']"
-  }
+  "source": { ... }
 }
 ```
 
-## Käyttö
+### V4 uudet kentät
 
-### 1. JSON-datan uudelleengenerointi
+| Kenttä | Tarkoitus |
+|--------|-----------|
+| `node_id` | Uniikki tunniste jokaiselle momentille |
+| `section_id` | Pykälätunniste kirjainsuffiksilla (110, 110a, 62b) |
+| `anchors` | Momenttispesifit avainsanat (query-time rerank) |
 
-```bash
-python analysis_layer/build_kuntalaki_json.py
-```
+## RAG-käyttö
 
-### 2. Markdown-version generointi
-
-```bash
-python analysis_layer/build_markdown.py
-```
-
-### 3. Versiohistorian päivitys
-
-```bash
-python analysis_layer/build_lineage.py
-```
-
-## Semanttiset tagit
-
-Jokainen momentti sisältää automaattisesti johdetut tagit:
-
-- **Luvun perusteella**: talous, hallinto, päätöksenteko
-- **Avainsanojen perusteella**: alijäämä, arviointimenettely, tilintarkastus
-- **Pykälän otsikon perusteella**: talousarvio ja -suunnitelma
-
-## RAG-integraatio (ChromaDB)
-
-Vektori-indeksi on valmiina käyttöön `analysis_layer/embeddings/chroma_db/`.
-
-### Semanttinen haku
+### Perus semanttinen haku
 
 ```python
 from sentence_transformers import SentenceTransformer
 from analysis_layer.vector_store.chroma_store import ChromaVectorStore
 
-# Lataa malli ja yhdistä indeksiin
 model = SentenceTransformer("BAAI/bge-m3")
 store = ChromaVectorStore("analysis_layer/embeddings/chroma_db", "kuntalaki")
 
-# Hae semanttisesti
 query = "kunnan talousarvion alijäämä"
 embedding = model.encode([query], normalize_embeddings=True)[0]
 results = store.query(embedding.tolist(), n_results=5)
 
-for doc, meta in zip(results["documents"][0], results["metadatas"][0]):
-    print(f"§ {meta['section']}.{meta['moment']} - {meta['section_title']}")
+for meta in results["metadatas"][0]:
+    print(f"§ {meta['section_id']}.{meta['moment']} - {meta['section_title']}")
 ```
 
-### Metadata-suodatus
+### Query boost (suositeltu)
 
 ```python
-# Hae vain luvusta 13 (Kunnan talous)
-results = store.query(embedding.tolist(), where={"chapter": "13 luku"})
+from analysis_layer.query_boost import apply_query_boost
+
+# Hae ensin ChromaDB:stä
+raw_results = store.query(embedding.tolist(), n_results=10)
+
+# Paranna järjestystä boost-säännöillä
+hits = [
+    {"section_id": m["section_id"], "moment": m["moment"], 
+     "score": 1 - d, "anchors": m.get("anchors", [])}
+    for m, d in zip(raw_results["metadatas"][0], raw_results["distances"][0])
+]
+boosted = apply_query_boost(query, hits)
 ```
 
-### Indeksin uudelleenrakennus
+## Eval v3 tulokset
+
+```
+Configuration: k=10, min_score=0.50
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TOTAL:     150/150 (100.0%) ✅
+MUST:      50/50   (100.0%) ✅
+SHOULD:    60/60   (100.0%) ✅
+Top-1 hit: 91.3%
+Precision@1: 88.0%
+MRR: 0.944
+Latency: ~45ms
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+### Aja testit itse
 
 ```bash
-python analysis_layer/build_embeddings.py
+python eval/v3/run_kuntalaki_eval_v3.py --k 10 --min-score 0.50
 ```
-
-## AI-käyttötapaukset
-
-Tämän datapaketin avulla AI pystyy:
-
-1. **Viittaamaan täsmällisesti** (§ 110.2 mom.)
-2. **Yhdistämään pykälät tilinpäätöksiin** (talousanalyysi)
-3. **Tunnistamaan kuntalain rikkomusriskit**
-4. **Vastaamaan**: *"Rikkooko tämä talousarvio 110 §:ää?"*
-5. **Aikajanakyselyt**: *"Mikä pykälä 110 tarkoitti vuonna 2018?"*
 
 ## Tilastot
 
@@ -142,27 +162,28 @@ Tämän datapaketin avulla AI pystyy:
 - **Pykäliä**: 150
 - **Lukuja**: 21
 - **Osia**: 8
-- **Versioita**: 13
+- **Finlex-versioita**: 13
 
-## Lähde
+## Lisenssi & lähde
 
-- **Data**: [Finlex avoin data](https://data.finlex.fi/)
+- **Data**: [Finlex avoin data](https://data.finlex.fi/) (CC BY 4.0)
 - **Formaatti**: Akoma Ntoso 3.0
-- **Lisenssi**: CC BY 4.0
+- **Koodi**: MIT
 
 ## Riippuvuudet
 
 ```
 lxml
-chromadb
+chromadb>=0.4.0
 sentence-transformers
+pytest
 ```
 
 ```bash
-pip install lxml chromadb sentence-transformers
+pip install lxml chromadb sentence-transformers pytest
 ```
 
-**Huom**: Windows-ympäristössä aseta ennen ajoa:
+**Windows**: Aseta ennen ajoa:
 ```powershell
 $env:USE_TF="0"
 $env:USE_TORCH="1"
