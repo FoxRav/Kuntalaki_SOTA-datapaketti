@@ -1,0 +1,21 @@
+{
+  "total_nodes": 81,
+  "total_edges": 82,
+  "node_types": {
+    "DOC": 1,
+    "PAGE": 8,
+    "SECTION": 12,
+    "PARA": 22,
+    "TABLE": 5,
+    "ROW": 26,
+    "METRIC": 7
+  },
+  "edge_types": {
+    "HAS_PAGE": 8,
+    "HAS_SECTION": 12,
+    "HAS_PARA": 22,
+    "NEXT": 9,
+    "HAS_TABLE": 5,
+    "HAS_ROW": 26
+  }
+}

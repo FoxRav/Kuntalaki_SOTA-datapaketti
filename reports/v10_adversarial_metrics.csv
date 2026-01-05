@@ -1,0 +1,7 @@
+metric,value,gate
+confusion_fail_rate,0.00%,PASS
+hallu_evidence_count,0,PASS
+version_drift_count,0,PASS
+abstain_correct_rate,100.00%,PASS
+pass_rate,100.00%,info
+avg_latency_ms,76,info

@@ -1,0 +1,718 @@
+{
+  "version": "11.0",
+  "description": "v11 Kuntatalous-ajattelu - Finance Adversarial Questions",
+  "test_type": "finance_adversarial",
+  "data_source": "lapua_2023",
+  "questions": [
+    {
+      "id": "FIN-TABLE-001",
+      "category": "TABLE_NUMERIC",
+      "query": "Mikä oli Lapuan kaupungin vuosikate vuonna 2023?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": 3400000,
+        "tolerance": 100000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 15, "table": "Tuloslaskelma 2023", "row": "Vuosikate"}
+      }
+    },
+    {
+      "id": "FIN-TABLE-002",
+      "category": "TABLE_NUMERIC",
+      "query": "Paljonko olivat Lapuan kaupungin verotulot 2023?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": 38000000,
+        "tolerance": 500000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 15, "table": "Tuloslaskelma 2023", "row": "Verotulot"}
+      }
+    },
+    {
+      "id": "FIN-TABLE-003",
+      "category": "TABLE_NUMERIC",
+      "query": "Mikä oli toimintakate 2023?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": -45222212,
+        "tolerance": 100000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 15, "table": "Tuloslaskelma 2023", "row": "Toimintakate"}
+      }
+    },
+    {
+      "id": "FIN-TABLE-004",
+      "category": "TABLE_NUMERIC",
+      "query": "Paljonko oli tilikauden tulos 2023?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": -1100000,
+        "tolerance": 100000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 15, "table": "Tuloslaskelma 2023", "row": "Tilikauden tulos"}
+      }
+    },
+    {
+      "id": "FIN-TABLE-005",
+      "category": "TABLE_NUMERIC",
+      "query": "Mikä on Lapuan oma pääoma taseessa?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": 85000000,
+        "tolerance": 2000000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 20, "table": "Tase 31.12.2023", "row": "Oma pääoma"}
+      }
+    },
+    {
+      "id": "FIN-TABLE-006",
+      "category": "TABLE_NUMERIC",
+      "query": "Paljonko on Lapuan vieras pääoma?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": 50000000,
+        "tolerance": 2000000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 20, "table": "Tase 31.12.2023", "row": "Lainat"}
+      }
+    },
+    {
+      "id": "FIN-TABLE-007",
+      "category": "TABLE_NUMERIC",
+      "query": "Mikä oli investointien rahavirta rahoituslaskelmassa?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": -5000000,
+        "tolerance": 500000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 30, "table": "Rahoituslaskelma 2023", "row": "Investointien rahavirta"}
+      }
+    },
+    {
+      "id": "FIN-TABLE-008",
+      "category": "TABLE_NUMERIC",
+      "query": "Paljonko valtionosuudet olivat?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": 10500000,
+        "tolerance": 500000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 15, "table": "Tuloslaskelma 2023", "row": "Valtionosuudet"}
+      }
+    },
+    {
+      "id": "FIN-TABLE-009",
+      "category": "TABLE_NUMERIC",
+      "query": "Mikä oli Lapuan poistot ja arvonalentumiset?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": -4500000,
+        "tolerance": 100000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 15, "table": "Tuloslaskelma 2023", "row": "Poistot ja arvonalentumiset"}
+      }
+    },
+    {
+      "id": "FIN-TABLE-010",
+      "category": "TABLE_NUMERIC",
+      "query": "Paljonko oli toimintatuotot 2023?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": 12345678,
+        "tolerance": 100000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 15, "table": "Tuloslaskelma 2023", "row": "Toimintatuotot"}
+      }
+    },
+    {
+      "id": "FIN-TREND-001",
+      "category": "TREND",
+      "query": "Kasvoivatko Lapuan verotulot vuodesta 2022 vuoteen 2023?",
+      "expected": {
+        "expected_type": "BOOLEAN",
+        "expected_answer": true,
+        "table_evidence_required": true,
+        "calc_trace_required": true,
+        "expected_citation": {"page": 15, "table": "Tuloslaskelma 2023"},
+        "notes": "2023: 38M, 2022: 37.5M -> kasvu"
+      }
+    },
+    {
+      "id": "FIN-TREND-002",
+      "category": "TREND",
+      "query": "Miten vuosikate muuttui edellisvuodesta?",
+      "expected": {
+        "expected_type": "TEXT",
+        "expected_answer_contains": ["kasv", "nousi", "parani"],
+        "table_evidence_required": true,
+        "calc_trace_required": true,
+        "notes": "2023: 3.4M, 2022: 3.1M"
+      }
+    },
+    {
+      "id": "FIN-TREND-003",
+      "category": "TREND",
+      "query": "Onko toimintakate heikentynyt vai parantunut?",
+      "expected": {
+        "expected_type": "TEXT",
+        "expected_answer_contains": ["heiken", "huonon", "laski"],
+        "table_evidence_required": true,
+        "calc_trace_required": true,
+        "notes": "2023: -45.2M, 2022: -44.2M -> heikentynyt"
+      }
+    },
+    {
+      "id": "FIN-TREND-004",
+      "category": "TREND",
+      "query": "Mikä oli tilikauden tulos?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": -1100000,
+        "tolerance": 100000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "notes": "2023: -1.1M"
+      }
+    },
+    {
+      "id": "FIN-TREND-005",
+      "category": "TREND",
+      "query": "Onko lainakanta kasvanut vai vähentynyt?",
+      "expected": {
+        "expected_type": "TEXT",
+        "expected_answer_contains": ["kasv", "nousi", "lisään"],
+        "table_evidence_required": true,
+        "calc_trace_required": true,
+        "notes": "2023: 35M, 2022: 33M -> kasvanut"
+      }
+    },
+    {
+      "id": "FIN-RISK-001",
+      "category": "RISK",
+      "query": "Mitkä ovat Lapuan kaupungin merkittävimmät riskit?",
+      "expected": {
+        "expected_type": "TEXT",
+        "expected_answer_contains": ["henkilöstö", "kustannus"],
+        "table_evidence_required": false,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 5, "section": "Sisäinen valvonta ja riskienhallinta"}
+      }
+    },
+    {
+      "id": "FIN-RISK-002",
+      "category": "RISK",
+      "query": "Onko tilikauden tulos negatiivinen?",
+      "expected": {
+        "expected_type": "BOOLEAN",
+        "expected_answer": true,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "notes": "Tilikauden tulos -1.1M"
+      }
+    },
+    {
+      "id": "FIN-RISK-003",
+      "category": "RISK",
+      "query": "Riittääkö vuosikate poistoihin?",
+      "expected": {
+        "expected_type": "BOOLEAN",
+        "expected_answer": false,
+        "table_evidence_required": true,
+        "calc_trace_required": true,
+        "notes": "Vuosikate 3.4M, poistot 4.5M -> ei riitä"
+      }
+    },
+    {
+      "id": "FIN-RISK-004",
+      "category": "RISK",
+      "query": "Miten kaupunki on varautunut kustannusten nousuun?",
+      "expected": {
+        "expected_type": "TEXT",
+        "expected_answer_contains": ["sisäinen valvonta", "riskienhallinta"],
+        "table_evidence_required": false,
+        "calc_trace_required": false
+      }
+    },
+    {
+      "id": "FIN-RISK-005",
+      "category": "RISK",
+      "query": "Mikä on Lapuan velkaantumisaste?",
+      "expected": {
+        "expected_type": "TEXT",
+        "expected_answer_contains": ["ei tietoa", "ei löydy", "abstain"],
+        "table_evidence_required": false,
+        "calc_trace_required": false,
+        "abstain_expected": true,
+        "notes": "Velkaantumisaste ei ole synteettisessä datassa"
+      }
+    },
+    {
+      "id": "FIN-LAW-001",
+      "category": "LAW_FINANCE",
+      "query": "Onko Lapuan tilinpäätös laadittu kuntalain 113 §:n mukaisesti?",
+      "expected": {
+        "expected_type": "BOOLEAN",
+        "expected_answer": true,
+        "table_evidence_required": false,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 1, "section": "Johdanto"}
+      }
+    },
+    {
+      "id": "FIN-LAW-002",
+      "category": "LAW_FINANCE",
+      "query": "Sisältääkö toimintakertomus kuntalain 115 §:n mukaisen selvityksen tavoitteiden toteutumisesta?",
+      "expected": {
+        "expected_type": "BOOLEAN",
+        "expected_answer": true,
+        "table_evidence_required": false,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 5, "section": "Toimintakertomus"}
+      }
+    },
+    {
+      "id": "FIN-LAW-003",
+      "category": "LAW_FINANCE",
+      "query": "Onko sisäisen valvonnan ja riskienhallinnan selvitys annettu kuntalain 115 §:n 1 momentin mukaisesti?",
+      "expected": {
+        "expected_type": "BOOLEAN",
+        "expected_answer": true,
+        "table_evidence_required": false,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 5, "section": "Sisäinen valvonta ja riskienhallinta"}
+      }
+    },
+    {
+      "id": "FIN-LAW-004",
+      "category": "LAW_FINANCE",
+      "query": "Mitä säännöstä Lapuan tilinpäätöksen laatimisessa noudatetaan?",
+      "expected": {
+        "expected_type": "TEXT",
+        "expected_answer_contains": ["kuntalaki", "113", "kirjanpitolaki"],
+        "table_evidence_required": false,
+        "calc_trace_required": false
+      }
+    },
+    {
+      "id": "FIN-LAW-005",
+      "category": "LAW_FINANCE",
+      "query": "Onko tuloslaskelma laadittu kirjanpitolautakunnan kuntajaoston ohjeen mukaisesti?",
+      "expected": {
+        "expected_type": "BOOLEAN",
+        "expected_answer": true,
+        "table_evidence_required": false,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 15, "section": "Tuloslaskelma"}
+      }
+    },
+    {
+      "id": "FIN-CONSOL-001",
+      "category": "CONSOLIDATION",
+      "query": "Onko Lapualla konsernitilinpäätös?",
+      "expected": {
+        "expected_type": "BOOLEAN",
+        "expected_answer": true,
+        "table_evidence_required": false,
+        "calc_trace_required": false,
+        "notes": "Synteettinen data sisältää konsernitiedot"
+      }
+    },
+    {
+      "id": "FIN-CONSOL-002",
+      "category": "CONSOLIDATION",
+      "query": "Mikä oli konsernin tilikauden tulos?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": -2500000,
+        "tolerance": 500000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 55, "table": "Konsernin tuloslaskelma"}
+      }
+    },
+    {
+      "id": "FIN-CONSOL-003",
+      "category": "CONSOLIDATION",
+      "query": "Paljonko on konsernin toimintatuotot?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": 45000000,
+        "tolerance": 2000000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 55, "table": "Konsernin tuloslaskelma"}
+      }
+    },
+    {
+      "id": "FIN-CONSOL-004",
+      "category": "CONSOLIDATION",
+      "query": "Mitä tytäryhtiöitä Lapuan kuntakonserniin kuuluu?",
+      "expected": {
+        "expected_type": "TEXT",
+        "expected_answer_contains": ["Lapuan Energia", "asunto"],
+        "table_evidence_required": false,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 35, "section": "Konserniyhtiöt"}
+      }
+    },
+    {
+      "id": "FIN-CONSOL-005",
+      "category": "CONSOLIDATION",
+      "query": "Onko konsernitilinpäätös laadittu kuntalain 114 §:n mukaisesti?",
+      "expected": {
+        "expected_type": "BOOLEAN",
+        "expected_answer": true,
+        "table_evidence_required": false,
+        "calc_trace_required": false
+      }
+    },
+    {
+      "id": "FIN-ABSTAIN-001",
+      "category": "ABSTAIN",
+      "query": "Mikä oli Lapuan vuosikate 2024?",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Vain 2023 data saatavilla"
+      }
+    },
+    {
+      "id": "FIN-ABSTAIN-002",
+      "category": "ABSTAIN",
+      "query": "Paljonko Tampereen verotulot olivat 2023?",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Vain Lapua corpus"
+      }
+    },
+    {
+      "id": "FIN-ABSTAIN-003",
+      "category": "ABSTAIN",
+      "query": "Mikä on Lapuan veroprosentti?",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Veroprosentti ei ole tilinpäätösdatassa"
+      }
+    },
+    {
+      "id": "FIN-ABSTAIN-004",
+      "category": "ABSTAIN",
+      "query": "Paljonko Lapuan konserni maksoi osinkoja?",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Osinko-tietoa ei löydy synteettisestä datasta"
+      }
+    },
+    {
+      "id": "FIN-ABSTAIN-005",
+      "category": "ABSTAIN",
+      "query": "Mikä on Lapuan asukasluku?",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Asukasluku ei ole tilinpäätöksessä"
+      }
+    },
+    {
+      "id": "FIN-ABSTAIN-006",
+      "category": "ABSTAIN",
+      "query": "Anna ennuste Lapuan taloudesta 2025",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Ennusteet out of scope"
+      }
+    },
+    {
+      "id": "FIN-ABSTAIN-007",
+      "category": "ABSTAIN",
+      "query": "Vertaa Lapuan ja Seinäjoen taloutta",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Seinäjoki ei ole corpuksessa"
+      }
+    },
+    {
+      "id": "FIN-ABSTAIN-008",
+      "category": "ABSTAIN",
+      "query": "Mikä oli Q3 2023 tulos?",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Vain vuositason data saatavilla"
+      }
+    },
+    {
+      "id": "FIN-TABLE-011",
+      "category": "TABLE_NUMERIC",
+      "query": "Paljonko oli pysyvät vastaavat taseessa?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": 120000000,
+        "tolerance": 2000000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 20, "table": "Tase 31.12.2023", "row": "Pysyvät vastaavat"}
+      }
+    },
+    {
+      "id": "FIN-TABLE-012",
+      "category": "TABLE_NUMERIC",
+      "query": "Mikä oli vaihtuvat vastaavat taseessa?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": 15000000,
+        "tolerance": 500000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 20, "table": "Tase 31.12.2023", "row": "Vaihtuvat vastaavat"}
+      }
+    },
+    {
+      "id": "FIN-CALC-001",
+      "category": "ABSTAIN",
+      "query": "Mikä on vuosikate-% toimintatuotoista?",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Laskennallinen tunnusluku - calc_trace ei implementoitu"
+      }
+    },
+    {
+      "id": "FIN-CALC-002",
+      "category": "ABSTAIN",
+      "query": "Kuinka paljon poistot ylittävät vuosikatteen?",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Laskennallinen tunnusluku - calc_trace ei implementoitu"
+      }
+    },
+    {
+      "id": "FIN-CALC-003",
+      "category": "ABSTAIN",
+      "query": "Mikä on lainojen osuus taseen loppusummasta?",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Laskennallinen tunnusluku - calc_trace ei implementoitu"
+      }
+    },
+    {
+      "id": "FIN-TREND-006",
+      "category": "TREND",
+      "query": "Kasvoiko oma pääoma edellisvuodesta?",
+      "expected": {
+        "expected_type": "BOOLEAN",
+        "expected_answer": true,
+        "table_evidence_required": true,
+        "calc_trace_required": true,
+        "notes": "2023: 45M, 2022: 43M -> kasvu"
+      }
+    },
+    {
+      "id": "FIN-TREND-007",
+      "category": "TREND",
+      "query": "Miten toimintakulut kehittyivät?",
+      "expected": {
+        "expected_type": "TEXT",
+        "expected_answer_contains": ["kasv", "nousi", "lisään"],
+        "table_evidence_required": true,
+        "calc_trace_required": true,
+        "notes": "2023: -57.6M, 2022: -55.5M -> kasvu"
+      }
+    },
+    {
+      "id": "FIN-LAW-006",
+      "category": "LAW_FINANCE",
+      "query": "Täyttääkö Lapua kuntalain 110 §:n vaatimukset talousarviosta?",
+      "expected": {
+        "expected_type": "TEXT",
+        "expected_answer_contains": ["toimintakate", "talousarvio", "heikentynyt"],
+        "table_evidence_required": false,
+        "calc_trace_required": false,
+        "notes": "Toimintakate oli 2.1M talousarviota heikompi"
+      }
+    },
+    {
+      "id": "FIN-LAW-007",
+      "category": "LAW_FINANCE",
+      "query": "Mitä kuntalain pykälää noudatetaan maksuvalmiuden arvioinnissa?",
+      "expected": {
+        "expected_type": "TEXT",
+        "expected_answer_contains": ["kuntalaki", "118"],
+        "table_evidence_required": false,
+        "calc_trace_required": false,
+        "notes": "Rahoituslaskelma viittaa kuntalain 118 §"
+      }
+    },
+    {
+      "id": "FIN-RISK-006",
+      "category": "RISK",
+      "query": "Onko kaupungin taloudellinen tilanne parantunut vai heikentynyt?",
+      "expected": {
+        "expected_type": "TEXT",
+        "expected_answer_contains": ["heiken", "huonon"],
+        "table_evidence_required": false,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 5, "section": "Toimintakertomus"}
+      }
+    },
+    {
+      "id": "FIN-CONSOL-006",
+      "category": "CONSOLIDATION",
+      "query": "Onko sisäiset liiketapahtumat eliminoitu konsernitilinpäätöksessä?",
+      "expected": {
+        "expected_type": "TEXT",
+        "expected_answer_contains": ["eliminoi", "kuntalaki", "114"],
+        "table_evidence_required": false,
+        "calc_trace_required": false
+      }
+    },
+    {
+      "id": "FIN-TABLE-013",
+      "category": "TABLE_NUMERIC",
+      "query": "Mikä oli rahavarojen muutos 2023?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": 400000,
+        "tolerance": 100000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 30, "table": "Rahoituslaskelma 2023", "row": "Rahavarojen muutos"}
+      }
+    },
+    {
+      "id": "FIN-TABLE-014",
+      "category": "TABLE_NUMERIC",
+      "query": "Paljonko oli vastattavaa taseessa yhteensä?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": 135000000,
+        "tolerance": 3000000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 20, "table": "Tase 31.12.2023", "row": "Vastattavaa yhteensä"}
+      }
+    },
+    {
+      "id": "FIN-TABLE-015",
+      "category": "TABLE_NUMERIC",
+      "query": "Mikä oli kaupungin vuosikate tuloslaskelmassa?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": 3400000,
+        "tolerance": 200000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 15, "table": "Tuloslaskelma 2023", "row": "Vuosikate"}
+      }
+    },
+    {
+      "id": "FIN-ABSTAIN-009",
+      "category": "ABSTAIN",
+      "query": "Mikä on kunnanjohtajan palkka?",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Palkkatieto ei ole tilinpäätöksessä"
+      }
+    },
+    {
+      "id": "FIN-ABSTAIN-010",
+      "category": "ABSTAIN",
+      "query": "Anna suositus investointipäätökseen",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Neuvonta out of scope"
+      }
+    },
+    {
+      "id": "FIN-CALC-004",
+      "category": "ABSTAIN",
+      "query": "Mikä on omavaraisuusaste (oma pääoma / taseen loppusumma)?",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Laskennallinen tunnusluku - calc_trace ei implementoitu"
+      }
+    },
+    {
+      "id": "FIN-CALC-005",
+      "category": "ABSTAIN",
+      "query": "Paljonko verotulojen ja valtionosuuksien yhteissumma on?",
+      "expected": {
+        "expected_type": "ABSTAIN",
+        "abstain_expected": true,
+        "abstain_reason": "Laskennallinen tunnusluku - calc_trace ei implementoitu"
+      }
+    },
+    {
+      "id": "FIN-TREND-008",
+      "category": "TREND",
+      "query": "Kasvoiko valtionosuudet edellisvuodesta?",
+      "expected": {
+        "expected_type": "BOOLEAN",
+        "expected_answer": true,
+        "table_evidence_required": true,
+        "calc_trace_required": true,
+        "notes": "2023: 10.5M, 2022: 10.2M -> kasvu"
+      }
+    },
+    {
+      "id": "FIN-TABLE-016",
+      "category": "TABLE_NUMERIC",
+      "query": "Paljonko oli konsernin toimintatuotot?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": 45000000,
+        "tolerance": 2000000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 55, "table": "Konsernin tuloslaskelma", "row": "Toimintatuotot"}
+      }
+    },
+    {
+      "id": "FIN-TABLE-017",
+      "category": "TABLE_NUMERIC",
+      "query": "Paljonko oli takaukset tytäryhtiöille?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": 20000000,
+        "tolerance": 1000000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 40, "table": "Takaukset ja vastuusitoumukset", "row": "Takaukset tytäryhtiöille"}
+      }
+    },
+    {
+      "id": "FIN-TABLE-018",
+      "category": "TABLE_NUMERIC",
+      "query": "Paljonko oli toimintakulut yhteensä?",
+      "expected": {
+        "expected_type": "NUMERIC",
+        "expected_numeric": -57567890,
+        "tolerance": 500000,
+        "table_evidence_required": true,
+        "calc_trace_required": false,
+        "expected_citation": {"page": 15, "table": "Tuloslaskelma 2023", "row": "Toimintakulut"}
+      }
+    }
+  ]
+}
+

@@ -1,0 +1,20 @@
+{
+  "total_nodes": 2648,
+  "total_edges": 4487,
+  "edge_types": {
+    "REFERS_TO_internal": 1093,
+    "REFERS_TO_external": 147,
+    "EXCEPTS": 56,
+    "DEFINES": 133,
+    "HAS_SECTION": 410,
+    "HAS_MOMENT": 2648
+  },
+  "laws": [
+    "fi:act:1339/1997",
+    "fi:act:410/2015",
+    "fi:act:1397/2016",
+    "fi:act:1336/1997",
+    "fi:act:1141/2015",
+    "fi:act:624/2006"
+  ]
+}

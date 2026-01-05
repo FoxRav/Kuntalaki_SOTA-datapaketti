@@ -1,0 +1,82 @@
+{"source": "lapua:2023:DOC:root", "target": "lapua:2023:PAGE:1", "edge_type": "HAS_PAGE", "context": "Page 1"}
+{"source": "lapua:2023:PAGE:1", "target": "lapua:2023:SECTION:johdanto", "edge_type": "HAS_SECTION", "context": "Johdanto"}
+{"source": "lapua:2023:SECTION:johdanto", "target": "lapua:2023:PARA:johdanto:p0", "edge_type": "HAS_PARA", "context": "Paragraph 0"}
+{"source": "lapua:2023:SECTION:johdanto", "target": "lapua:2023:PARA:johdanto:p1", "edge_type": "HAS_PARA", "context": "Paragraph 1"}
+{"source": "lapua:2023:DOC:root", "target": "lapua:2023:PAGE:5", "edge_type": "HAS_PAGE", "context": "Page 5"}
+{"source": "lapua:2023:PAGE:1", "target": "lapua:2023:PAGE:5", "edge_type": "NEXT", "context": "Sequential pages"}
+{"source": "lapua:2023:PAGE:5", "target": "lapua:2023:SECTION:toimintakertomus", "edge_type": "HAS_SECTION", "context": "Toimintakertomus"}
+{"source": "lapua:2023:SECTION:toimintakertomus", "target": "lapua:2023:PARA:toimintakertomus:p0", "edge_type": "HAS_PARA", "context": "Paragraph 0"}
+{"source": "lapua:2023:SECTION:toimintakertomus", "target": "lapua:2023:PARA:toimintakertomus:p1", "edge_type": "HAS_PARA", "context": "Paragraph 1"}
+{"source": "lapua:2023:SECTION:toimintakertomus", "target": "lapua:2023:SECTION:toimintakertomus:talouden_toteutuminen", "edge_type": "HAS_SECTION", "context": "Talouden toteutuminen"}
+{"source": "lapua:2023:SECTION:toimintakertomus:talouden_toteutuminen", "target": "lapua:2023:PARA:toimintakertomus:talouden_toteutuminen:p0", "edge_type": "HAS_PARA", "context": "Paragraph 0"}
+{"source": "lapua:2023:SECTION:toimintakertomus", "target": "lapua:2023:SECTION:toimintakertomus:sisäinen_valvonta_ja_riskienha", "edge_type": "HAS_SECTION", "context": "Sisäinen valvonta ja riskienhallinta"}
+{"source": "lapua:2023:SECTION:toimintakertomus:talouden_toteutuminen", "target": "lapua:2023:SECTION:toimintakertomus:sisäinen_valvonta_ja_riskienha", "edge_type": "NEXT", "context": "Sequential sections"}
+{"source": "lapua:2023:SECTION:toimintakertomus:sisäinen_valvonta_ja_riskienha", "target": "lapua:2023:PARA:toimintakertomus:sisäinen_valvonta_ja_riskienha:p0", "edge_type": "HAS_PARA", "context": "Paragraph 0"}
+{"source": "lapua:2023:SECTION:toimintakertomus:sisäinen_valvonta_ja_riskienha", "target": "lapua:2023:PARA:toimintakertomus:sisäinen_valvonta_ja_riskienha:p1", "edge_type": "HAS_PARA", "context": "Paragraph 1"}
+{"source": "lapua:2023:SECTION:toimintakertomus:sisäinen_valvonta_ja_riskienha", "target": "lapua:2023:PARA:toimintakertomus:sisäinen_valvonta_ja_riskienha:p2", "edge_type": "HAS_PARA", "context": "Paragraph 2"}
+{"source": "lapua:2023:DOC:root", "target": "lapua:2023:PAGE:15", "edge_type": "HAS_PAGE", "context": "Page 15"}
+{"source": "lapua:2023:PAGE:5", "target": "lapua:2023:PAGE:15", "edge_type": "NEXT", "context": "Sequential pages"}
+{"source": "lapua:2023:PAGE:15", "target": "lapua:2023:SECTION:tuloslaskelma", "edge_type": "HAS_SECTION", "context": "Tuloslaskelma"}
+{"source": "lapua:2023:SECTION:tuloslaskelma", "target": "lapua:2023:PARA:tuloslaskelma:p0", "edge_type": "HAS_PARA", "context": "Paragraph 0"}
+{"source": "lapua:2023:SECTION:tuloslaskelma", "target": "lapua:2023:TABLE:tuloslaskelma:tuloslaskelma_2023", "edge_type": "HAS_TABLE", "context": "Tuloslaskelma 2023"}
+{"source": "lapua:2023:TABLE:tuloslaskelma:tuloslaskelma_2023", "target": "lapua:2023:ROW:tuloslaskelma:tuloslaskelma_2023:r0", "edge_type": "HAS_ROW", "context": "Row 0"}
+{"source": "lapua:2023:TABLE:tuloslaskelma:tuloslaskelma_2023", "target": "lapua:2023:ROW:tuloslaskelma:tuloslaskelma_2023:r1", "edge_type": "HAS_ROW", "context": "Row 1"}
+{"source": "lapua:2023:TABLE:tuloslaskelma:tuloslaskelma_2023", "target": "lapua:2023:ROW:tuloslaskelma:tuloslaskelma_2023:r2", "edge_type": "HAS_ROW", "context": "Row 2"}
+{"source": "lapua:2023:TABLE:tuloslaskelma:tuloslaskelma_2023", "target": "lapua:2023:ROW:tuloslaskelma:tuloslaskelma_2023:r3", "edge_type": "HAS_ROW", "context": "Row 3"}
+{"source": "lapua:2023:TABLE:tuloslaskelma:tuloslaskelma_2023", "target": "lapua:2023:ROW:tuloslaskelma:tuloslaskelma_2023:r4", "edge_type": "HAS_ROW", "context": "Row 4"}
+{"source": "lapua:2023:TABLE:tuloslaskelma:tuloslaskelma_2023", "target": "lapua:2023:ROW:tuloslaskelma:tuloslaskelma_2023:r5", "edge_type": "HAS_ROW", "context": "Row 5"}
+{"source": "lapua:2023:TABLE:tuloslaskelma:tuloslaskelma_2023", "target": "lapua:2023:ROW:tuloslaskelma:tuloslaskelma_2023:r6", "edge_type": "HAS_ROW", "context": "Row 6"}
+{"source": "lapua:2023:TABLE:tuloslaskelma:tuloslaskelma_2023", "target": "lapua:2023:ROW:tuloslaskelma:tuloslaskelma_2023:r7", "edge_type": "HAS_ROW", "context": "Row 7"}
+{"source": "lapua:2023:DOC:root", "target": "lapua:2023:PAGE:20", "edge_type": "HAS_PAGE", "context": "Page 20"}
+{"source": "lapua:2023:PAGE:15", "target": "lapua:2023:PAGE:20", "edge_type": "NEXT", "context": "Sequential pages"}
+{"source": "lapua:2023:PAGE:20", "target": "lapua:2023:SECTION:tase", "edge_type": "HAS_SECTION", "context": "Tase"}
+{"source": "lapua:2023:SECTION:tase", "target": "lapua:2023:PARA:tase:p0", "edge_type": "HAS_PARA", "context": "Paragraph 0"}
+{"source": "lapua:2023:SECTION:tase", "target": "lapua:2023:TABLE:tase:tase_31.12.2023", "edge_type": "HAS_TABLE", "context": "Tase 31.12.2023"}
+{"source": "lapua:2023:TABLE:tase:tase_31.12.2023", "target": "lapua:2023:ROW:tase:tase_31.12.2023:r0", "edge_type": "HAS_ROW", "context": "Row 0"}
+{"source": "lapua:2023:TABLE:tase:tase_31.12.2023", "target": "lapua:2023:ROW:tase:tase_31.12.2023:r1", "edge_type": "HAS_ROW", "context": "Row 1"}
+{"source": "lapua:2023:TABLE:tase:tase_31.12.2023", "target": "lapua:2023:ROW:tase:tase_31.12.2023:r2", "edge_type": "HAS_ROW", "context": "Row 2"}
+{"source": "lapua:2023:TABLE:tase:tase_31.12.2023", "target": "lapua:2023:ROW:tase:tase_31.12.2023:r3", "edge_type": "HAS_ROW", "context": "Row 3"}
+{"source": "lapua:2023:TABLE:tase:tase_31.12.2023", "target": "lapua:2023:ROW:tase:tase_31.12.2023:r4", "edge_type": "HAS_ROW", "context": "Row 4"}
+{"source": "lapua:2023:TABLE:tase:tase_31.12.2023", "target": "lapua:2023:ROW:tase:tase_31.12.2023:r5", "edge_type": "HAS_ROW", "context": "Row 5"}
+{"source": "lapua:2023:TABLE:tase:tase_31.12.2023", "target": "lapua:2023:ROW:tase:tase_31.12.2023:r6", "edge_type": "HAS_ROW", "context": "Row 6"}
+{"source": "lapua:2023:TABLE:tase:tase_31.12.2023", "target": "lapua:2023:ROW:tase:tase_31.12.2023:r7", "edge_type": "HAS_ROW", "context": "Row 7"}
+{"source": "lapua:2023:DOC:root", "target": "lapua:2023:PAGE:30", "edge_type": "HAS_PAGE", "context": "Page 30"}
+{"source": "lapua:2023:PAGE:20", "target": "lapua:2023:PAGE:30", "edge_type": "NEXT", "context": "Sequential pages"}
+{"source": "lapua:2023:PAGE:30", "target": "lapua:2023:SECTION:rahoituslaskelma", "edge_type": "HAS_SECTION", "context": "Rahoituslaskelma"}
+{"source": "lapua:2023:SECTION:rahoituslaskelma", "target": "lapua:2023:PARA:rahoituslaskelma:p0", "edge_type": "HAS_PARA", "context": "Paragraph 0"}
+{"source": "lapua:2023:SECTION:rahoituslaskelma", "target": "lapua:2023:TABLE:rahoituslaskelma:rahoituslaskelma_202", "edge_type": "HAS_TABLE", "context": "Rahoituslaskelma 2023"}
+{"source": "lapua:2023:TABLE:rahoituslaskelma:rahoituslaskelma_202", "target": "lapua:2023:ROW:rahoituslaskelma:rahoituslaskelma_202:r0", "edge_type": "HAS_ROW", "context": "Row 0"}
+{"source": "lapua:2023:TABLE:rahoituslaskelma:rahoituslaskelma_202", "target": "lapua:2023:ROW:rahoituslaskelma:rahoituslaskelma_202:r1", "edge_type": "HAS_ROW", "context": "Row 1"}
+{"source": "lapua:2023:TABLE:rahoituslaskelma:rahoituslaskelma_202", "target": "lapua:2023:ROW:rahoituslaskelma:rahoituslaskelma_202:r2", "edge_type": "HAS_ROW", "context": "Row 2"}
+{"source": "lapua:2023:TABLE:rahoituslaskelma:rahoituslaskelma_202", "target": "lapua:2023:ROW:rahoituslaskelma:rahoituslaskelma_202:r3", "edge_type": "HAS_ROW", "context": "Row 3"}
+{"source": "lapua:2023:DOC:root", "target": "lapua:2023:PAGE:40", "edge_type": "HAS_PAGE", "context": "Page 40"}
+{"source": "lapua:2023:PAGE:30", "target": "lapua:2023:PAGE:40", "edge_type": "NEXT", "context": "Sequential pages"}
+{"source": "lapua:2023:PAGE:40", "target": "lapua:2023:SECTION:liitetiedot", "edge_type": "HAS_SECTION", "context": "Liitetiedot"}
+{"source": "lapua:2023:SECTION:liitetiedot", "target": "lapua:2023:PARA:liitetiedot:p0", "edge_type": "HAS_PARA", "context": "Paragraph 0"}
+{"source": "lapua:2023:SECTION:liitetiedot", "target": "lapua:2023:PARA:liitetiedot:p1", "edge_type": "HAS_PARA", "context": "Paragraph 1"}
+{"source": "lapua:2023:SECTION:liitetiedot", "target": "lapua:2023:SECTION:liitetiedot:tilinpäätöksen_laatimisperiaat", "edge_type": "HAS_SECTION", "context": "Tilinpäätöksen laatimisperiaatteet"}
+{"source": "lapua:2023:SECTION:liitetiedot:tilinpäätöksen_laatimisperiaat", "target": "lapua:2023:PARA:liitetiedot:tilinpäätöksen_laatimisperiaat:p0", "edge_type": "HAS_PARA", "context": "Paragraph 0"}
+{"source": "lapua:2023:SECTION:liitetiedot:tilinpäätöksen_laatimisperiaat", "target": "lapua:2023:PARA:liitetiedot:tilinpäätöksen_laatimisperiaat:p1", "edge_type": "HAS_PARA", "context": "Paragraph 1"}
+{"source": "lapua:2023:SECTION:liitetiedot", "target": "lapua:2023:SECTION:liitetiedot:vastuusitoumukset", "edge_type": "HAS_SECTION", "context": "Vastuusitoumukset"}
+{"source": "lapua:2023:SECTION:liitetiedot:tilinpäätöksen_laatimisperiaat", "target": "lapua:2023:SECTION:liitetiedot:vastuusitoumukset", "edge_type": "NEXT", "context": "Sequential sections"}
+{"source": "lapua:2023:SECTION:liitetiedot:vastuusitoumukset", "target": "lapua:2023:PARA:liitetiedot:vastuusitoumukset:p0", "edge_type": "HAS_PARA", "context": "Paragraph 0"}
+{"source": "lapua:2023:SECTION:liitetiedot:vastuusitoumukset", "target": "lapua:2023:PARA:liitetiedot:vastuusitoumukset:p1", "edge_type": "HAS_PARA", "context": "Paragraph 1"}
+{"source": "lapua:2023:SECTION:liitetiedot:vastuusitoumukset", "target": "lapua:2023:TABLE:liitetiedot:vastuusitoumukset:takaukset_ja_vastuus", "edge_type": "HAS_TABLE", "context": "Takaukset ja vastuusitoumukset"}
+{"source": "lapua:2023:TABLE:liitetiedot:vastuusitoumukset:takaukset_ja_vastuus", "target": "lapua:2023:ROW:liitetiedot:vastuusitoumukset:takaukset_ja_vastuus:r0", "edge_type": "HAS_ROW", "context": "Row 0"}
+{"source": "lapua:2023:TABLE:liitetiedot:vastuusitoumukset:takaukset_ja_vastuus", "target": "lapua:2023:ROW:liitetiedot:vastuusitoumukset:takaukset_ja_vastuus:r1", "edge_type": "HAS_ROW", "context": "Row 1"}
+{"source": "lapua:2023:TABLE:liitetiedot:vastuusitoumukset:takaukset_ja_vastuus", "target": "lapua:2023:ROW:liitetiedot:vastuusitoumukset:takaukset_ja_vastuus:r2", "edge_type": "HAS_ROW", "context": "Row 2"}
+{"source": "lapua:2023:DOC:root", "target": "lapua:2023:PAGE:55", "edge_type": "HAS_PAGE", "context": "Page 55"}
+{"source": "lapua:2023:PAGE:40", "target": "lapua:2023:PAGE:55", "edge_type": "NEXT", "context": "Sequential pages"}
+{"source": "lapua:2023:PAGE:55", "target": "lapua:2023:SECTION:konsernitilinpäätös", "edge_type": "HAS_SECTION", "context": "Konsernitilinpäätös"}
+{"source": "lapua:2023:SECTION:konsernitilinpäätös", "target": "lapua:2023:PARA:konsernitilinpäätös:p0", "edge_type": "HAS_PARA", "context": "Paragraph 0"}
+{"source": "lapua:2023:SECTION:konsernitilinpäätös", "target": "lapua:2023:PARA:konsernitilinpäätös:p1", "edge_type": "HAS_PARA", "context": "Paragraph 1"}
+{"source": "lapua:2023:SECTION:konsernitilinpäätös", "target": "lapua:2023:TABLE:konsernitilinpäätös:konsernin_tuloslaske", "edge_type": "HAS_TABLE", "context": "Konsernin tuloslaskelma"}
+{"source": "lapua:2023:TABLE:konsernitilinpäätös:konsernin_tuloslaske", "target": "lapua:2023:ROW:konsernitilinpäätös:konsernin_tuloslaske:r0", "edge_type": "HAS_ROW", "context": "Row 0"}
+{"source": "lapua:2023:TABLE:konsernitilinpäätös:konsernin_tuloslaske", "target": "lapua:2023:ROW:konsernitilinpäätös:konsernin_tuloslaske:r1", "edge_type": "HAS_ROW", "context": "Row 1"}
+{"source": "lapua:2023:TABLE:konsernitilinpäätös:konsernin_tuloslaske", "target": "lapua:2023:ROW:konsernitilinpäätös:konsernin_tuloslaske:r2", "edge_type": "HAS_ROW", "context": "Row 2"}
+{"source": "lapua:2023:DOC:root", "target": "lapua:2023:PAGE:65", "edge_type": "HAS_PAGE", "context": "Page 65"}
+{"source": "lapua:2023:PAGE:55", "target": "lapua:2023:PAGE:65", "edge_type": "NEXT", "context": "Sequential pages"}
+{"source": "lapua:2023:PAGE:65", "target": "lapua:2023:SECTION:tilintarkastuskertomus", "edge_type": "HAS_SECTION", "context": "Tilintarkastuskertomus"}
+{"source": "lapua:2023:SECTION:tilintarkastuskertomus", "target": "lapua:2023:PARA:tilintarkastuskertomus:p0", "edge_type": "HAS_PARA", "context": "Paragraph 0"}
+{"source": "lapua:2023:SECTION:tilintarkastuskertomus", "target": "lapua:2023:PARA:tilintarkastuskertomus:p1", "edge_type": "HAS_PARA", "context": "Paragraph 1"}
+{"source": "lapua:2023:SECTION:tilintarkastuskertomus", "target": "lapua:2023:PARA:tilintarkastuskertomus:p2", "edge_type": "HAS_PARA", "context": "Paragraph 2"}

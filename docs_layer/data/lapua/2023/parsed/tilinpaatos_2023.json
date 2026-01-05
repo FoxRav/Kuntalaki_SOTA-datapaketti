@@ -1,0 +1,234 @@
+{
+  "city": "lapua",
+  "year": 2023,
+  "title": "Lapuan kaupungin tilinpäätös 2023",
+  "pages": [
+    {
+      "page_num": 1,
+      "sections": [
+        {
+          "title": "Johdanto",
+          "level": 1,
+          "paragraphs": [
+            "Lapuan kaupungin tilinpäätös vuodelta 2023 on laadittu kuntalain 113 §:n mukaisesti.",
+            "Tilinpäätös sisältää tuloslaskelman, taseen, rahoituslaskelman ja liitetiedot sekä toimintakertomuksen."
+          ],
+          "tables": [],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "page_num": 5,
+      "sections": [
+        {
+          "title": "Toimintakertomus",
+          "level": 1,
+          "paragraphs": [
+            "Kuntalain 115 §:n mukaisesti toimintakertomuksessa esitetään selvitys valtuuston asettamien toiminnallisten ja taloudellisten tavoitteiden toteutumisesta.",
+            "Vuoden 2023 aikana kaupungin taloudellinen tilanne heikkeni johtuen yleisestä kustannustason noususta."
+          ],
+          "tables": [],
+          "subsections": [
+            {
+              "title": "Talouden toteutuminen",
+              "level": 2,
+              "paragraphs": [
+                "Toimintakate oli -45,2 miljoonaa euroa, mikä oli 2,1 miljoonaa euroa talousarviota heikompi.",
+                "Vuosikate oli 3,4 miljoonaa euroa positiivinen."
+              ],
+              "tables": [],
+              "subsections": []
+            },
+            {
+              "title": "Sisäinen valvonta ja riskienhallinta",
+              "level": 2,
+              "paragraphs": [
+                "Kuntalain 115 §:n 1 momentin mukaisesti toimintakertomuksessa annetaan selvitys sisäisen valvonnan ja riskienhallinnan järjestämisestä.",
+                "Kaupunginhallitus on hyväksynyt sisäisen valvonnan ja riskienhallinnan perusteet.",
+                "Merkittävimmät riskit liittyvät henkilöstön saatavuuteen ja kustannusten hallintaan."
+              ],
+              "tables": [],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_num": 15,
+      "sections": [
+        {
+          "title": "Tuloslaskelma",
+          "level": 1,
+          "paragraphs": [
+            "Tuloslaskelma on laadittu kirjanpitolautakunnan kuntajaoston antaman ohjeen mukaisesti."
+          ],
+          "tables": [
+            {
+              "title": "Tuloslaskelma 2023",
+              "rows": [
+                {"cells": ["Toimintatuotot", "12 345 678", "11 234 567"]},
+                {"cells": ["Toimintakulut", "-57 567 890", "-55 456 789"]},
+                {"cells": ["Toimintakate", "-45 222 212", "-44 222 222"]},
+                {"cells": ["Verotulot", "38 000 000", "37 500 000"]},
+                {"cells": ["Valtionosuudet", "10 500 000", "10 200 000"]},
+                {"cells": ["Vuosikate", "3 400 000", "3 100 000"]},
+                {"cells": ["Poistot ja arvonalentumiset", "-4 500 000", "-4 300 000"]},
+                {"cells": ["Tilikauden tulos", "-1 100 000", "-1 200 000"]}
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "page_num": 20,
+      "sections": [
+        {
+          "title": "Tase",
+          "level": 1,
+          "paragraphs": [
+            "Tase on laadittu kirjanpitolain ja kirjanpitoasetuksen mukaisesti."
+          ],
+          "tables": [
+            {
+              "title": "Tase 31.12.2023",
+              "rows": [
+                {"cells": ["VASTAAVAA", "", ""]},
+                {"cells": ["Pysyvät vastaavat", "120 000 000", "118 000 000"]},
+                {"cells": ["Vaihtuvat vastaavat", "15 000 000", "14 500 000"]},
+                {"cells": ["Vastaavaa yhteensä", "135 000 000", "132 500 000"]},
+                {"cells": ["VASTATTAVAA", "", ""]},
+                {"cells": ["Oma pääoma", "85 000 000", "86 100 000"]},
+                {"cells": ["Vieras pääoma", "50 000 000", "46 400 000"]},
+                {"cells": ["Vastattavaa yhteensä", "135 000 000", "132 500 000"]}
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "page_num": 30,
+      "sections": [
+        {
+          "title": "Rahoituslaskelma",
+          "level": 1,
+          "paragraphs": [
+            "Rahoituslaskelman tiedot tukevat arviota kunnan maksuvalmiudesta kuntalain 118 §:n mukaisesti."
+          ],
+          "tables": [
+            {
+              "title": "Rahoituslaskelma 2023",
+              "rows": [
+                {"cells": ["Toiminnan rahavirta", "3 400 000", "3 100 000"]},
+                {"cells": ["Investointien rahavirta", "-5 000 000", "-4 800 000"]},
+                {"cells": ["Rahoituksen rahavirta", "2 000 000", "1 500 000"]},
+                {"cells": ["Rahavarojen muutos", "400 000", "-200 000"]}
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "page_num": 40,
+      "sections": [
+        {
+          "title": "Liitetiedot",
+          "level": 1,
+          "paragraphs": [
+            "Liitetiedot on laadittu kirjanpitolain 3 luvun 2 §:n ja kirjanpitoasetuksen mukaisesti.",
+            "Tilinpäätöksen laatimisessa noudatetut arvostus- ja jaksotusperiaatteet on esitetty alla."
+          ],
+          "tables": [],
+          "subsections": [
+            {
+              "title": "Tilinpäätöksen laatimisperiaatteet",
+              "level": 2,
+              "paragraphs": [
+                "Pysyvien vastaavien hyödykkeet on merkitty taseeseen hankintamenoon vähennettynä suunnitelman mukaisilla poistoilla.",
+                "Vaihto-omaisuus on arvostettu FIFO-periaatteen mukaisesti."
+              ],
+              "tables": [],
+              "subsections": []
+            },
+            {
+              "title": "Vastuusitoumukset",
+              "level": 2,
+              "paragraphs": [
+                "Kuntalain 114 §:n 4 momentin mukaisesti kunnan antamat takaukset on esitetty liitetiedoissa.",
+                "Kaupungin antamat takaukset olivat yhteensä 25 miljoonaa euroa."
+              ],
+              "tables": [
+                {
+                  "title": "Takaukset ja vastuusitoumukset",
+                  "rows": [
+                    {"cells": ["Takaukset tytäryhtiöille", "20 000 000", "18 000 000"]},
+                    {"cells": ["Muut takaukset", "5 000 000", "4 500 000"]},
+                    {"cells": ["Yhteensä", "25 000 000", "22 500 000"]}
+                  ]
+                }
+              ],
+              "subsections": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page_num": 55,
+      "sections": [
+        {
+          "title": "Konsernitilinpäätös",
+          "level": 1,
+          "paragraphs": [
+            "Kuntalain 114 §:n mukaisesti kunnan, joka tytäryhteisöineen muodostaa kuntakonsernin, on laadittava konsernitilinpäätös.",
+            "Konsernitilinpäätös on laadittu kirjanpitolain 6 luvun säännösten mukaisesti."
+          ],
+          "tables": [
+            {
+              "title": "Konsernin tuloslaskelma",
+              "rows": [
+                {"cells": ["Toimintatuotot", "45 000 000", "43 000 000"]},
+                {"cells": ["Toimintakulut", "-85 000 000", "-82 000 000"]},
+                {"cells": ["Tilikauden tulos", "-2 500 000", "-2 000 000"]}
+              ]
+            }
+          ],
+          "subsections": []
+        }
+      ]
+    },
+    {
+      "page_num": 65,
+      "sections": [
+        {
+          "title": "Tilintarkastuskertomus",
+          "level": 1,
+          "paragraphs": [
+            "Tilintarkastuslain 3 luvun mukaisesti olemme tarkastaneet Lapuan kaupungin tilinpäätöksen tilikaudelta 2023.",
+            "Lausuntonamme esitämme, että tilinpäätös antaa oikean ja riittävän kuvan kaupungin tuloksesta ja taloudellisesta asemasta.",
+            "Tilintarkastaja ei anna huomautusta kuntalain 125 §:n nojalla."
+          ],
+          "tables": [],
+          "subsections": []
+        }
+      ]
+    }
+  ],
+  "metrics": [
+    {"name": "vuosikate", "value": 3400000, "unit": "EUR", "page": 15},
+    {"name": "tilikauden_tulos", "value": -1100000, "unit": "EUR", "page": 15},
+    {"name": "toimintakate", "value": -45222212, "unit": "EUR", "page": 15},
+    {"name": "omavaraisuusaste", "value": 63.0, "unit": "%", "page": 20},
+    {"name": "suhteellinen_velkaantuneisuus", "value": 37.0, "unit": "%", "page": 20},
+    {"name": "lainakanta", "value": 50000000, "unit": "EUR", "page": 20},
+    {"name": "takaukset", "value": 25000000, "unit": "EUR", "page": 40}
+  ]
+}
+

@@ -1,0 +1,79 @@
+{
+  "version": "11.0",
+  "description": "v11 Metrics Contract - Kuntatalous-ajattelu",
+  "principles": [
+    "Single source of truth: v11_results.json",
+    "Numerokysymyksiin taulukko-evidenssi pakollinen",
+    "Laskentajälki johdetuille tunnusluvuille",
+    "Abstain oikein: ei arvailla puuttuvaa dataa"
+  ],
+  "case_fields": {
+    "required": [
+      "case_id",
+      "category",
+      "query",
+      "expected_type",
+      "table_evidence_required",
+      "calc_trace_required",
+      "has_table_evidence",
+      "has_calc_trace",
+      "has_citation",
+      "system_abstains",
+      "abstain_expected",
+      "numeric_value",
+      "expected_numeric",
+      "latency_ms"
+    ]
+  },
+  "case_pass_logic": {
+    "description": "CASE_FAIL if ANY of:",
+    "rules": [
+      "table_evidence_required AND NOT has_table_evidence",
+      "calc_trace_required AND NOT has_calc_trace",
+      "(expected_type == NUMERIC) AND (abs(numeric_value - expected_numeric) > tolerance)",
+      "abstain_expected AND NOT system_abstains",
+      "NOT abstain_expected AND system_abstains"
+    ]
+  },
+  "gates": {
+    "TABLE_EVIDENCE_RATE": {
+      "description": "% of TABLE_NUMERIC cases with table evidence",
+      "formula": "count(has_table_evidence AND table_evidence_required) / count(table_evidence_required)",
+      "threshold": ">= 0.90"
+    },
+    "CALC_TRACE_OK": {
+      "description": "% of CALC cases with correct trace",
+      "formula": "count(has_calc_trace AND calc_trace_required) / count(calc_trace_required)",
+      "threshold": ">= 0.85"
+    },
+    "NUMERIC_ACCURACY": {
+      "description": "% of NUMERIC cases within tolerance",
+      "formula": "count(abs(numeric_value - expected_numeric) <= tolerance) / count(expected_type == NUMERIC)",
+      "threshold": ">= 0.95",
+      "tolerance": 0.01
+    },
+    "CITATION_COVERAGE": {
+      "description": "% of cases with page/table/row citation",
+      "formula": "count(has_citation) / total",
+      "threshold": ">= 0.90"
+    },
+    "ABSTAIN_CORRECT": {
+      "description": "Correct abstain rate",
+      "formula": "count(abstain_expected AND system_abstains) / count(abstain_expected)",
+      "threshold": ">= 0.90"
+    },
+    "CONFUSION_FAIL_RATE": {
+      "description": "Wrong law in top-1 (inherited from v10.1)",
+      "threshold": "<= 0.02"
+    }
+  },
+  "categories": [
+    "TABLE_NUMERIC",
+    "TREND",
+    "RISK",
+    "LAW_FINANCE",
+    "CONSOLIDATION",
+    "ABSTAIN"
+  ]
+}
+

@@ -1,0 +1,691 @@
+[
+  {
+    "id": "REAL-COMPLIANCE-001",
+    "query": "Onko Lapuan kaupungin tilinpäätös laadittu kuntalain 113 §:n mukaisesti?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 484.09509658813477,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:113:3",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 113,
+      "moment": "3",
+      "score": 0.5631097555160522,
+      "text": "§ 113 Tilinpäätös: Tilinpäätöksen tulee antaa oikea ja riittävä kuva kunnan tuloksesta, taloudellisesta asemasta, rahoituksesta sekä toiminnasta olennaisuusperiaatteen mukaisesti. Tätä varten tarpeell"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:johdanto:p0",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 1,
+      "score": 0.8149083852767944,
+      "text": "Lapuan kaupungin tilinpäätös vuodelta 2023 on laadittu kuntalain 113 §:n mukaisesti."
+    }
+  },
+  {
+    "id": "REAL-COMPLIANCE-002",
+    "query": "Sisältääkö toimintakertomus selvityksen sisäisestä valvonnasta kuntalain 115 §:n 1 momentin mukaisesti?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 64.63885307312012,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:115:1",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 115,
+      "moment": "1",
+      "score": 0.635567307472229,
+      "text": "§ 115 Toimintakertomus: Toimintakertomuksessa on esitettävä selvitys valtuuston asettamien toiminnan ja talouden tavoitteiden toteutumisesta kunnassa ja kuntakonsernissa. Toimintakertomuksessa on myös"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:toimintakertomus:sisäinen_valvonta_ja_riskienha:p0",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 5,
+      "score": 0.737354576587677,
+      "text": "Kuntalain 115 §:n 1 momentin mukaisesti toimintakertomuksessa annetaan selvitys sisäisen valvonnan ja riskienhallinnan järjestämisestä."
+    }
+  },
+  {
+    "id": "REAL-COMPLIANCE-003",
+    "query": "Onko konsernitilinpäätös laadittu kuntalain 114 §:n mukaisesti?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 84.27190780639648,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:114:1",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 114,
+      "moment": "1",
+      "score": 0.687894344329834,
+      "text": "§ 114 Konsernitilinpäätös: Kunnan, joka tytäryhteisöineen muodostaa kuntakonsernin, tulee laatia ja sisällyttää tilinpäätökseensä konsernitilinpäätös. Konsernitilinpäätös tulee laatia samalta päivältä"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:SECTION:konsernitilinpäätös",
+      "node_type": "SECTION",
+      "title": "Konsernitilinpäätös",
+      "page_num": 55,
+      "score": 0.7327756881713867,
+      "text": "Konsernitilinpäätös Kuntalain 114 §:n mukaisesti kunnan, joka tytäryhteisöineen muodostaa kuntakonsernin, on laadittava konsernitilinpäätös.\nKonsernitilinpäätös on laadittu kirjanpitolain 6 luvun sään"
+    }
+  },
+  {
+    "id": "REAL-COMPLIANCE-004",
+    "query": "Onko takaukset esitetty liitetiedoissa kuntalain mukaisesti?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 152.16684341430664,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:129:3",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 129,
+      "moment": "3",
+      "score": 0.5950623154640198,
+      "text": "§ 129 Lainan taikka takauksen tai muun vakuuden antaminen: Sen estämättä, mitä 2 momentissa säädetään, kunta voi myöntää takauksen tai muun vakuuden, joka liittyy sen liikuntalain (390/2015) , kuntien"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:liitetiedot:vastuusitoumukset:p0",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 40,
+      "score": 0.7536664009094238,
+      "text": "Kuntalain 114 §:n 4 momentin mukaisesti kunnan antamat takaukset on esitetty liitetiedoissa."
+    }
+  },
+  {
+    "id": "REAL-DISCLOSURE-001",
+    "query": "Mitä tietoja toimintakertomuksessa on esitetty tavoitteiden toteutumisesta?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 67.60001182556152,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:115:1",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 115,
+      "moment": "1",
+      "score": 0.6390226483345032,
+      "text": "§ 115 Toimintakertomus: Toimintakertomuksessa on esitettävä selvitys valtuuston asettamien toiminnan ja talouden tavoitteiden toteutumisesta kunnassa ja kuntakonsernissa. Toimintakertomuksessa on myös"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:toimintakertomus:p0",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 5,
+      "score": 0.6799073815345764,
+      "text": "Kuntalain 115 §:n mukaisesti toimintakertomuksessa esitetään selvitys valtuuston asettamien toiminnallisten ja taloudellisten tavoitteiden toteutumisesta."
+    }
+  },
+  {
+    "id": "REAL-DISCLOSURE-002",
+    "query": "Miten vuosikate on esitetty tuloslaskelmassa?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 71.5188980102539,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:118:4",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 118,
+      "moment": "4",
+      "score": 0.6460753083229065,
+      "text": "§ 118 Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely: Edellä 3 momentissa tarkoitettujen tunnuslukujen raja-arvot lasketaan vuosittain Valtiokonttorin ylläpitämiin konse"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:ROW:tuloslaskelma:tuloslaskelma_2023:r5",
+      "node_type": "ROW",
+      "title": "Vuosikate",
+      "page_num": 15,
+      "score": 0.6093152165412903,
+      "text": "Vuosikate Vuosikate | 3 400 000 | 3 100 000 Vuosikate | 3 400 000 | 3 100 000"
+    }
+  },
+  {
+    "id": "REAL-DISCLOSURE-003",
+    "query": "Miten oma pääoma on esitetty taseessa?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 166.0780906677246,
+    "law_top1": {
+      "node_id": "1336/1997:fin@20251006:5l:5c:1",
+      "law_key": "kirjanpitolaki_1336_1997",
+      "section_num": 5,
+      "moment": "1",
+      "score": 0.623871922492981,
+      "text": "Pääomalainan merkitseminen taseeseen. Omaan pääomaan saadaan merkitä erilliseksi eräksi sellainen pääomalaina, jota osakeyhtiö tai osuuskunta pitää ehdoiltaan oman pääoman luonteisena siten kuin IAS-a"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:tase:p0",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 20,
+      "score": 0.6021565794944763,
+      "text": "Tase on laadittu kirjanpitolain ja kirjanpitoasetuksen mukaisesti."
+    }
+  },
+  {
+    "id": "REAL-DISCLOSURE-004",
+    "query": "Miten liitetiedot on laadittu kirjanpitolain mukaisesti?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 65.75202941894531,
+    "law_top1": {
+      "node_id": "1336/1997:fin@20251006:8l:6:1",
+      "law_key": "kirjanpitolaki_1336_1997",
+      "section_num": 6,
+      "moment": "1",
+      "score": 0.6136134266853333,
+      "text": "Tarkemmat säännökset. Tarkemmat säännökset tilinpäätöksen tase- ja tuloslaskelmakaavoista, toimintakertomuksesta, rahoituslaskelmasta, tilinpäätöksen liitetiedoista, konsernitilinpäätöksen laatimiseen"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:liitetiedot:p0",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 40,
+      "score": 0.728350818157196,
+      "text": "Liitetiedot on laadittu kirjanpitolain 3 luvun 2 §:n ja kirjanpitoasetuksen mukaisesti."
+    }
+  },
+  {
+    "id": "REAL-METRIC-001",
+    "query": "Mikä oli Lapuan kaupungin vuosikate vuonna 2023?",
+    "law_pass": false,
+    "doc_pass": true,
+    "evidence_pass": false,
+    "latency_ms": 65.60921669006348,
+    "law_top1": null,
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:tilintarkastuskertomus:p0",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 65,
+      "score": 0.6832973957061768,
+      "text": "Tilintarkastuslain 3 luvun mukaisesti olemme tarkastaneet Lapuan kaupungin tilinpäätöksen tilikaudelta 2023."
+    }
+  },
+  {
+    "id": "REAL-METRIC-002",
+    "query": "Mikä oli tilikauden tulos 2023?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 68.34864616394043,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:113:2",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 113,
+      "moment": "2",
+      "score": 0.4645521640777588,
+      "text": "§ 113 Tilinpäätös: Tilinpäätökseen kuuluvat tase, tuloslaskelma, rahoituslaskelma ja niiden liitteenä olevat tiedot sekä talousarvion toteutumisvertailu ja toimintakertomus."
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:TABLE:rahoituslaskelma:rahoituslaskelma_202",
+      "node_type": "TABLE",
+      "title": "Rahoituslaskelma 2023",
+      "page_num": 30,
+      "score": 0.6777440309524536,
+      "text": "Rahoituslaskelma 2023"
+    }
+  },
+  {
+    "id": "REAL-METRIC-003",
+    "query": "Paljonko kaupungilla on takauksia?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 63.173770904541016,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:129:1",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 129,
+      "moment": "1",
+      "score": 0.5744067430496216,
+      "text": "§ 129 Lainan taikka takauksen tai muun vakuuden antaminen: Kunnan myöntämä laina, takaus tai muu vakuus ei saa vaarantaa kunnan kykyä vastata sille laissa säädetyistä tehtävistä. Kunta ei saa myöntää "
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:SECTION:liitetiedot:vastuusitoumukset",
+      "node_type": "SECTION",
+      "title": "Vastuusitoumukset",
+      "page_num": 40,
+      "score": 0.6742966175079346,
+      "text": "Vastuusitoumukset Kuntalain 114 §:n 4 momentin mukaisesti kunnan antamat takaukset on esitetty liitetiedoissa.\nKaupungin antamat takaukset olivat yhteensä 25 miljoonaa euroa."
+    }
+  },
+  {
+    "id": "REAL-METRIC-004",
+    "query": "Mikä on kaupungin lainakanta?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 148.15521240234375,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:129:1",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 129,
+      "moment": "1",
+      "score": 0.5242536664009094,
+      "text": "§ 129 Lainan taikka takauksen tai muun vakuuden antaminen: Kunnan myöntämä laina, takaus tai muu vakuus ei saa vaarantaa kunnan kykyä vastata sille laissa säädetyistä tehtävistä. Kunta ei saa myöntää "
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:liitetiedot:vastuusitoumukset:p1",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 40,
+      "score": 0.6418126821517944,
+      "text": "Kaupungin antamat takaukset olivat yhteensä 25 miljoonaa euroa."
+    }
+  },
+  {
+    "id": "REAL-RISK-001",
+    "query": "Onko kaupungin taloudellinen tilanne arviointimenettelyn piirissä kuntalain 118 §:n perusteella?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": false,
+    "latency_ms": 93.45054626464844,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:118:1",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 118,
+      "moment": "1",
+      "score": 0.6354510188102722,
+      "text": "§ 118 Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely: Kunnan ja valtion tulee yhdessä selvittää kunnan mahdollisuudet turvata asukkailleen lainsäädännössä edellytetyt pa"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:rahoituslaskelma:p0",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 30,
+      "score": 0.6640783548355103,
+      "text": "Rahoituslaskelman tiedot tukevat arviota kunnan maksuvalmiudesta kuntalain 118 §:n mukaisesti."
+    }
+  },
+  {
+    "id": "REAL-RISK-002",
+    "query": "Mitkä ovat merkittävimmät riskit toimintakertomuksen mukaan?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 81.89129829406738,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:115:1",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 115,
+      "moment": "1",
+      "score": 0.5316779613494873,
+      "text": "§ 115 Toimintakertomus: Toimintakertomuksessa on esitettävä selvitys valtuuston asettamien toiminnan ja talouden tavoitteiden toteutumisesta kunnassa ja kuntakonsernissa. Toimintakertomuksessa on myös"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:toimintakertomus:sisäinen_valvonta_ja_riskienha:p2",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 5,
+      "score": 0.5818727612495422,
+      "text": "Merkittävimmät riskit liittyvät henkilöstön saatavuuteen ja kustannusten hallintaan."
+    }
+  },
+  {
+    "id": "REAL-RISK-003",
+    "query": "Onko alijäämän kattamisvelvollisuutta kuntalain mukaan?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": false,
+    "latency_ms": 80.05142211914062,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:148:2",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 148,
+      "moment": "2",
+      "score": 0.7116084694862366,
+      "text": "§ 148 Alijäämän kattamista ja arviointimenettelyä koskevat siirtymäsäännökset: Sen estämättä, mitä 110 §:n 3 momentissa säädetään velvollisuudesta kattaa kunnan taseeseen kertynyt alijäämä, alijäämän "
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:rahoituslaskelma:p0",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 30,
+      "score": 0.48788487911224365,
+      "text": "Rahoituslaskelman tiedot tukevat arviota kunnan maksuvalmiudesta kuntalain 118 §:n mukaisesti."
+    }
+  },
+  {
+    "id": "REAL-AUDIT-001",
+    "query": "Onko tilintarkastaja antanut huomautuksen tilinpäätöksestä?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 159.24668312072754,
+    "law_top1": {
+      "node_id": "1141/2015:fin@20240985:10l:1:1",
+      "law_key": "tilintarkastuslaki_1141_2015",
+      "section_num": 1,
+      "moment": "1",
+      "score": 0.6748985648155212,
+      "text": "Huomautus ja varoitus. Tilintarkastuslautakunnan tulee antaa tilintarkastajalle huomautus, jos tämä on huolimattomuudesta menetellyt tämän lain tai sen nojalla annettujen säännösten vastaisesti tai ju"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:SECTION:tilintarkastuskertomus",
+      "node_type": "SECTION",
+      "title": "Tilintarkastuskertomus",
+      "page_num": 65,
+      "score": 0.6268913149833679,
+      "text": "Tilintarkastuskertomus Tilintarkastuslain 3 luvun mukaisesti olemme tarkastaneet Lapuan kaupungin tilinpäätöksen tilikaudelta 2023.\nLausuntonamme esitämme, että tilinpäätös antaa oikean ja riittävän k"
+    }
+  },
+  {
+    "id": "REAL-AUDIT-002",
+    "query": "Antaako tilintarkastuskertomus puhtaan lausunnon?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 72.79396057128906,
+    "law_top1": {
+      "node_id": "1141/2015:fin@20240985:3l:5:2",
+      "law_key": "tilintarkastuslaki_1141_2015",
+      "section_num": 5,
+      "moment": "2",
+      "score": 0.6306204199790955,
+      "text": "Tilintarkastuskertomus. Tilintarkastuskertomuksessa on annettava lausunto siitä: 1) antaako tilinpäätös noudatetun tilinpäätössäännöstön mukaisesti oikean ja riittävän kuvan yhteisön tai säätiön toimi"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:tilintarkastuskertomus:p1",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 65,
+      "score": 0.6010911464691162,
+      "text": "Lausuntonamme esitämme, että tilinpäätös antaa oikean ja riittävän kuvan kaupungin tuloksesta ja taloudellisesta asemasta."
+    }
+  },
+  {
+    "id": "REAL-CROSS-001",
+    "query": "Miten kuntalaki ja kirjanpitolaki yhdessä sääntelevät tilinpäätöstä?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 81.2370777130127,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:112:1",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 112,
+      "moment": "1",
+      "score": 0.6628459692001343,
+      "text": "§ 112 Kirjanpito: Kunnan kirjanpitovelvollisuuteen, kirjanpitoon ja tilinpäätökseen sovelletaan sen lisäksi, mitä tässä laissa säädetään, kirjanpitolakia. Kirjanpitolautakunnan kuntajaosto antaa ohjei"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:SECTION:konsernitilinpäätös",
+      "node_type": "SECTION",
+      "title": "Konsernitilinpäätös",
+      "page_num": 55,
+      "score": 0.6417223811149597,
+      "text": "Konsernitilinpäätös Kuntalain 114 §:n mukaisesti kunnan, joka tytäryhteisöineen muodostaa kuntakonsernin, on laadittava konsernitilinpäätös.\nKonsernitilinpäätös on laadittu kirjanpitolain 6 luvun sään"
+    }
+  },
+  {
+    "id": "REAL-CROSS-002",
+    "query": "Mihin kirjanpitolain kohtiin viitataan tilinpäätöksen liitetiedoissa?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 65.91081619262695,
+    "law_top1": {
+      "node_id": "1336/1997:fin@20251006:8l:6:1",
+      "law_key": "kirjanpitolaki_1336_1997",
+      "section_num": 6,
+      "moment": "1",
+      "score": 0.6405142545700073,
+      "text": "Tarkemmat säännökset. Tarkemmat säännökset tilinpäätöksen tase- ja tuloslaskelmakaavoista, toimintakertomuksesta, rahoituslaskelmasta, tilinpäätöksen liitetiedoista, konsernitilinpäätöksen laatimiseen"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:SECTION:liitetiedot",
+      "node_type": "SECTION",
+      "title": "Liitetiedot",
+      "page_num": 40,
+      "score": 0.6789391040802002,
+      "text": "Liitetiedot Liitetiedot on laadittu kirjanpitolain 3 luvun 2 §:n ja kirjanpitoasetuksen mukaisesti.\nTilinpäätöksen laatimisessa noudatetut arvostus- ja jaksotusperiaatteet on esitetty alla."
+    }
+  },
+  {
+    "id": "REAL-TABLE-001",
+    "query": "Mitä tuloslaskelman rivit kertovat toimintatuotoista ja -kuluista?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 67.25001335144043,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:113:2",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 113,
+      "moment": "2",
+      "score": 0.5970276594161987,
+      "text": "§ 113 Tilinpäätös: Tilinpäätökseen kuuluvat tase, tuloslaskelma, rahoituslaskelma ja niiden liitteenä olevat tiedot sekä talousarvion toteutumisvertailu ja toimintakertomus."
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:johdanto:p1",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 1,
+      "score": 0.6453139781951904,
+      "text": "Tilinpäätös sisältää tuloslaskelman, taseen, rahoituslaskelman ja liitetiedot sekä toimintakertomuksen."
+    }
+  },
+  {
+    "id": "REAL-TABLE-002",
+    "query": "Mitä taseen vastaavaa-puoli sisältää?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 78.47166061401367,
+    "law_top1": {
+      "node_id": "1336/1997:fin@20251006:5l:2:1",
+      "law_key": "kirjanpitolaki_1336_1997",
+      "section_num": 2,
+      "moment": "1",
+      "score": 0.5200962424278259,
+      "text": "Saamiset, rahoitusvarat ja velat. Taseeseen merkitään: 1) saamiset nimellisarvoon, kuitenkin enintään todennäköiseen arvoon; 2) rahoitusomaisuuteen kuuluvat arvopaperit ja muut sellaiset rahoitusvarat"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:johdanto:p1",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 1,
+      "score": 0.4703770875930786,
+      "text": "Tilinpäätös sisältää tuloslaskelman, taseen, rahoituslaskelman ja liitetiedot sekä toimintakertomuksen."
+    }
+  },
+  {
+    "id": "REAL-TABLE-003",
+    "query": "Miten rahoituslaskelman rahavirrat on esitetty?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 80.60097694396973,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:110:4",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 110,
+      "moment": "4",
+      "score": 0.5489869713783264,
+      "text": "§ 110 Talousarvio ja -suunnitelma: Talousarvioon otetaan tehtävien ja toiminnan tavoitteiden edellyttämät määrärahat ja tuloarviot sekä siinä osoitetaan, miten rahoitustarve katetaan. Määräraha ja tul"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:TABLE:rahoituslaskelma:rahoituslaskelma_202",
+      "node_type": "TABLE",
+      "title": "Rahoituslaskelma 2023",
+      "page_num": 30,
+      "score": 0.6260887384414673,
+      "text": "Rahoituslaskelma 2023"
+    }
+  },
+  {
+    "id": "REAL-DISCLOSURE-005",
+    "query": "Miten pysyvien vastaavien arvostusperiaatteet on kuvattu?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 70.05167007446289,
+    "law_top1": {
+      "node_id": "1336/1997:fin@20251006:4l:3:1",
+      "law_key": "kirjanpitolaki_1336_1997",
+      "section_num": 3,
+      "moment": "1",
+      "score": 0.548744797706604,
+      "text": "Pysyvät ja vaihtuvat vastaavat. Taseen vastaavien erät jaetaan pysyviin ja vaihtuviin käyttötarkoituksensa perusteella. Pysyviä ovat erät, jotka on tarkoitettu tuottamaan tuloa jatkuvasti useana tilik"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:SECTION:liitetiedot:tilinpäätöksen_laatimisperiaat",
+      "node_type": "SECTION",
+      "title": "Tilinpäätöksen laatimisperiaatteet",
+      "page_num": 40,
+      "score": 0.5705863237380981,
+      "text": "Tilinpäätöksen laatimisperiaatteet Pysyvien vastaavien hyödykkeet on merkitty taseeseen hankintamenoon vähennettynä suunnitelman mukaisilla poistoilla.\nVaihto-omaisuus on arvostettu FIFO-periaatteen m"
+    }
+  },
+  {
+    "id": "REAL-COMPLIANCE-005",
+    "query": "Onko toimintakertomuksen sisältö kuntalain 115 §:n 2 momentin mukainen?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 73.61102104187012,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:115:1",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 115,
+      "moment": "1",
+      "score": 0.6756609678268433,
+      "text": "§ 115 Toimintakertomus: Toimintakertomuksessa on esitettävä selvitys valtuuston asettamien toiminnan ja talouden tavoitteiden toteutumisesta kunnassa ja kuntakonsernissa. Toimintakertomuksessa on myös"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:toimintakertomus:p0",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 5,
+      "score": 0.741652250289917,
+      "text": "Kuntalain 115 §:n mukaisesti toimintakertomuksessa esitetään selvitys valtuuston asettamien toiminnallisten ja taloudellisten tavoitteiden toteutumisesta."
+    }
+  },
+  {
+    "id": "REAL-METRIC-005",
+    "query": "Mikä on toimintakate?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 66.47181510925293,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:115:2",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 115,
+      "moment": "2",
+      "score": 0.5487744212150574,
+      "text": "§ 115 Toimintakertomus: Jos kunnan taseessa on kattamatonta alijäämää, toimintakertomuksessa on esitettävä selvitys talouden tasapainotuksen toteutumisesta tilikaudella sekä voimassa olevan taloussuun"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:ROW:tuloslaskelma:tuloslaskelma_2023:r2",
+      "node_type": "ROW",
+      "title": "Toimintakate",
+      "page_num": 15,
+      "score": 0.6615163087844849,
+      "text": "Toimintakate Toimintakate | -45 222 212 | -44 222 222 Toimintakate | -45 222 212 | -44 222 222"
+    }
+  },
+  {
+    "id": "REAL-DISCLOSURE-006",
+    "query": "Miten konsernin tuloslaskelma eroaa kaupungin tuloslaskelmasta?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 64.91470336914062,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:114:3",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 114,
+      "moment": "3",
+      "score": 0.5892090797424316,
+      "text": "§ 114 Konsernitilinpäätös: Kuntayhtymän tilinpäätös yhdistellään jäsenkunnan konsernitilinpäätökseen. Kunnan, jolla ei ole tytäryhteisöjä, mutta joka on jäsen kuntayhtymässä tai liikelaitoskuntayhtymä"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:TABLE:konsernitilinpäätös:konsernin_tuloslaske",
+      "node_type": "TABLE",
+      "title": "Konsernin tuloslaskelma",
+      "page_num": 55,
+      "score": 0.6344771385192871,
+      "text": "Konsernin tuloslaskelma"
+    }
+  },
+  {
+    "id": "REAL-RISK-004",
+    "query": "Onko kaupungin velkaantuneisuus kohtuullisella tasolla?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 66.73741340637207,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:118:3",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 118,
+      "moment": "3",
+      "score": 0.4969123601913452,
+      "text": "§ 118 Erityisen vaikeassa taloudellisessa asemassa olevan kunnan arviointimenettely: Arviointimenettely voidaan lisäksi käynnistää, jos asukasta kohden laskettu kertynyt alijäämä on kunnan viimeisessä"
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:PARA:liitetiedot:vastuusitoumukset:p1",
+      "node_type": "PARA",
+      "title": "",
+      "page_num": 40,
+      "score": 0.5669914484024048,
+      "text": "Kaupungin antamat takaukset olivat yhteensä 25 miljoonaa euroa."
+    }
+  },
+  {
+    "id": "REAL-AUDIT-003",
+    "query": "Onko vastuuvapaus myönnettävissä tilinpäätöksen perusteella?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 61.374664306640625,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:125:1",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 125,
+      "moment": "1",
+      "score": 0.6322817206382751,
+      "text": "§ 125 Tilintarkastuskertomus ja sen käsittely: Tilintarkastajan on annettava valtuustolle kultakin tilikaudelta kertomus, jossa esitetään tarkastuksen tulokset. Kertomuksessa on myös esitettävä, onko "
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:TABLE:liitetiedot:vastuusitoumukset:takaukset_ja_vastuus",
+      "node_type": "TABLE",
+      "title": "Takaukset ja vastuusitoumukset",
+      "page_num": 40,
+      "score": 0.5451345443725586,
+      "text": "Takaukset ja vastuusitoumukset"
+    }
+  },
+  {
+    "id": "REAL-COMPLIANCE-006",
+    "query": "Onko tilinpäätös allekirjoitettu määräajassa?",
+    "law_pass": true,
+    "doc_pass": true,
+    "evidence_pass": true,
+    "latency_ms": 68.06278228759766,
+    "law_top1": {
+      "node_id": "410/2015:fin@20230780:113:4",
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 113,
+      "moment": "4",
+      "score": 0.6049310564994812,
+      "text": "§ 113 Tilinpäätös: Tilinpäätöksen allekirjoittavat kunnanhallituksen jäsenet sekä kunnanjohtaja tai pormestari."
+    },
+    "doc_top1": {
+      "doc_node_id": "lapua:2023:SECTION:tilintarkastuskertomus",
+      "node_type": "SECTION",
+      "title": "Tilintarkastuskertomus",
+      "page_num": 65,
+      "score": 0.5507127046585083,
+      "text": "Tilintarkastuskertomus Tilintarkastuslain 3 luvun mukaisesti olemme tarkastaneet Lapuan kaupungin tilinpäätöksen tilikaudelta 2023.\nLausuntonamme esitämme, että tilinpäätös antaa oikean ja riittävän k"
+    }
+  }
+]

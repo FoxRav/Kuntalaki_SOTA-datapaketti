@@ -1,0 +1,626 @@
+{
+  "description": "v10 Adversarial Eval - Epätoiminnallisuuden paljastava testipatteri",
+  "version": "10.0",
+  "test_type": "adversarial",
+  "categories": ["LAW", "GRAPH", "DOC", "ABSTAIN"],
+  "metrics": {
+    "CONFUSION_FAIL": "Väärä laki top-1, kun kysymys sisältää vahvan domain-ankkurin",
+    "NEAR_MISS": "Oikea osuma top-5 mutta ei top-1",
+    "HALLU_EVIDENCE": "Viitataan dokumenttievidenssiin, jota ei löydy",
+    "PATH_TRUNCATION": "Normipolku puuttuu, vaikka viittausedge on olemassa",
+    "VERSION_DRIFT": "Kynnysarvo/numero ei täsmää lain versioon",
+    "ABSTAIN_RATE": "Järjestelmä sanoo 'en voi varmistaa' oikein"
+  },
+  "gates": {
+    "CONFUSION_FAIL": {"max": 0.02, "description": "≤ 2%"},
+    "HALLU_EVIDENCE": {"max": 0, "description": "= 0"},
+    "VERSION_DRIFT": {"max": 0, "description": "= 0"},
+    "ABSTAIN_CORRECT": {"min": 0.90, "description": "≥ 90%"}
+  },
+  "questions": [
+    {
+      "id": "ADV-LAW-001",
+      "category": "LAW",
+      "query": "kunnan laatimisvelvollisuus",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "required_anchor_terms": ["kunta", "laatiminen", "tilinpäätös"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 3,
+        "confusion_trap": "kirjanpitolaki_1336_1997"
+      },
+      "notes": "Tahallisen lyhyt kysymys - pitää ohjata KUNTA, ei KPL"
+    },
+    {
+      "id": "ADV-LAW-002",
+      "category": "LAW",
+      "query": "tilinpäätöksen laatiminen kirjanpitovelvollisella kunnalla",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015", "kirjanpitolaki_1336_1997"],
+        "required_anchor_terms": ["tilinpäätös", "kunta", "kirjanpito"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5,
+        "must_have_both_laws": true
+      },
+      "notes": "Sekoitus - priorisoi KUNTA + KPL top-2"
+    },
+    {
+      "id": "ADV-LAW-003",
+      "category": "LAW",
+      "query": "kuntakonsernin konsernitilinpäätös vai konsernitilinpäätös yhtiössä?",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015", "osakeyhtiolaki_624_2006"],
+        "required_anchor_terms": ["konserni", "tilinpäätös"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5,
+        "must_disambiguate": true
+      },
+      "notes": "Pitää erottaa KUNTA vs OYL"
+    },
+    {
+      "id": "ADV-LAW-004",
+      "category": "LAW",
+      "query": "tilintarkastajan muistutus kunnan päätöksistä",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "required_anchor_terms": ["tilintarkastaja", "muistutus", "kunta"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 3,
+        "confusion_trap": "tilintarkastuslaki_1141_2015"
+      },
+      "notes": "KUNTA/TILA sekaisin - kunnan konteksti dominoi"
+    },
+    {
+      "id": "ADV-LAW-005",
+      "category": "LAW",
+      "query": "hankinnan kynnysarvot kunnassa",
+      "expected": {
+        "expected_law_any": ["hankintalaki_1397_2016"],
+        "required_anchor_terms": ["hankinta", "kynnysarvo"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 3
+      },
+      "notes": "HANK primary, mahdollinen KUNTA support"
+    },
+    {
+      "id": "ADV-LAW-006",
+      "category": "LAW",
+      "query": "liitetiedot kunnan taseessa",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015", "kirjanpitolaki_1336_1997", "kirjanpitoasetus_1339_1997"],
+        "required_anchor_terms": ["liitetiedot", "tase", "kunta"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5
+      },
+      "notes": "KPL/KPA + KUNTA raja"
+    },
+    {
+      "id": "ADV-LAW-007",
+      "category": "LAW",
+      "query": "osakeyhtiön hallituksen vastuu kunnan tytäryhtiössä",
+      "expected": {
+        "expected_law_any": ["osakeyhtiolaki_624_2006"],
+        "required_anchor_terms": ["hallitus", "vastuu", "osakeyhtiö"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 3,
+        "confusion_trap": "kuntalaki_410_2015"
+      },
+      "notes": "OYL primary, KUNTA support"
+    },
+    {
+      "id": "ADV-LAW-008",
+      "category": "LAW",
+      "query": "tasekirja ja toimintakertomus kunnassa",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "required_anchor_terms": ["tasekirja", "toimintakertomus", "kunta"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 3
+      },
+      "notes": "KUNTA + KPL/KPA"
+    },
+    {
+      "id": "ADV-LAW-009",
+      "category": "LAW",
+      "query": "tuloslaskelmakaava kunnalla",
+      "expected": {
+        "expected_law_any": ["kirjanpitoasetus_1339_1997"],
+        "required_anchor_terms": ["tuloslaskelma", "kaava"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 3
+      },
+      "notes": "KUNTA/KPA - kaavat ovat KPA:ssa"
+    },
+    {
+      "id": "ADV-LAW-010",
+      "category": "LAW",
+      "query": "kunnan alijäämäselvitys toimintakertomuksessa",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "required_anchor_terms": ["alijäämä", "selvitys", "toimintakertomus"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 3
+      },
+      "notes": "KUNTA selkeästi"
+    },
+    {
+      "id": "ADV-GRAPH-001",
+      "category": "GRAPH",
+      "query": "milloin kuntalain tilinpäätössäännöksistä voidaan poiketa?",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "expected_edge_types": ["EXCEPTS"],
+        "required_anchor_terms": ["poiketa", "tilinpäätös"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5,
+        "requires_exception_edge": true
+      },
+      "notes": "Vaatii poiketen-ketjun (EXCEPTS)"
+    },
+    {
+      "id": "ADV-GRAPH-002",
+      "category": "GRAPH",
+      "query": "mitä tarkoitetaan kuntakonsernilla tässä laissa?",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "expected_edge_types": ["DEFINES"],
+        "required_anchor_terms": ["kuntakonserni", "tarkoitetaan", "määritelmä"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 3,
+        "requires_definition_edge": true
+      },
+      "notes": "Vaatii määritelmän (DEFINES)"
+    },
+    {
+      "id": "ADV-GRAPH-003",
+      "category": "GRAPH",
+      "query": "sovelletaanko kuntalakia vai kirjanpitolakia tilinpäätökseen?",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "expected_edge_types": ["REFERS_TO"],
+        "required_anchor_terms": ["soveltaa", "kuntalaki", "kirjanpitolaki"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5,
+        "requires_reference_edge": true
+      },
+      "notes": "REFERS_TO ulkoiseen lakiin"
+    },
+    {
+      "id": "ADV-GRAPH-004",
+      "category": "GRAPH",
+      "query": "jollei toisin säädetä kunnan talousarviosta",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "expected_edge_types": ["EXCEPTS"],
+        "required_anchor_terms": ["jollei", "talousarvio"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5,
+        "requires_exception_edge": true
+      },
+      "notes": "Pakota support (jollei toisin säädetä)"
+    },
+    {
+      "id": "ADV-GRAPH-005",
+      "category": "GRAPH",
+      "query": "kuntalain 1 luvun määritelmät ja soveltamisala",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "expected_edge_types": ["DEFINES"],
+        "required_anchor_terms": ["määritelmä", "soveltamisala", "1 luku"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 3,
+        "requires_definition_edge": true
+      },
+      "notes": "Definition trigger"
+    },
+    {
+      "id": "ADV-GRAPH-006",
+      "category": "GRAPH",
+      "query": "kunnan tilinpäätöksen allekirjoittajat ja vastuut",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "expected_edge_types": ["REFERS_TO"],
+        "required_anchor_terms": ["allekirjoitus", "vastuu"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5
+      },
+      "notes": "Sisältää viittauksen muihin pykäliin"
+    },
+    {
+      "id": "ADV-GRAPH-007",
+      "category": "GRAPH",
+      "query": "arviointimenettelyn kriteerit ja seuraukset",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "expected_edge_types": ["REFERS_TO"],
+        "required_anchor_terms": ["arviointimenettely", "kriisikunta"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5
+      },
+      "notes": "Multi-hop: 118 § viittaa muihin kohtiin"
+    },
+    {
+      "id": "ADV-GRAPH-008",
+      "category": "GRAPH",
+      "query": "tarkastuslautakunnan tehtävät ja tilintarkastuksen suhde",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "expected_edge_types": ["REFERS_TO"],
+        "required_anchor_terms": ["tarkastuslautakunta", "tilintarkastus"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5
+      },
+      "notes": "Viittausketju lautakunta ↔ tarkastaja"
+    },
+    {
+      "id": "ADV-GRAPH-009",
+      "category": "GRAPH",
+      "query": "konsernitilinpäätöksen laatimisperiaatteet ja viittaukset kirjanpitolakiin",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "expected_edge_types": ["REFERS_TO"],
+        "required_anchor_terms": ["konsernitilinpäätös", "kirjanpitolaki"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5,
+        "requires_external_law_reference": true
+      },
+      "notes": "External law reference (KPL)"
+    },
+    {
+      "id": "ADV-GRAPH-010",
+      "category": "GRAPH",
+      "query": "kunnan lainanotto ja takaukset - pykäläviittaukset",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "expected_edge_types": ["REFERS_TO"],
+        "required_anchor_terms": ["laina", "takaus", "129"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5
+      },
+      "notes": "Internal references within Kuntalaki"
+    },
+    {
+      "id": "ADV-DOC-001",
+      "category": "DOC",
+      "query": "missä tilinpäätöksen kohdassa näkyy kattamaton alijäämä?",
+      "expected": {
+        "expected_doc_path_any": ["toimintakertomus", "tase"],
+        "required_anchor_terms": ["alijäämä", "kattamaton"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5,
+        "requires_doc_evidence": true
+      },
+      "notes": "Page/section required"
+    },
+    {
+      "id": "ADV-DOC-002",
+      "category": "DOC",
+      "query": "näytä taulukosta rahoituslaskelman nettoinvestoinnit",
+      "expected": {
+        "expected_doc_path_any": ["rahoituslaskelma"],
+        "expected_node_type": "TABLE",
+        "required_anchor_terms": ["rahoituslaskelma", "investointi"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5,
+        "requires_table_evidence": true
+      },
+      "notes": "Table/cell evidence"
+    },
+    {
+      "id": "ADV-DOC-003",
+      "category": "DOC",
+      "query": "millä sivulla esitetään takaukset ja vastuusitoumukset?",
+      "expected": {
+        "expected_doc_path_any": ["liitetiedot", "vastuusitoumukset"],
+        "required_anchor_terms": ["takaukset", "vastuusitoumukset", "sivu"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5,
+        "requires_page_reference": true
+      },
+      "notes": "Liitetieto page"
+    },
+    {
+      "id": "ADV-DOC-004",
+      "category": "DOC",
+      "query": "löytyykö toimintakertomuksesta olennaiset tapahtumat?",
+      "expected": {
+        "expected_doc_path_any": ["toimintakertomus"],
+        "expected_node_type": "PARA",
+        "required_anchor_terms": ["toimintakertomus", "olennaiset", "tapahtumat"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5
+      },
+      "notes": "Paragraph evidence"
+    },
+    {
+      "id": "ADV-DOC-005",
+      "category": "DOC",
+      "query": "mikä on vuosikate tuloslaskelmassa ja onko se positiivinen?",
+      "expected": {
+        "expected_doc_path_any": ["tuloslaskelma"],
+        "expected_node_type": "ROW",
+        "required_anchor_terms": ["vuosikate", "positiivinen"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5,
+        "requires_metric_value": true
+      },
+      "notes": "Metric value from table"
+    },
+    {
+      "id": "ADV-DOC-006",
+      "category": "DOC",
+      "query": "näytä taseen oma pääoma -erittely",
+      "expected": {
+        "expected_doc_path_any": ["tase"],
+        "expected_node_type": "TABLE",
+        "required_anchor_terms": ["tase", "oma pääoma"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5
+      },
+      "notes": "Balance sheet detail"
+    },
+    {
+      "id": "ADV-DOC-007",
+      "category": "DOC",
+      "query": "mitä riskejä toimintakertomuksessa mainitaan?",
+      "expected": {
+        "expected_doc_path_any": ["toimintakertomus", "riskienhallinta"],
+        "expected_node_type": "PARA",
+        "required_anchor_terms": ["riskit", "riskienhallinta"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5
+      },
+      "notes": "Risk disclosure"
+    },
+    {
+      "id": "ADV-DOC-008",
+      "category": "DOC",
+      "query": "onko konsernin tuloslaskelmassa alijäämä?",
+      "expected": {
+        "expected_doc_path_any": ["konsernitilinpäätös", "konserni"],
+        "expected_node_type": "TABLE",
+        "required_anchor_terms": ["konserni", "tuloslaskelma", "alijäämä"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5
+      },
+      "notes": "Consolidated statement"
+    },
+    {
+      "id": "ADV-DOC-009",
+      "category": "DOC",
+      "query": "mitä tilintarkastuskertomuksessa sanotaan?",
+      "expected": {
+        "expected_doc_path_any": ["tilintarkastuskertomus"],
+        "expected_node_type": "PARA",
+        "required_anchor_terms": ["tilintarkastus", "kertomus"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5
+      },
+      "notes": "Audit report content"
+    },
+    {
+      "id": "ADV-DOC-010",
+      "category": "DOC",
+      "query": "miten liitetiedoissa kuvataan arvostusperiaatteet?",
+      "expected": {
+        "expected_doc_path_any": ["liitetiedot", "laatimisperiaatteet"],
+        "expected_node_type": "PARA",
+        "required_anchor_terms": ["arvostus", "periaatteet", "liitetiedot"],
+        "must_abstain": false
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5
+      },
+      "notes": "Valuation principles"
+    },
+    {
+      "id": "ADV-ABSTAIN-001",
+      "category": "ABSTAIN",
+      "query": "mikä on hankintalain EU-kynnysarvo tänään?",
+      "expected": {
+        "expected_law_any": ["hankintalaki_1397_2016"],
+        "required_anchor_terms": ["kynnysarvo", "EU"],
+        "must_abstain": true,
+        "abstain_reason": "Vaatii ajantasaisen finlex_version; data voi olla vanhentunut"
+      },
+      "scoring": {
+        "pass_if_abstain": true
+      },
+      "notes": "Version drift - kynnysarvot muuttuvat"
+    },
+    {
+      "id": "ADV-ABSTAIN-002",
+      "category": "ABSTAIN",
+      "query": "mikä on Lapuan vuosikate 2024?",
+      "expected": {
+        "expected_doc_path_any": [],
+        "required_anchor_terms": ["vuosikate", "2024"],
+        "must_abstain": true,
+        "abstain_reason": "Vain 2023 data saatavilla"
+      },
+      "scoring": {
+        "pass_if_abstain": true
+      },
+      "notes": "Out-of-scope year"
+    },
+    {
+      "id": "ADV-ABSTAIN-003",
+      "category": "ABSTAIN",
+      "query": "mikä on kunnan veroprosentti?",
+      "expected": {
+        "expected_law_any": [],
+        "required_anchor_terms": ["veroprosentti"],
+        "must_abstain": true,
+        "abstain_reason": "Ei sisälly lakiteksti-indeksiin"
+      },
+      "scoring": {
+        "pass_if_abstain": true
+      },
+      "notes": "Not in corpus"
+    },
+    {
+      "id": "ADV-ABSTAIN-004",
+      "category": "ABSTAIN",
+      "query": "anna juridinen neuvo henkilökohtaisessa riidassa",
+      "expected": {
+        "expected_law_any": [],
+        "required_anchor_terms": [],
+        "must_abstain": true,
+        "abstain_reason": "Out of scope - henkilökohtainen neuvonta"
+      },
+      "scoring": {
+        "pass_if_abstain": true
+      },
+      "notes": "Abstain + redirect"
+    },
+    {
+      "id": "ADV-ABSTAIN-005",
+      "category": "ABSTAIN",
+      "query": "mitkä ovat Helsingin kaupungin talousluvut?",
+      "expected": {
+        "expected_doc_path_any": [],
+        "required_anchor_terms": ["Helsinki"],
+        "must_abstain": true,
+        "abstain_reason": "Vain Lapua corpus"
+      },
+      "scoring": {
+        "pass_if_abstain": true
+      },
+      "notes": "Wrong city"
+    },
+    {
+      "id": "ADV-ABSTAIN-006",
+      "category": "ABSTAIN",
+      "query": "mikä on voimassa oleva kuntalaki tänään?",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "required_anchor_terms": ["voimassa"],
+        "must_abstain": true,
+        "abstain_reason": "Finlex_version voi olla vanhempi kuin 'tänään'"
+      },
+      "scoring": {
+        "pass_if_abstain": true
+      },
+      "notes": "Version ambiguity"
+    },
+    {
+      "id": "ADV-ABSTAIN-007",
+      "category": "ABSTAIN",
+      "query": "mitä sanoo uusi hankintalakimuutos 2025?",
+      "expected": {
+        "expected_law_any": [],
+        "required_anchor_terms": ["2025", "muutos"],
+        "must_abstain": true,
+        "abstain_reason": "Tulevaisuuden lainsäädäntö ei datassa"
+      },
+      "scoring": {
+        "pass_if_abstain": true
+      },
+      "notes": "Future legislation"
+    },
+    {
+      "id": "ADV-ABSTAIN-008",
+      "category": "ABSTAIN",
+      "query": "voiko kunta mennä konkurssiin?",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "required_anchor_terms": ["konkurssi"],
+        "must_abstain": true,
+        "abstain_reason": "Kunta ei voi mennä konkurssiin - vastaus vaatii tulkintaa"
+      },
+      "scoring": {
+        "pass_if_abstain": true
+      },
+      "notes": "Interpretation needed"
+    },
+    {
+      "id": "ADV-ABSTAIN-009",
+      "category": "ABSTAIN",
+      "query": "mitä kuntalaissa sanotaan koronapandemiasta?",
+      "expected": {
+        "expected_law_any": ["kuntalaki_410_2015"],
+        "required_anchor_terms": ["korona", "pandemia"],
+        "must_abstain": false,
+        "abstain_reason": null
+      },
+      "scoring": {
+        "pass_if_topk_contains": 5
+      },
+      "notes": "Trick: 110a § sisältää covid-poikkeuksen - EI abstain"
+    },
+    {
+      "id": "ADV-ABSTAIN-010",
+      "category": "ABSTAIN",
+      "query": "paljonko Lapuan kaupungin tytäryhtiöt maksoivat osinkoja 2023?",
+      "expected": {
+        "expected_doc_path_any": [],
+        "required_anchor_terms": ["osinko", "tytäryhtiö"],
+        "must_abstain": true,
+        "abstain_reason": "Osinko-tieto ei sisälly synteettiseen testidataan"
+      },
+      "scoring": {
+        "pass_if_abstain": true
+      },
+      "notes": "Missing specific data"
+    }
+  ]
+}
+

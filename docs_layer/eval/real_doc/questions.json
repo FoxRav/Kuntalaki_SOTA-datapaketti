@@ -1,0 +1,447 @@
+{
+  "description": "v9 Real-doc eval - Questions requiring both law and document retrieval",
+  "version": "9.0",
+  "test_type": "real_doc",
+  "city": "lapua",
+  "year": 2023,
+  "questions": [
+    {
+      "id": "REAL-COMPLIANCE-001",
+      "type": "MUST",
+      "category": "compliance",
+      "query": "Onko Lapuan kaupungin tilinpäätös laadittu kuntalain 113 §:n mukaisesti?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 113
+      },
+      "expected_doc": {
+        "section_pattern": "tuloslaskelma|tase|rahoituslaskelma|johdanto",
+        "page_range": [1, 35]
+      },
+      "anchor_terms": ["tilinpäätös", "kuntalaki", "113"]
+    },
+    {
+      "id": "REAL-COMPLIANCE-002",
+      "type": "MUST",
+      "category": "compliance",
+      "query": "Sisältääkö toimintakertomus selvityksen sisäisestä valvonnasta kuntalain 115 §:n 1 momentin mukaisesti?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 115,
+        "moment": 1
+      },
+      "expected_doc": {
+        "section_pattern": "sisäinen_valvonta|riskienhallinta|toimintakertomus",
+        "page_range": [5, 15]
+      },
+      "anchor_terms": ["sisäinen valvonta", "riskienhallinta", "115"]
+    },
+    {
+      "id": "REAL-COMPLIANCE-003",
+      "type": "MUST",
+      "category": "compliance",
+      "query": "Onko konsernitilinpäätös laadittu kuntalain 114 §:n mukaisesti?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 114
+      },
+      "expected_doc": {
+        "section_pattern": "konsernitilinpäätös|konserni",
+        "page_range": [50, 65]
+      },
+      "anchor_terms": ["konsernitilinpäätös", "kuntakonserni", "114"]
+    },
+    {
+      "id": "REAL-COMPLIANCE-004",
+      "type": "MUST",
+      "category": "compliance",
+      "query": "Onko takaukset esitetty liitetiedoissa kuntalain mukaisesti?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 129
+      },
+      "expected_doc": {
+        "section_pattern": "vastuusitoumukset|takaukset|liitetiedot",
+        "page_range": [40, 50]
+      },
+      "anchor_terms": ["takaukset", "vastuusitoumukset", "liitetiedot"]
+    },
+    {
+      "id": "REAL-DISCLOSURE-001",
+      "type": "MUST",
+      "category": "disclosure",
+      "query": "Mitä tietoja toimintakertomuksessa on esitetty tavoitteiden toteutumisesta?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 115
+      },
+      "expected_doc": {
+        "section_pattern": "toimintakertomus|talouden_toteutuminen",
+        "page_range": [5, 15]
+      },
+      "anchor_terms": ["tavoitteiden toteutuminen", "toimintakertomus"]
+    },
+    {
+      "id": "REAL-DISCLOSURE-002",
+      "type": "SHOULD",
+      "category": "disclosure",
+      "query": "Miten vuosikate on esitetty tuloslaskelmassa?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 113
+      },
+      "expected_doc": {
+        "section_pattern": "tuloslaskelma",
+        "page_range": [15, 20]
+      },
+      "anchor_terms": ["vuosikate", "tuloslaskelma"]
+    },
+    {
+      "id": "REAL-DISCLOSURE-003",
+      "type": "SHOULD",
+      "category": "disclosure",
+      "query": "Miten oma pääoma on esitetty taseessa?",
+      "expected_law": {
+        "law_key": "kirjanpitolaki_1336_1997"
+      },
+      "expected_doc": {
+        "section_pattern": "tase",
+        "page_range": [20, 25]
+      },
+      "anchor_terms": ["oma pääoma", "tase", "vastattavaa"]
+    },
+    {
+      "id": "REAL-DISCLOSURE-004",
+      "type": "SHOULD",
+      "category": "disclosure",
+      "query": "Miten liitetiedot on laadittu kirjanpitolain mukaisesti?",
+      "expected_law": {
+        "law_key": "kirjanpitolaki_1336_1997"
+      },
+      "expected_doc": {
+        "section_pattern": "liitetiedot|laatimisperiaatteet",
+        "page_range": [40, 50]
+      },
+      "anchor_terms": ["liitetiedot", "laatimisperiaatteet", "kirjanpitolaki"]
+    },
+    {
+      "id": "REAL-METRIC-001",
+      "type": "MUST",
+      "category": "metric",
+      "query": "Mikä oli Lapuan kaupungin vuosikate vuonna 2023?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 115
+      },
+      "expected_doc": {
+        "section_pattern": "tuloslaskelma|talouden|vuosikate",
+        "page_range": [5, 20]
+      },
+      "expected_value": 3400000,
+      "anchor_terms": ["vuosikate", "miljoonaa", "positiivinen"]
+    },
+    {
+      "id": "REAL-METRIC-002",
+      "type": "MUST",
+      "category": "metric",
+      "query": "Mikä oli tilikauden tulos 2023?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 113
+      },
+      "expected_doc": {
+        "section_pattern": "tuloslaskelma|tilikauden",
+        "page_range": [15, 25]
+      },
+      "expected_value": -1100000,
+      "anchor_terms": ["tilikauden", "tulos", "tuloslaskelma"]
+    },
+    {
+      "id": "REAL-METRIC-003",
+      "type": "SHOULD",
+      "category": "metric",
+      "query": "Paljonko kaupungilla on takauksia?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 129
+      },
+      "expected_doc": {
+        "node_type": "METRIC",
+        "metric_name": "takaukset"
+      },
+      "expected_value": 25000000,
+      "anchor_terms": ["takaukset", "vastuusitoumukset"]
+    },
+    {
+      "id": "REAL-METRIC-004",
+      "type": "SHOULD",
+      "category": "metric",
+      "query": "Mikä on kaupungin lainakanta?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 118
+      },
+      "expected_doc": {
+        "node_type": "METRIC",
+        "metric_name": "lainakanta"
+      },
+      "expected_value": 50000000,
+      "anchor_terms": ["lainakanta", "vieras pääoma"]
+    },
+    {
+      "id": "REAL-RISK-001",
+      "type": "MUST",
+      "category": "risk",
+      "query": "Onko kaupungin taloudellinen tilanne arviointimenettelyn piirissä kuntalain 118 §:n perusteella?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 118
+      },
+      "expected_doc": {
+        "section_pattern": "talouden|vuosikate|toimintakate",
+        "page_range": [5, 30]
+      },
+      "anchor_terms": ["taloudellinen", "tilanne", "vuosikate", "toimintakate"]
+    },
+    {
+      "id": "REAL-RISK-002",
+      "type": "SHOULD",
+      "category": "risk",
+      "query": "Mitkä ovat merkittävimmät riskit toimintakertomuksen mukaan?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 115,
+        "moment": 1
+      },
+      "expected_doc": {
+        "section_pattern": "riskienhallinta|sisäinen_valvonta",
+        "page_range": [5, 15]
+      },
+      "anchor_terms": ["riskit", "riskienhallinta", "henkilöstö"]
+    },
+    {
+      "id": "REAL-RISK-003",
+      "type": "SHOULD",
+      "category": "risk",
+      "query": "Onko alijäämän kattamisvelvollisuutta kuntalain mukaan?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 110
+      },
+      "expected_doc": {
+        "section_pattern": "toimintakertomus|tuloslaskelma",
+        "page_range": [5, 20]
+      },
+      "anchor_terms": ["alijäämä", "talousarvio", "tulos"]
+    },
+    {
+      "id": "REAL-AUDIT-001",
+      "type": "MUST",
+      "category": "audit",
+      "query": "Onko tilintarkastaja antanut huomautuksen tilinpäätöksestä?",
+      "expected_law": {
+        "law_key": "tilintarkastuslaki_1141_2015"
+      },
+      "expected_doc": {
+        "section_pattern": "tilintarkastuskertomus|tilintarkastaja",
+        "page_range": [60, 70]
+      },
+      "anchor_terms": ["huomautus", "tilintarkastaja", "kertomus"]
+    },
+    {
+      "id": "REAL-AUDIT-002",
+      "type": "SHOULD",
+      "category": "audit",
+      "query": "Antaako tilintarkastuskertomus puhtaan lausunnon?",
+      "expected_law": {
+        "law_key": "tilintarkastuslaki_1141_2015"
+      },
+      "expected_doc": {
+        "section_pattern": "tilintarkastuskertomus",
+        "page_range": [60, 70]
+      },
+      "anchor_terms": ["lausunto", "oikea ja riittävä kuva"]
+    },
+    {
+      "id": "REAL-CROSS-001",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "query": "Miten kuntalaki ja kirjanpitolaki yhdessä sääntelevät tilinpäätöstä?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 112
+      },
+      "expected_doc": {
+        "section_pattern": "liitetiedot|laatimisperiaatteet",
+        "page_range": [40, 50]
+      },
+      "anchor_terms": ["kirjanpitolaki", "tilinpäätös", "laadittu"]
+    },
+    {
+      "id": "REAL-CROSS-002",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "query": "Mihin kirjanpitolain kohtiin viitataan tilinpäätöksen liitetiedoissa?",
+      "expected_law": {
+        "law_key": "kirjanpitolaki_1336_1997"
+      },
+      "expected_doc": {
+        "section_pattern": "liitetiedot|laatimisperiaatteet",
+        "page_range": [40, 50]
+      },
+      "anchor_terms": ["kirjanpitolaki", "liitetiedot", "3 luku"]
+    },
+    {
+      "id": "REAL-TABLE-001",
+      "type": "SHOULD",
+      "category": "table",
+      "query": "Mitä tuloslaskelman rivit kertovat toimintatuotoista ja -kuluista?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 113
+      },
+      "expected_doc": {
+        "node_type": "TABLE",
+        "section_pattern": "tuloslaskelma"
+      },
+      "anchor_terms": ["toimintatuotot", "toimintakulut", "tuloslaskelma"]
+    },
+    {
+      "id": "REAL-TABLE-002",
+      "type": "SHOULD",
+      "category": "table",
+      "query": "Mitä taseen vastaavaa-puoli sisältää?",
+      "expected_law": {
+        "law_key": "kirjanpitolaki_1336_1997"
+      },
+      "expected_doc": {
+        "node_type": "TABLE",
+        "section_pattern": "tase"
+      },
+      "anchor_terms": ["vastaavat", "pysyvät", "tase"]
+    },
+    {
+      "id": "REAL-TABLE-003",
+      "type": "SHOULD",
+      "category": "table",
+      "query": "Miten rahoituslaskelman rahavirrat on esitetty?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 113
+      },
+      "expected_doc": {
+        "node_type": "TABLE",
+        "section_pattern": "rahoituslaskelma"
+      },
+      "anchor_terms": ["rahavirta", "investoinnit", "rahoitus"]
+    },
+    {
+      "id": "REAL-DISCLOSURE-005",
+      "type": "SHOULD",
+      "category": "disclosure",
+      "query": "Miten pysyvien vastaavien arvostusperiaatteet on kuvattu?",
+      "expected_law": {
+        "law_key": "kirjanpitolaki_1336_1997"
+      },
+      "expected_doc": {
+        "section_pattern": "laatimisperiaatteet|liitetiedot",
+        "page_range": [40, 50]
+      },
+      "anchor_terms": ["arvostus", "pysyvät vastaavat", "poistot"]
+    },
+    {
+      "id": "REAL-COMPLIANCE-005",
+      "type": "SHOULD",
+      "category": "compliance",
+      "query": "Onko toimintakertomuksen sisältö kuntalain 115 §:n 2 momentin mukainen?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 115,
+        "moment": 2
+      },
+      "expected_doc": {
+        "section_pattern": "toimintakertomus|talouden_toteutuminen",
+        "page_range": [5, 15]
+      },
+      "anchor_terms": ["alijäämä", "tasapainottaminen", "115"]
+    },
+    {
+      "id": "REAL-METRIC-005",
+      "type": "SHOULD",
+      "category": "metric",
+      "query": "Mikä on toimintakate?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 115
+      },
+      "expected_doc": {
+        "node_type": "METRIC",
+        "metric_name": "toimintakate"
+      },
+      "expected_value": -45222212,
+      "anchor_terms": ["toimintakate", "toimintatuotot", "toimintakulut"]
+    },
+    {
+      "id": "REAL-DISCLOSURE-006",
+      "type": "SHOULD",
+      "category": "disclosure",
+      "query": "Miten konsernin tuloslaskelma eroaa kaupungin tuloslaskelmasta?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 114
+      },
+      "expected_doc": {
+        "section_pattern": "konsernitilinpäätös|konserni",
+        "page_range": [50, 60]
+      },
+      "anchor_terms": ["konserni", "eliminointi", "konsernitilinpäätös"]
+    },
+    {
+      "id": "REAL-RISK-004",
+      "type": "SHOULD",
+      "category": "risk",
+      "query": "Onko kaupungin velkaantuneisuus kohtuullisella tasolla?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 118
+      },
+      "expected_doc": {
+        "node_type": "METRIC",
+        "metric_name": "suhteellinen_velkaantuneisuus"
+      },
+      "expected_value": 37.0,
+      "anchor_terms": ["velkaantuneisuus", "vieras pääoma"]
+    },
+    {
+      "id": "REAL-AUDIT-003",
+      "type": "SHOULD",
+      "category": "audit",
+      "query": "Onko vastuuvapaus myönnettävissä tilinpäätöksen perusteella?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 125
+      },
+      "expected_doc": {
+        "section_pattern": "tilintarkastuskertomus",
+        "page_range": [60, 70]
+      },
+      "anchor_terms": ["vastuuvapaus", "tilintarkastus"]
+    },
+    {
+      "id": "REAL-COMPLIANCE-006",
+      "type": "SHOULD",
+      "category": "compliance",
+      "query": "Onko tilinpäätös allekirjoitettu määräajassa?",
+      "expected_law": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 113
+      },
+      "expected_doc": {
+        "section_pattern": "johdanto|allekirjoitus",
+        "page_range": [1, 5]
+      },
+      "anchor_terms": ["tilinpäätös", "laadittu", "2023"]
+    }
+  ]
+}
+

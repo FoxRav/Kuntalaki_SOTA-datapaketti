@@ -1,0 +1,194 @@
+[
+  {
+    "id": "GRAPH-REF-001",
+    "query": "Mikä on kuntakonsernin määritelmä ja mihin lakiin se viittaa?",
+    "primary_pass": true,
+    "graph_path_pass": true,
+    "support_pass": true,
+    "latency_ms": 523.9720344543457,
+    "primary_hit": {
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 6,
+      "moment": "1",
+      "score": 0.6647846293449402
+    },
+    "supporting_count": 1,
+    "normipolku_count": 2
+  },
+  {
+    "id": "GRAPH-REF-002",
+    "query": "Kunnan järjestämisvastuun siirtäminen ja rahoitusvastuu",
+    "primary_pass": true,
+    "graph_path_pass": true,
+    "support_pass": true,
+    "latency_ms": 46.39410972595215,
+    "primary_hit": {
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 8,
+      "moment": "3",
+      "score": 0.7305990052223206
+    },
+    "supporting_count": 0,
+    "normipolku_count": 0
+  },
+  {
+    "id": "GRAPH-EXC-001",
+    "query": "Kuntalain soveltamisala ja poikkeukset",
+    "primary_pass": true,
+    "graph_path_pass": true,
+    "support_pass": true,
+    "latency_ms": 38.99574279785156,
+    "primary_hit": {
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 2,
+      "moment": "1",
+      "score": 0.6786000323295593
+    },
+    "supporting_count": 1,
+    "normipolku_count": 1
+  },
+  {
+    "id": "GRAPH-REF-003",
+    "query": "Palvelujen tuottaminen ja järjestämisvastuu",
+    "primary_pass": true,
+    "graph_path_pass": true,
+    "support_pass": true,
+    "latency_ms": 37.25075721740723,
+    "primary_hit": {
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 9,
+      "moment": "3",
+      "score": 0.7261366438865662
+    },
+    "supporting_count": 1,
+    "normipolku_count": 1
+  },
+  {
+    "id": "GRAPH-REF-004",
+    "query": "Valtuuston tehtävät ja kunnan toiminta",
+    "primary_pass": true,
+    "graph_path_pass": true,
+    "support_pass": true,
+    "latency_ms": 39.629459381103516,
+    "primary_hit": {
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 14,
+      "moment": "1",
+      "score": 0.7572348308563233
+    },
+    "supporting_count": 0,
+    "normipolku_count": 0
+  },
+  {
+    "id": "GRAPH-DEF-001",
+    "query": "Kunnan jäsenen määritelmä",
+    "primary_pass": true,
+    "graph_path_pass": true,
+    "support_pass": true,
+    "latency_ms": 38.182973861694336,
+    "primary_hit": {
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 3,
+      "moment": "1",
+      "score": 0.7274628472328186
+    },
+    "supporting_count": 0,
+    "normipolku_count": 0
+  },
+  {
+    "id": "GRAPH-REF-005",
+    "query": "Tilinpäätös ja kirjanpitolain soveltaminen kuntaan",
+    "primary_pass": true,
+    "graph_path_pass": true,
+    "support_pass": true,
+    "latency_ms": 39.25275802612305,
+    "primary_hit": {
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 112,
+      "moment": "1",
+      "score": 0.7182060670852661
+    },
+    "supporting_count": 1,
+    "normipolku_count": 2
+  },
+  {
+    "id": "GRAPH-EXC-002",
+    "query": "Kuntayhtymän toimielinten soveltamissäännökset",
+    "primary_pass": true,
+    "graph_path_pass": true,
+    "support_pass": true,
+    "latency_ms": 38.78951072692871,
+    "primary_hit": {
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 2,
+      "moment": "2",
+      "score": 0.7266840529441834
+    },
+    "supporting_count": 1,
+    "normipolku_count": 1
+  },
+  {
+    "id": "GRAPH-REF-006",
+    "query": "Tilintarkastajan valinta ja osakeyhtiölain soveltaminen",
+    "primary_pass": true,
+    "graph_path_pass": true,
+    "support_pass": true,
+    "latency_ms": 247.10631370544434,
+    "primary_hit": {
+      "law_key": "tilintarkastuslaki_1141_2015",
+      "section_num": 2,
+      "moment": "4",
+      "score": 0.6980662536621094
+    },
+    "supporting_count": 1,
+    "normipolku_count": 3
+  },
+  {
+    "id": "GRAPH-REF-007",
+    "query": "Konsernitilinpäätöksen laatimisvelvollisuus ja määräysvalta",
+    "primary_pass": true,
+    "graph_path_pass": true,
+    "support_pass": true,
+    "latency_ms": 36.292076110839844,
+    "primary_hit": {
+      "law_key": "kirjanpitolaki_1336_1997",
+      "section_num": 1,
+      "moment": "2",
+      "score": 0.7195073366165161
+    },
+    "supporting_count": 1,
+    "normipolku_count": 8
+  },
+  {
+    "id": "GRAPH-CROSS-001",
+    "query": "Kunnan tilinpäätöksen laatimisperiaatteet vs kirjanpitolaki",
+    "primary_pass": true,
+    "graph_path_pass": true,
+    "support_pass": true,
+    "latency_ms": 103.8978099822998,
+    "primary_hit": {
+      "law_key": "kuntalaki_410_2015",
+      "section_num": 112,
+      "moment": "1",
+      "score": 0.6355752944946289
+    },
+    "supporting_count": 1,
+    "normipolku_count": 2
+  },
+  {
+    "id": "GRAPH-CROSS-002",
+    "query": "Hankintasopimuksen ja kilpailutuksen säännökset kuntahankinnoissa",
+    "primary_pass": true,
+    "graph_path_pass": true,
+    "support_pass": true,
+    "latency_ms": 126.03902816772461,
+    "primary_hit": {
+      "law_key": "hankintalaki_1397_2016",
+      "section_num": 1,
+      "moment": "1",
+      "score": 0.6200852704048156
+    },
+    "supporting_count": 0,
+    "normipolku_count": 0
+  }
+]

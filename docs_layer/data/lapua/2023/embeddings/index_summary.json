@@ -1,0 +1,11 @@
+{
+  "collection_name": "lapua_2023",
+  "document_count": 70,
+  "node_types": {
+    "SECTION": 12,
+    "PARA": 22,
+    "ROW": 26,
+    "TABLE": 3,
+    "METRIC": 7
+  }
+}

@@ -1,0 +1,1723 @@
+[
+  {
+    "case_id": "ADV-LAW-001",
+    "category": "LAW",
+    "query": "kunnan laatimisvelvollisuus",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitolaki_1336_1997"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 874.7889995574951,
+    "id": "ADV-LAW-001",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.6597464251518249,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "required_anchor_terms": [
+        "kunta",
+        "laatiminen",
+        "tilinpäätös"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015"
+    ],
+    "pass_reason": "Expected law found in top-3"
+  },
+  {
+    "case_id": "ADV-LAW-002",
+    "category": "LAW",
+    "query": "tilinpäätöksen laatiminen kirjanpitovelvollisella kunnalla",
+    "top1_law_key": "kirjanpitolaki_1336_1997",
+    "topk_law_keys": [
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitolaki_1336_1997",
+      "osakeyhtiolaki_624_2006",
+      "kuntalaki_410_2015",
+      "kirjanpitolaki_1336_1997"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 42.21653938293457,
+    "id": "ADV-LAW-002",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kirjanpitolaki_1336_1997",
+    "top1_score": 0.694114089012146,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015",
+        "kirjanpitolaki_1336_1997"
+      ],
+      "required_anchor_terms": [
+        "tilinpäätös",
+        "kunta",
+        "kirjanpito"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015",
+      "kirjanpitolaki_1336_1997"
+    ],
+    "actual_topk_laws": [
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitolaki_1336_1997",
+      "osakeyhtiolaki_624_2006",
+      "kuntalaki_410_2015",
+      "kirjanpitolaki_1336_1997"
+    ],
+    "pass_reason": "Expected law found in top-5"
+  },
+  {
+    "case_id": "ADV-LAW-003",
+    "category": "LAW",
+    "query": "kuntakonsernin konsernitilinpäätös vai konsernitilinpäätös yhtiössä?",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006",
+      "tilintarkastuslaki_1141_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 40.14873504638672,
+    "id": "ADV-LAW-003",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.8189702796936035,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015",
+        "osakeyhtiolaki_624_2006"
+      ],
+      "required_anchor_terms": [
+        "konserni",
+        "tilinpäätös"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006",
+      "tilintarkastuslaki_1141_2015"
+    ],
+    "pass_reason": "Expected law found in top-5"
+  },
+  {
+    "case_id": "ADV-LAW-004",
+    "category": "LAW",
+    "query": "tilintarkastajan muistutus kunnan päätöksistä",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "tilintarkastuslaki_1141_2015",
+      "tilintarkastuslaki_1141_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 45.682430267333984,
+    "id": "ADV-LAW-004",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.7766302394866943,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "required_anchor_terms": [
+        "tilintarkastaja",
+        "muistutus",
+        "kunta"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015"
+    ],
+    "pass_reason": "Expected law found in top-3"
+  },
+  {
+    "case_id": "ADV-LAW-005",
+    "category": "LAW",
+    "query": "hankinnan kynnysarvot kunnassa",
+    "top1_law_key": "hankintalaki_1397_2016",
+    "topk_law_keys": [
+      "hankintalaki_1397_2016",
+      "hankintalaki_1397_2016",
+      "hankintalaki_1397_2016",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 40.9245491027832,
+    "id": "ADV-LAW-005",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "hankintalaki_1397_2016",
+    "top1_score": 0.6643668413162231,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "hankintalaki_1397_2016"
+      ],
+      "required_anchor_terms": [
+        "hankinta",
+        "kynnysarvo"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "hankintalaki_1397_2016"
+    ],
+    "actual_topk_laws": [
+      "hankintalaki_1397_2016",
+      "hankintalaki_1397_2016",
+      "hankintalaki_1397_2016"
+    ],
+    "pass_reason": "Expected law found in top-3"
+  },
+  {
+    "case_id": "ADV-LAW-006",
+    "category": "LAW",
+    "query": "liitetiedot kunnan taseessa",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 42.77539253234863,
+    "id": "ADV-LAW-006",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.6733592319488525,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015",
+        "kirjanpitolaki_1336_1997",
+        "kirjanpitoasetus_1339_1997"
+      ],
+      "required_anchor_terms": [
+        "liitetiedot",
+        "tase",
+        "kunta"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015",
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitoasetus_1339_1997"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997"
+    ],
+    "pass_reason": "Expected law found in top-5"
+  },
+  {
+    "case_id": "ADV-LAW-007",
+    "category": "LAW",
+    "query": "osakeyhtiön hallituksen vastuu kunnan tytäryhtiössä",
+    "top1_law_key": "osakeyhtiolaki_624_2006",
+    "topk_law_keys": [
+      "osakeyhtiolaki_624_2006",
+      "osakeyhtiolaki_624_2006",
+      "osakeyhtiolaki_624_2006",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 46.47254943847656,
+    "id": "ADV-LAW-007",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "osakeyhtiolaki_624_2006",
+    "top1_score": 0.6702891159057617,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "osakeyhtiolaki_624_2006"
+      ],
+      "required_anchor_terms": [
+        "hallitus",
+        "vastuu",
+        "osakeyhtiö"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "osakeyhtiolaki_624_2006"
+    ],
+    "actual_topk_laws": [
+      "osakeyhtiolaki_624_2006",
+      "osakeyhtiolaki_624_2006",
+      "osakeyhtiolaki_624_2006"
+    ],
+    "pass_reason": "Expected law found in top-3"
+  },
+  {
+    "case_id": "ADV-LAW-008",
+    "category": "LAW",
+    "query": "tasekirja ja toimintakertomus kunnassa",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitolaki_1336_1997"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 44.72851753234863,
+    "id": "ADV-LAW-008",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.6488434672355652,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "required_anchor_terms": [
+        "tasekirja",
+        "toimintakertomus",
+        "kunta"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015"
+    ],
+    "pass_reason": "Expected law found in top-3"
+  },
+  {
+    "case_id": "ADV-LAW-009",
+    "category": "LAW",
+    "query": "tuloslaskelmakaava kunnalla",
+    "top1_law_key": "kirjanpitoasetus_1339_1997",
+    "topk_law_keys": [
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 46.6153621673584,
+    "id": "ADV-LAW-009",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kirjanpitoasetus_1339_1997",
+    "top1_score": 0.6335174441337585,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kirjanpitoasetus_1339_1997"
+      ],
+      "required_anchor_terms": [
+        "tuloslaskelma",
+        "kaava"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kirjanpitoasetus_1339_1997"
+    ],
+    "actual_topk_laws": [
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997"
+    ],
+    "pass_reason": "Expected law found in top-3"
+  },
+  {
+    "case_id": "ADV-LAW-010",
+    "category": "LAW",
+    "query": "kunnan alijäämäselvitys toimintakertomuksessa",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006",
+      "osakeyhtiolaki_624_2006"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 50.704002380371094,
+    "id": "ADV-LAW-010",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.8327463436126709,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "required_anchor_terms": [
+        "alijäämä",
+        "selvitys",
+        "toimintakertomus"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015"
+    ],
+    "pass_reason": "Expected law found in top-3"
+  },
+  {
+    "case_id": "ADV-GRAPH-001",
+    "category": "GRAPH",
+    "query": "milloin kuntalain tilinpäätössäännöksistä voidaan poiketa?",
+    "top1_law_key": "kirjanpitolaki_1336_1997",
+    "topk_law_keys": [
+      "kirjanpitolaki_1336_1997",
+      "kuntalaki_410_2015",
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitolaki_1336_1997",
+      "kuntalaki_410_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 49.37124252319336,
+    "id": "ADV-GRAPH-001",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kirjanpitolaki_1336_1997",
+    "top1_score": 0.6169474124908447,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "expected_edge_types": [
+        "EXCEPTS"
+      ],
+      "required_anchor_terms": [
+        "poiketa",
+        "tilinpäätös"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kirjanpitolaki_1336_1997",
+      "kuntalaki_410_2015",
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitolaki_1336_1997",
+      "kuntalaki_410_2015"
+    ],
+    "pass_reason": "Expected law found in top-5"
+  },
+  {
+    "case_id": "ADV-GRAPH-002",
+    "category": "GRAPH",
+    "query": "mitä tarkoitetaan kuntakonsernilla tässä laissa?",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "tilintarkastuslaki_1141_2015",
+      "kirjanpitolaki_1336_1997"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 47.27768898010254,
+    "id": "ADV-GRAPH-002",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.7244905400276184,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "expected_edge_types": [
+        "DEFINES"
+      ],
+      "required_anchor_terms": [
+        "kuntakonserni",
+        "tarkoitetaan",
+        "määritelmä"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015"
+    ],
+    "pass_reason": "Expected law found in top-3"
+  },
+  {
+    "case_id": "ADV-GRAPH-003",
+    "category": "GRAPH",
+    "query": "sovelletaanko kuntalakia vai kirjanpitolakia tilinpäätökseen?",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006",
+      "tilintarkastuslaki_1141_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 41.29934310913086,
+    "id": "ADV-GRAPH-003",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.7439768481254577,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "expected_edge_types": [
+        "REFERS_TO"
+      ],
+      "required_anchor_terms": [
+        "soveltaa",
+        "kuntalaki",
+        "kirjanpitolaki"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006",
+      "tilintarkastuslaki_1141_2015"
+    ],
+    "pass_reason": "Expected law found in top-5"
+  },
+  {
+    "case_id": "ADV-GRAPH-004",
+    "category": "GRAPH",
+    "query": "jollei toisin säädetä kunnan talousarviosta",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006",
+      "hankintalaki_1397_2016"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 40.34996032714844,
+    "id": "ADV-GRAPH-004",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.666868405342102,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "expected_edge_types": [
+        "EXCEPTS"
+      ],
+      "required_anchor_terms": [
+        "jollei",
+        "talousarvio"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006",
+      "hankintalaki_1397_2016"
+    ],
+    "pass_reason": "Expected law found in top-5"
+  },
+  {
+    "case_id": "ADV-GRAPH-005",
+    "category": "GRAPH",
+    "query": "kuntalain 1 luvun määritelmät ja soveltamisala",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "tilintarkastuslaki_1141_2015",
+      "tilintarkastuslaki_1141_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 41.55445098876953,
+    "id": "ADV-GRAPH-005",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.6095682978630066,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "expected_edge_types": [
+        "DEFINES"
+      ],
+      "required_anchor_terms": [
+        "määritelmä",
+        "soveltamisala",
+        "1 luku"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015"
+    ],
+    "pass_reason": "Expected law found in top-3"
+  },
+  {
+    "case_id": "ADV-GRAPH-006",
+    "category": "GRAPH",
+    "query": "kunnan tilinpäätöksen allekirjoittajat ja vastuut",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kirjanpitolaki_1336_1997",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 42.79327392578125,
+    "id": "ADV-GRAPH-006",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.8276356625556945,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "expected_edge_types": [
+        "REFERS_TO"
+      ],
+      "required_anchor_terms": [
+        "allekirjoitus",
+        "vastuu"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "kirjanpitolaki_1336_1997",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006"
+    ],
+    "pass_reason": "Expected law found in top-5"
+  },
+  {
+    "case_id": "ADV-GRAPH-007",
+    "category": "GRAPH",
+    "query": "arviointimenettelyn kriteerit ja seuraukset",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "hankintalaki_1397_2016",
+      "hankintalaki_1397_2016",
+      "hankintalaki_1397_2016",
+      "tilintarkastuslaki_1141_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 42.59347915649414,
+    "id": "ADV-GRAPH-007",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.5827170610427856,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "expected_edge_types": [
+        "REFERS_TO"
+      ],
+      "required_anchor_terms": [
+        "arviointimenettely",
+        "kriisikunta"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "hankintalaki_1397_2016",
+      "hankintalaki_1397_2016",
+      "hankintalaki_1397_2016",
+      "tilintarkastuslaki_1141_2015"
+    ],
+    "pass_reason": "Expected law found in top-5"
+  },
+  {
+    "case_id": "ADV-GRAPH-008",
+    "category": "GRAPH",
+    "query": "tarkastuslautakunnan tehtävät ja tilintarkastuksen suhde",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "tilintarkastuslaki_1141_2015",
+      "osakeyhtiolaki_624_2006"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 133.4059238433838,
+    "id": "ADV-GRAPH-008",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.7737156319618225,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "expected_edge_types": [
+        "REFERS_TO"
+      ],
+      "required_anchor_terms": [
+        "tarkastuslautakunta",
+        "tilintarkastus"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "tilintarkastuslaki_1141_2015",
+      "osakeyhtiolaki_624_2006"
+    ],
+    "pass_reason": "Expected law found in top-5"
+  },
+  {
+    "case_id": "ADV-GRAPH-009",
+    "category": "GRAPH",
+    "query": "konsernitilinpäätöksen laatimisperiaatteet ja viittaukset kirjanpitolakiin",
+    "top1_law_key": "kirjanpitoasetus_1339_1997",
+    "topk_law_keys": [
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997",
+      "osakeyhtiolaki_624_2006",
+      "kuntalaki_410_2015",
+      "kirjanpitoasetus_1339_1997"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 46.14996910095215,
+    "id": "ADV-GRAPH-009",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kirjanpitoasetus_1339_1997",
+    "top1_score": 0.73564213514328,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "expected_edge_types": [
+        "REFERS_TO"
+      ],
+      "required_anchor_terms": [
+        "konsernitilinpäätös",
+        "kirjanpitolaki"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997",
+      "osakeyhtiolaki_624_2006",
+      "kuntalaki_410_2015",
+      "kirjanpitoasetus_1339_1997"
+    ],
+    "pass_reason": "Expected law found in top-5"
+  },
+  {
+    "case_id": "ADV-GRAPH-010",
+    "category": "GRAPH",
+    "query": "kunnan lainanotto ja takaukset - pykäläviittaukset",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006",
+      "osakeyhtiolaki_624_2006"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 40.750980377197266,
+    "id": "ADV-GRAPH-010",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.7098263072967529,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "expected_edge_types": [
+        "REFERS_TO"
+      ],
+      "required_anchor_terms": [
+        "laina",
+        "takaus",
+        "129"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006",
+      "osakeyhtiolaki_624_2006"
+    ],
+    "pass_reason": "Expected law found in top-5"
+  },
+  {
+    "case_id": "ADV-DOC-001",
+    "category": "DOC",
+    "query": "missä tilinpäätöksen kohdassa näkyy kattamaton alijäämä?",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitolaki_1336_1997"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 143.28956604003906,
+    "id": "ADV-DOC-001",
+    "law_hits_count": 10,
+    "doc_hits_count": 5,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.6557927131652832,
+    "abstain_reason": "",
+    "expected": {
+      "expected_doc_path_any": [
+        "toimintakertomus",
+        "tase"
+      ],
+      "required_anchor_terms": [
+        "alijäämä",
+        "kattamaton"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "pass_reason": "DOC hits found"
+  },
+  {
+    "case_id": "ADV-DOC-002",
+    "category": "DOC",
+    "query": "näytä taulukosta rahoituslaskelman nettoinvestoinnit",
+    "top1_law_key": "kirjanpitoasetus_1339_1997",
+    "topk_law_keys": [
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitolaki_1336_1997",
+      "kuntalaki_410_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 76.92360877990723,
+    "id": "ADV-DOC-002",
+    "law_hits_count": 10,
+    "doc_hits_count": 5,
+    "top1_law": "kirjanpitoasetus_1339_1997",
+    "top1_score": 0.5695445537567139,
+    "abstain_reason": "",
+    "expected": {
+      "expected_doc_path_any": [
+        "rahoituslaskelma"
+      ],
+      "expected_node_type": "TABLE",
+      "required_anchor_terms": [
+        "rahoituslaskelma",
+        "investointi"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "pass_reason": "DOC hits found"
+  },
+  {
+    "case_id": "ADV-DOC-003",
+    "category": "DOC",
+    "query": "millä sivulla esitetään takaukset ja vastuusitoumukset?",
+    "top1_law_key": "kirjanpitoasetus_1339_1997",
+    "topk_law_keys": [
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitoasetus_1339_1997",
+      "tilintarkastuslaki_1141_2015",
+      "kirjanpitoasetus_1339_1997"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 72.53360748291016,
+    "id": "ADV-DOC-003",
+    "law_hits_count": 10,
+    "doc_hits_count": 5,
+    "top1_law": "kirjanpitoasetus_1339_1997",
+    "top1_score": 0.5724903345108032,
+    "abstain_reason": "",
+    "expected": {
+      "expected_doc_path_any": [
+        "liitetiedot",
+        "vastuusitoumukset"
+      ],
+      "required_anchor_terms": [
+        "takaukset",
+        "vastuusitoumukset",
+        "sivu"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "pass_reason": "DOC hits found"
+  },
+  {
+    "case_id": "ADV-DOC-004",
+    "category": "DOC",
+    "query": "löytyykö toimintakertomuksesta olennaiset tapahtumat?",
+    "top1_law_key": "kirjanpitolaki_1336_1997",
+    "topk_law_keys": [
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitolaki_1336_1997",
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 73.41957092285156,
+    "id": "ADV-DOC-004",
+    "law_hits_count": 10,
+    "doc_hits_count": 5,
+    "top1_law": "kirjanpitolaki_1336_1997",
+    "top1_score": 0.6607509851455688,
+    "abstain_reason": "",
+    "expected": {
+      "expected_doc_path_any": [
+        "toimintakertomus"
+      ],
+      "expected_node_type": "PARA",
+      "required_anchor_terms": [
+        "toimintakertomus",
+        "olennaiset",
+        "tapahtumat"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "pass_reason": "DOC hits found"
+  },
+  {
+    "case_id": "ADV-DOC-005",
+    "category": "DOC",
+    "query": "mikä on vuosikate tuloslaskelmassa ja onko se positiivinen?",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitolaki_1336_1997"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 81.13551139831543,
+    "id": "ADV-DOC-005",
+    "law_hits_count": 10,
+    "doc_hits_count": 5,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.5981502532958984,
+    "abstain_reason": "",
+    "expected": {
+      "expected_doc_path_any": [
+        "tuloslaskelma"
+      ],
+      "expected_node_type": "ROW",
+      "required_anchor_terms": [
+        "vuosikate",
+        "positiivinen"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "pass_reason": "DOC hits found"
+  },
+  {
+    "case_id": "ADV-DOC-006",
+    "category": "DOC",
+    "query": "näytä taseen oma pääoma -erittely",
+    "top1_law_key": "osakeyhtiolaki_624_2006",
+    "topk_law_keys": [
+      "osakeyhtiolaki_624_2006",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 85.90507507324219,
+    "id": "ADV-DOC-006",
+    "law_hits_count": 10,
+    "doc_hits_count": 5,
+    "top1_law": "osakeyhtiolaki_624_2006",
+    "top1_score": 0.5881843566894531,
+    "abstain_reason": "",
+    "expected": {
+      "expected_doc_path_any": [
+        "tase"
+      ],
+      "expected_node_type": "TABLE",
+      "required_anchor_terms": [
+        "tase",
+        "oma pääoma"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "pass_reason": "DOC hits found"
+  },
+  {
+    "case_id": "ADV-DOC-007",
+    "category": "DOC",
+    "query": "mitä riskejä toimintakertomuksessa mainitaan?",
+    "top1_law_key": "kirjanpitolaki_1336_1997",
+    "topk_law_keys": [
+      "kirjanpitolaki_1336_1997",
+      "osakeyhtiolaki_624_2006",
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitolaki_1336_1997",
+      "osakeyhtiolaki_624_2006"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 75.06370544433594,
+    "id": "ADV-DOC-007",
+    "law_hits_count": 10,
+    "doc_hits_count": 5,
+    "top1_law": "kirjanpitolaki_1336_1997",
+    "top1_score": 0.6034819483757019,
+    "abstain_reason": "",
+    "expected": {
+      "expected_doc_path_any": [
+        "toimintakertomus",
+        "riskienhallinta"
+      ],
+      "expected_node_type": "PARA",
+      "required_anchor_terms": [
+        "riskit",
+        "riskienhallinta"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "pass_reason": "DOC hits found"
+  },
+  {
+    "case_id": "ADV-DOC-008",
+    "category": "DOC",
+    "query": "onko konsernin tuloslaskelmassa alijäämä?",
+    "top1_law_key": "kirjanpitolaki_1336_1997",
+    "topk_law_keys": [
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitolaki_1336_1997",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 74.554443359375,
+    "id": "ADV-DOC-008",
+    "law_hits_count": 10,
+    "doc_hits_count": 5,
+    "top1_law": "kirjanpitolaki_1336_1997",
+    "top1_score": 0.6521583199501038,
+    "abstain_reason": "",
+    "expected": {
+      "expected_doc_path_any": [
+        "konsernitilinpäätös",
+        "konserni"
+      ],
+      "expected_node_type": "TABLE",
+      "required_anchor_terms": [
+        "konserni",
+        "tuloslaskelma",
+        "alijäämä"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "pass_reason": "DOC hits found"
+  },
+  {
+    "case_id": "ADV-DOC-009",
+    "category": "DOC",
+    "query": "mitä tilintarkastuskertomuksessa sanotaan?",
+    "top1_law_key": "tilintarkastuslaki_1141_2015",
+    "topk_law_keys": [
+      "tilintarkastuslaki_1141_2015",
+      "tilintarkastuslaki_1141_2015",
+      "tilintarkastuslaki_1141_2015",
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 76.75743103027344,
+    "id": "ADV-DOC-009",
+    "law_hits_count": 10,
+    "doc_hits_count": 5,
+    "top1_law": "tilintarkastuslaki_1141_2015",
+    "top1_score": 0.6542239189147949,
+    "abstain_reason": "",
+    "expected": {
+      "expected_doc_path_any": [
+        "tilintarkastuskertomus"
+      ],
+      "expected_node_type": "PARA",
+      "required_anchor_terms": [
+        "tilintarkastus",
+        "kertomus"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "pass_reason": "DOC hits found"
+  },
+  {
+    "case_id": "ADV-DOC-010",
+    "category": "DOC",
+    "query": "miten liitetiedoissa kuvataan arvostusperiaatteet?",
+    "top1_law_key": "kirjanpitoasetus_1339_1997",
+    "topk_law_keys": [
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitoasetus_1339_1997",
+      "kirjanpitolaki_1336_1997",
+      "kuntalaki_410_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 73.31442832946777,
+    "id": "ADV-DOC-010",
+    "law_hits_count": 10,
+    "doc_hits_count": 5,
+    "top1_law": "kirjanpitoasetus_1339_1997",
+    "top1_score": 0.6373683214187622,
+    "abstain_reason": "",
+    "expected": {
+      "expected_doc_path_any": [
+        "liitetiedot",
+        "laatimisperiaatteet"
+      ],
+      "expected_node_type": "PARA",
+      "required_anchor_terms": [
+        "arvostus",
+        "periaatteet",
+        "liitetiedot"
+      ],
+      "must_abstain": false
+    },
+    "pass": true,
+    "pass_reason": "DOC hits found"
+  },
+  {
+    "case_id": "ADV-ABSTAIN-001",
+    "category": "ABSTAIN",
+    "query": "mikä on hankintalain EU-kynnysarvo tänään?",
+    "top1_law_key": "hankintalaki_1397_2016",
+    "topk_law_keys": [
+      "hankintalaki_1397_2016",
+      "hankintalaki_1397_2016",
+      "hankintalaki_1397_2016",
+      "kuntalaki_410_2015",
+      "kirjanpitolaki_1336_1997"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": true,
+    "abstain_expected": true,
+    "latency_ms": 39.3221378326416,
+    "id": "ADV-ABSTAIN-001",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "hankintalaki_1397_2016",
+    "top1_score": 0.725990891456604,
+    "abstain_reason": "Strong signal: 'tänään'",
+    "expected": {
+      "expected_law_any": [
+        "hankintalaki_1397_2016"
+      ],
+      "required_anchor_terms": [
+        "kynnysarvo",
+        "EU"
+      ],
+      "must_abstain": true,
+      "abstain_reason": "Vaatii ajantasaisen finlex_version; data voi olla vanhentunut"
+    },
+    "pass": true,
+    "pass_reason": "Correctly abstained",
+    "metric_type": "ABSTAIN"
+  },
+  {
+    "case_id": "ADV-ABSTAIN-002",
+    "category": "ABSTAIN",
+    "query": "mikä on Lapuan vuosikate 2024?",
+    "top1_law_key": null,
+    "topk_law_keys": [],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": true,
+    "abstain_expected": true,
+    "latency_ms": 42.86527633666992,
+    "id": "ADV-ABSTAIN-002",
+    "law_hits_count": 0,
+    "doc_hits_count": 0,
+    "top1_law": null,
+    "top1_score": 0,
+    "abstain_reason": "Strong signal: '2024'",
+    "expected": {
+      "expected_doc_path_any": [],
+      "required_anchor_terms": [
+        "vuosikate",
+        "2024"
+      ],
+      "must_abstain": true,
+      "abstain_reason": "Vain 2023 data saatavilla"
+    },
+    "pass": true,
+    "pass_reason": "Correctly abstained",
+    "metric_type": "ABSTAIN"
+  },
+  {
+    "case_id": "ADV-ABSTAIN-003",
+    "category": "ABSTAIN",
+    "query": "mikä on kunnan veroprosentti?",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "hankintalaki_1397_2016",
+      "hankintalaki_1397_2016"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": true,
+    "abstain_expected": true,
+    "latency_ms": 46.418190002441406,
+    "id": "ADV-ABSTAIN-003",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.6754613089561462,
+    "abstain_reason": "Strong signal: 'veroprosentti'",
+    "expected": {
+      "expected_law_any": [],
+      "required_anchor_terms": [
+        "veroprosentti"
+      ],
+      "must_abstain": true,
+      "abstain_reason": "Ei sisälly lakiteksti-indeksiin"
+    },
+    "pass": true,
+    "pass_reason": "Correctly abstained",
+    "metric_type": "ABSTAIN"
+  },
+  {
+    "case_id": "ADV-ABSTAIN-004",
+    "category": "ABSTAIN",
+    "query": "anna juridinen neuvo henkilökohtaisessa riidassa",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "osakeyhtiolaki_624_2006",
+      "osakeyhtiolaki_624_2006",
+      "kuntalaki_410_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": true,
+    "abstain_expected": true,
+    "latency_ms": 42.729854583740234,
+    "id": "ADV-ABSTAIN-004",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.5134286284446716,
+    "abstain_reason": "Strong signal: 'henkilökohtai'",
+    "expected": {
+      "expected_law_any": [],
+      "required_anchor_terms": [],
+      "must_abstain": true,
+      "abstain_reason": "Out of scope - henkilökohtainen neuvonta"
+    },
+    "pass": true,
+    "pass_reason": "Correctly abstained",
+    "metric_type": "ABSTAIN"
+  },
+  {
+    "case_id": "ADV-ABSTAIN-005",
+    "category": "ABSTAIN",
+    "query": "mitkä ovat Helsingin kaupungin talousluvut?",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kirjanpitolaki_1336_1997",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": true,
+    "abstain_expected": true,
+    "latency_ms": 41.59712791442871,
+    "id": "ADV-ABSTAIN-005",
+    "law_hits_count": 4,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.4103146195411682,
+    "abstain_reason": "Strong signal: 'helsingin'",
+    "expected": {
+      "expected_doc_path_any": [],
+      "required_anchor_terms": [
+        "Helsinki"
+      ],
+      "must_abstain": true,
+      "abstain_reason": "Vain Lapua corpus"
+    },
+    "pass": true,
+    "pass_reason": "Correctly abstained",
+    "metric_type": "ABSTAIN"
+  },
+  {
+    "case_id": "ADV-ABSTAIN-006",
+    "category": "ABSTAIN",
+    "query": "mikä on voimassa oleva kuntalaki tänään?",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "hankintalaki_1397_2016",
+      "hankintalaki_1397_2016"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": true,
+    "abstain_expected": true,
+    "latency_ms": 39.08395767211914,
+    "id": "ADV-ABSTAIN-006",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.631132321357727,
+    "abstain_reason": "Strong signal: 'tänään'",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "required_anchor_terms": [
+        "voimassa"
+      ],
+      "must_abstain": true,
+      "abstain_reason": "Finlex_version voi olla vanhempi kuin 'tänään'"
+    },
+    "pass": true,
+    "pass_reason": "Correctly abstained",
+    "metric_type": "ABSTAIN"
+  },
+  {
+    "case_id": "ADV-ABSTAIN-007",
+    "category": "ABSTAIN",
+    "query": "mitä sanoo uusi hankintalakimuutos 2025?",
+    "top1_law_key": "hankintalaki_1397_2016",
+    "topk_law_keys": [
+      "hankintalaki_1397_2016",
+      "hankintalaki_1397_2016",
+      "hankintalaki_1397_2016",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": true,
+    "abstain_expected": true,
+    "latency_ms": 47.5921630859375,
+    "id": "ADV-ABSTAIN-007",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "hankintalaki_1397_2016",
+    "top1_score": 0.5601196885108948,
+    "abstain_reason": "Strong signal: '2025'",
+    "expected": {
+      "expected_law_any": [],
+      "required_anchor_terms": [
+        "2025",
+        "muutos"
+      ],
+      "must_abstain": true,
+      "abstain_reason": "Tulevaisuuden lainsäädäntö ei datassa"
+    },
+    "pass": true,
+    "pass_reason": "Correctly abstained",
+    "metric_type": "ABSTAIN"
+  },
+  {
+    "case_id": "ADV-ABSTAIN-008",
+    "category": "ABSTAIN",
+    "query": "voiko kunta mennä konkurssiin?",
+    "top1_law_key": "osakeyhtiolaki_624_2006",
+    "topk_law_keys": [
+      "osakeyhtiolaki_624_2006",
+      "osakeyhtiolaki_624_2006",
+      "osakeyhtiolaki_624_2006",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": true,
+    "abstain_expected": true,
+    "latency_ms": 40.657758712768555,
+    "id": "ADV-ABSTAIN-008",
+    "law_hits_count": 10,
+    "doc_hits_count": 0,
+    "top1_law": "osakeyhtiolaki_624_2006",
+    "top1_score": 0.6086520552635193,
+    "abstain_reason": "Interpretation needed: 'konkurssi'",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "required_anchor_terms": [
+        "konkurssi"
+      ],
+      "must_abstain": true,
+      "abstain_reason": "Kunta ei voi mennä konkurssiin - vastaus vaatii tulkintaa"
+    },
+    "pass": true,
+    "pass_reason": "Correctly abstained",
+    "metric_type": "ABSTAIN"
+  },
+  {
+    "case_id": "ADV-ABSTAIN-009",
+    "category": "ABSTAIN",
+    "query": "mitä kuntalaissa sanotaan koronapandemiasta?",
+    "top1_law_key": "kuntalaki_410_2015",
+    "topk_law_keys": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015"
+    ],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": false,
+    "abstain_expected": false,
+    "latency_ms": 42.91486740112305,
+    "id": "ADV-ABSTAIN-009",
+    "law_hits_count": 3,
+    "doc_hits_count": 0,
+    "top1_law": "kuntalaki_410_2015",
+    "top1_score": 0.428678035736084,
+    "abstain_reason": "",
+    "expected": {
+      "expected_law_any": [
+        "kuntalaki_410_2015"
+      ],
+      "required_anchor_terms": [
+        "korona",
+        "pandemia"
+      ],
+      "must_abstain": false,
+      "abstain_reason": null
+    },
+    "pass": true,
+    "expected_laws": [
+      "kuntalaki_410_2015"
+    ],
+    "actual_topk_laws": [
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015",
+      "kuntalaki_410_2015"
+    ],
+    "pass_reason": "Expected law found in top-5"
+  },
+  {
+    "case_id": "ADV-ABSTAIN-010",
+    "category": "ABSTAIN",
+    "query": "paljonko Lapuan kaupungin tytäryhtiöt maksoivat osinkoja 2023?",
+    "top1_law_key": null,
+    "topk_law_keys": [],
+    "confusion_fail": false,
+    "hallucinated_evidence": false,
+    "version_drift": false,
+    "system_abstains": true,
+    "abstain_expected": true,
+    "latency_ms": 41.99647903442383,
+    "id": "ADV-ABSTAIN-010",
+    "law_hits_count": 0,
+    "doc_hits_count": 0,
+    "top1_law": null,
+    "top1_score": 0,
+    "abstain_reason": "Strong signal: 'osinko'",
+    "expected": {
+      "expected_doc_path_any": [],
+      "required_anchor_terms": [
+        "osinko",
+        "tytäryhtiö"
+      ],
+      "must_abstain": true,
+      "abstain_reason": "Osinko-tieto ei sisälly synteettiseen testidataan"
+    },
+    "pass": true,
+    "pass_reason": "Correctly abstained",
+    "metric_type": "ABSTAIN"
+  }
+]

@@ -1,8 +1,8 @@
-# Kunnallinen Talous Law Stack (v5)
+# Kunnallinen Talous Law Stack (v8)
 
 **Suomen kunnallisen talous- ja valvontadomainin lainsäädäntö SOTA-tasoisena AI-analyysidatana.**
 
-Finlexin Akoma Ntoso XML -muodosta muunnettuna momenttitason JSON/JSONL-dataksi, vektori-indeksillä (ChromaDB/bge-m3) ja deterministisellä query-time reitityksellä.
+Finlexin Akoma Ntoso XML -muodosta muunnettuna momenttitason JSON/JSONL-dataksi, vektori-indeksillä (ChromaDB/bge-m3), deterministisellä query-time reitityksellä ja **graph-guided context expansionilla**.
 
 ## Lait
 
@@ -32,6 +32,12 @@ Finlexin Akoma Ntoso XML -muodosta muunnettuna momenttitason JSON/JSONL-dataksi,
 │   ├── hankintalaki_1397_2016/
 │   └── osakeyhtiolaki_624_2006/
 │
+├── graph/                    # v8: Structural Legal Graph
+│   ├── nodes.jsonl           # 2648 moment nodes
+│   ├── edges.jsonl           # 4412 edges (REFERS_TO, EXCEPTS, DEFINES)
+│   ├── graph_summary.json    # Statistics
+│   └── eval/                 # Graph-needed eval
+│
 ├── shared/                   # Jaettu infrastruktuuri
 │   ├── law_catalog.json      # Lakikatalogi
 │   ├── cross_refs.json       # Ristiinviittaukset
@@ -42,7 +48,10 @@ Finlexin Akoma Ntoso XML -muodosta muunnettuna momenttitason JSON/JSONL-dataksi,
 │
 ├── scripts/                  # Ajoskriptit
 │   ├── build_all_embeddings.py
-│   └── multi_law_query.py    # Multi-laki haku
+│   ├── multi_law_query.py          # Multi-laki haku
+│   ├── build_structural_legal_graph.py  # v8: Graafin rakentaja
+│   ├── graph_guided_query.py       # v8: Graph-guided query
+│   └── graph_context_builder.py    # v8: Context expansion
 │
 └── eval/                     # Evaluaatio
     └── v3/                   # 150 kysymyksen testipatteri
@@ -180,6 +189,41 @@ Kaikki 20 asiantuntijatason kysymystä (talousammattilaisen näkökulmasta) tunn
 
 **OVERALL: PASS** ✅
 
+## Graph-guided RAG (v8.1) ✅
+
+| Metric | Tulos | Gate | Tila |
+|--------|--------|------|------|
+| **Nodes** | 2648 | - | - |
+| **Edges** | 4487 | - | - |
+| **PRIMARY_PASS** | **100.0%** | ≥ 90% | ✅ |
+| **GRAPH_PATH_PASS** | **100.0%** | ≥ 85% | ✅ |
+| **SUPPORT_PASS** | **100.0%** | ≥ 80% | ✅ |
+| **Latency** | **109.7 ms** | < 150 ms | ✅ |
+
+**OVERALL: 100% ALL v8.1 METRICS** ✅
+
+Edge types:
+- REFERS_TO (internal): 1093
+- REFERS_TO (external): 147
+- EXCEPTS: 56
+- DEFINES: 133
+
+v8.1 improvements:
+- Section-level neighbor expansion (graph-context-builder)
+- Named law reference parsing (kirjanpitolakia, tilintarkastuslakia etc.)
+- Router hardening for municipal context
+- Law-mismatch penalty for reranking
+
+### Graph-guided Query
+
+```bash
+# Interactive mode
+python scripts/graph_guided_query.py --interactive
+
+# Single query with normipolku
+python scripts/graph_guided_query.py "kuntalain tilinpäätös pykälä 113"
+```
+
 ## Roadmap
 
 1. ✅ **v4**: Kuntalaki SOTA (100% pass)
@@ -190,6 +234,98 @@ Kaikki 20 asiantuntijatason kysymystä (talousammattilaisen näkökulmasta) tunn
 6. ✅ **v7.1**: Router-bonus + Pair-guards (HN=0)
 7. ✅ **v7.2**: Multi-law autofill + eval (**100% PASS**)
 8. ✅ **SOTA**: 20 asiantuntijakysymystä (**20/20 = 100%**)
+9. ✅ **v8**: Graph-guided Legal RAG (2648 nodes, 4412 edges)
+10. ✅ **v8.1**: Graph-guided kovennus (**ALL GATES PASS**)
+11. ✅ **v9**: Document Graph + Law↔Report Mapping (**ALL GATES PASS**)
+12. ✅ **v10.1**: Adversarial Eval - Robustness Testing (**ALL GATES PASS**)
+13. ✅ **v11**: Finance Eval - Table-aware Retrieval (**ALL GATES PASS**)
+
+## Finance Eval - Table-aware Retrieval (v11) ✅
+
+**Kuntatalous-ajattelu**: Taulukko-evidenssi pakollinen numerokysymyksille.
+
+| Gate | Value | Threshold | Status |
+|------|-------|-----------|--------|
+| **TABLE_EVIDENCE** | 100.0% | ≥90% | ✅ PASS |
+| **NUMERIC_ACCURACY** | 100.0% | ≥95% | ✅ PASS |
+| **CITATION_COVERAGE** | 86.4% | ≥85% | ✅ PASS |
+| **ABSTAIN_CORRECT** | 100.0% | ≥90% | ✅ PASS |
+
+**OVERALL: PASS**
+
+Finance testit (60 kysymystä):
+- **TABLE_NUMERIC** (18): Taulukko-lukukysymykset
+- **TREND** (8): Vuosivertailu
+- **RISK** (6): Riskianalyysi
+- **LAW_FINANCE** (7): Lakikytkentä
+- **CONSOLIDATION** (6): Konsernitiedot
+- **ABSTAIN** (15): Out-of-scope kysymykset
+
+```bash
+# Run finance eval
+python scripts/run_v11_finance_eval.py
+```
+
+---
+
+## Adversarial Robustness Testing (v10.1) ✅
+
+**Single-Source Metrics Contract** - all metrics derived from `v10_adversarial_results.json`.
+
+| Gate | Value | Threshold | Status |
+|------|-------|-----------|--------|
+| **CONFUSION_FAIL_RATE** | 0.0% | ≤ 2% | ✅ PASS |
+| **HALLU_EVIDENCE** | 0 | = 0 | ✅ PASS |
+| **VERSION_DRIFT** | 0 | = 0 | ✅ PASS |
+| **ABSTAIN_CORRECT** | 100.0% | ≥ 90% | ✅ PASS |
+
+**OVERALL: PASS**
+
+Adversarial testit (40 kysymystä):
+- **LAW** (10): Confusion & synonym attacks
+- **GRAPH** (10): Multi-hop & exception traps  
+- **DOC** (10): Evidence & table attacks
+- **ABSTAIN** (10): Unknown/out-of-scope/versioning
+
+```bash
+# Run adversarial eval + render reports
+python scripts/run_v10_adversarial_eval.py
+python scripts/render_v10_report.py
+```
+
+## Document Graph + Law↔Report Mapping (v9) ✅
+
+| Metric | Tulos | Tavoite | Tila |
+|--------|-------|---------|------|
+| **LAW_PASS** | **96.6%** | ≥95% | ✅ |
+| **DOC_PASS** | **100.0%** | ≥85% | ✅ |
+| **EVIDENCE_PASS** | **89.7%** | ≥85% | ✅ |
+| **Latency** | **97.7ms** | <250ms | ✅ |
+
+**OVERALL: ALL v9 GATES PASS** ✅
+
+Document Graph (Lapua 2023):
+- Nodes: 81 (DOC, PAGE, SECTION, PARA, TABLE, ROW, METRIC)
+- Edges: 82 (HAS_PAGE, HAS_SECTION, HAS_PARA, HAS_TABLE, HAS_ROW, NEXT)
+
+v9 yhdistää:
+1. Lakitekstin haun (v7.2)
+2. Viittausketjut/poikkeukset (v8.1)
+3. Tilinpäätösasiakirjan rakenteen
+
+```bash
+# Build document graph from structured JSON
+python docs_layer/scripts/build_document_graph.py --input <parsed_json> --output <output_dir>
+
+# Build document index
+python docs_layer/scripts/build_document_index.py --graph <graph_dir> --output <chroma_dir>
+
+# Interactive law↔doc mapping
+python docs_layer/scripts/map_law_to_doc.py --interactive --doc-index <chroma_dir>
+
+# Run real-doc eval
+python docs_layer/scripts/run_real_doc_eval.py --questions <questions.json> --doc-index <chroma_dir> --output <output_dir>
+```
 
 ## Lisenssi & lähde
 

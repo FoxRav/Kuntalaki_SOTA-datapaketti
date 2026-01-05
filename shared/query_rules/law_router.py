@@ -23,11 +23,19 @@ def _load_router_keywords() -> dict[str, list[str]]:
     return {}
 
 
+# v8.1: Strong municipal anchors that MUST route to Kuntalaki
+_MUNICIPAL_STRONG_ANCHORS = [
+    "kunnan", "kuntakonserni", "kuntalaki", "valtuusto", "kunnanhallitus",
+    "tarkastuslautakunta", "kunnanjohtaja", "kunnanvaltuusto", "kuntalain",
+]
+
 # Default keywords if cross_refs.json not available
 _DEFAULT_KEYWORDS: dict[str, list[str]] = {
     "kuntalaki_410_2015": [
         "kunta", "kunnan", "valtuusto", "kunnanhallitus", "kunnanjohtaja",
         "kriisikunta", "arviointimenettely", "kuntayhtymä", "konserni",
+        "kuntakonserni", "kuntalaki", "tarkastuslautakunta", "kuntalain",
+        "kuntien", "kuntalainen", "kunnanvaltuusto",
     ],
     "kirjanpitolaki_1336_1997": [
         "tase", "liitetiedot", "tuloslaskelma", "poistot", "arvostus",
@@ -105,6 +113,12 @@ def _extract_explicit_law_reference(query: str) -> Optional[str]:
     return None
 
 
+def _has_municipal_anchor(query: str) -> bool:
+    """Check if query contains strong municipal anchors."""
+    query_lower = query.lower()
+    return any(anchor in query_lower for anchor in _MUNICIPAL_STRONG_ANCHORS)
+
+
 def route_query(
     query: str,
     available_laws: Optional[list[str]] = None,
@@ -112,7 +126,7 @@ def route_query(
     min_laws: int = 2,
 ) -> dict[str, float]:
     """
-    Route a query to appropriate law indices (v7: Top2 + fallback).
+    Route a query to appropriate law indices (v8.1: hardened municipal routing).
     
     Args:
         query: User query string
@@ -129,6 +143,9 @@ def route_query(
     # Check for explicit law reference first
     explicit_law = _extract_explicit_law_reference(query)
     
+    # v8.1: Check for strong municipal anchors
+    has_municipal = _has_municipal_anchor(query)
+    
     # Count keyword matches for each law
     query_lower = query.lower()
     keywords = _get_router_keywords()
@@ -139,6 +156,10 @@ def route_query(
             continue
         score = sum(1 for kw in kw_list if kw in query_lower)
         scores[law_key] = score
+    
+    # v8.1: Strong boost for Kuntalaki when municipal anchors present
+    if has_municipal and "kuntalaki_410_2015" in available_laws:
+        scores["kuntalaki_410_2015"] = scores.get("kuntalaki_410_2015", 0) + 3
     
     # v7: If explicit law reference, give it high weight but still include 2nd law
     if explicit_law and explicit_law in available_laws:
@@ -204,6 +225,25 @@ def route_query(
         # Re-normalize
         total = sum(weights.values())
         weights = {k: v / total for k, v in weights.items()}
+    
+    # v8.1: Force Kuntalaki into top-2 when municipal anchors present
+    if has_municipal and "kuntalaki_410_2015" in available_laws:
+        if "kuntalaki_410_2015" not in weights:
+            # Add Kuntalaki with high weight
+            weights["kuntalaki_410_2015"] = 0.5
+            # Re-normalize
+            total = sum(weights.values())
+            weights = {k: v / total for k, v in weights.items()}
+        else:
+            # Ensure it's in top-2
+            sorted_laws = sorted(weights.items(), key=lambda x: x[1], reverse=True)
+            if sorted_laws[0][0] != "kuntalaki_410_2015" and \
+               (len(sorted_laws) < 2 or sorted_laws[1][0] != "kuntalaki_410_2015"):
+                # Boost Kuntalaki
+                weights["kuntalaki_410_2015"] = max(weights["kuntalaki_410_2015"], sorted_laws[0][1] * 0.9)
+                # Re-normalize
+                total = sum(weights.values())
+                weights = {k: v / total for k, v in weights.items()}
     
     return weights
 

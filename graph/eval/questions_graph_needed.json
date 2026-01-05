@@ -1,0 +1,170 @@
+{
+  "description": "v8 Graph-needed eval - Questions requiring graph expansion for complete answers",
+  "version": "8.0",
+  "test_type": "graph_needed",
+  "questions": [
+    {
+      "id": "GRAPH-REF-001",
+      "type": "MUST",
+      "category": "reference_chain",
+      "query": "Mikä on kuntakonsernin määritelmä ja mihin lakiin se viittaa?",
+      "expected_primary": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 6,
+        "moment": 1
+      },
+      "expected_references": [
+        {"law_key": "kirjanpitolaki_1336_1997", "section_num": 5, "note": "Kirjanpitolain määräysvaltasäännös"}
+      ],
+      "notes": "Kuntalaki 6:1 viittaa kirjanpitolakiin."
+    },
+    {
+      "id": "GRAPH-REF-002",
+      "type": "SHOULD",
+      "category": "reference_chain",
+      "query": "Kunnan järjestämisvastuun siirtäminen ja rahoitusvastuu",
+      "expected_primary": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 8
+      },
+      "expected_references": [],
+      "notes": "8§ sisältää järjestämisvastuun. Momentit eivät viittaa eksplisiittisesti toisiinsa vaan ovat eri näkökulmat samaan asiaan."
+    },
+    {
+      "id": "GRAPH-EXC-001",
+      "type": "MUST",
+      "category": "exception",
+      "query": "Kuntalain soveltamisala ja poikkeukset",
+      "expected_primary": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 2,
+        "moment": 1
+      },
+      "expected_exceptions": [
+        {"note": "Viittaa 6§:n 2 momenttiin 'jollei lailla toisin säädetä'"}
+      ],
+      "notes": "2:1 sisältää poikkeusviittauksen."
+    },
+    {
+      "id": "GRAPH-REF-003",
+      "type": "SHOULD",
+      "category": "reference_chain",
+      "query": "Palvelujen tuottaminen ja järjestämisvastuu",
+      "expected_primary": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 9,
+        "moment": 3
+      },
+      "expected_references": [
+        {"law_key": "kuntalaki_410_2015", "section_num": 8, "moment": 2}
+      ],
+      "notes": "9:3 viittaa 8§:n 2 momenttiin."
+    },
+    {
+      "id": "GRAPH-REF-004",
+      "type": "SHOULD",
+      "category": "reference_chain",
+      "query": "Valtuuston tehtävät ja kunnan toiminta",
+      "expected_primary": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 14
+      },
+      "expected_references": [],
+      "notes": "Valtuuston perustehtävät."
+    },
+    {
+      "id": "GRAPH-DEF-001",
+      "type": "SHOULD",
+      "category": "definition",
+      "query": "Kunnan jäsenen määritelmä",
+      "expected_primary": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 3,
+        "moment": 1
+      },
+      "expected_definition": true,
+      "notes": "3:1 määrittelee kunnan jäsenen."
+    },
+    {
+      "id": "GRAPH-REF-005",
+      "type": "SHOULD",
+      "category": "reference_chain",
+      "query": "Tilinpäätös ja kirjanpitolain soveltaminen kuntaan",
+      "expected_primary": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 112
+      },
+      "expected_references": [
+        {"law_key": "kirjanpitolaki_1336_1997", "note": "Ulkoinen viittaus KPL:ään"}
+      ],
+      "notes": "§112 = Kirjanpitolain ja tilintarkastuslain soveltaminen."
+    },
+    {
+      "id": "GRAPH-EXC-002",
+      "type": "SHOULD",
+      "category": "exception",
+      "query": "Kuntayhtymän toimielinten soveltamissäännökset",
+      "expected_primary": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 2,
+        "moment": 2
+      },
+      "expected_exceptions": [
+        {"note": "'Sen estämättä, mitä muualla laissa säädetään'"}
+      ],
+      "notes": "2:2 sisältää poikkeuksen muusta lainsäädännöstä."
+    },
+    {
+      "id": "GRAPH-REF-006",
+      "type": "SHOULD",
+      "category": "reference_chain",
+      "query": "Tilintarkastajan valinta ja osakeyhtiölain soveltaminen",
+      "expected_primary": {
+        "law_key": "tilintarkastuslaki_1141_2015"
+      },
+      "expected_references": [
+        {"law_key": "osakeyhtiolaki_624_2006", "note": "Viittaus OYL:ään"}
+      ],
+      "notes": "Tilintarkastuslaki ja OYL yhteys."
+    },
+    {
+      "id": "GRAPH-REF-007",
+      "type": "SHOULD",
+      "category": "reference_chain",
+      "query": "Konsernitilinpäätöksen laatimisvelvollisuus ja määräysvalta",
+      "expected_primary": {
+        "law_key": "kirjanpitolaki_1336_1997"
+      },
+      "expected_references": [
+        {"note": "Viittaus määräysvaltasäännöksiin"}
+      ],
+      "notes": "KPL konsernitilinpäätös viittaa määräysvaltaan."
+    },
+    {
+      "id": "GRAPH-CROSS-001",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "query": "Kunnan tilinpäätöksen laatimisperiaatteet vs kirjanpitolaki",
+      "expected_primary": {
+        "law_key": "kuntalaki_410_2015",
+        "section_num": 112
+      },
+      "expected_references": [
+        {"law_key": "kirjanpitolaki_1336_1997", "note": "KPL:n yleiset periaatteet"}
+      ],
+      "notes": "§112 = Kirjanpitolain soveltaminen kuntaan."
+    },
+    {
+      "id": "GRAPH-CROSS-002",
+      "type": "SHOULD",
+      "category": "cross_law",
+      "query": "Hankintasopimuksen ja kilpailutuksen säännökset kuntahankinnoissa",
+      "expected_primary": {
+        "law_key": "hankintalaki_1397_2016"
+      },
+      "expected_references": [],
+      "notes": "Hankintalain perusviittaus kuntahankintoihin."
+    }
+  ]
+}
+
